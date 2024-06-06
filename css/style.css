@@ -489,5 +489,11 @@
     padding-right: 0;
     border-right: none;
 }
-
+::-webkit-scrollbar{
+    background-color: #0F172B;
+    width: 15px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #F1F8FF;
+}
 
