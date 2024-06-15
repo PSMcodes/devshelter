@@ -107,11 +107,11 @@
         }
     });
     
-    $('.dropdown-submenu a.test').on("click", function(e){
-        $(this).next('ul').toggle();
-        e.stopPropagation();
-        e.preventDefault();
-      });
+    // $('.dropdown-submenu a.test').on("click", function(e){
+    //     $(this).next('ul').toggle();
+    //     e.stopPropagation();
+    //     e.preventDefault();
+    //   });
 
 
     var myCarousel = document.querySelector('#myCarousel');
