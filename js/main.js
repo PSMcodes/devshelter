@@ -10,7 +10,9 @@
         }, 1);
     };
     spinner();
-
+    
+    var marquee_width = $(".marquee-content-primary").width();
+    document.documentElement.style.setProperty('--marquee-padding', marquee_width + 'px');
 
     // Initiate the wowjs
     new WOW().init();
@@ -104,7 +106,43 @@
             }
         }
     });
+    
+    // $('.dropdown-submenu a.test').on("click", function(e){
+    //     $(this).next('ul').toggle();
+    //     e.stopPropagation();
+    //     e.preventDefault();
+    //   });
 
 
+    var myCarousel = document.querySelector('#myCarousel');
+
+    var carousel = new bootstrap.Carousel(myCarousel, {
+    interval: 10000
+});
+
+
+$('.carousel .carousel-item').each(function(){
+    var minPerSlide = 4;
+    var next = $(this).next();
+    if (!next.length) {
+    next = $(this).siblings(':first');
+    }
+    next.children(':first-child').clone().appendTo($(this));
+    
+    for (var i=0;i<minPerSlide;i++) {
+        next=next.next();
+        if (!next.length) {
+        	next = $(this).siblings(':first');
+      	}
+        
+        next.children(':first-child').clone().appendTo($(this));
+      }
+});
+
+
+
+  
+  
+    
 })(jQuery);
 
