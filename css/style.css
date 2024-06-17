@@ -694,6 +694,12 @@ button:hover {
     background-color: #F1F8FF;
 }
 
+.drp-items{
+    padding: 10px  8px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
 /* offer */
 
 :root{
