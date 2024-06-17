@@ -291,6 +291,7 @@
     height: auto;
 }
 
+
 .video .btn-play span {
     display: block;
     position: relative;
@@ -341,6 +342,202 @@
     color: #FFFFFF;
     background: #000000;
     opacity: 1;
+}
+ /* timeline */
+ .timeline-container{
+    height: 70vh !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .timeline {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 4px;
+    background-color: yellow;
+    transform: translateY(-50%);
+}
+
+.timeline-event {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    margin: 20px 0;
+    background: url("https://www.sunteckindia.com/blog/isystem/wp-content/uploads/2024/03/The-10-Best-Things-to-Do-in-Goregaon-Mumbai.webp");
+    background-size: cover;
+    /* background: rgba(255, 255, 255, 0.47); */
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    transform: translateY(-110px);
+}
+.timeline-event:nth-child(odd) {
+    transform: translateY(110px);
+    background: url("https://images.timesproperty.com/blog/2835/unnamed___2022_08_17T163324620.jpg");
+    background-size: cover;
+}
+
+.timeline-event::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 25px;
+    height: 25px;
+    background-color: yellow;
+    border: 4px solid white;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.timeline-event:nth-child(odd)::after {
+    top: -35px;
+    margin: 2%;
+    right: 45%;
+}
+
+.timeline-event:nth-child(even)::after {
+    top: 184px;
+    margin: 2%;
+    right: 45%;
+}
+
+.timeline-event img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px 6px 0 0;
+}
+
+.timeline-content {
+    padding: 20px;
+}
+
+.timeline-content h2 {
+    color: #ffffff;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: yellow;
+    border: none;
+    border-radius: 4px;
+    color: #333;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #ffdd00;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .timeline-container{
+        height: 100vh !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+    .timeline {
+        flex-direction: column;
+    }
+
+    .timeline::before {
+        left: 50%;
+        top: 0;
+        width: 4px;
+        height: 100%;
+        transform: translateX(-50%);
+    }
+    .timeline-event {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50% !important;
+        margin: 20px 0;
+        background: url("https://www.sunteckindia.com/blog/isystem/wp-content/uploads/2024/03/The-10-Best-Things-to-Do-in-Goregaon-Mumbai.webp");
+        background-size: cover;
+        /* background: rgba(255, 255, 255, 0.47); */
+        border-radius: 6px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+        position: relative;
+        transform: translateY(-110px);
+    }
+    .timeline-event {
+        width: 80%;
+        /* margin: 40px 0; */
+    }
+
+    .timeline-event:nth-child(odd) {
+        transform: translateX(0) translateY(0);
+        margin-left: 40px;
+    }
+
+    .timeline-event:nth-child(even) {
+        margin-left: -90px;
+    }
+
+    .timeline-event::after {
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    .timeline-event:nth-child(odd)::after {
+        left: -12.5px;
+    }
+
+    .timeline-event:nth-child(even)::after {
+        right: -12.5px;
+    }
+}
+
+/* contact form */
+.toggle-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-bottom: 20px;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.form-container {
+    display: none;
+}
+.form-container.active {
+    display: block;
+}
+.form-floating {
+    margin-bottom: 15px;
+}
+.form-floating label {
+    padding: 10px;
+}
+.form-floating textarea {
+    resize: none;
 }
 
 
@@ -423,7 +620,7 @@
 .footer {
     position: relative;
     margin-top: -110px;
-    padding-top: 180px;
+    padding-top: 80px;
 }
 
 .footer .btn.btn-social {

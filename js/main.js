@@ -146,3 +146,19 @@ $('.carousel .carousel-item').each(function(){
     
 })(jQuery);
 
+// for contact form
+function toggleForms() {
+    var regularForm = document.getElementById('regular-form');
+    var corporateForm = document.getElementById('corporate-form');
+    var toggleButton = document.querySelector('.toggle-button');
+
+    if (regularForm.classList.contains('active')) {
+        regularForm.classList.remove('active');
+        corporateForm.classList.add('active');
+        toggleButton.textContent = 'Switch to Regular Inquiry Form';
+    } else {
+        regularForm.classList.add('active');
+        corporateForm.classList.remove('active');
+        toggleButton.textContent = 'Switch to Corporate Inquiry Form';
+    }
+}
