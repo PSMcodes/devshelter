@@ -1,12 +1,15 @@
 /********** Template CSS **********/
 :root {
-    --primary: #FEA116;
+    --primary: #24d4fd;
     --light: #F1F8FF;
     --dark: #0F172B;
 }
 
 .fw-medium {
     font-weight: 500 !important;
+}
+.text-yellow{
+  color: yellow;
 }
 
 .fw-semi-bold {
