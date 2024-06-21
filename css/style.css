@@ -4,6 +4,9 @@
     --light: #F1F8FF;
     --dark: #0F172B;
 }
+#logo{
+  filter: drop-shadow(1px 1px 100px #24d4fd);
+}
 
 .fw-medium {
     font-weight: 500 !important;
