@@ -162,6 +162,3 @@ function toggleForms() {
         toggleButton.textContent = 'Switch to Corporate Inquiry Form';
     }
 }
-
-
-
