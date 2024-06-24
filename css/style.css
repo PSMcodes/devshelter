@@ -119,6 +119,7 @@
   }
 }
 
+
 /*** Header ***/
 .carousel-caption {
   top: 0;
@@ -1261,7 +1262,7 @@
   aspect-ratio: 16/9;
 }
 
-.circle {
+/* .circle {
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -1269,7 +1270,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .parent {
   position: relative;
@@ -1279,7 +1280,7 @@
   width: 400px;
   height: 400px;
   border-radius: 50%;
-  background-color: teal;
+  /* background-color: teal; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1292,7 +1293,7 @@
   left: 0;
   right: 0;
   width: 400px;
-  /* animation: rotate linear 5s infinite forwards; */
+  animation: rotate linear 15s infinite forwards;
   /* animation-name: rotate;
   animation-duration: 5s;
   animation-iteration-count: infinite;
