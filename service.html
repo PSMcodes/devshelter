@@ -1,430 +1,472 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title>DEVSHELTER </title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+  <head>
+    <meta charset="utf-8" />
+    <title>DEVSHELTER</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/favicon.ico" rel="icon" />
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">  
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Icon Font Stylesheet -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link
+      href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-</head>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
 
-<body>
+  <body>
     <div class="container-fluid bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
+      <!-- Spinner Start -->
+      <div
+        id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+      >
+        <div
+          class="spinner-border text-primary"
+          style="width: 3rem; height: 3rem"
+          role="status"
+        >
+          <span class="sr-only">Loading...</span>
         </div>
-        <!-- Spinner End -->
-
-        <!-- Header Start -->
-        <div class="container-fluid bg-dark px-0">
-          <div class="row gx-0">
-              <div class="col-lg-3 bg-dark d-none d-lg-block">
-                <a href="index.html"
-                class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center ">
-                <img src="img/logo.png" class="navbar-brand w-25  mx-2 p-0   " alt="" srcset="" id="logo">
-                <h1 class="m-10 text-primary text-uppercase">Devshelter</h1>
-              </a>
-              </div>
-              <div class="col-lg-9">
-                  <div class="row gx-0 bg-white d-none d-lg-flex">
-                      <div class="col-lg-7 px-5 text-start">
-                          <div class="h-100 d-inline-flex align-items-center py-2 me-4">
-                              <i class="fa fa-envelope text-primary me-2"></i>
-                              <p class="mb-0">devshelters63@gmail.com
-                              </p>
-                          </div>
-                          <div class="h-100 d-inline-flex align-items-center py-2 me-4">
-                              <i class="fa fa-phone-alt text-primary me-2"></i>
-                              <p class="mb-0">+91 8451880595</p>
-                          </div>
-
-                          <div class="h-100 d-inline-flex align-items-center py-2">
-                              <i class="fa fa-phone-alt text-primary me-2"></i>
-                              <p class="mb-0">+91 8451880595</p>
-                          </div>
-
-                      </div>
-                      <div class="col-lg-5 px-5 text-end">
-                          <div class="d-inline-flex align-items-center py-2">
-                              <a class="me-3" href=""><i class="fab fa-facebook-f"></i></a>
-                              <a class="me-3" href=""><i class="fab fa-instagram"></i></a>
-                              <a class="me-3" href=""><i class="fab fa-youtube"></i></a>
-                              <a class="" href=""><i class="fab fa-linkedin-in"></i></a>
-
-                          </div>
-                      </div>
-                  </div>
-                  <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
-                      <a href="index.html" class="navbar-brand d-block d-lg-none">
-                          <h1 class="m-0 text-primary text-uppercase">DevShelter</h1>
-                      </a>
-                      <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
-                          data-bs-target="#navbarCollapse">
-                          <span class="navbar-toggler-icon"></span>
-                      </button>
-                      <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                          <div class="navbar-nav mr-auto py-0">
-                              <a href="index.html" class="nav-item nav-link ">Home</a>
-                              <a href="service.html" class="nav-item nav-link active">Services</a>
-                               <a href="about.html" class="nav-item nav-link w-100">About Us</a>
-                              <!-- <a href="#" class="nav-item nav-link">Rooms</a> -->
-
-                          
-
-                  
-
-                        <ul class="navbar-nav ">
-                          <!-- Dropdown -->
-                          <li class="nav-item dropdown p-0 m-0">
-                            <a data-mdb-dropdown-init class="nav-link dropdown-toggle" href="room.html" id="navbarDropdownMenuLink" role="button"
-                              data-mdb-toggle="dropdown" aria-expanded="false">
-                              Our Rooms
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-
-                              <li>
-                                <a class="dropdown-item border-bottom" href="#">
-                                  Malad &raquo;
-                                </a>
-                                <ul class="dropdown-menu dropdown-submenu">
-                            
-                                  <li>
-                                    <a class="dropdown-item border-bottom"  href="#">Deluxe Rooms &raquo; </a>
-                                    <ul class="dropdown-menu dropdown-submenu">
-                                      <li>
-                                        <a class="dropdown-item border-bottom" href="#">Room 1</a>
-                                      </li>
-                                      <li>
-                                        <a class="dropdown-item" href="#">Room 2</a>
-                                      </li>
-                                    </ul>
-                                  </li>
-                                  <li>
-                                    <a class="dropdown-item border-bottom " href="#">Executive Deluxe Rooms &raquo; </a>
-                                    <ul class="dropdown-menu dropdown-submenu">
-                                      <li>
-                                        <a class="dropdown-item" href="#">Room 1</a>
-                                      </li>
-                                      <li>
-                                        <a class="dropdown-item" href="#">Room 2</a>
-                                      </li>
-                                    </ul>
-                                  </li>
-                                  <li>
-                                    <a class="dropdown-item border-bottom" href="#">Kalpataru Hometel Rooms &raquo; </a>
-                                    <ul class="dropdown-menu dropdown-submenu">
-                                      <li>
-                                        <a class="dropdown-item" href="#">Room 1</a>
-                                      </li>
-                                      <li>
-                                        <a class="dropdown-item" href="#">Room 2</a>
-                                      </li>
-                                    </ul>
-                                  </li>
-                                  <li>
-                                    <a class="dropdown-item border-bottom" href="#">Service Apartments 3Bhk &raquo; </a>
-                                    <ul class="dropdown-menu dropdown-submenu">
-                                      <li>
-                                        <a class="dropdown-item border-bottom" href="#">Deluxe Rooms &raquo; </a>
-                                        <ul class="dropdown-menu dropdown-submenu">
-                                          <li>
-                                            <a class="dropdown-item border-bottom" href="#">Room 1  </a>
-                                            <li>
-                                              
-                                            </li>
-                                          </li>
-                                          <li>
-                                            <a class="dropdown-item" href="#">Room 2</a>
-                                          </li>
-                                        </ul>
-                                      </li>
-                                      <li>
-                                        <a class="dropdown-item" href="#">Semi Deluxe &raquo;</a>
-                                        <ul class="dropdown-menu dropdown-submenu">
-                                          <li>
-                                            <a class="dropdown-item border-bottom" href="#">Room 1  </a>
-                                            <li>
-                                              
-                                            </li>
-                                          </li>
-                                          <li>
-                                            <a class="dropdown-item" href="#">Room 2</a>
-                                          </li>
-                                        </ul>
-                                      </li>
-                                    </ul>
-                                  </li>
-                                  <li>
-                                    <a class="dropdown-item border-bottom" href="#">Service Apartments 4Bhk &raquo; </a>
-                                    <ul class="dropdown-menu dropdown-submenu">
-                                      <li>
-                                        <a class="dropdown-item border-bottom" href="#">Deluxe Rooms &raquo; </a>
-                                        <ul class="dropdown-menu dropdown-submenu">
-                                          <li>
-                                            <a class="dropdown-item border-bottom" href="#">Room 1  </a>
-                                            <li>
-                                              
-                                            </li>
-                                          </li>
-                                          <li>
-                                            <a class="dropdown-item" href="#">Room 2</a>
-                                          </li>
-                                        </ul>
-                                      </li>
-                                      <li>
-                                        <a class="dropdown-item" href="#">Semi Deluxe &raquo;</a>
-                                        <ul class="dropdown-menu dropdown-submenu">
-                                          <li>
-                                            <a class="dropdown-item border-bottom" href="#">Room 1  </a>
-                                            <li>
-                                              
-                                            </li>
-                                          </li>
-                                          <li>
-                                            <a class="dropdown-item" href="#">Room 2</a>
-                                          </li>
-                                        </ul>
-                                      </li>
-                                    </ul>
-                                  </li>
-
-                                </ul>
-                              </li>
-
-                              <li>
-                                <a class="dropdown-item border-bottom" href="#">
-                                  Goregaon &raquo;
-                                </a>
-                                <ul class="dropdown-menu dropdown-submenu">
-                                  <!-- <li>
-                                    <a class="dropdown-item" href="#">Submenu item 1</a>
-                                  </li>
-                                  <li>
-                                    <a class="dropdown-item" href="#">Submenu item 2</a>
-                                  </li> -->
-                                  <li>
-                                    <a class="dropdown-item border-bottom" href="#">Deluxe Rooms &raquo; </a>
-                                    <ul class="dropdown-menu dropdown-submenu">
-                                      <li>
-                                        <a class="dropdown-item border-bottom" href="#">Room 1</a>
-                                      </li>
-                                      <li>
-                                        <a class="dropdown-item" href="#">Room 2</a>
-                                      </li>
-                                    </ul>
-                                  </li>
-                                  <li>
-                                    <a class="dropdown-item" href="#">Executive Deluxe rooms &raquo; </a>
-                                    <ul class="dropdown-menu dropdown-submenu">
-                                      <li>
-                                        <a class="dropdown-item" href="#">Room 1</a>
-                                      </li>
-                                      <li>
-                                        <a class="dropdown-item" href="#">Room 2</a>
-                                      </li>
-                                    </ul>
-                                  </li>
-                            
-                              </li>
-
-                                </ul>
-                              </li>
-                              
-                              <li>
-                                <a class="dropdown-item " href="#">
-                                  Jogeshwari &raquo;
-                                </a>
-                                <ul class="dropdown-menu dropdown-submenu">
-
-                                  <li>
-                                    <a class="dropdown-item border-bottom" href="#">Deluxe Rooms &raquo; </a>
-                                    <ul class="dropdown-menu dropdown-submenu">
-                                      <li>
-                                        <a class="dropdown-item" href="#">Room 1</a>
-                                      </li>
-                                      <li>
-                                        <a class="dropdown-item" href="#">Room 2</a>
-                                      </li>
-                                    </ul>
-                                  </li>
-                                  <li>
-                                    <a class="dropdown-item border-bottom" href="#">Executive Deluxe Rooms &raquo; </a>
-                                    <ul class="dropdown-menu dropdown-submenu">
-                                      <li>
-                                        <a class="dropdown-item" href="#">Room 1</a>
-                                      </li>
-                                      <li>
-                                        <a class="dropdown-item" href="#">Room 2</a>
-                                      </li>
-                                    </ul>
-                                  </li>
-
-                                </ul>
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
-            
-
-                   
-
-          
-
-                              <a href="booking.html" class="nav-item nav-link">Booking</a>
-                              <a href="contact.html" class="nav-item nav-link">Contact</a>
-                          </div>
-                          <!-- <a href="https://htmlcodex.com/hotel-html-template-pro" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Premium Version<i class="fa fa-arrow-right ms-3"></i></a> -->
-                      </div>
-                  </nav>
-              </div>
-          </div>
       </div>
-        <!-- Header End -->
+      <!-- Spinner End -->
 
-
-        <!-- Page Header Start -->
-        <div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/carousel-1.jpg);">
-            <div class="container-fluid page-header-inner py-5">
-                <div class="container text-center pb-5">
-                    <h1 class="display-3 text-white mb-3 animated slideInDown">Services</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center text-uppercase">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Services</li>
-                        </ol>
-                    </nav>
+      <!-- Header Start -->
+      <div class="container-fluid bg-dark px-0">
+        <div class="row gx-0">
+          <div class="col-lg-3 bg-dark d-none d-lg-block">
+            <a
+              href="index.html"
+              class="navbar-brand d-flex flex-column align-items-center justify-content-center"
+            >
+              <img
+                src="img/logo.png"
+                class="navbar-brand w-25"
+                alt="Dev Shelters Logo"
+                id="logo"
+              />
+              <h3 class="text-primary text-uppercase">Devshelter</h3>
+            </a>
+          </div>
+          <div class="col-lg-9 d-flex flex-column justify-content-center">
+            <div class="row gx-0 bg-white d-none d-lg-flex h-100">
+              <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center me-4">
+                  <i class="fa fa-envelope text-primary me-2"></i>
+                  <p class="mb-0">devshelters63@gmail.com</p>
                 </div>
-            </div>
-        </div>
-        <!-- Page Header End -->
+                <div class="h-100 d-inline-flex align-items-center me-4">
+                  <i class="fa fa-phone-alt text-primary me-2"></i>
+                  <p class="mb-0">+91 8451880595</p>
+                </div>
 
-
-        <!-- Booking Start -->
-        <div class="container-fluid booking pb-5 wow fadeIn" data-wow-delay="0.1s">
-          <div class="container">
-              <div class="bg-white shadow" style="padding: 35px;">
-                  <div class="row g-2">
-                      <div class="col-md-10">
-                          <div class="row g-2">
-                              <div class="col-md-3">
-                                  <select class="form-select" name="location">
-                                      <option selected>Location</option>
-                                      <option value="Kandivali">Kandivali</option>
-                                      <option value="Malad">Malad</option>
-                                      <option value="Goregaon">Goregaon</option>
-                                  </select>
-                              </div>
-                              <div class="col-md-3">
-                                  <div class="date" data-target-input="nearest">
-                                      <input placeholder="Check In" class="form-control" type="text"
-                                          onfocus="(this.type='date')" onblur="(this.type='text')" id="date0"
-                                          name="checkIn" />
-                                  </div>
-                              </div>
-                              <div class="col-md-3">
-                                  <div class="date" data-target-input="nearest">
-                                      <input placeholder="Check Out" class="form-control" type="text"
-                                          onfocus="(this.type='date')" onblur="(this.type='text')" id="date1"
-                                          name="checkOut" />
-                                  </div>
-                              </div>
-                              <div class="col-md-3">
-                                  <div class="dropdown form-select">
-                                      <span id="guestCounterDisplay">1</span> Guests / <span
-                                          id="roomCounterDisplay">1</span> Room
-                                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                          <div class="drp-items">
-                                              <label for="adults">Adults:</label>
-                                              <div class="btn-div d-flex container-sm">
-                                                  <button type="button" onclick="decrementCounter('adultCounter')"
-                                                      class="btn btn-primary">-</button>
-                                                  <span type="text" id="adultCounter" readonly value="1"
-                                                      class="w-25 p-2">1</span>
-                                                  <button type="button" onclick="incrementCounter('adultCounter')"
-                                                      class="btn btn-primary">+</button>
-                                              </div>
-                                          </div>
-                                          <div class="drp-items">
-                                              <label for="children">Children:</label>
-                                              <div class="btn-div d-flex container-sm">
-                                                  <button type="button" onclick="decrementCounter('childCounter')"
-                                                      class="btn btn-primary">-</button>
-                                                  <span type="text" id="childCounter" readonly value="0"
-                                                      class="w-25 p-2">0</span>
-                                                  <button type="button" onclick="incrementCounter('childCounter')"
-                                                      class="btn btn-primary">+</button>
-                                              </div>
-                                          </div>
-                                          <div class="drp-items">
-                                              <label for="rooms">Rooms:</label>
-                                              <div class="btn-div d-flex container-sm">
-                                                  <button type="button" onclick="decrementRoomCounter()"
-                                                      class="btn btn-primary">-</button>
-                                                  <span type="text" id="roomCounter" readonly value="1"
-                                                      class="w-25 p-2">1</span>
-                                                  <button type="button" onclick="incrementCounter('roomCounter')"
-                                                      class="btn btn-primary">+</button>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col-md-2">
-                          <button class="btn btn-primary w-100" id="submitBtn">Search</button>
-                      </div>
-                  </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                  <i class="fa fa-phone-alt text-primary me-2"></i>
+                  <p class="mb-0">+91 8451880595</p>
+                </div>
               </div>
+              <div
+                class="col-lg-5 px-5 text-end d-inline-flex align-items-center justify-content-center"
+              >
+                <div>
+                  <a class="me-3" href=""><i class="fab fa-facebook-f"></i></a>
+                  <a class="me-3" href=""><i class="fab fa-instagram"></i></a>
+                  <a class="me-3" href=""><i class="fab fa-youtube"></i></a>
+                  <a class="" href=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+            <nav class="navbar navbar-expand-md bg-dark navbar-dark p-3 p-lg-0">
+              <a href="index.html" class="navbar-brand d-block d-lg-none">
+                <h1 class="m-0 text-primary text-uppercase">DevShelter</h1>
+              </a>
+              <button
+                type="button"
+                class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div
+                class="collapse navbar-collapse justify-content-between"
+                id="navbarCollapse"
+              >
+                <div class="navbar-nav">
+                  <a href="index.html" class="nav-item nav-link">Home</a>
+                  <a href="service.html" class="nav-item nav-link active"
+                    >Services</a
+                  >
+                  <a href="about.html" class="nav-item nav-link w-100"
+                    >About Us</a
+                  >
+                  <ul class="navbar-nav">
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown p-0 m-0">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        id="navbarDropdownMenuLink"
+                      >
+                        Our Rooms
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a class="dropdown-item border-bottom" href="#">
+                            Malad &raquo;
+                          </a>
+                          <ul class="dropdown-menu dropdown-submenu l">
+                            <li>
+                              <a class="dropdown-item border-bottom" href="#"
+                                >Deluxe Rooms &raquo;
+                              </a>
+                              <ul class="dropdown-menu dropdown-submenu">
+                                <li>
+                                  <a
+                                    class="dropdown-item border-bottom"
+                                    href="#"
+                                    >Room 1</a
+                                  >
+                                </li>
+                                <li>
+                                  <a class="dropdown-item" href="#">Room 2</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <a class="dropdown-item border-bottom" href="#"
+                                >Executive Deluxe Rooms &raquo;
+                              </a>
+                              <ul class="dropdown-menu dropdown-submenu">
+                                <li>
+                                  <a class="dropdown-item" href="#">Room 1</a>
+                                </li>
+                                <li>
+                                  <a class="dropdown-item" href="#">Room 2</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <a class="dropdown-item border-bottom" href="#"
+                                >Kalpataru Hometel Rooms &raquo;
+                              </a>
+                              <ul class="dropdown-menu dropdown-submenu">
+                                <li>
+                                  <a class="dropdown-item" href="#">Room 1</a>
+                                </li>
+                                <li>
+                                  <a class="dropdown-item" href="#">Room 2</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <a class="dropdown-item border-bottom" href="#"
+                                >Service Apartments 3Bhk &raquo;
+                              </a>
+                              <ul class="dropdown-menu dropdown-submenu">
+                                <li>
+                                  <a
+                                    class="dropdown-item border-bottom"
+                                    href="#"
+                                    >Deluxe Rooms &raquo;
+                                  </a>
+                                  <ul class="dropdown-menu dropdown-submenu">
+                                    <li>
+                                      <a
+                                        class="dropdown-item border-bottom"
+                                        href="#"
+                                        >Room 1
+                                      </a>
+                                    </li>
+
+                                    <li></li>
+                                    <li>
+                                      <a class="dropdown-item" href="#"
+                                        >Room 2</a
+                                      >
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <a class="dropdown-item" href="#"
+                                    >Semi Deluxe &raquo;</a
+                                  >
+                                  <ul class="dropdown-menu dropdown-submenu">
+                                    <li>
+                                      <a
+                                        class="dropdown-item border-bottom"
+                                        href="#"
+                                        >Room 1
+                                      </a>
+                                    </li>
+
+                                    <li></li>
+                                    <li>
+                                      <a class="dropdown-item" href="#"
+                                        >Room 2</a
+                                      >
+                                    </li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <a class="dropdown-item border-bottom" href="#"
+                                >Service Apartments 4Bhk &raquo;
+                              </a>
+                              <ul class="dropdown-menu dropdown-submenu">
+                                <li>
+                                  <a
+                                    class="dropdown-item border-bottom"
+                                    href="#"
+                                    >Deluxe Rooms &raquo;
+                                  </a>
+                                  <ul class="dropdown-menu dropdown-submenu">
+                                    <li>
+                                      <a
+                                        class="dropdown-item border-bottom"
+                                        href="#"
+                                        >Room 1
+                                      </a>
+                                    </li>
+
+                                    <li></li>
+                                    <li>
+                                      <a class="dropdown-item" href="#"
+                                        >Room 2</a
+                                      >
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <a class="dropdown-item" href="#"
+                                    >Semi Deluxe &raquo;</a
+                                  >
+                                  <ul class="dropdown-menu dropdown-submenu">
+                                    <li>
+                                      <a
+                                        class="dropdown-item border-bottom"
+                                        href="#"
+                                        >Room 1
+                                      </a>
+                                    </li>
+
+                                    <li></li>
+                                    <li>
+                                      <a class="dropdown-item" href="#"
+                                        >Room 2</a
+                                      >
+                                    </li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+
+                        <li>
+                          <a class="dropdown-item border-bottom" href="#">
+                            Goregaon &raquo;
+                          </a>
+                          <ul class="dropdown-menu dropdown-submenu">
+                            <!-- <li>
+                                      <a class="dropdown-item" href="#">Submenu item 1</a>
+                                    </li>
+                                    <li>
+                                      <a class="dropdown-item" href="#">Submenu item 2</a>
+                                    </li> -->
+                            <li>
+                              <a class="dropdown-item border-bottom" href="#"
+                                >Deluxe Rooms &raquo;
+                              </a>
+                              <ul class="dropdown-menu dropdown-submenu">
+                                <li>
+                                  <a
+                                    class="dropdown-item border-bottom"
+                                    href="#"
+                                    >Room 1</a
+                                  >
+                                </li>
+                                <li>
+                                  <a class="dropdown-item" href="#">Room 2</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"
+                                >Executive Deluxe rooms &raquo;
+                              </a>
+                              <ul class="dropdown-menu dropdown-submenu">
+                                <li>
+                                  <a class="dropdown-item" href="#">Room 1</a>
+                                </li>
+                                <li>
+                                  <a class="dropdown-item" href="#">Room 2</a>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            Jogeshwari &raquo;
+                          </a>
+                          <ul class="dropdown-menu dropdown-submenu">
+                            <li>
+                              <a class="dropdown-item border-bottom" href="#"
+                                >Deluxe Rooms &raquo;
+                              </a>
+                              <ul class="dropdown-menu dropdown-submenu">
+                                <li>
+                                  <a class="dropdown-item" href="#">Room 1</a>
+                                </li>
+                                <li>
+                                  <a class="dropdown-item" href="#">Room 2</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <a class="dropdown-item border-bottom" href="#"
+                                >Executive Deluxe Rooms &raquo;
+                              </a>
+                              <ul class="dropdown-menu dropdown-submenu">
+                                <li>
+                                  <a class="dropdown-item" href="#">Room 1</a>
+                                </li>
+                                <li>
+                                  <a class="dropdown-item" href="#">Room 2</a>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+
+                  <a href="booking.html" class="nav-item nav-link">Booking</a>
+                  <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <!-- <a href="https://htmlcodex.com/hotel-html-template-pro" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Premium Version<i class="fa fa-arrow-right ms-3"></i></a> -->
+              </div>
+            </nav>
           </div>
+        </div>
       </div>
-        <!-- Booking End -->
+      <!-- Header End -->
 
+      <!-- Page Header Start -->
+      <div
+        class="container-fluid page-header p-0"
+        style="background-image: url(img/carousel-1.jpg)"
+      >
+        <div class="container-fluid page-header-inner py-5">
+          <div class="container text-center pb-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">
+              Services
+            </h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb justify-content-center text-uppercase">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                <li
+                  class="breadcrumb-item text-white active"
+                  aria-current="page"
+                >
+                  Services
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <!-- Page Header End -->
 
-        <!-- about service start  -->
-                <div class="container-fluid py-5 px-0 wow zoomIn" data-wow-delay="0.1s">
-                  
-                        <div class="container-fluid bg-dark d-flex align-items-center">
-                            <div class="p-5">
-                                <h6 class="section-title text-start text-white text-uppercase mb-3">luxurious Service</h6>
-                                <h1 class="text-white mb-4">Discover our Luxurious Service!</h1>
-                                <p class="text-white mb-4">
-                                  Welcome to Devshelter, where every detail is meticulously curated to offer you an unparalleled experience of opulence and comfort. Our exquisite rooms and suites are designed with elegant décor and equipped with state-of-the-art amenities, ensuring a serene and lavish retreat. Guests can indulge in our 24-hour concierge service, gourmet dining options featuring world-class chefs, and personalized spa treatments tailored to rejuvenate your senses. Each stay is enhanced by breathtaking views, plush bedding, and a commitment to exceptional service, promising a memorable and extraordinary escape from the everyday. <br> <br>
-                                  Our rooms are adorned with fine linens, custom furnishings, and cutting-edge technology, providing a seamless blend of classic elegance and modern convenience. For those seeking the ultimate in luxury, our premium suites offer expansive living spaces, private terraces, and exclusive access to our elite club lounge, where personalized service and exquisite offerings await. Beyond the comfort of your room, our hotel boasts an array of exclusive amenities designed to elevate your stay. Unwind in our infinity pool overlooking stunning vistas, or take advantage of our fully equipped fitness center and wellness programs. Our business facilities, including high-speed internet and elegantly appointed meeting rooms, cater to the needs of discerning professionals, ensuring productivity in a luxurious setting. Dining at our hotel is an experience in itself, with a selection of gourmet restaurants and chic lounges that cater to every palate. Enjoy handcrafted cocktails at our rooftop bar, savor international delicacies prepared by our award-winning chefs, or indulge in a private dining experience tailored to your preferences.
-                                  Every meal is a celebration of the finest ingredients and culinary artistry. <br> <br> Our dedicated team is committed to providing personalized service that exceeds your expectations. From arranging bespoke excursions and local experiences to ensuring every detail of your stay is flawless, we are here to make your visit truly extraordinary. Discover the epitome of luxury at our hotel, where every moment is crafted to create lasting memories and an unparalleled escape from the everyday. Let us create a bespoke experience that caters to your every desire, setting a new standard in luxury hospitality.
-                                    </p>
-                       
-                            </div>
-                        </div>
-                        <!-- <div class="col-md-4">
+      <!-- about service start  -->
+      <div class="container-fluid px-0 wow zoomIn" data-wow-delay="0.1s">
+        <div class="container-fluid bg-dark d-flex align-items-center">
+          <div class="p-5">
+            <h6 class="section-title text-start text-white text-uppercase mb-3">
+              luxurious Service
+            </h6>
+            <h1 class="text-white mb-4">Discover our Luxurious Service!</h1>
+            <p class="text-white mb-4">
+              Welcome to Devshelter, where every detail is meticulously curated
+              to offer you an unparalleled experience of opulence and comfort.
+              Our exquisite rooms and suites are designed with elegant décor and
+              equipped with state-of-the-art amenities, ensuring a serene and
+              lavish retreat. Guests can indulge in our 24-hour concierge
+              service, gourmet dining options featuring world-class chefs, and
+              personalized spa treatments tailored to rejuvenate your senses.
+              Each stay is enhanced by breathtaking views, plush bedding, and a
+              commitment to exceptional service, promising a memorable and
+              extraordinary escape from the everyday. <br />
+              <br />
+              Our rooms are adorned with fine linens, custom furnishings, and
+              cutting-edge technology, providing a seamless blend of classic
+              elegance and modern convenience. For those seeking the ultimate in
+              luxury, our premium suites offer expansive living spaces, private
+              terraces, and exclusive access to our elite club lounge, where
+              personalized service and exquisite offerings await. Beyond the
+              comfort of your room, our hotel boasts an array of exclusive
+              amenities designed to elevate your stay. Unwind in our infinity
+              pool overlooking stunning vistas, or take advantage of our fully
+              equipped fitness center and wellness programs. Our business
+              facilities, including high-speed internet and elegantly appointed
+              meeting rooms, cater to the needs of discerning professionals,
+              ensuring productivity in a luxurious setting. Dining at our hotel
+              is an experience in itself, with a selection of gourmet
+              restaurants and chic lounges that cater to every palate. Enjoy
+              handcrafted cocktails at our rooftop bar, savor international
+              delicacies prepared by our award-winning chefs, or indulge in a
+              private dining experience tailored to your preferences. Every meal
+              is a celebration of the finest ingredients and culinary artistry.
+              <br />
+              <br />
+              Our dedicated team is committed to providing personalized service
+              that exceeds your expectations. From arranging bespoke excursions
+              and local experiences to ensuring every detail of your stay is
+              flawless, we are here to make your visit truly extraordinary.
+              Discover the epitome of luxury at our hotel, where every moment is
+              crafted to create lasting memories and an unparalleled escape from
+              the everyday. Let us create a bespoke experience that caters to
+              your every desire, setting a new standard in luxury hospitality.
+            </p>
+          </div>
+        </div>
+        <!-- <div class="col-md-4">
                             <div class="video">
                                 <button type="button" class="btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/C6ZQTMQ7k9A?si=YlIgMoi5oue9Y4iE" data-bs-target="#videoModal">
                                     <span></span>
@@ -432,352 +474,566 @@
                         
                             </div>
                         </div> -->
-               
-                </div>
-                <!-- about service end  -->
-    
+      </div>
+      <!-- about service end  -->
 
-        <!-- Service Start -->
-        <div class="container-fluid py-5">
-            <div class="container">
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="section-title text-center text-primary text-uppercase">Our Services</h6>
-                    <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Services</span></h1>
+      <!-- Service Start -->
+      <div class="container-fluid py-5">
+        <div class="container">
+          <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title text-center text-primary text-uppercase">
+              Our Services
+            </h6>
+            <h1 class="mb-5">
+              Explore Our
+              <span class="text-primary text-uppercase">Services</span>
+            </h1>
+          </div>
+          <div class="row m-2">
+            <div class="col-lg-3 col-md-3 wow fadeInUp" data-wow-delay="0.1s">
+              <a class="service-item rounded" href="">
+                <div class="service-icon bg-transparent border rounded p-1">
+                  <div
+                    class="w-100 h-100 border rounded d-flex align-items-center justify-content-center"
+                  >
+                    <i class="fa fa-hotel fa-2x text-primary"></i>
+                  </div>
                 </div>
-                <div class="row  m-2">
-                    <div class="col-lg-3 col-md-3 wow fadeInUp" data-wow-delay="0.1s">
-                        <a class="service-item rounded" href="">
-                            <div class="service-icon bg-transparent border rounded p-1">
-                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                                    <i class="fa fa-hotel fa-2x text-primary"></i>
-                                </div>
-                            </div>
-                            <h5 class="mb-3">Rooms & Apartments</h5>
-                            <p class="text-body mb-0">Our rooms and apartments offer luxurious amenities and stunning views, providing a blend of comfort and elegance for an exceptional stay."</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-md-3 wow fadeInUp" data-wow-delay="0.2s">
-                        <a class="service-item rounded" href="">
-                            <div class="service-icon bg-transparent border rounded p-1">
-                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                                    <i class="fa fa-newspaper fa-2x text-primary"></i>
-                                </div>
-                            </div>
-                            <h5 class="mb-3">Comp. newspaper</h5>
-                            <p class="text-body mb-0">Stay informed effortlessly with our complimentary newspaper service, offering access to top publications for the latest news and insights during your stay.</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-md-3 wow fadeInUp" data-wow-delay="0.3s">
-                        <a class="service-item rounded" href="">
-                            <div class="service-icon bg-transparent border rounded p-1">
-                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                                    <i class="fa fa-wifi fa-2x text-primary"></i>
-                                </div>
-                            </div>
-                            <h5 class="mb-3">Free wifi</h5>
-                            <p class="text-body mb-0">Enjoy seamless connectivity with our complimentary Wi-Fi, ensuring you stay connected throughout your stay without any hassle.</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-md-3 wow fadeInUp" data-wow-delay="0.4s">
-                        <a class="service-item rounded" href="">
-                            <div class="service-icon bg-transparent border rounded p-1">
-                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                                    <i class="fa fa-handshake-angle fa-2x text-primary"></i>
-                                </div>
-                            </div>
-                            <h5 class="mb-3">24 Hour Help Desk</h5>
-                            <p class="text-body mb-0">Rest easy knowing our 24-hour help desk is here for you around the clock, ready to assist with any inquiries or needs you may have throughout your stay.</p>
-                        </a>
-                    </div>
-                    
-                    <div class="col-lg-3 col-md-3 wow fadeInUp mt-4" data-wow-delay="0.5s">
-                        <a class="service-item rounded" href="">
-                            <div class="service-icon bg-transparent border rounded p-1">
-                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                                    <i class="fa fa-bed fa-2x text-primary"></i>
-                                </div>
-                            </div>
-                            <h5 class="mb-3">Wake-up calls</h5>
-                            <p class="text-body mb-0">Never miss a beat with our reliable wake-up call service, ensuring you start your day on time and refreshed during your stay with us.</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-md-3 wow fadeInUp mt-4" data-wow-delay="0.6s">
-                        <a class="service-item rounded" href="">
-                            <div class="service-icon bg-transparent border rounded p-1">
-                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                                    <i class="fa fa-suitcase fa-2x text-primary"></i>
-                                </div>
-                            </div>
-                            <h5 class="mb-3">Luggage Storage</h5>
-                            <p class="text-body mb-0">Store your luggage securely with our convenient luggage storage service, ensuring peace of mind throughout your stay.</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-md-3 wow fadeInUp mt-4" data-wow-delay="0.6s">
-                        <a class="service-item rounded" href="">
-                            <div class="service-icon bg-transparent border rounded p-1">
-                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                                    <i class="fa fa-car fa-2x text-primary"></i>
-                                </div>
-                            </div>
-                            <h5 class="mb-3">Free Parking</h5>
-                            <p class="text-body mb-0">Store your luggage securely with our convenient luggage storage service, ensuring peace of mind throughout your stay.</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-md-3 wow fadeInUp mt-4" data-wow-delay="0.6s">
-                        <a class="service-item rounded" href="">
-                            <div class="service-icon bg-transparent border rounded p-1">
-                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                                    <i class="fa fa-shirt fa-2x text-primary"></i>
-                                </div>
-                            </div>
-                            <h5 class="mb-3">Laundry/Dry Cleaning</h5>
-                            <p class="text-body mb-0">Experience convenience with our laundry and dry cleaning services, ensuring your wardrobe stays fresh and ready for any occasion during your stay with us.</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-4 wow fadeInUp mt-4" data-wow-delay="0.6s">
-                        <a class="service-item rounded" href="">
-                            <div class="service-icon bg-transparent border rounded p-1">
-                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                                    <i class="fa fa-mug-saucer fa-2x text-primary"></i>
-                                </div>
-                            </div>
-                            <h5 class="mb-3">Comp. breakfast/juice</h5>
-                            <p class="text-body mb-0">Start your day right with our complimentary breakfast and refreshing juice, a delightful way to energize and fuel your adventures during your stay.</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-4 mt-4 wow fadeInUp" data-wow-delay="0.6s">
-                        <a class="service-item rounded" href="">
-                            <div class="service-icon bg-transparent border rounded p-1">
-                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                                    <i class="fa fa-people-group fa-2x text-primary"></i>
-                                </div>
-                            </div>
-                            <h5 class="mb-3">Chef & Care taker</h5>
-                            <p class="text-body mb-0">Experience culinary excellence with our talented chef, while our dedicated caretaker ensures your every need is met for a seamless and memorable stay.</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-4 mt-4 wow fadeInUp" data-wow-delay="0.6s">
-                        <a class="service-item rounded" href="">
-                            <div class="service-icon bg-transparent border rounded p-1">
-                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                                    <i class="fa fa-print    fa-2x text-primary"></i>
-                                </div>
-                            </div>
-                            <h5 class="mb-3">Printing/Xerox</h5>
-                            <p class="text-body mb-0">Access printing and Xerox services conveniently during your stay, ensuring you have everything you need for business or personal needs right at your fingertips.</p>
-                        </a>
-                    </div>
-                </div>
-
-
-                <div class="text-center wow fadeInUp mt-5" data-wow-delay="0.1s">
-               
-                    <h1 class="mb-5">Explore Paid <span class="text-primary text-uppercase">Services</span></h1>
-                </div>
-                <div class="row  g-4 ">
-                    <div class="container-fluid col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <a class="service-item rounded" href="">
-                            <div class="service-icon bg-transparent border rounded p-1">
-                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                                    <i class="fa fa-user-tie fa-2x text-primary"></i>
-                                </div>
-                            </div>
-                            <h5 class="mb-3">Butler services</h5>
-                            <p class="text-body mb-0">Indulge in luxury with our personalized butler service, offering attentive assistance and bespoke experiences to elevate your stay to new heights of comfort and convenience.</p>
-                        </a>
-                    </div>
-                    <div class="container-fluid col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                        <a class="service-item rounded" href="">
-                            <div class="service-icon bg-transparent border rounded p-1">
-                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                                    <i class="fa fa-plane-departure fa-2x text-primary"></i>
-                                </div>
-                            </div>
-                            <h5 class="mb-3">Airport Transfers</h5>
-                            <p class="text-body mb-0">Simplify your travel with our seamless airport transfer service, ensuring a smooth and stress-free journey to and from your destination, leaving you free to relax and enjoy your stay.</p>
-                        </a>
-                    </div>  
-                  
-                        <div class="container-fluid col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                            <a class="service-item rounded" href="">
-                                <div class="service-icon bg-transparent border rounded p-1">
-                                    <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                                        <i class="fa fa-utensils fa-2x text-primary"></i>
-                                    </div>
-                                </div>
-                                <h5 class="mb-3">Food and Beverages</h5>
-                                <p class="text-body mb-0">Savor a delightful array of food and beverages, curated to tantalize your taste buds and complement your stay with a delectable culinary experience.</p>
-                            </a>
-                        </div>
-                        <div class="container-fluid col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                            <a class="service-item rounded" href="">
-                                <div class="service-icon bg-transparent border rounded p-1">
-                                    <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                                        <i class="fa fa-taxi fa-2x text-primary"></i>
-                                    </div>
-                                </div>
-                                <h5 class="mb-3">Transportation charges Cab hire
-                                </h5>
-                                <p class="text-body mb-0">Conveniently arrange transportation with our cab hire service, providing hassle-free access to explore the city or travel to your destination with ease.</p>
-                            </a>
-                   
-
+                <h5 class="mb-3">Rooms & Apartments</h5>
+                <p class="text-body mb-0">
+                  Our rooms and apartments offer luxurious amenities and
+                  stunning views, providing a blend of comfort and elegance for
+                  an exceptional stay."
+                </p>
+              </a>
             </div>
+            <div class="col-lg-3 col-md-3 wow fadeInUp" data-wow-delay="0.2s">
+              <a class="service-item rounded" href="">
+                <div class="service-icon bg-transparent border rounded p-1">
+                  <div
+                    class="w-100 h-100 border rounded d-flex align-items-center justify-content-center"
+                  >
+                    <i class="fa fa-newspaper fa-2x text-primary"></i>
+                  </div>
+                </div>
+                <h5 class="mb-3">Comp. newspaper</h5>
+                <p class="text-body mb-0">
+                  Stay informed effortlessly with our complimentary newspaper
+                  service, offering access to top publications for the latest
+                  news and insights during your stay.
+                </p>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-3 wow fadeInUp" data-wow-delay="0.3s">
+              <a class="service-item rounded" href="">
+                <div class="service-icon bg-transparent border rounded p-1">
+                  <div
+                    class="w-100 h-100 border rounded d-flex align-items-center justify-content-center"
+                  >
+                    <i class="fa fa-wifi fa-2x text-primary"></i>
+                  </div>
+                </div>
+                <h5 class="mb-3">Free wifi</h5>
+                <p class="text-body mb-0">
+                  Enjoy seamless connectivity with our complimentary Wi-Fi,
+                  ensuring you stay connected throughout your stay without any
+                  hassle.
+                </p>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-3 wow fadeInUp" data-wow-delay="0.4s">
+              <a class="service-item rounded" href="">
+                <div class="service-icon bg-transparent border rounded p-1">
+                  <div
+                    class="w-100 h-100 border rounded d-flex align-items-center justify-content-center"
+                  >
+                    <i class="fa fa-handshake-angle fa-2x text-primary"></i>
+                  </div>
+                </div>
+                <h5 class="mb-3">24 Hour Help Desk</h5>
+                <p class="text-body mb-0">
+                  Rest easy knowing our 24-hour help desk is here for you around
+                  the clock, ready to assist with any inquiries or needs you may
+                  have throughout your stay.
+                </p>
+              </a>
+            </div>
+
+            <div
+              class="col-lg-3 col-md-3 wow fadeInUp mt-4"
+              data-wow-delay="0.5s"
+            >
+              <a class="service-item rounded" href="">
+                <div class="service-icon bg-transparent border rounded p-1">
+                  <div
+                    class="w-100 h-100 border rounded d-flex align-items-center justify-content-center"
+                  >
+                    <i class="fa fa-bed fa-2x text-primary"></i>
+                  </div>
+                </div>
+                <h5 class="mb-3">Wake-up calls</h5>
+                <p class="text-body mb-0">
+                  Never miss a beat with our reliable wake-up call service,
+                  ensuring you start your day on time and refreshed during your
+                  stay with us.
+                </p>
+              </a>
+            </div>
+            <div
+              class="col-lg-3 col-md-3 wow fadeInUp mt-4"
+              data-wow-delay="0.6s"
+            >
+              <a class="service-item rounded" href="">
+                <div class="service-icon bg-transparent border rounded p-1">
+                  <div
+                    class="w-100 h-100 border rounded d-flex align-items-center justify-content-center"
+                  >
+                    <i class="fa fa-suitcase fa-2x text-primary"></i>
+                  </div>
+                </div>
+                <h5 class="mb-3">Luggage Storage</h5>
+                <p class="text-body mb-0">
+                  Store your luggage securely with our convenient luggage
+                  storage service, ensuring peace of mind throughout your stay.
+                </p>
+              </a>
+            </div>
+            <div
+              class="col-lg-3 col-md-3 wow fadeInUp mt-4"
+              data-wow-delay="0.6s"
+            >
+              <a class="service-item rounded" href="">
+                <div class="service-icon bg-transparent border rounded p-1">
+                  <div
+                    class="w-100 h-100 border rounded d-flex align-items-center justify-content-center"
+                  >
+                    <i class="fa fa-car fa-2x text-primary"></i>
+                  </div>
+                </div>
+                <h5 class="mb-3">Free Parking</h5>
+                <p class="text-body mb-0">
+                  Store your luggage securely with our convenient luggage
+                  storage service, ensuring peace of mind throughout your stay.
+                </p>
+              </a>
+            </div>
+            <div
+              class="col-lg-3 col-md-3 wow fadeInUp mt-4"
+              data-wow-delay="0.6s"
+            >
+              <a class="service-item rounded" href="">
+                <div class="service-icon bg-transparent border rounded p-1">
+                  <div
+                    class="w-100 h-100 border rounded d-flex align-items-center justify-content-center"
+                  >
+                    <i class="fa fa-shirt fa-2x text-primary"></i>
+                  </div>
+                </div>
+                <h5 class="mb-3">Laundry/Dry Cleaning</h5>
+                <p class="text-body mb-0">
+                  Experience convenience with our laundry and dry cleaning
+                  services, ensuring your wardrobe stays fresh and ready for any
+                  occasion during your stay with us.
+                </p>
+              </a>
+            </div>
+            <div
+              class="col-lg-4 col-md-4 wow fadeInUp mt-4"
+              data-wow-delay="0.6s"
+            >
+              <a class="service-item rounded" href="">
+                <div class="service-icon bg-transparent border rounded p-1">
+                  <div
+                    class="w-100 h-100 border rounded d-flex align-items-center justify-content-center"
+                  >
+                    <i class="fa fa-mug-saucer fa-2x text-primary"></i>
+                  </div>
+                </div>
+                <h5 class="mb-3">Comp. breakfast/juice</h5>
+                <p class="text-body mb-0">
+                  Start your day right with our complimentary breakfast and
+                  refreshing juice, a delightful way to energize and fuel your
+                  adventures during your stay.
+                </p>
+              </a>
+            </div>
+            <div
+              class="col-lg-4 col-md-4 mt-4 wow fadeInUp"
+              data-wow-delay="0.6s"
+            >
+              <a class="service-item rounded" href="">
+                <div class="service-icon bg-transparent border rounded p-1">
+                  <div
+                    class="w-100 h-100 border rounded d-flex align-items-center justify-content-center"
+                  >
+                    <i class="fa fa-people-group fa-2x text-primary"></i>
+                  </div>
+                </div>
+                <h5 class="mb-3">Chef & Care taker</h5>
+                <p class="text-body mb-0">
+                  Experience culinary excellence with our talented chef, while
+                  our dedicated caretaker ensures your every need is met for a
+                  seamless and memorable stay.
+                </p>
+              </a>
+            </div>
+            <div
+              class="col-lg-4 col-md-4 mt-4 wow fadeInUp"
+              data-wow-delay="0.6s"
+            >
+              <a class="service-item rounded" href="">
+                <div class="service-icon bg-transparent border rounded p-1">
+                  <div
+                    class="w-100 h-100 border rounded d-flex align-items-center justify-content-center"
+                  >
+                    <i class="fa fa-print fa-2x text-primary"></i>
+                  </div>
+                </div>
+                <h5 class="mb-3">Printing/Xerox</h5>
+                <p class="text-body mb-0">
+                  Access printing and Xerox services conveniently during your
+                  stay, ensuring you have everything you need for business or
+                  personal needs right at your fingertips.
+                </p>
+              </a>
+            </div>
+          </div>
+
+          <div class="text-center wow fadeInUp mt-5" data-wow-delay="0.1s">
+            <h1 class="mb-5">
+              Explore Paid
+              <span class="text-primary text-uppercase">Services</span>
+            </h1>
+          </div>
+          <div class="row g-4">
+            <div
+              class="container-fluid col-md-6 wow fadeInUp"
+              data-wow-delay="0.1s"
+            >
+              <a class="service-item rounded" href="">
+                <div class="service-icon bg-transparent border rounded p-1">
+                  <div
+                    class="w-100 h-100 border rounded d-flex align-items-center justify-content-center"
+                  >
+                    <i class="fa fa-user-tie fa-2x text-primary"></i>
+                  </div>
+                </div>
+                <h5 class="mb-3">Butler services</h5>
+                <p class="text-body mb-0">
+                  Indulge in luxury with our personalized butler service,
+                  offering attentive assistance and bespoke experiences to
+                  elevate your stay to new heights of comfort and convenience.
+                </p>
+              </a>
+            </div>
+            <div
+              class="container-fluid col-md-6 wow fadeInUp"
+              data-wow-delay="0.2s"
+            >
+              <a class="service-item rounded" href="">
+                <div class="service-icon bg-transparent border rounded p-1">
+                  <div
+                    class="w-100 h-100 border rounded d-flex align-items-center justify-content-center"
+                  >
+                    <i class="fa fa-plane-departure fa-2x text-primary"></i>
+                  </div>
+                </div>
+                <h5 class="mb-3">Airport Transfers</h5>
+                <p class="text-body mb-0">
+                  Simplify your travel with our seamless airport transfer
+                  service, ensuring a smooth and stress-free journey to and from
+                  your destination, leaving you free to relax and enjoy your
+                  stay.
+                </p>
+              </a>
+            </div>
+
+            <div
+              class="container-fluid col-md-6 wow fadeInUp"
+              data-wow-delay="0.1s"
+            >
+              <a class="service-item rounded" href="">
+                <div class="service-icon bg-transparent border rounded p-1">
+                  <div
+                    class="w-100 h-100 border rounded d-flex align-items-center justify-content-center"
+                  >
+                    <i class="fa fa-utensils fa-2x text-primary"></i>
+                  </div>
+                </div>
+                <h5 class="mb-3">Food and Beverages</h5>
+                <p class="text-body mb-0">
+                  Savor a delightful array of food and beverages, curated to
+                  tantalize your taste buds and complement your stay with a
+                  delectable culinary experience.
+                </p>
+              </a>
+            </div>
+            <div
+              class="container-fluid col-md-6 wow fadeInUp"
+              data-wow-delay="0.2s"
+            >
+              <a class="service-item rounded" href="">
+                <div class="service-icon bg-transparent border rounded p-1">
+                  <div
+                    class="w-100 h-100 border rounded d-flex align-items-center justify-content-center"
+                  >
+                    <i class="fa fa-taxi fa-2x text-primary"></i>
+                  </div>
+                </div>
+                <h5 class="mb-3">Transportation charges Cab hire</h5>
+                <p class="text-body mb-0">
+                  Conveniently arrange transportation with our cab hire service,
+                  providing hassle-free access to explore the city or travel to
+                  your destination with ease.
+                </p>
+              </a>
+            </div>
+          </div>
         </div>
-            </div>
-            </div>
+      </div>
 
-        <!-- Service End -->
+      <!-- Service End -->
 
-
-        <!-- Testimonial Start -->
-        <div class="container-fluid testimonial my-5 py-5 bg-dark wow zoomIn" data-wow-delay="0.1s">
-            <div class="container-fluid">
-                <div class="owl-carousel testimonial-carousel py-5">
-
-                  <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
-                      <a href="https://www.google.com/travel/search?q=Dev%20shelter&g2lb=2504374%2C4814050%2C4874190%2C4893075%2C4965990%2C72277293%2C72302247%2C72317059%2C72406588%2C72414906%2C72421566%2C72462234%2C72470899%2C72471280%2C72472051%2C72473841%2C72481459%2C72485658%2C72486593%2C72494250%2C72513513%2C72536387%2C72538597%2C72549171%2C72570850%2C72586335%2C72597757%2C72597926%2C72602734%2C72606236%2C72616110%2C72618896%2C72619172%2C72619927%2C72620306%2C72629582&hl=en-IN&gl=in&cs=1&ssta=1&ts=CAEaHhIcEhQKBwjoDxAGGA8SBwjoDxAGGBAYATIECAAQACoHCgU6A0lOUg&qs=CAEyFENnc0kwSmJkOXAzUWhlX1RBUkFCOAhCCREKx7NY-G_nj0IJEatrXTwSsitZQgkRaMv8PQDWrFpaODI2qgEzEAEyHhABIhpFppq6QvAZouUrN5eveHdnfFoOfzH50PmY9TIPEAIiC2RldiBzaGVsdGVyahwKGg0AcBZFEhMIiuCCzJzbhgMVVf5MAh1ekQVr&ap=MABoAboBB3Jldmlld3M&ictx=111&ved=0CAAQ5JsGahcKEwjY8ezQnNuGAxUAAAAAHQAAAAAQPA" class="text-dark">
-                        <p>Well managed set of properties. The manager, Shivajeet, is a very kind and helpful guy. They have a caretaker and a cook at each property. The caretakers are very cooperative people as well.</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="https://lh3.googleusercontent.com/a/ACg8ocI62o557erbgRx7ujT8D91pPhNaUW8Qz5l8K-V8-V1IbxfHbw=s40-c-rp-mo-ba3-br100" style="width: 45px; height: 45px;">
-                            <div class="ps-3">
-                                <h6 class="fw-bold mb-1">Siddharth Mathapati</h6>
-                                <!-- <small>Profession</small> -->
-                            </div>
-                        </div>
-                        <i class="fa-brands fa-google fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1" style="color: #FFD43B;"></i>
-                        <!-- <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i> -->
-                      </a>
-                    </div>
-                    <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
-                      <a href="https://www.google.com/travel/search?q=Dev%20shelter&g2lb=2504374%2C4814050%2C4874190%2C4893075%2C4965990%2C72277293%2C72302247%2C72317059%2C72406588%2C72414906%2C72421566%2C72462234%2C72470899%2C72471280%2C72472051%2C72473841%2C72481459%2C72485658%2C72486593%2C72494250%2C72513513%2C72536387%2C72538597%2C72549171%2C72570850%2C72586335%2C72597757%2C72597926%2C72602734%2C72606236%2C72616110%2C72618896%2C72619172%2C72619927%2C72620306%2C72629582&hl=en-IN&gl=in&cs=1&ssta=1&ts=CAEaHhIcEhQKBwjoDxAGGA8SBwjoDxAGGBAYATIECAAQACoHCgU6A0lOUg&qs=CAEyFENnc0kwSmJkOXAzUWhlX1RBUkFCOAhCCREKx7NY-G_nj0IJEatrXTwSsitZQgkRaMv8PQDWrFpaODI2qgEzEAEyHhABIhpFppq6QvAZouUrN5eveHdnfFoOfzH50PmY9TIPEAIiC2RldiBzaGVsdGVyahwKGg0AcBZFEhMIiuCCzJzbhgMVVf5MAh1ekQVr&ap=MABoAboBB3Jldmlld3M&ictx=111&ved=0CAAQ5JsGahcKEwjY8ezQnNuGAxUAAAAAHQAAAAAQPA" class="text-dark">
-                      <p>What a homestay!!! This is the best room stay hotel ever seen...superb room super service everything is so good .. The only thing I felt sad is bed because it's small for family members..if king size means this is ...</p>
-                      <div class="d-flex align-items-center">
-                        <img class="img-fluid flex-shrink-0 rounded" src="https://lh3.googleusercontent.com/a/ACg8ocLy-WJtCSBzP1SYemgxQ68JELFiY5XWCF_J579jBFGpMIZcvA=s40-c-rp-mo-br100 " style="width: 45px; height: 45px;">
-                        <div class="ps-3">
-                          <h6 class="fw-bold mb-1">
-                            Hamee Safee</h6>
-                            <!-- <small>Profession</small> -->
-                          </div>
-                        </div>
-                        <i class="fa-brands fa-google fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1" style="color: #FFD43B;"></i>
-                        <!-- <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i> -->
-                         </a>
-                    </div>
-                    <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
-                      <a href="https://www.google.com/travel/search?q=Dev%20shelter&g2lb=2504374%2C4814050%2C4874190%2C4893075%2C4965990%2C72277293%2C72302247%2C72317059%2C72406588%2C72414906%2C72421566%2C72462234%2C72470899%2C72471280%2C72472051%2C72473841%2C72481459%2C72485658%2C72486593%2C72494250%2C72513513%2C72536387%2C72538597%2C72549171%2C72570850%2C72586335%2C72597757%2C72597926%2C72602734%2C72606236%2C72616110%2C72618896%2C72619172%2C72619927%2C72620306%2C72629582&hl=en-IN&gl=in&cs=1&ssta=1&ts=CAEaHhIcEhQKBwjoDxAGGA8SBwjoDxAGGBAYATIECAAQACoHCgU6A0lOUg&qs=CAEyFENnc0kwSmJkOXAzUWhlX1RBUkFCOAhCCREKx7NY-G_nj0IJEatrXTwSsitZQgkRaMv8PQDWrFpaODI2qgEzEAEyHhABIhpFppq6QvAZouUrN5eveHdnfFoOfzH50PmY9TIPEAIiC2RldiBzaGVsdGVyahwKGg0AcBZFEhMIiuCCzJzbhgMVVf5MAh1ekQVr&ap=MABoAboBB3Jldmlld3M&ictx=111&ved=0CAAQ5JsGahcKEwjY8ezQnNuGAxUAAAAAHQAAAAAQPA" class="text-dark">
-                        <p>Thank you so much for the hospitality and also the arrangements. We really liked your service. Amar bhaiyaa is an amazing cook. They have laundary facility and also outside food is allowed.
-                          We enjoyed our 17 days stay.</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="https://lh3.googleusercontent.com/a-/ALV-UjWlJxKP9QO1aIGAT2ZYFVlFAtiriSJBPTzUQLRpgby4A0pHhX4T=s40-c-rp-mo-ba3-br100" style="width: 45px; height: 45px;">
-                            <div class="ps-3">
-                                <h6 class="fw-bold mb-1">Skinasics by Rhea</h6>
-                                <!-- <small>Profession</small> -->
-                            </div>
-                        </div>
-                        <i class="fa-brands fa-google fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1" style="color: #FFD43B;"></i>
-                        <!-- <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i> -->
-                      </a>
-                    </div>
-                    <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
-                      <a href="https://www.google.com/travel/search?q=Dev%20shelter&g2lb=2504374%2C4814050%2C4874190%2C4893075%2C4965990%2C72277293%2C72302247%2C72317059%2C72406588%2C72414906%2C72421566%2C72462234%2C72470899%2C72471280%2C72472051%2C72473841%2C72481459%2C72485658%2C72486593%2C72494250%2C72513513%2C72536387%2C72538597%2C72549171%2C72570850%2C72586335%2C72597757%2C72597926%2C72602734%2C72606236%2C72616110%2C72618896%2C72619172%2C72619927%2C72620306%2C72629582&hl=en-IN&gl=in&cs=1&ssta=1&ts=CAEaHhIcEhQKBwjoDxAGGA8SBwjoDxAGGBAYATIECAAQACoHCgU6A0lOUg&qs=CAEyFENnc0kwSmJkOXAzUWhlX1RBUkFCOAhCCREKx7NY-G_nj0IJEatrXTwSsitZQgkRaMv8PQDWrFpaODI2qgEzEAEyHhABIhpFppq6QvAZouUrN5eveHdnfFoOfzH50PmY9TIPEAIiC2RldiBzaGVsdGVyahwKGg0AcBZFEhMIiuCCzJzbhgMVVf5MAh1ekQVr&ap=MABoAboBB3Jldmlld3M&ictx=111&ved=0CAAQ5JsGahcKEwjY8ezQnNuGAxUAAAAAHQAAAAAQPA" class="text-dark">
-                        <p>Great experience in this hotel manager and staff is ver good behaviour And rooms , clining, breakfast is very good great experience I request to all please 👍visit</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="https://lh3.googleusercontent.com/a-/ALV-UjXmCIc5zMNotppB-VcxZI3HS6sjHiUPvHMLIqi4m6OenUVgiINs=s40-c-rp-mo-br100" style="width: 45px; height: 45px;">
-                            <div class="ps-3">
-                                <h6 class="fw-bold mb-1">Indrajeet Pandey</h6>
-                                <!-- <small>Profession</small> -->
-                            </div>
-                        </div>
-                        <i class="fa-brands fa-google fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1" style="color: #FFD43B;"></i>
-                        <!-- <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i> -->
-                      </a>
-                    </div>
+      <!-- Testimonial Start -->
+      <div
+        class="container-fluid testimonial my-5 py-5 bg-dark wow zoomIn"
+        data-wow-delay="0.1s"
+      >
+        <div class="container-fluid">
+          <div class="owl-carousel testimonial-carousel py-5">
+            <div
+              class="testimonial-item position-relative bg-white rounded overflow-hidden"
+            >
+              <a
+                href="https://www.google.com/travel/search?q=Dev%20shelter&g2lb=2504374%2C4814050%2C4874190%2C4893075%2C4965990%2C72277293%2C72302247%2C72317059%2C72406588%2C72414906%2C72421566%2C72462234%2C72470899%2C72471280%2C72472051%2C72473841%2C72481459%2C72485658%2C72486593%2C72494250%2C72513513%2C72536387%2C72538597%2C72549171%2C72570850%2C72586335%2C72597757%2C72597926%2C72602734%2C72606236%2C72616110%2C72618896%2C72619172%2C72619927%2C72620306%2C72629582&hl=en-IN&gl=in&cs=1&ssta=1&ts=CAEaHhIcEhQKBwjoDxAGGA8SBwjoDxAGGBAYATIECAAQACoHCgU6A0lOUg&qs=CAEyFENnc0kwSmJkOXAzUWhlX1RBUkFCOAhCCREKx7NY-G_nj0IJEatrXTwSsitZQgkRaMv8PQDWrFpaODI2qgEzEAEyHhABIhpFppq6QvAZouUrN5eveHdnfFoOfzH50PmY9TIPEAIiC2RldiBzaGVsdGVyahwKGg0AcBZFEhMIiuCCzJzbhgMVVf5MAh1ekQVr&ap=MABoAboBB3Jldmlld3M&ictx=111&ved=0CAAQ5JsGahcKEwjY8ezQnNuGAxUAAAAAHQAAAAAQPA"
+                class="text-dark"
+              >
+                <p>
+                  Well managed set of properties. The manager, Shivajeet, is a
+                  very kind and helpful guy. They have a caretaker and a cook at
+                  each property. The caretakers are very cooperative people as
+                  well.
+                </p>
+                <div class="d-flex align-items-center">
+                  <img
+                    class="img-fluid flex-shrink-0 rounded"
+                    src="https://lh3.googleusercontent.com/a/ACg8ocI62o557erbgRx7ujT8D91pPhNaUW8Qz5l8K-V8-V1IbxfHbw=s40-c-rp-mo-ba3-br100"
+                    style="width: 45px; height: 45px"
+                  />
+                  <div class="ps-3">
+                    <h6 class="fw-bold mb-1">Siddharth Mathapati</h6>
+                    <!-- <small>Profession</small> -->
+                  </div>
                 </div>
+                <i
+                  class="fa-brands fa-google fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"
+                  style="color: #ffd43b"
+                ></i>
+                <!-- <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i> -->
+              </a>
             </div>
+            <div
+              class="testimonial-item position-relative bg-white rounded overflow-hidden"
+            >
+              <a
+                href="https://www.google.com/travel/search?q=Dev%20shelter&g2lb=2504374%2C4814050%2C4874190%2C4893075%2C4965990%2C72277293%2C72302247%2C72317059%2C72406588%2C72414906%2C72421566%2C72462234%2C72470899%2C72471280%2C72472051%2C72473841%2C72481459%2C72485658%2C72486593%2C72494250%2C72513513%2C72536387%2C72538597%2C72549171%2C72570850%2C72586335%2C72597757%2C72597926%2C72602734%2C72606236%2C72616110%2C72618896%2C72619172%2C72619927%2C72620306%2C72629582&hl=en-IN&gl=in&cs=1&ssta=1&ts=CAEaHhIcEhQKBwjoDxAGGA8SBwjoDxAGGBAYATIECAAQACoHCgU6A0lOUg&qs=CAEyFENnc0kwSmJkOXAzUWhlX1RBUkFCOAhCCREKx7NY-G_nj0IJEatrXTwSsitZQgkRaMv8PQDWrFpaODI2qgEzEAEyHhABIhpFppq6QvAZouUrN5eveHdnfFoOfzH50PmY9TIPEAIiC2RldiBzaGVsdGVyahwKGg0AcBZFEhMIiuCCzJzbhgMVVf5MAh1ekQVr&ap=MABoAboBB3Jldmlld3M&ictx=111&ved=0CAAQ5JsGahcKEwjY8ezQnNuGAxUAAAAAHQAAAAAQPA"
+                class="text-dark"
+              >
+                <p>
+                  What a homestay!!! This is the best room stay hotel ever
+                  seen...superb room super service everything is so good .. The
+                  only thing I felt sad is bed because it's small for family
+                  members..if king size means this is ...
+                </p>
+                <div class="d-flex align-items-center">
+                  <img
+                    class="img-fluid flex-shrink-0 rounded"
+                    src="https://lh3.googleusercontent.com/a/ACg8ocLy-WJtCSBzP1SYemgxQ68JELFiY5XWCF_J579jBFGpMIZcvA=s40-c-rp-mo-br100 "
+                    style="width: 45px; height: 45px"
+                  />
+                  <div class="ps-3">
+                    <h6 class="fw-bold mb-1">Hamee Safee</h6>
+                    <!-- <small>Profession</small> -->
+                  </div>
+                </div>
+                <i
+                  class="fa-brands fa-google fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"
+                  style="color: #ffd43b"
+                ></i>
+                <!-- <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i> -->
+              </a>
+            </div>
+            <div
+              class="testimonial-item position-relative bg-white rounded overflow-hidden"
+            >
+              <a
+                href="https://www.google.com/travel/search?q=Dev%20shelter&g2lb=2504374%2C4814050%2C4874190%2C4893075%2C4965990%2C72277293%2C72302247%2C72317059%2C72406588%2C72414906%2C72421566%2C72462234%2C72470899%2C72471280%2C72472051%2C72473841%2C72481459%2C72485658%2C72486593%2C72494250%2C72513513%2C72536387%2C72538597%2C72549171%2C72570850%2C72586335%2C72597757%2C72597926%2C72602734%2C72606236%2C72616110%2C72618896%2C72619172%2C72619927%2C72620306%2C72629582&hl=en-IN&gl=in&cs=1&ssta=1&ts=CAEaHhIcEhQKBwjoDxAGGA8SBwjoDxAGGBAYATIECAAQACoHCgU6A0lOUg&qs=CAEyFENnc0kwSmJkOXAzUWhlX1RBUkFCOAhCCREKx7NY-G_nj0IJEatrXTwSsitZQgkRaMv8PQDWrFpaODI2qgEzEAEyHhABIhpFppq6QvAZouUrN5eveHdnfFoOfzH50PmY9TIPEAIiC2RldiBzaGVsdGVyahwKGg0AcBZFEhMIiuCCzJzbhgMVVf5MAh1ekQVr&ap=MABoAboBB3Jldmlld3M&ictx=111&ved=0CAAQ5JsGahcKEwjY8ezQnNuGAxUAAAAAHQAAAAAQPA"
+                class="text-dark"
+              >
+                <p>
+                  Thank you so much for the hospitality and also the
+                  arrangements. We really liked your service. Amar bhaiyaa is an
+                  amazing cook. They have laundary facility and also outside
+                  food is allowed. We enjoyed our 17 days stay.
+                </p>
+                <div class="d-flex align-items-center">
+                  <img
+                    class="img-fluid flex-shrink-0 rounded"
+                    src="https://lh3.googleusercontent.com/a-/ALV-UjWlJxKP9QO1aIGAT2ZYFVlFAtiriSJBPTzUQLRpgby4A0pHhX4T=s40-c-rp-mo-ba3-br100"
+                    style="width: 45px; height: 45px"
+                  />
+                  <div class="ps-3">
+                    <h6 class="fw-bold mb-1">Skinasics by Rhea</h6>
+                    <!-- <small>Profession</small> -->
+                  </div>
+                </div>
+                <i
+                  class="fa-brands fa-google fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"
+                  style="color: #ffd43b"
+                ></i>
+                <!-- <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i> -->
+              </a>
+            </div>
+            <div
+              class="testimonial-item position-relative bg-white rounded overflow-hidden"
+            >
+              <a
+                href="https://www.google.com/travel/search?q=Dev%20shelter&g2lb=2504374%2C4814050%2C4874190%2C4893075%2C4965990%2C72277293%2C72302247%2C72317059%2C72406588%2C72414906%2C72421566%2C72462234%2C72470899%2C72471280%2C72472051%2C72473841%2C72481459%2C72485658%2C72486593%2C72494250%2C72513513%2C72536387%2C72538597%2C72549171%2C72570850%2C72586335%2C72597757%2C72597926%2C72602734%2C72606236%2C72616110%2C72618896%2C72619172%2C72619927%2C72620306%2C72629582&hl=en-IN&gl=in&cs=1&ssta=1&ts=CAEaHhIcEhQKBwjoDxAGGA8SBwjoDxAGGBAYATIECAAQACoHCgU6A0lOUg&qs=CAEyFENnc0kwSmJkOXAzUWhlX1RBUkFCOAhCCREKx7NY-G_nj0IJEatrXTwSsitZQgkRaMv8PQDWrFpaODI2qgEzEAEyHhABIhpFppq6QvAZouUrN5eveHdnfFoOfzH50PmY9TIPEAIiC2RldiBzaGVsdGVyahwKGg0AcBZFEhMIiuCCzJzbhgMVVf5MAh1ekQVr&ap=MABoAboBB3Jldmlld3M&ictx=111&ved=0CAAQ5JsGahcKEwjY8ezQnNuGAxUAAAAAHQAAAAAQPA"
+                class="text-dark"
+              >
+                <p>
+                  Great experience in this hotel manager and staff is ver good
+                  behaviour And rooms , clining, breakfast is very good great
+                  experience I request to all please 👍visit
+                </p>
+                <div class="d-flex align-items-center">
+                  <img
+                    class="img-fluid flex-shrink-0 rounded"
+                    src="https://lh3.googleusercontent.com/a-/ALV-UjXmCIc5zMNotppB-VcxZI3HS6sjHiUPvHMLIqi4m6OenUVgiINs=s40-c-rp-mo-br100"
+                    style="width: 45px; height: 45px"
+                  />
+                  <div class="ps-3">
+                    <h6 class="fw-bold mb-1">Indrajeet Pandey</h6>
+                    <!-- <small>Profession</small> -->
+                  </div>
+                </div>
+                <i
+                  class="fa-brands fa-google fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"
+                  style="color: #ffd43b"
+                ></i>
+                <!-- <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i> -->
+              </a>
+            </div>
+          </div>
         </div>
-        <!-- Testimonial End -->
+      </div>
+      <!-- Testimonial End -->
 
-
-
-        <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
-            <div class="container pb-5">
-                <div class="row g-5">
-                    <div class="col-md-4 col-lg-4 ">
-                        <div class="bg-primary rounded p-4">
-                            <a href="index.html"><h1 class="text-white text-uppercase mb-3">DevShelter</h1></a>
-                            <p class="text-white mb-0">
-							 <a class="text-dark fw-medium" >DevShelter </a> have properties listed from Malad to Jogeshwari over 30+ Rooms in Inventory
-
-							</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-lg-3">
-                        <h6 class="section-title text-start text-primary text-uppercase mb-4">Contact</h6>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>2nd Floor, Kalpataru Building,Evershine Nagar, Malad West
-                            Mumbai -400064, India.
-                            </p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 8451880595
-                        </p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>devshelters63@gmail.com
-                        </p>
-                        <!-- <div class="d-flex pt-2">
+      <!-- Footer Start -->
+      <div
+        class="container-fluid bg-dark text-light wow fadeIn footer"
+        data-wow-delay="0.1s"
+      >
+        <div class="container pb-5">
+          <div class="row g-5">
+            <div class="col-md-6 col-lg-4">
+              <div class="bg-primary rounded p-4">
+                <a href="index.html">
+                  <h1 class="text-white text-uppercase mb-3">DevShelter</h1>
+                </a>
+                <p class="text-white mb-0">
+                  <a class="text-dark fw-medium">DevShelter </a> have properties
+                  listed from Malad to Jogeshwari over 30+ Rooms in Inventory
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h6
+                class="section-title text-start text-primary text-uppercase mb-4"
+              >
+                Contact
+              </h6>
+              <p class="mb-2">
+                <i class="fa fa-map-marker-alt me-3"></i>2nd Floor, Kalpataru
+                Building,Evershine Nagar, Malad West Mumbai -400064, India.
+              </p>
+              <p class="mb-2">
+                <i class="fa fa-phone-alt me-3"></i>+91 8451880595
+              </p>
+              <p class="mb-2">
+                <i class="fa fa-envelope me-3"></i>devshelters63@gmail.com
+              </p>
+              <!-- <div class="d-flex pt-2">
                             <a class=" btn-outline-light btn-social m-2" href=""><i class="fab fa-twitter"></i></a>
                             <a class=" btn-outline-light btn-social m-2" href=""><i class="fab fa-facebook-f"></i></a>
                             <a class=" btn-outline-light btn-social m-2" href=""><i class="fab fa-youtube"></i></a>
                             <a class=" btn-outline-light btn-social m-2 " href=""><i class="fab fa-linkedin-in"></i></a>
                         </div> -->
-                    </div>
-                    <div class="col-lg-5 col-md-12">
-                        <div class="row gy-5 g-4">
-                            <div class="col-md-4">
-                                <h6 class="section-title text-start text-primary text-uppercase mb-4">Company</h6>
-                                <a class="btn btn-link" href="">About Us</a>
-                                <a class="btn btn-link" href="">Contact Us</a>
-                                <a class="btn btn-link" href="">Privacy Policy</a>
-                                <a class="btn btn-link" href="">Terms & Condition</a>
-                                <a class="btn btn-link" href="">Support</a>
-                            </div>
-                            <div class="col-md-4 d-flex flex-column">
-                              <h6 class=" text-start text-primary text-uppercase mb-4">Social media</h6>
-                              <a class=" btn btn-link m-1" href=""><i class="fab fa-linkedin-in me-2"></i>Linkedin</a>
-                              <a class=" btn btn-link m-1" href=""><i class="fab fa-facebook-f me-2"></i>Facebook</a>
-                              <a class=" btn btn-link m-1" href=""><i class="fab fa-youtube me-2"></i>Youtube</a>
-                              <a class=" btn btn-link m-1 " href=""><i class="fab fa-instagram me-2"></i>Instagram</a>
-                          </div>
-                   
-                        </div>
-                    </div>
-                    
-                </div>
             </div>
-            <!-- <div class="container">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. 
-							
-							/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/
-							Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
-                        </div>
-                        <div class="col-md-4 text-center text-md-end">
-                            <div class="footer-menu">
-                                <a href="">Home</a>
-                                <a href="">Cookies</a>
-                                <a href="">Help</a>
-                                <a href="">FQAs</a>
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-lg-5 col-md-12">
+              <div class="row gy-5 g-4">
+                <div class="col-md-6">
+                  <h6
+                    class="section-title text-start text-primary text-uppercase mb-4"
+                  >
+                    Company
+                  </h6>
+                  <a class="btn btn-link" href="">About Us</a>
+                  <a class="btn btn-link" href="">Contact Us</a>
                 </div>
-            </div> -->
+                <div class="col-md-6 d-flex flex-column">
+                  <h6 class="text-start text-primary text-uppercase mb-4">
+                    Social media
+                  </h6>
+                  <a class="btn btn-link m-1" href=""
+                    ><i class="fab fa-linkedin-in me-2"></i>Linkedin</a
+                  >
+                  <a class="btn btn-link m-1" href=""
+                    ><i class="fab fa-facebook-f me-2"></i>Facebook</a
+                  >
+                  <a class="btn btn-link m-1" href=""
+                    ><i class="fab fa-youtube me-2"></i>Youtube</a
+                  >
+                  <a class="btn btn-link m-1" href=""
+                    ><i class="fab fa-instagram me-2"></i>Instagram</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- Footer End -->
+        <div class="container">
+          <div class="copyright">
+            <div class="row">
+              <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                &copy; <a class="border-bottom" href="#">DevShelter</a> , All
+                Right Reserved. Designed by
+                <a
+                  class="border-bottom"
+                  href="https://psmcodes.com"
+                  target="_blank"
+                >
+                  psmcodes</a
+                >
+              </div>
+              <div class="col-md-6 text-center text-md-end">
+                <div class="footer-menu">
+                  <a href="">Home</a>
+                  <a href="">Cookies</a>
+                  <a href="">Help</a>
+                  <a href="">FQAs</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer End -->
 
-
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+      <!-- Back to Top -->
+      <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+        ><i class="bi bi-arrow-up"></i
+      ></a>
     </div>
 
     <!-- JavaScript Libraries -->
@@ -794,6 +1050,5 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-</body>
-
+  </body>
 </html>
