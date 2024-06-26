@@ -158,7 +158,7 @@
 .page-header {
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
 }
 
 .page-header-inner {
@@ -1016,8 +1016,6 @@
 
 .footer {
   position: relative;
-  margin-top: -110px;
-  padding-top: 80px;
 }
 
 .footer .btn.btn-social {
