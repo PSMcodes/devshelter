@@ -66,33 +66,41 @@
       <!-- Spinner End -->
 
       <!-- Header Start -->
-      <div class="container-fluid bg-dark px-0">
+      <div class="container-fluid bg-dark px-0" >
         <div class="row gx-0">
           <div class="col-lg-3 bg-dark d-none d-lg-block">
-            <a href="index.html" class="navbar-brand d-flex flex-column align-items-center justify-content-center">
-              <img src="img/logo.png" class="navbar-brand w-25" alt="Dev Shelters Logo" id="logo"/>
+            <a
+              href="index.html"
+              class="navbar-brand d-flex flex-column align-items-center justify-content-center"
+            >
+              <img
+                src="img/logo.png"
+                class="navbar-brand w-25"
+                alt="Dev Shelters Logo"
+                id="logo"
+              />
               <h3 class="text-primary text-uppercase">Devshelter</h3>
             </a>
           </div>
-          <div class="col-lg-9">
-            <div class="row gx-0 bg-white d-none d-lg-flex">
+          <div class="col-lg-9 d-flex flex-column justify-content-center">
+            <div class="row gx-0 bg-white d-none d-lg-flex h-100">
               <div class="col-lg-7 px-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center me-4">
                   <i class="fa fa-envelope text-primary me-2"></i>
                   <p class="mb-0">devshelters63@gmail.com</p>
                 </div>
-                <div class="h-100 d-inline-flex align-items-center  me-4">
+                <div class="h-100 d-inline-flex align-items-center me-4">
                   <i class="fa fa-phone-alt text-primary me-2"></i>
                   <p class="mb-0">+91 8451880595</p>
                 </div>
 
-                <div class="h-100 d-inline-flex align-items-center ">
+                <div class="h-100 d-inline-flex align-items-center">
                   <i class="fa fa-phone-alt text-primary me-2"></i>
                   <p class="mb-0">+91 8451880595</p>
                 </div>
               </div>
-              <div class="col-lg-5 px-5 text-end">
-                <div class="d-inline-flex align-items-center ">
+              <div class="col-lg-5 px-5 text-end d-inline-flex align-items-center justify-content-center">
+                <div>
                   <a class="me-3" href=""><i class="fab fa-facebook-f"></i></a>
                   <a class="me-3" href=""><i class="fab fa-instagram"></i></a>
                   <a class="me-3" href=""><i class="fab fa-youtube"></i></a>
@@ -116,7 +124,7 @@
                 class="collapse navbar-collapse justify-content-between"
                 id="navbarCollapse"
               >
-                <div class="navbar-nav mr-auto py-0">
+                <div class="navbar-nav">
                   <a href="index.html" class="nav-item nav-link active">Home</a>
                   <a href="service.html" class="nav-item nav-link">Services</a>
                   <a href="about.html" class="nav-item nav-link w-100"
@@ -125,7 +133,10 @@
                   <ul class="navbar-nav">
                     <!-- Dropdown -->
                     <li class="nav-item dropdown p-0 m-0">
-                      <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        id="navbarDropdownMenuLink"
+                      >
                         Our Rooms
                       </a>
                       <ul class="dropdown-menu">
@@ -712,32 +723,100 @@
 
     <!-- Room Start -->
     <div class="container bootstrap snippets bootdeys timeline-main py-5">
-      <div class="col-md-9">
-          <div class="timeline-centered timeline-sm ">
-              <article class="timeline-entry">
-                  <div class="timeline-entry-inner">
-                      <div class="timeline-icon bg-primary"><i class="fa fa-hotel"></i></div>
-                      <div class="timeline-label pb-5 pt-5 d-flex flex-column justify-content-between"style="background: url(img/malad.jpg); background-size: cover; background-position: start center; "><h4 class="timeline-title text-light text-center">Malad</h4>
-                        <button class="bg-primary" style="background: #24d4fd; border: none; padding: 2%; border-radius: 6px; margin-top: 6%;">Book Here</button>
-                  </div>
-              </article>
-              <article class="timeline-entry left-aligned">
-                  <div class="timeline-entry-inner">
-                      <div class="timeline-icon bg-primary "><i class="fa fa-hotel"></i></div>
-                      <div class="timeline-label pb-5 pt-5 d-flex flex-column justify-content-between"style="background:url(img/goregaon.jpg); background-size: cover; background-position: start center; "><h4 class="timeline-title text-light text-center">Goregaon</h4>
-                        <button class="bg-primary" style="background: #24d4fd; border: none; padding: 2%; border-radius: 6px; margin-top: 6%;">Book Here</button>
-                  </div>
-              </article>
-              <article class="timeline-entry">
-                  <div class="timeline-entry-inner">
-                      <div class="timeline-icon bg-primary"><i class="fa fa-hotel"></i></div>
-                      <div class="timeline-label pb-5 pt-5 d-flex flex-column justify-content-between"style="background: url(img/jogeshwari.jpg); background-size: cover; background-position: start center; "><h4 class="timeline-title text-light text-center ">Jogeshwari</h4>
-                        <button class="bg-primary" style="background: #24d4fd; border: none; padding: 2%; border-radius: 6px; margin-top: 6%;">Book Here</button>
-                  </div>
-              </article>
-          </div>
+      <div class="col-md-12">
+        <div class="timeline-centered timeline-sm">
+          <article class="timeline-entry">
+            <div class="timeline-entry-inner">
+              <div class="timeline-icon bg-primary">
+                <i class="fa fa-hotel"></i>
+              </div>
+              <div
+                class="timeline-label pb-5 pt-5 d-flex flex-column justify-content-between"
+                style="
+                  background: url(img/malad.jpg);
+                  background-size: cover;
+                  background-position: start center;
+                "
+              >
+                <h4 class="timeline-title text-light text-center">Malad</h4>
+                <button
+                  class="bg-primary"
+                  style="
+                    background: #24d4fd;
+                    border: none;
+                    padding: 2%;
+                    border-radius: 6px;
+                    margin-top: 6%;
+                  "
+                >
+                  Book Here
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="timeline-entry left-aligned">
+            <div class="timeline-entry-inner">
+              <div class="timeline-icon bg-primary">
+                <i class="fa fa-hotel"></i>
+              </div>
+              <div
+                class="timeline-label pb-5 pt-5 d-flex flex-column justify-content-between"
+                style="
+                  background: url(img/goregaon.jpg);
+                  background-size: cover;
+                  background-position: start center;
+                "
+              >
+                <h4 class="timeline-title text-light text-center">Goregaon</h4>
+                <button
+                  class="bg-primary"
+                  style="
+                    background: #24d4fd;
+                    border: none;
+                    padding: 2%;
+                    border-radius: 6px;
+                    margin-top: 6%;
+                  "
+                >
+                  Book Here
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="timeline-entry">
+            <div class="timeline-entry-inner">
+              <div class="timeline-icon bg-primary">
+                <i class="fa fa-hotel"></i>
+              </div>
+              <div
+                class="timeline-label pb-5 pt-5 d-flex flex-column justify-content-between"
+                style="
+                  background: url(img/jogeshwari.jpg);
+                  background-size: cover;
+                  background-position: start center;
+                "
+              >
+                <h4 class="timeline-title text-light text-center">
+                  Jogeshwari
+                </h4>
+                <button
+                  class="bg-primary"
+                  style="
+                    background: #24d4fd;
+                    border: none;
+                    padding: 2%;
+                    border-radius: 6px;
+                    margin-top: 6%;
+                  "
+                >
+                  Book Here
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
-  </div>
+    </div>
     <!-- Room End -->
 
     <!-- Service Start -->
@@ -752,22 +831,54 @@
         </h1>
       </div>
       <div class="row d-flex justify-content-center align-items-center">
-      <div class="col-md-6">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta et fugit corporis, nostrum doloremque vitae dolor a minima debitis molestiae pariatur iste amet commodi ab maiores porro. Adipisci, cum at!
-      </div>
-        <div class="col-md-6">
-          <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-md-6 text-justify">
+          Welcome to Devshelter, where every detail is meticulously curated to offer you an unparalleled experience of opulence and comfort. Our exquisite rooms and suites are designed with elegant décor and equipped with state-of-the-art amenities, ensuring a serene and lavish retreat. Guests can indulge in our 24-hour concierge service, gourmet dining options featuring world-class chefs, and personalized spa treatments tailored to rejuvenate your senses. Each stay is enhanced by breathtaking views, plush bedding, and a commitment to exceptional service, promising a memorable and extraordinary escape from the everyday.
+        </div>
+        <div class="col-md-6 d-flex justify-content-center align-items-center">
+          <div class="row ">
             <div class="parent m-5">
-              <div class="circle" id="sample-text">Sample Text</div>
+              <div class="circle" id="sample-text"><h3>Services</h3></div>
               <div class="image-holder">
-                <img data-text="A" src="http://placehold.it/50x50" alt="" />
-                <img data-text="B" src="http://placehold.it/50x50" alt="" />
-                <img data-text="C" src="http://placehold.it/50x50" alt="" />
-                <img data-text="D" src="http://placehold.it/50x50" alt="" />
-                <img data-text="E" src="http://placehold.it/50x50" alt="" />
-                <img data-text="F" src="http://placehold.it/50x50" alt="" />
-                <img data-text="G" src="http://placehold.it/50x50" alt="" />
-                <img data-text="H" src="http://placehold.it/50x50" alt="" />
+                <i
+                  class="icons fa fa-hotel fa-2x text-primary"
+                  data-text=' <h5 class="mb-3">Rooms & Apartments</h5>
+                  <p class="text-body mb-0">Our rooms and apartments offer luxurious amenities and stunning views, providing a blend of comfort and elegance for an exceptional stay."</p>'
+                ></i>
+                <i
+                  class="icons fa fa-newspaper fa-2x text-primary"
+                  data-text='<h5 class="mb-3">Comp. newspaper</h5>
+                <p class="text-body mb-0">Stay informed effortlessly with our complimentary newspaper service, offering access to top publications for the latest news and insights during your stay.</p>'
+                ></i>
+                <i
+                  class="icons fa fa-wifi fa-2x text-primary"
+                  data-text='<h5 class="mb-3">Free wifi</h5>
+                  <p class="text-body mb-0">Enjoy seamless connectivity with our complimentary Wi-Fi, ensuring you stay connected throughout your stay without any hassle.</p>'
+                ></i>
+                <i
+                  class="icons fa fa-handshake-angle fa-2x text-primary"
+                  data-text='<h5 class="mb-3">24 Hour Help Desk</h5>
+                  <p class="text-body mb-0">Rest easy knowing our 24-hour help desk is here for you around the clock, ready to assist with any inquiries or needs you may have throughout your stay.</p>'
+                ></i>
+                <i
+                  class="icons fa fa-bed fa-2x text-primary"
+                  data-text='<h5 class="mb-3">Wake-up calls</h5>
+                  <p class="text-body mb-0">Never miss a beat with our reliable wake-up call service, ensuring you start your day on time and refreshed during your stay with us.</p>'
+                ></i>
+                <i
+                  class="icons fa fa-suitcase fa-2x text-primary"
+                  data-text='<h5 class="mb-3">Luggage Storage</h5>
+                <p class="text-body mb-0">Store your luggage securely with our convenient luggage storage service, ensuring peace of mind throughout your stay.</p>'
+                ></i>
+                <i
+                  class="icons fa fa-car fa-2x text-primary"
+                  data-text='<h5 class="mb-3">Free Parking</h5>
+                <p class="text-body mb-0">Store your luggage securely with our convenient luggage storage service, ensuring peace of mind throughout your stay.</p>'
+                ></i>
+                <i
+                  class="icons fa fa-shirt fa-2x text-primary"
+                  data-text='<h5 class="mb-3">Laundry/Dry Cleaning</h5>
+                <p class="text-body mb-0">Experience convenience with our laundry and dry cleaning services, ensuring your wardrobe stays fresh and ready for any occasion during your stay with us.</p>'
+                ></i>
               </div>
             </div>
           </div>
@@ -1044,7 +1155,6 @@
             <img class="img-fluid object-fit" src="/img//brands/brand41.jpg" />
           </div>
         </div>
-
       </div>
       <button
         class="carousel-control-prev"
@@ -1205,7 +1315,7 @@
 
     <!-- Footer Start -->
     <div
-      class="container-fluid bg-dark text-light footer wow fadeIn"
+      class="container-fluid bg-dark text-light wow fadeIn footer"
       data-wow-delay="0.1s"
     >
       <div class="container pb-5">
@@ -1282,7 +1392,11 @@
             <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
               &copy; <a class="border-bottom" href="#">DevShelter</a> , All
               Right Reserved. Designed by
-              <a class="border-bottom" href="https://psmcodes.com" target="_blank">
+              <a
+                class="border-bottom"
+                href="https://psmcodes.com"
+                target="_blank"
+              >
                 psmcodes</a
               >
             </div>
@@ -1387,14 +1501,18 @@
         window.location.href = `/booking.html?location=${stayLocation}&checkIn=${checkInDate}&checkOut=${checkOutDate}&guest=${noOfGuest}&rooms=${noOfRooms}`;
       });
 
-      var images = document.getElementsByTagName("img");
+      var images = document.getElementsByClassName("icons");
       var sampleText = document.getElementById("sample-text");
       for (var i = 0; i < images.length; i++) {
         images[i].addEventListener("mouseover", updateName);
+        images[i].addEventListener("mouseleave", makeNoraml);
       }
 
       function updateName() {
         sampleText.innerHTML = this.getAttribute("data-text");
+      }
+      function makeNoraml(){
+        sampleText.innerHTML = "<h3>Services </h3>";
       }
     </script>
   </body>
