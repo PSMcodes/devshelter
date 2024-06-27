@@ -1368,3 +1368,23 @@
 .text-justify{
   text-align: justify;
 }
+
+
+.amenities {
+  display: flex;
+  align-items: start;
+}
+.amenities .icon {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+.amenities .Details {
+  /* background: rgb(216, 216, 216); */
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+}
