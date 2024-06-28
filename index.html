@@ -620,7 +620,7 @@
     <!-- Booking End -->
 
     <!-- About Start -->
-    <div class="container-fluid py-5">
+    <div class="container-fluid py-5" style="background: url(img/background-about.jpg); background-size: cover; background-position:center center ; backdrop-filter: opacity(23%) ;">
       <div class="container">
         <div class="row g-5 align-items-center">
           <div class="col-lg-6">
@@ -675,8 +675,8 @@
                 </div>
               </div>
             </div>
-            <a class="btn btn-primary py-3 px-5 mt-2" href="">Explore More</a>
-          </div>
+            <a class="btn btn-about btn-primary py-3 px-5 mt-2" href="">Explore More</a>
+          </div> 
           <div class="col-lg-6">
             <div class="row g-3">
               <div class="col-6 text-end">
@@ -722,101 +722,45 @@
     <!-- About End -->
 
     <!-- Room Start -->
-    <div class="container bootstrap snippets bootdeys timeline-main py-5">
-      <div class="col-md-12">
-        <div class="timeline-centered timeline-sm">
-          <article class="timeline-entry">
-            <div class="timeline-entry-inner">
-              <div class="timeline-icon bg-primary">
-                <i class="fa fa-hotel"></i>
-              </div>
-              <div
-                class="timeline-label pb-5 pt-5 d-flex flex-column justify-content-between"
-                style="
-                  background: url(img/malad.jpg);
-                  background-size: cover;
-                  background-position: start center;
-                "
-              >
-                <h4 class="timeline-title text-light text-center">Malad</h4>
-                <button
-                  class="bg-primary"
-                  style="
-                    background: #24d4fd;
-                    border: none;
-                    padding: 2%;
-                    border-radius: 6px;
-                    margin-top: 6%;
-                  "
-                >
-                  Book Here
-                </button>
-              </div>
-            </div>
-          </article>
-          <article class="timeline-entry left-aligned">
-            <div class="timeline-entry-inner">
-              <div class="timeline-icon bg-primary">
-                <i class="fa fa-hotel"></i>
-              </div>
-              <div
-                class="timeline-label pb-5 pt-5 d-flex flex-column justify-content-between"
-                style="
-                  background: url(img/goregaon.jpg);
-                  background-size: cover;
-                  background-position: start center;
-                "
-              >
-                <h4 class="timeline-title text-light text-center">Goregaon</h4>
-                <button
-                  class="bg-primary"
-                  style="
-                    background: #24d4fd;
-                    border: none;
-                    padding: 2%;
-                    border-radius: 6px;
-                    margin-top: 6%;
-                  "
-                >
-                  Book Here
-                </button>
-              </div>
-            </div>
-          </article>
-          <article class="timeline-entry">
-            <div class="timeline-entry-inner">
-              <div class="timeline-icon bg-primary">
-                <i class="fa fa-hotel"></i>
-              </div>
-              <div
-                class="timeline-label pb-5 pt-5 d-flex flex-column justify-content-between"
-                style="
-                  background: url(img/jogeshwari.jpg);
-                  background-size: cover;
-                  background-position: start center;
-                "
-              >
-                <h4 class="timeline-title text-light text-center">
-                  Jogeshwari
-                </h4>
-                <button
-                  class="bg-primary"
-                  style="
-                    background: #24d4fd;
-                    border: none;
-                    padding: 2%;
-                    border-radius: 6px;
-                    margin-top: 6%;
-                  "
-                >
-                  Book Here
-                </button>
-              </div>
-            </div>
-          </article>
-        </div>
+    <div class="container-fluid  py-5" style="background: url(img/time-background.png); background-size: cover; background-position:center; backdrop-filter: opacity(23%) ;">
+      <div class="text-center w-70" data-wow-delay="0.1s">
+        <h6 class="section-title text-center text-primary text-uppercase">
+          Our Location 
+        </h6>
+       <p style="margin-left:5rem ;margin-right: 5rem;">DevShelter offers conveniently located hotels in vibrant Mumbai neighborhoods such as Malad, Goregaon, and Jogeshwari, providing guests with easy access to local attractions, business centers, and cultural experiences throughout the city.</p>
       </div>
+      <div class="container d-flex justify-content-between py-5">
+        <div class="card">
+          <div class="imgbox">
+              <div class="img" style="background: url(img/malad.jpg); background-size: cover;"></div>
+          </div>
+          <div class="details">
+              <h2 class="title">Malad</h2>
+              <span class="caption">Explore</span>
+          </div>
+      </div>
+
+      <div class="card">
+        <div class="imgbox">
+            <div class="img" style="background: url(img/goregaon.jpg); background-size: cover;"></div>
+        </div>
+        <div class="details">
+            <h2 class="title">Goregaon</h2>
+            <span class="caption">Explore</span>
+        </div>
     </div>
+
+    <div class="card">
+      <div class="imgbox">
+          <div class="img" style="background: url(img/jogeshwari.jpg); background-size: cover;"></div>
+      </div>
+      <div class="details">
+          <h2 class="title">Jogeshwari</h2>
+          <span class="caption">Explore</span>
+      </div>
+  </div>
+    </div>
+  </div>
     <!-- Room End -->
 
     <!-- Service Start -->
@@ -830,61 +774,67 @@
           <span class="text-primary text-uppercase">Services</span>
         </h1>
       </div>
-      <div class="row d-flex justify-content-center align-items-center">
-        <div class="col-md-6 text-justify">
-          Welcome to Devshelter, where every detail is meticulously curated to offer you an unparalleled experience of opulence and comfort. Our exquisite rooms and suites are designed with elegant décor and equipped with state-of-the-art amenities, ensuring a serene and lavish retreat. Guests can indulge in our 24-hour concierge service, gourmet dining options featuring world-class chefs, and personalized spa treatments tailored to rejuvenate your senses. Each stay is enhanced by breathtaking views, plush bedding, and a commitment to exceptional service, promising a memorable and extraordinary escape from the everyday.
+      <div class="row d-flex justify-content-center align-items-center py-5">
+        <div class="col-md-6 text-justify py-5">
+          <h6 class="section-title text-start text-primary text-uppercase">
+            
+          </h6>
+          <h1 class="mb-4">
+            Best Services at
+            <span class="text-primary text-uppercase">DevShelter</span>
+          </h1>
+          <p class="mb-4">
+            Welcome to Devshelter, where every detail is meticulously curated to offer you an unparalleled experience of opulence and comfort. Our exquisite rooms and suites are designed with elegant décor and equipped with state-of-the-art amenities, ensuring a serene and lavish retreat. Guests can indulge in our 24-hour concierge service, gourmet dining options featuring world-class chefs, and personalized spa treatments tailored to rejuvenate your senses. Each stay is enhanced by breathtaking views, plush bedding, and a commitment to exceptional service, promising a memorable and extraordinary escape from the everyday.
+          </p>
+          <a class="btn btn-about btn-primary py-3 px-5 mt-2" href="">Explore More</a>
         </div>
-        <div class="col-md-6 d-flex justify-content-center align-items-center">
+        <div class="col-md-6 d-flex justify-content-evenly align-items-center">
           <div class="row ">
-            <div class="parent m-5">
-              <div class="circle" id="sample-text"><h3>Services</h3></div>
-              <div class="image-holder">
-                <i
-                  class="icons fa fa-hotel fa-2x text-primary"
-                  data-text=' <h5 class="mb-3">Rooms & Apartments</h5>
-                  <p class="text-body mb-0">Our rooms and apartments offer luxurious amenities and stunning views, providing a blend of comfort and elegance for an exceptional stay."</p>'
-                ></i>
-                <i
-                  class="icons fa fa-newspaper fa-2x text-primary"
-                  data-text='<h5 class="mb-3">Comp. newspaper</h5>
-                <p class="text-body mb-0">Stay informed effortlessly with our complimentary newspaper service, offering access to top publications for the latest news and insights during your stay.</p>'
-                ></i>
-                <i
-                  class="icons fa fa-wifi fa-2x text-primary"
-                  data-text='<h5 class="mb-3">Free wifi</h5>
-                  <p class="text-body mb-0">Enjoy seamless connectivity with our complimentary Wi-Fi, ensuring you stay connected throughout your stay without any hassle.</p>'
-                ></i>
-                <i
-                  class="icons fa fa-handshake-angle fa-2x text-primary"
-                  data-text='<h5 class="mb-3">24 Hour Help Desk</h5>
-                  <p class="text-body mb-0">Rest easy knowing our 24-hour help desk is here for you around the clock, ready to assist with any inquiries or needs you may have throughout your stay.</p>'
-                ></i>
-                <i
-                  class="icons fa fa-bed fa-2x text-primary"
-                  data-text='<h5 class="mb-3">Wake-up calls</h5>
-                  <p class="text-body mb-0">Never miss a beat with our reliable wake-up call service, ensuring you start your day on time and refreshed during your stay with us.</p>'
-                ></i>
-                <i
-                  class="icons fa fa-suitcase fa-2x text-primary"
-                  data-text='<h5 class="mb-3">Luggage Storage</h5>
-                <p class="text-body mb-0">Store your luggage securely with our convenient luggage storage service, ensuring peace of mind throughout your stay.</p>'
-                ></i>
-                <i
-                  class="icons fa fa-car fa-2x text-primary"
-                  data-text='<h5 class="mb-3">Free Parking</h5>
-                <p class="text-body mb-0">Store your luggage securely with our convenient luggage storage service, ensuring peace of mind throughout your stay.</p>'
-                ></i>
-                <i
-                  class="icons fa fa-shirt fa-2x text-primary"
-                  data-text='<h5 class="mb-3">Laundry/Dry Cleaning</h5>
-                <p class="text-body mb-0">Experience convenience with our laundry and dry cleaning services, ensuring your wardrobe stays fresh and ready for any occasion during your stay with us.</p>'
-                ></i>
+            <div class="cards-2">
+              <div class="card-2 red">
+                  <p class="tip">Rooms & Apartments</p>
+                  <p class="second-text">Our rooms and apartments offer luxury, stunning views, and comfort.</p>
+              </div>
+              <div class="card-2 blue">
+                  <p class="tip">Comp. newspaper</p>
+                  <p class="second-text">Enjoy free access to top newspapers and the latest news during your stay.</p>
+              </div>
+              <div class="card-2 green">
+                  <p class="tip">Free wifi</p>
+                  <p class="second-text">Enjoy free Wi-Fi for seamless connectivity during your stay.</p>
+              </div>
+              <div class="card-2 green">
+                <p class="tip">24 Hour Help Desk</p>
+                <p class="second-text">Rest easy with our 24-hour help desk ready to assist you anytime.</p>
+            </div>
+          </div>
+            </div>
+
+            <div class="row ">
+              <div class="cards-2">
+                <div class="card-2 red">
+                    <p class="tip">Wake-up calls</p>
+                    <p class="second-text">Never miss a beat with our reliable wake-up call service.</p>
+                </div>
+                <div class="card-2 blue">
+                    <p class="tip">Luggage Storage</p>
+                    <p class="second-text">Store your luggage securely with our convenient storage service.</p>
+                </div>
+                <div class="card-2 green">
+                    <p class="tip">Laundry/Dry Cleaning</p>
+                    <p class="second-text">
+                      Store your luggage securely with our convenient service for peace of mind.</p>
+                </div>
+                <div class="card-2 green">
+                  <p class="tip">Free Parking</p>
+                  <p class="second-text">Enjoy laundry and dry cleaning services for a fresh wardrobe throughout your stay.</p>
               </div>
             </div>
+              </div>
           </div>
         </div>
       </div>
-    </div>
+    
     <!-- Service End -->
 
     <!-- Video Start -->
