@@ -2,17 +2,17 @@
     "use strict";
 
     // Spinner
-    let spinner = function () {
+    let loader = function () {
         setTimeout(function () {
-            if ($('#spinner').length > 0) {
-                $('#spinner').removeClass('show');
+            if ($('#loader').length > 0) {
+                $('#loader').removeClass('show');
             }
         }, 1);
     };
-    spinner();
+    loader();
 
-    var marquee_width = $(".marquee-content-primary").width();
-    document.documentElement.style.setProperty('--marquee-padding', marquee_width + 'px');
+    // var marquee_width = $(".marquee-content-primary").width();
+    // document.documentElement.style.setProperty('--marquee-padding', marquee_width + 'px');
 
     // Initiate the wowjs
     new WOW().init();

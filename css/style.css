@@ -9,7 +9,7 @@
 }
 
 .fw-medium {
-  font-weight: 500 !important;
+  font-weight: 800 !important;
 }
 .text-yellow {
   color: yellow;
@@ -1583,3 +1583,6 @@
   display: block;
   flex: 0 0 20%;
 }
+
+
+
