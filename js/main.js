@@ -2,14 +2,14 @@
     "use strict";
 
     // Spinner
-    let loader = function () {
+    let spinner = function () {
         setTimeout(function () {
-            if ($('#loader').length > 0) {
-                $('#loader').removeClass('show');
+            if ($('#spinner').length > 0) {
+                $('#spinner').removeClass('show');
             }
         }, 1);
     };
-    loader();
+    spinner();
 
     // var marquee_width = $(".marquee-content-primary").width();
     // document.documentElement.style.setProperty('--marquee-padding', marquee_width + 'px');
