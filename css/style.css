@@ -1397,7 +1397,7 @@
 
 .details {
   position: absolute;
-  left: -10px;
+  left: 20px;
   right: 0;
   bottom: 5px;
   height: 60px;
@@ -1427,17 +1427,29 @@
 
 /*Text*/
 .title {
-  font-weight: 600;
-  font-size: 20px;
-  color: #777;
+  font-weight: 800;
+  font-size: 33px;
+  color: #ffffff;
+  text-align: center;
+  padding-top:6% ;
 }
 
 .caption {
+  width: 50%;
+  background: cyan;
+  padding: 2%;
   font-weight: 500;
   font-size: 16px;
-  color: #4158d0;
+  color: #000000;
   display: block;
   margin-top: 5px;
+  margin-left: 20%;
+  border-radius: 4px;
+}
+.caption:hover{
+  background: white;
+  border: 2px solid cyan;
+  cursor: pointer;
 }
 
 /*Hover*/
@@ -1582,4 +1594,9 @@
   content: "";
   display: block;
   flex: 0 0 20%;
+}
+.btn-2{
+  border: 2px solid rgb(0, 0, 255);
+  background: white !important;
+  color: rgb(0, 38, 255);
 }

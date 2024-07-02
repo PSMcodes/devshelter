@@ -13,4 +13,4 @@
 
   remining task
   -- the maximum capicity of guest 
-  -- the maximum capicity of rooms
+  -- the maximum capicity of rooms 

@@ -414,8 +414,8 @@
                       </div>
                       <div class="col-md-6 py-8">
                           <div class=" form-container active" id="regular-form">
-                            <button class="toggle-button" onclick="toggleForms()">Switch to Corporate Inquiry Form</button>
-                            <h6 class="section text-right text-primary text-uppercase">Regular Inquiry Form</h6>
+                            <button class="toggle-button" onclick="toggleForms()">Switch to Normal Inquiry Form</button>
+                            <h6 class="section text-right text-primary text-uppercase">Corporate Inquiry Form</h6>
                               <form>
                                   <div class="row g-3">
                                       <div class="col-md-6">
@@ -430,6 +430,18 @@
                                             <label for="email">Your Email</label>
                                         </div>
                                     </div>
+                                    <div class="col-md-6">
+                                      <div class="form-floating">
+                                          <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                          <label for="name">Company Name</label>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <div class="form-floating">
+                                          <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                          <label for="email">Designation</label>
+                                      </div>
+                                  </div>
                                     <div class="col-12">
                                         <div class="form-floating">
                                             <input type="text" class="form-control" id="subject" placeholder="Subject">
@@ -450,8 +462,8 @@
                         </div>
 
                         <div class="form-container" id="corporate-form">
-                          <button class="toggle-button" onclick="toggleForms()">Switch to Normal Inquiry Form</button>
-                          <h6 class="section text-right text-primary text-uppercase">Corporate Inquiry Form</h6>
+                          <button class="toggle-button btn-2" onclick="toggleForms()">Switch to Corporate Inquiry Form</button>
+                          <h6 class="section text-right text-primary text-uppercase">Normal Inquiry Form</h6>
                             <form>
                                 <div class="row g-3">
                                     <div class="col-md-6">
@@ -466,6 +478,7 @@
                                             <label for="email">Your Email</label>
                                         </div>
                                     </div>
+                                    
                                     <div class="col-12">
                                         <div class="form-floating">
                                             <input type="text" class="form-control" id="subject" placeholder="Subject">
