@@ -1513,15 +1513,11 @@
 
 .amenities {
   display: flex;
-  align-items: start;
+  align-items: center;
 }
 .amenities .icon {
-  display: grid;
-  place-items: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
   margin: 0 10px;
+  padding: 10px;
 }
 .amenities .Details {
   /* background: rgb(216, 216, 216); */
@@ -1582,4 +1578,16 @@
   content: "";
   display: block;
   flex: 0 0 20%;
+}
+.f-20{
+  font-size: 30px;
+}
+
+.form-control2{
+  background: none;
+  outline: none;
+  border: 1px solid var(--dark);
+  padding: 10px 5px;
+  margin: 10px 0;
+  border-radius: 5px;
 }
