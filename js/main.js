@@ -11,8 +11,8 @@
     };
     spinner();
 
-    var marquee_width = $(".marquee-content-primary").width();
-    document.documentElement.style.setProperty('--marquee-padding', marquee_width + 'px');
+    // var marquee_width = $(".marquee-content-primary").width();
+    // document.documentElement.style.setProperty('--marquee-padding', marquee_width + 'px');
 
     // Initiate the wowjs
     new WOW().init();

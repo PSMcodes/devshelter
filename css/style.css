@@ -9,7 +9,7 @@
 }
 
 .fw-medium {
-  font-weight: 500 !important;
+  font-weight: 800 !important;
 }
 .text-yellow {
   color: yellow;
@@ -1525,15 +1525,11 @@
 
 .amenities {
   display: flex;
-  align-items: start;
+  align-items: center;
 }
 .amenities .icon {
-  display: grid;
-  place-items: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
   margin: 0 10px;
+  padding: 10px;
 }
 .amenities .Details {
   /* background: rgb(216, 216, 216); */
@@ -1595,8 +1591,26 @@
   display: block;
   flex: 0 0 20%;
 }
+<<<<<<< HEAD
 .btn-2{
   border: 2px solid rgb(0, 0, 255);
   background: white !important;
   color: rgb(0, 38, 255);
 }
+=======
+.f-20{
+  font-size: 30px;
+}
+
+.form-control2{
+  background: none;
+  outline: none;
+  border: 1px solid var(--dark);
+  padding: 10px 5px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+
+ 
+>>>>>>> 0dc57e87b756264a0a122a69d69c2ecc98e133ec
