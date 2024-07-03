@@ -192,3 +192,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const descriptionBoxes = document.querySelectorAll('.description-box');
+    let currentIndex = 0;
+
+    function showNextDescription() {
+        descriptionBoxes.forEach((box, index) => {
+            if (index === currentIndex) {
+                box.classList.add('active');
+            } else {
+                box.classList.remove('active');
+            }
+        });
+
+        currentIndex = (currentIndex + 1) % descriptionBoxes.length;
+    }
+
+    setInterval(showNextDescription, 2000); // Change description every 3 seconds
+});
