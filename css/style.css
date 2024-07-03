@@ -1591,26 +1591,126 @@
   display: block;
   flex: 0 0 20%;
 }
-<<<<<<< HEAD
 .btn-2{
   border: 2px solid rgb(0, 0, 255);
   background: white !important;
   color: rgb(0, 38, 255);
 }
-=======
-.f-20{
-  font-size: 30px;
+
+.radio-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.form-control2{
-  background: none;
-  outline: none;
-  border: 1px solid var(--dark);
-  padding: 10px 5px;
-  margin: 10px 0;
-  border-radius: 5px;
+.radio-inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
+.radio-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 0.5rem;
+  border: 2px solid #b5bfd9;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.15s ease;
+  cursor: pointer;
+  position: relative;
+  margin: 10px;
+}
 
- 
->>>>>>> 0dc57e87b756264a0a122a69d69c2ecc98e133ec
+.radio-tile:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border: 2px solid #b5bfd9;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 0.25rem;
+  left: 0.25rem;
+  opacity: 0;
+  transform: scale(0);
+  transition: 0.25s ease;
+}
+
+.radio-tile:hover {
+  border-color: #2260ff;
+}
+
+.radio-tile:hover:before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.radio-input:checked + .radio-tile {
+  border-color: #2260ff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  color: #000000;
+  background: cyan;
+}
+
+.radio-input:checked + .radio-tile:before {
+  transform: scale(1);
+  opacity: 1;
+  background-color: #2260ff;
+  border-color: #2260ff;
+}
+
+.radio-icon i {
+  width: 1rem;
+  height: 1rem;
+  fill: #000000;
+}
+
+.radio-label {
+  color: #707070;
+  transition: 0.375s ease;
+  text-align: center;
+  font-size: 13px;
+}
+
+.description-boxes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 700px; /* Adjust as needed */
+  min-height:300px;
+  margin-left: 20px; /* Space between inputs and descriptions */
+}
+
+.description-box {
+  overflow: hidden;
+  display: none; /* Initially hide all description boxes */
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-height: 80%;
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53); /* Added cubic-bezier for smooth animation */
+  opacity: 0;
+  transform: translateX(-20px); /* Initial position off-screen */
+}
+
+.description-box.active {
+  display: block; /* Show the active description box */
+  opacity: 1;
+  transform: translateX(0);
+}
+*{
+  outline: 2px solid red;
+}
