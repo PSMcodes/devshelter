@@ -175,3 +175,20 @@ function toggleForms() {
     }
 }
 
+    
+document.addEventListener('DOMContentLoaded', function() {
+    const radioInputs = document.querySelectorAll('.radio-input');
+    const descriptionBoxes = document.querySelectorAll('.description-box');
+
+    radioInputs.forEach((input, index) => {
+        input.addEventListener('change', () => {
+            // Hide all description boxes
+            descriptionBoxes.forEach(box => {
+                box.classList.remove('active');
+            });
+
+            // Show selected description box
+            descriptionBoxes[index].classList.add('active');
+        });
+    });
+});
