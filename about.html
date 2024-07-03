@@ -52,7 +52,7 @@
                 class="navbar-brand d-flex flex-column align-items-center justify-content-center"
               >
                 <img
-                  src="img/logo.png"
+                  src="img/main/logo.png"
                   class="navbar-brand w-25"
                   alt="Dev Shelters Logo"
                   id="logo"
@@ -198,7 +198,7 @@
 
 
         <!-- Page Header Start -->
-        <div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/carousel-1.jpg);">
+        <div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/main/carousel-1.jpg);">
             <div class="container-fluid page-header-inner py-5">
                 <div class="container text-center pb-5">
                     <h1 class="display-3 text-white mb-3 animated slideInDown">About Us</h1>
@@ -217,58 +217,115 @@
 
         </div>
         <!-- About Start -->
-        <div class="container-fluid py-5">
-            <div class="container">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-6">
-                        <h6 class="section-title text-start text-primary text-uppercase">About Us</h6>
-                        <h1 class="mb-4">Welcome to <span class="text-primary text-uppercase">DevShelter</span></h1>
-                        <p class="mb-4">We provide comfortable and peaceful stay for corporate executives, business travelers, tourists and vacation rentals. Serviced Apartments are best alternate option to expensive hotel stays.Our Service Apartments are ideal for organizations to meet all their employee’s travel requirements. If you wish to travel especially for longer duration, then DEV SHELTERS is an ideal choice.
-                            Our Service Apartments are located in premium areas of Mumbai such as Malad, Goregaon and Jogeshwari which are surrounded with business hubs, shopping malls, restaurants and also convenient commute to major spots.
-                        
-                        </p>
-                        <div class="row g-3 pb-4">
-                            <div class="col-sm-4 wow fadeIn" data-wow-delay="0.1s">
-                                <div class="border rounded p-1">
-                                    <div class="border rounded text-center p-4">
-                                        <i class="fa fa-hotel fa-2x text-primary mb-2"></i>
-                                        <h2 class="mb-1" data-toggle="counter-up">999 </h2>
-                                        <p class="mb-0">Corporate</p>
-                                    </div>
-                                </div>
-                            </div>
-             
-                            <div class="col-sm-4 wow fadeIn" data-wow-delay="0.5s">
-                                <div class="border rounded p-1">
-                                    <div class="border rounded text-center p-4">
-                                        <i class="fa fa-users fa-2x text-primary mb-2"></i>
-                                        <h2 class="mb-1" data-toggle="counter-up">1234</h2>
-                                        <p class="mb-0">Total Guests </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <a class="btn btn-primary py-3 px-5 mt-2" href="">Explore More</a>
+        <div
+        class="container-fluid py-5"
+        style="
+          background: url(img/main/background-about.jpg);
+          background-size: cover;
+          background-position: center center;
+          backdrop-filter: opacity(23%);
+        "
+      >
+        <div class="container">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+              <h6 class="section-title text-start text-primary text-uppercase">
+                About Us
+              </h6>
+              <h1 class="mb-4">
+                Welcome to
+                <span class="text-primary">DevShelter</span>
+              </h1>
+              <p class="mb-4">
+                We provide comfortable and peaceful stay for corporate executives,
+                business travelers, tourists and vacation rentals. Serviced
+                Apartments are best alternate option to expensive hotel stays.Our
+                Service Apartments are ideal for organizations to meet all their
+                employee’s travel requirements. If you wish to travel especially
+                for longer duration, then DEV SHELTERS is an ideal choice. Our
+                Service Apartments are located in premium areas of Mumbai such as
+                Malad, Goregaon and Jogeshwari which are surrounded with business
+                hubs, shopping malls, restaurants and also convenient commute to
+                major spots.
+              </p>
+  
+              <div class="row g-3 pb-4">
+                <div class="col-sm-4 wow fadeIn" data-wow-delay="0.1s">
+                  <div class="border rounded p-1">
+                    <div class="border rounded text-center p-4">
+                      <i class="fa fa-hotel fa-2x text-primary mb-2"></i>
+                      <div
+                        class="d-flex align-items-center justify-content-center"
+                      >
+                        <h2 class="mb-1" data-toggle="counter-up">200</h2>
+                        <small>+</small>
+                      </div>
+                      <p class="mb-0">Corporate</p>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="row g-3">
-                            <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="img/about-1.jpg" style="margin-top: 25%;">
-                            </div>
-                            <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="img/about-2.jpg">
-                            </div>
-                            <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="img/about-3.jpg">
-                            </div>
-                            <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="img/about-4.jpg">
-                            </div>
-                        </div>
-                    </div>
+                  </div>
                 </div>
+  
+                <div class="col-sm-4 wow fadeIn" data-wow-delay="0.5s">
+                  <div class="border rounded p-1">
+                    <div class="border rounded text-center p-4">
+                      <i class="fa fa-users fa-2x text-primary mb-2"></i>
+                      <div
+                        class="d-flex align-items-center justify-content-center"
+                      >
+                        <h2 class="mb-1" data-toggle="counter-up">500</h2>
+                        <small>+</small>
+                      </div>
+                      <p class="mb-0">Total Guests</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a class="btn btn-about btn-primary py-3 px-5 mt-2" href=""
+                >Explore More</a
+              >
             </div>
+            <div class="col-lg-6">
+              <div class="row g-3">
+                <div class="col-6 text-end">
+                  <img
+                    class="img-fluid rounded w-75 wow zoomIn"
+                    data-wow-delay="0.1s"
+                    src="img/goregaon-aparthotel/IMG_3279.JPG "
+                    style="
+                      margin-top: 25%;
+                      filter: drop-shadow(4px 3px 1px #46464688);
+                    "
+                  />
+                </div>
+                <div class="col-6 text-start">
+                  <img
+                    class="img-fluid rounded w-100 wow zoomIn"
+                    data-wow-delay="0.3s"
+                    src="img/malad-aparthotel/IMG_5278.JPG"
+                    style="filter: drop-shadow(-4px 3px 1px #46464688)"
+                  />
+                </div>
+                <div class="col-6 text-end">
+                  <img
+                    class="img-fluid rounded w-50 wow zoomIn"
+                    data-wow-delay="0.5s"
+                    src="img/malad-3bhk/IMG_2081.JPG"
+                    style="filter: drop-shadow(4px 3px 1px #46464688)"
+                  />
+                </div>
+                <div class="col-6 text-start">
+                  <img
+                    class="img-fluid rounded w-75 wow zoomIn"
+                    data-wow-delay="0.7s"
+                    src="img/goregaon-aparthotel/IMG_3289.JPG"
+                    style="filter: drop-shadow(4px 3px 1px #46464688)"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
         <!-- start timeline -->
         <div class="container bootstrap snippets bootdeys timeline-main py-5">
           <div class="col-md-12">
@@ -281,7 +338,7 @@
                   <div
                     class="timeline-label pb-5 pt-5 d-flex flex-column justify-content-between"
                     style="
-                      background: url(img/malad.jpg);
+                      background: url(img/main/malad.jpg);
                       background-size: cover;
                       background-position: start center;
                     "
@@ -310,7 +367,7 @@
                   <div
                     class="timeline-label pb-5 pt-5 d-flex flex-column justify-content-between"
                     style="
-                      background: url(img/goregaon.jpg);
+                      background: url(img/main/goregaon.jpg);
                       background-size: cover;
                       background-position: start center;
                     "
@@ -339,7 +396,7 @@
                   <div
                     class="timeline-label pb-5 pt-5 d-flex flex-column justify-content-between"
                     style="
-                      background: url(img/jogeshwari.jpg);
+                      background: url(img/main/jogeshwari.jpg);
                       background-size: cover;
                       background-position: start center;
                     "
@@ -708,8 +765,15 @@
         <!-- Footer End -->
 
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        <a href="https://wa.me/7709705558" class="float "  target="_blank" alt="contact directly">
+          <i class="fab fa-whatsapp my-float"></i>
+          </a>
+          
+      
+          
+          <a href="tel:+91 8451880595" class="float-2" target="_blank">
+            <i class="fa fa-headset my-float"></i>
+            </a>
     </div>
 
     <!-- JavaScript Libraries -->
