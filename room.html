@@ -8,7 +8,7 @@
     <meta content="" name="description" />
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon" />
+    <link href="img/main/favicon.ico" rel="icon" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -72,7 +72,7 @@
               class="navbar-brand d-flex flex-column align-items-center justify-content-center"
             >
               <img
-                src="img/logo.png"
+                src="img/main/logo.png"
                 class="navbar-brand w-25"
                 alt="Dev Shelters Logo"
                 id="logo"
@@ -232,7 +232,7 @@
       <!-- Page Header Start -->
       <div
         class="container-fluid page-header mb-5 p-0"
-        style="background-image: url(img/carousel-1.jpg)"
+        style="background-image: url(img/main/carousel-1.jpg)"
       >
         <div class="container-fluid page-header-inner py-5">
           <div class="container text-center pb-5">
@@ -267,12 +267,15 @@
               Explore Our <span class="text-primary text-uppercase">Rooms</span>
             </h1>
           </div>
-          <div class="row g-4 d-none" id="maladDiv">
+          <div class="row g-4 mt-2 d-none" id="maladDiv">
             <h1 class="text-primary text-uppercase">MALAD ---</h1>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div
+              class="col-lg-4 col-md-6 wow fadeInUp roomCard"
+              data-wow-delay="0.1s"
+            >
               <div class="room-item shadow rounded overflow-hidden">
                 <div class="position-relative">
-                  <img class="img-fluid" src="img/room-1.jpg" alt="" />
+                  <img class="img-fluid" src="img/main/room-1.jpg" alt="" />
                 </div>
                 <div class="p-4 mt-2">
                   <div class="d-flex justify-content-between mb-3">
@@ -295,25 +298,29 @@
                     falls short of the full luxury and features of a deluxe
                     room.
                   </p>
-                  <div class="d-flex justify-content-between">
-                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href=""
-                      >View Detail</a
-                    >
-                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href=""
-                      >Book Now</a
-                    >
-                  </div>
                 </div>
               </div>
+              <div class="card-overlay">
+                <a href="roomdetails.html?location=malad&type=3bhk&subtype=semi"
+                  ><div class="card-overlay-item">Semi Deluxe Rooms</div></a
+                >
+                <a
+                  href="roomdetails.html?location=malad&type=3bhk&subtype=deluxe"
+                  ><div class="card-overlay-item">Deluxe Rooms</div></a
+                >
+              </div>
             </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div
+              class="col-lg-4 col-md-6 wow fadeInUp roomCard"
+              data-wow-delay="0.3s"
+            >
               <div class="room-item shadow rounded overflow-hidden">
                 <div class="position-relative">
-                  <img class="img-fluid" src="img/room-2.jpg" alt="" />
+                  <img class="img-fluid" src="img/main/room-2.jpg" alt="" />
                 </div>
                 <div class="p-4 mt-2">
                   <div class="d-flex justify-content-between mb-3">
-                    <h5 class="mb-0">4bhks Service Apartment </h5>
+                    <h5 class="mb-0">4bhks Service Apartment</h5>
                   </div>
                   <div class="d-flex mb-3">
                     <small class="border-end me-3 pe-3"
@@ -331,343 +338,123 @@
                     spaciousness, luxury amenities, and enhanced comfort,
                     appealing to guests seeking a premium experience.
                   </p>
-                  <div class="d-flex justify-content-between">
-                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href=""
-                      >View Detail</a
-                    >
-                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href=""
-                      >Book Now</a
-                    >
-                  </div>
                 </div>
+              </div>
+              <div class="card-overlay">
+                <a href="roomdetails.html?location=malad&type=4bhk&subtype=semi"
+                  ><div class="card-overlay-item">Semi Deluxe Rooms</div></a
+                >
+                <a
+                  href="roomdetails.html?location=malad&type=4bhk&subtype=deluxe"
+                  ><div class="card-overlay-item">Deluxe Rooms</div></a
+                >
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-              <div class="room-item shadow rounded overflow-hidden">
-                <div class="position-relative">
-                  <img class="img-fluid" src="img/room-3.jpg" alt="" />
+            <div
+              class="col-lg-4 col-md-6 wow fadeInUp roomCard"
+              data-wow-delay="0.6s"
+            >
+              <a href="roomdetails.html?location=malad&type=apart">
+                <div class="room-item shadow rounded overflow-hidden">
+                  <div class="position-relative">
+                    <img class="img-fluid" src="img/main/room-3.jpg" alt="" />
+                  </div>
+                  <div class="p-4 mt-2">
+                    <div class="d-flex justify-content-between mb-3">
+                      <h5 class="mb-0">Kalpataru Hometel</h5>
+                    </div>
+                    <div class="d-flex mb-3">
+                      <small class="border-end me-3 pe-3"
+                        ><i class="fa fa-bed text-primary me-2"></i>3 Bed</small
+                      >
+                      <small class="border-end me-3 pe-3"
+                        ><i class="fa fa-bath text-primary me-2"></i>2
+                        Bath</small
+                      >
+                      <small
+                        ><i class="fa fa-wifi text-primary me-2"></i>Wifi</small
+                      >
+                    </div>
+                    <p class="text-body mb-3">
+                      A super deluxe room is the epitome of luxury
+                      accommodations, featuring spaciousness, premium amenities,
+                      and exceptional comfort, catering to guests seeking a
+                      lavish experience.
+                    </p>
+                  </div>
                 </div>
-                <div class="p-4 mt-2">
-                  <div class="d-flex justify-content-between mb-3">
-                    <h5 class="mb-0">Kalpataru Hometel</h5>
-                  </div>
-                  <div class="d-flex mb-3">
-                    <small class="border-end me-3 pe-3"
-                      ><i class="fa fa-bed text-primary me-2"></i>3 Bed</small
-                    >
-                    <small class="border-end me-3 pe-3"
-                      ><i class="fa fa-bath text-primary me-2"></i>2 Bath</small
-                    >
-                    <small
-                      ><i class="fa fa-wifi text-primary me-2"></i>Wifi</small
-                    >
-                  </div>
-                  <p class="text-body mb-3">
-                    A super deluxe room is the epitome of luxury accommodations,
-                    featuring spaciousness, premium amenities, and exceptional
-                    comfort, catering to guests seeking a lavish experience.
-                  </p>
-                  <div class="d-flex justify-content-between">
-                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href=""
-                      >View Detail</a
-                    >
-                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href=""
-                      >Book Now</a
-                    >
-                  </div>
-                </div>
-              </div>
+              </a>
             </div>
           </div>
-          <div class="row g-4 d-none" id="goregaonDiv">
+          <div class="row g-4 mt-2 d-none" id="goregaonDiv">
             <h1 class="text-primary text-uppercase">GOREGAON ---</h1>
-
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-              <div class="room-item shadow rounded overflow-hidden">
-                <div class="position-relative">
-                  <img class="img-fluid" src="img/room-1.jpg" alt="" />
-                  <small
-                    class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4"
-                    >₹ 2750/Night</small
-                  >
-                </div>
-                <div class="p-4 mt-2">
-                  <div class="d-flex justify-content-between mb-3">
-                    <h5 class="mb-0">Semi Deluxe</h5>
-                    <div class="ps-2">
-                      <small class="fa fa-star text-primary"></small>
-                      <small class="fa fa-star text-primary"></small>
-                      <small class="fa fa-star text-primary"></small>
-                      <small class="fa fa-star text-primary"></small>
-                      <small class="fa fa-star text-primary"></small>
+              <a href="roomdetails.html?location=goregaon&type=apart">
+                <div class="room-item shadow rounded overflow-hidden">
+                  <div class="position-relative">
+                    <img class="img-fluid" src="img/main/room-1.jpg" alt="" />
+                  </div>
+                  <div class="p-4 mt-2">
+                    <div class="d-flex justify-content-between mb-3">
+                      <h5 class="mb-0">Aparthotels</h5>
                     </div>
-                  </div>
-                  <div class="d-flex mb-3">
-                    <small class="border-end me-3 pe-3"
-                      ><i class="fa fa-bed text-primary me-2"></i>3 Bed</small
-                    >
-                    <small class="border-end me-3 pe-3"
-                      ><i class="fa fa-bath text-primary me-2"></i>2 Bath</small
-                    >
-                    <small
-                      ><i class="fa fa-wifi text-primary me-2"></i>Wifi</small
-                    >
-                  </div>
-                  <p class="text-body mb-3">
-                    A semi deluxe room is a mid-tier accommodation option that
-                    offers more space and amenities than a standard room but
-                    falls short of the full luxury and features of a deluxe
-                    room.
-                  </p>
-                  <div class="d-flex justify-content-between">
-                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href=""
-                      >View Detail</a
-                    >
-                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href=""
-                      >Book Now</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-              <div class="room-item shadow rounded overflow-hidden">
-                <div class="position-relative">
-                  <img class="img-fluid" src="img/room-2.jpg" alt="" />
-                  <small
-                    class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4"
-                    >₹ 2950/Night</small
-                  >
-                </div>
-                <div class="p-4 mt-2">
-                  <div class="d-flex justify-content-between mb-3">
-                    <h5 class="mb-0">Deluxe</h5>
-                    <div class="ps-2">
-                      <small class="fa fa-star text-primary"></small>
-                      <small class="fa fa-star text-primary"></small>
-                      <small class="fa fa-star text-primary"></small>
-                      <small class="fa fa-star text-primary"></small>
-                      <small class="fa fa-star text-primary"></small>
+                    <div class="d-flex mb-3">
+                      <small class="border-end me-3 pe-3"
+                        ><i class="fa fa-bed text-primary me-2"></i>3 Bed</small
+                      >
+                      <small class="border-end me-3 pe-3"
+                        ><i class="fa fa-bath text-primary me-2"></i>2
+                        Bath</small
+                      >
+                      <small
+                        ><i class="fa fa-wifi text-primary me-2"></i>Wifi</small
+                      >
                     </div>
-                  </div>
-                  <div class="d-flex mb-3">
-                    <small class="border-end me-3 pe-3"
-                      ><i class="fa fa-bed text-primary me-2"></i>3 Bed</small
-                    >
-                    <small class="border-end me-3 pe-3"
-                      ><i class="fa fa-bath text-primary me-2"></i>2 Bath</small
-                    >
-                    <small
-                      ><i class="fa fa-wifi text-primary me-2"></i>Wifi</small
-                    >
-                  </div>
-                  <p class="text-body mb-3">
-                    A deluxe room is a top-tier accommodation offering with
-                    spaciousness, luxury amenities, and enhanced comfort,
-                    appealing to guests seeking a premium experience.
-                  </p>
-                  <div class="d-flex justify-content-between">
-                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href=""
-                      >View Detail</a
-                    >
-                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href=""
-                      >Book Now</a
-                    >
+                    <p class="text-body mb-3">
+                      A semi deluxe room is a mid-tier accommodation option that
+                      offers more space and amenities than a standard room but
+                      falls short of the full luxury and features of a deluxe
+                      room.
+                    </p>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-              <div class="room-item shadow rounded overflow-hidden">
-                <div class="position-relative">
-                  <img class="img-fluid" src="img/room-3.jpg" alt="" />
-                  <small
-                    class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4"
-                    >₹ 3050/Night</small
-                  >
-                </div>
-                <div class="p-4 mt-2">
-                  <div class="d-flex justify-content-between mb-3">
-                    <h5 class="mb-0">Super Deluxe</h5>
-                    <div class="ps-2">
-                      <small class="fa fa-star text-primary"></small>
-                      <small class="fa fa-star text-primary"></small>
-                      <small class="fa fa-star text-primary"></small>
-                      <small class="fa fa-star text-primary"></small>
-                      <small class="fa fa-star text-primary"></small>
-                    </div>
-                  </div>
-                  <div class="d-flex mb-3">
-                    <small class="border-end me-3 pe-3"
-                      ><i class="fa fa-bed text-primary me-2"></i>3 Bed</small
-                    >
-                    <small class="border-end me-3 pe-3"
-                      ><i class="fa fa-bath text-primary me-2"></i>2 Bath</small
-                    >
-                    <small
-                      ><i class="fa fa-wifi text-primary me-2"></i>Wifi</small
-                    >
-                  </div>
-                  <p class="text-body mb-3">
-                    A super deluxe room is the epitome of luxury accommodations,
-                    featuring spaciousness, premium amenities, and exceptional
-                    comfort, catering to guests seeking a lavish experience.
-                  </p>
-                  <div class="d-flex justify-content-between">
-                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href=""
-                      >View Detail</a
-                    >
-                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href=""
-                      >Book Now</a
-                    >
-                  </div>
-                </div>
-              </div>
+              </a>
             </div>
           </div>
-          <div class="row g-4 d-none" id="jogeshwariDiv">
+          <div class="row g-4 mt-2 d-none" id="jogeshwariDiv">
             <h1 class="text-primary text-uppercase">JOGESHWARI ---</h1>
 
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-              <div class="room-item shadow rounded overflow-hidden">
-                <div class="position-relative">
-                  <img class="img-fluid" src="img/room-3.jpg" alt="" />
-                  <small
-                    class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4"
-                    >₹ 3050/Night</small
-                  >
-                </div>
-                <div class="p-4 mt-2">
-                  <div class="d-flex justify-content-between mb-3">
-                    <h5 class="mb-0">Super Deluxe</h5>
-                    <div class="ps-2">
-                      <small class="fa fa-star text-primary"></small>
-                      <small class="fa fa-star text-primary"></small>
-                      <small class="fa fa-star text-primary"></small>
-                      <small class="fa fa-star text-primary"></small>
-                      <small class="fa fa-star text-primary"></small>
+              <a href="roomdetails.html?location=jogeshwari&type=apart">
+                <div class="room-item shadow rounded overflow-hidden">
+                  <div class="position-relative">
+                    <img class="img-fluid" src="img/main/room-3.jpg" alt="" />
                     </div>
-                  </div>
-                  <div class="d-flex mb-3">
-                    <small class="border-end me-3 pe-3"
-                      ><i class="fa fa-bed text-primary me-2"></i>3 Bed</small
-                    >
-                    <small class="border-end me-3 pe-3"
-                      ><i class="fa fa-bath text-primary me-2"></i>2 Bath</small
-                    >
-                    <small
-                      ><i class="fa fa-wifi text-primary me-2"></i>Wifi</small
-                    >
-                  </div>
-                  <p class="text-body mb-3">
-                    A super deluxe room is the epitome of luxury accommodations,
-                    featuring spaciousness, premium amenities, and exceptional
-                    comfort, catering to guests seeking a lavish experience.
-                  </p>
-                  <div class="d-flex justify-content-between">
-                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href=""
-                      >View Detail</a
-                    >
-                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href=""
-                      >Book Now</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-              <div class="room-item shadow rounded overflow-hidden">
-                <div class="position-relative">
-                  <img class="img-fluid" src="img/room-3.jpg" alt="" />
-                  <small
-                    class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4"
-                    >₹ 3050/Night</small
-                  >
-                </div>
-                <div class="p-4 mt-2">
-                  <div class="d-flex justify-content-between mb-3">
-                    <h5 class="mb-0">Super Deluxe</h5>
-                    <div class="ps-2">
-                      <small class="fa fa-star text-primary"></small>
-                      <small class="fa fa-star text-primary"></small>
-                      <small class="fa fa-star text-primary"></small>
-                      <small class="fa fa-star text-primary"></small>
-                      <small class="fa fa-star text-primary"></small>
+                  <div class="p-4 mt-2">
+                    <div class="d-flex justify-content-between mb-3">
+                      <h5 class="mb-0">Aparthotel</h5>
                     </div>
-                  </div>
-                  <div class="d-flex mb-3">
-                    <small class="border-end me-3 pe-3"
-                      ><i class="fa fa-bed text-primary me-2"></i>3 Bed</small
-                    >
-                    <small class="border-end me-3 pe-3"
-                      ><i class="fa fa-bath text-primary me-2"></i>2 Bath</small
-                    >
-                    <small
-                      ><i class="fa fa-wifi text-primary me-2"></i>Wifi</small
-                    >
-                  </div>
-                  <p class="text-body mb-3">
-                    A super deluxe room is the epitome of luxury accommodations,
-                    featuring spaciousness, premium amenities, and exceptional
-                    comfort, catering to guests seeking a lavish experience.
-                  </p>
-                  <div class="d-flex justify-content-between">
-                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href=""
-                      >View Detail</a
-                    >
-                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href=""
-                      >Book Now</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-              <div class="room-item shadow rounded overflow-hidden">
-                <div class="position-relative">
-                  <img class="img-fluid" src="img/room-3.jpg" alt="" />
-                  <small
-                    class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4"
-                    >₹ 3050/Night</small
-                  >
-                </div>
-                <div class="p-4 mt-2">
-                  <div class="d-flex justify-content-between mb-3">
-                    <h5 class="mb-0">Super Deluxe</h5>
-                    <div class="ps-2">
-                      <small class="fa fa-star text-primary"></small>
-                      <small class="fa fa-star text-primary"></small>
-                      <small class="fa fa-star text-primary"></small>
-                      <small class="fa fa-star text-primary"></small>
-                      <small class="fa fa-star text-primary"></small>
+                    <div class="d-flex mb-3">
+                      <small class="border-end me-3 pe-3"
+                        ><i class="fa fa-bed text-primary me-2"></i>3 Bed</small
+                      >
+                      <small class="border-end me-3 pe-3"
+                        ><i class="fa fa-bath text-primary me-2"></i>2
+                        Bath</small
+                      >
+                      <small
+                        ><i class="fa fa-wifi text-primary me-2"></i>Wifi</small
+                      >
                     </div>
-                  </div>
-                  <div class="d-flex mb-3">
-                    <small class="border-end me-3 pe-3"
-                      ><i class="fa fa-bed text-primary me-2"></i>3 Bed</small
-                    >
-                    <small class="border-end me-3 pe-3"
-                      ><i class="fa fa-bath text-primary me-2"></i>2 Bath</small
-                    >
-                    <small
-                      ><i class="fa fa-wifi text-primary me-2"></i>Wifi</small
-                    >
-                  </div>
-                  <p class="text-body mb-3">
-                    A super deluxe room is the epitome of luxury accommodations,
-                    featuring spaciousness, premium amenities, and exceptional
-                    comfort, catering to guests seeking a lavish experience.
-                  </p>
-                  <div class="d-flex justify-content-between">
-                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href=""
-                      >View Detail</a
-                    >
-                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href=""
-                      >Book Now</a
-                    >
+                    <p class="text-body mb-3">
+                      A super deluxe room is the epitome of luxury
+                      accommodations, featuring spaciousness, premium amenities,
+                      and exceptional comfort, catering to guests seeking a
+                      lavish experience.
+                    </p>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -802,5 +589,11 @@
 <script>
   let params = window.location.search;
   let roomLocation = new URLSearchParams(params).get("location");
-  document.getElementById(`${roomLocation}Div`).classList.remove('d-none')
+  if(roomLocation){
+    document.getElementById(`${roomLocation}Div`).classList.remove("d-none");
+  }else{
+    document.getElementById('maladDiv').classList.remove('d-none')
+    document.getElementById('goregaonDiv').classList.remove('d-none')
+    document.getElementById('jogeshwariDiv').classList.remove('d-none')
+  }
 </script>
