@@ -1371,7 +1371,13 @@
 .text-justify {
   text-align: justify;
 }
-
+.room-div{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10%;
+  place-items: center;
+  width: 100%;
+}
 .card {
   overflow: visible;
   position: relative;
@@ -1688,7 +1694,7 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
-  width: 700px; /* Adjust as needed */
+  max-width: 500px; /* Adjust as needed */
   min-height:300px;
   margin-left: 20px; /* Space between inputs and descriptions */
 }
@@ -1700,11 +1706,10 @@
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
+  max-width: 90%;
   max-height: 80%;
   transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53); /* Added cubic-bezier for smooth animation */
   opacity: 0;
-  transform: translateX(-20px); /* Initial position off-screen */
    transition: transform 0.3s ease;
 }
 .description-box p{
@@ -1713,7 +1718,7 @@
 .description-box.active {
   display: block; /* Show the active description box */
   opacity: 1;
-  transform: translateX(60px);
+  transform: translateX(0px);
   animation: fade-in 1.3s ease;
 }
 @keyframes fade-in {
@@ -1724,46 +1729,29 @@
     opacity: 1;
   }
 }
-<<<<<<< HEAD
-=======
-
-.float{
-	position:fixed;
-	width:60px;
-	height:60px;
-	bottom:2%;
-	left:20px;
-	background-color:#24d4fd;
-	color:#FFF;
-	border-radius:50px;
-	text-align:center;
-  font-size:30px;
-	box-shadow: 2px 2px 3px #999;
-  z-index:100;
+.room-div2{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+  gap: 10%;
+  place-items: center;
+  width: 100%;
 }
-.float-2{
-	position:fixed;
-	width:60px;
-	height:60px;
-	bottom:2%;
-	right:20px;
-	background-color:#24d4fd;
-	color:#FFF;
-	border-radius:50px;
-	text-align:center;
-  font-size:30px;
-	box-shadow: 2px 2px 3px #999;
-  z-index:100;
+.service-main{
+  display: flex;
+} 
+@media (max-width:996px) {
+  .service-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }  
 }
-.float-2:hover{
-  color: #000000;
+*{
+  outline: 2px solid red;
 }
-.float:hover{
-  color: #000000;
+@media (max-width:700px) {
+  .para{
+  margin: 0;
+  }
 }
-.my-float{
-	margin-top:16px;
-}
-
-
->>>>>>> 4aeb7fbcb6b5267829403939bc9985b78eaf72e4
