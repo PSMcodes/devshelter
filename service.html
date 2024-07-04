@@ -9,7 +9,8 @@
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon" />
-
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -297,7 +298,7 @@
       <!-- about service end  -->
 
       <!-- Service Start -->
-      <div class="container-fluid py-5">
+      <div class="container-fluid py-5" style="background: url(img/background-about.jpg); background-size: cover; background-position:center center ; backdrop-filter: opacity(23%) ;">
         <div class="container">
           <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
             <h6 class="section-title text-center text-primary text-uppercase">
@@ -318,7 +319,12 @@
                       <span class="radio-tile">
                           <span class="radio-icon">
                               <!-- SVG for Room -->
-                             <i class="fa-solid fa-hotel"></i>
+                              <lord-icon
+                              src="https://cdn.lordicon.com/sncsryxo.json"
+                              trigger="hover"
+                              colors="primary:#121331,secondary:#30c9e8"
+                              style="width:50px;height:50px">
+                          </lord-icon>
                           </span>
                       </span>
                   </label>
@@ -328,7 +334,13 @@
                       <span class="radio-tile">
                           <span class="radio-icon">
                               <!-- SVG for Motorbike -->
-                              <i class="fa-solid fa-envelope"></i>
+                              <lord-icon
+    src="https://cdn.lordicon.com/wzwygmng.json"
+    trigger="hover"
+    state="in-unfold"
+    colors="primary:#121331,secondary:#30c9e8"
+    style="width:50px;height:50px">
+</lord-icon>
                           </span>
                       </span>
                   </label>
@@ -338,7 +350,13 @@
                       <span class="radio-tile">
                           <span class="radio-icon">
                               <!-- SVG for Car -->
-                              <i class="fa-solid fa-wifi"></i>
+                              <lord-icon
+    src="https://cdn.lordicon.com/vhbyziek.json"
+    trigger="hover"
+    state="in-reveal"
+    colors="primary:#121331,secondary:#30c9e8"
+    style="width:50px;height:50px">
+</lord-icon>
                           </span>
                       </span>
                   </label>
@@ -348,7 +366,12 @@
                       <span class="radio-tile">
                           <span class="radio-icon">
                               <!-- SVG for Plane -->
-                              <i class="fa-solid fa-table"></i>
+                              <lord-icon
+    src="https://cdn.lordicon.com/wzrwaorf.json"
+    trigger="hover"
+    colors="primary:#121331,secondary:#30c9e8"
+    style="width:50px;height:50px">
+</lord-icon>
                           </span>
                       </span>
                   </label>
@@ -358,41 +381,41 @@
               <div class="radio-inputs">
                 <!-- Radio Buttons -->
                 <label>
-                    <input class="radio-input" type="radio" name="vehicle" value="Room">
+                    <input class="radio-input" type="radio" name="vehicle" value="call">
                     <span class="radio-tile">
                         <span class="radio-icon">
                             <!-- SVG for Room -->
-                           <i class="fa-solid fa-hotel"></i>
+                           <i class="fa-solid fa-phone-alt"></i>
                         </span>
                     </span>
                 </label>
                 
                 <label>
-                    <input class="radio-input" type="radio" name="vehicle" value="newspaper">
+                    <input class="radio-input" type="radio" name="vehicle" value="Luggage">
                     <span class="radio-tile">
                         <span class="radio-icon">
                             <!-- SVG for Motorbike -->
-                            <i class="fa-solid fa-envelope"></i>
+                            <i class="fa-solid fa-store"></i>
                         </span>
                     </span>
                 </label>
                 
                 <label>
-                    <input class="radio-input" type="radio" name="vehicle" value="wifi">
+                    <input class="radio-input" type="radio" name="vehicle" value="Laundry">
                     <span class="radio-tile">
                         <span class="radio-icon">
                             <!-- SVG for Car -->
-                            <i class="fa-solid fa-wifi"></i>
+                            <i class="fa-solid fa-tshirt"></i>
                         </span>
                     </span>
                 </label>
                 
                 <label>
-                    <input class="radio-input" type="radio" name="vehicle" value="desk-services">
+                    <input class="radio-input" type="radio" name="vehicle" value="Parking">
                     <span class="radio-tile">
                         <span class="radio-icon">
                             <!-- SVG for Plane -->
-                            <i class="fa-solid fa-table"></i>
+                            <i class="fa-solid fa-car"></i>
                         </span>
                     </span>
                 </label>
@@ -404,29 +427,61 @@
               
               <!-- Description Boxes -->
               <div class="description-boxes">
-                  <div id="Room-description" class="description-box">
+                  <div id="Room-description" class="description-box active" >
                     <h6 class="section-title text-center text-primary text-uppercase">
                       Rooms & Apartments
                     </h6> 
-                      <p>Our rooms and apartments offer luxury, stunning views, and comfort.</p>
+                      <p>Our rooms and apartments are designed to offer the pinnacle of luxury and comfort, ensuring a memorable stay for every guest. Each space is meticulously furnished with high-end finishes, elegant décor, and state-of-the-art amenities to create a serene and sophisticated atmosphere.</p>
+                      <a class="btn btn-primary py-3 px-5 mt-2" href="">Explore More</a>
                   </div>
                   <div id="newspaper-description" class="description-box">
                     <h6 class="section-title text-center text-primary text-uppercase">
                       Comp. newspaper
                     </h6> 
-                      <p>Enjoy free access to top newspapers and the latest news during your stay.</p>
+                      <p>At our establishment, we understand the importance of staying connected and informed. That's why we offer our guests free access to a wide selection of top newspapers and the latest news. Whether you prefer to start your day with a cup of coffee and the morning paper or catch up on the latest headlines before bed.</p>
+                      <a class="btn btn-primary py-3 px-5 mt-2" href="">Explore More</a>
                   </div>
                   <div id="wifi-description" class="description-box">
                     <h6 class="section-title text-center text-primary text-uppercase">
                       Free wifi
                     </h6> 
-                      <p>Enjoy free Wi-Fi for seamless connectivity during your stay.</p>
+                      <p>Enjoy seamless connectivity with our complimentary high-speed Wi-Fi, available throughout our property. Whether you're working remotely, streaming your favorite shows, or staying in touch with loved ones, our reliable Wi-Fi ensures you're always connected.</p>
+                      <a class="btn btn-primary py-3 px-5 mt-2" href="">Explore More</a>
                   </div>
                   <div id="desk-services-description" class="description-box">
                     <h6 class="section-title text-center text-primary text-uppercase">
                       24 Hour Help Desk
                     </h6> 
-                      <p>Rest easy with our 24-hour help desk ready to assist you anytime.</p>
+                      <p>Rest easy knowing our 24-hour help desk is always available to assist you with any needs or concerns. Whether you require late-night assistance, travel arrangements, or local recommendations, our dedicated staff is ready to help anytime.</p>
+                      <a class="btn btn-primary py-3 px-5 mt-2" href="">Explore More</a>
+                  </div>
+                  <div id="call-description" class="description-box">
+                    <h6 class="section-title text-center text-primary text-uppercase">         
+                      Wake-up calls
+                    </h6> 
+                      <p>Never miss a beat with our dependable wake-up call service, ensuring you start your day on time. Whether you have an early meeting or a planned adventure, our attentive staff will give you a timely wake-up call. Enjoy a worry-free rest, knowing we’ve got your schedule covered.</p>
+                      <a class="btn btn-primary py-3 px-5 mt-2" href="">Explore More</a>
+                  </div>
+                  <div id="Luggage-services-description" class="description-box">
+                    <h6 class="section-title text-center text-primary text-uppercase">
+                      Luggage Storage
+                    </h6> 
+                      <p>Store your luggage securely with our convenient storage service, available for your peace of mind. Whether you arrive early, depart late, or simply need a safe place for your belongings, we've got you covered. Enjoy exploring the area without the hassle of carrying your bags.</p>
+                      <a class="btn btn-primary py-3 px-5 mt-2" href="">Explore More</a>
+                  </div>
+                  <div id="Laundry-description" class="description-box">
+                    <h6 class="section-title text-center text-primary text-uppercase">
+                      Laundry/Dry Cleaning
+                    </h6> 
+                      <p>Store your luggage securely with our convenient service, providing you with peace of mind during your stay. Whether you need to drop off bags before check-in or keep them safe after check-out, our reliable storage ensures your belongings are protected.</p>
+                      <a class="btn btn-primary py-3 px-5 mt-2" href="">Explore More</a>
+                  </div>
+                  <div id="Parking-description" class="description-box">
+                    <h6 class="section-title text-center text-primary text-uppercase">
+                      Free Parking
+                    </h6> 
+                      <p>Enjoy laundry and dry cleaning services for a fresh wardrobe throughout your stay. Our efficient and reliable service ensures your clothes are clean, pressed, and ready to wear. Relax and focus on your activities while we take care of your laundry needs.</p>
+                      <a class="btn btn-primary py-3 px-5 mt-2" href="">Explore More</a>
                   </div>
                   <!-- Add more description boxes for other options -->
               </div>
@@ -674,10 +729,15 @@
     </div>
       <!-- Footer End -->
 
-      <!-- Back to Top -->
-      <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
-        ><i class="bi bi-arrow-up"></i
-      ></a>
+      <a href="https://wa.me/7709705558" class="float "  target="_blank" alt="contact directly">
+        <i class="fab fa-whatsapp my-float"></i>
+        </a>
+        
+    
+        
+        <a href="tel:+91 8451880595" class="float-2" target="_blank">
+          <i class="fa fa-headset my-float"></i>
+          </a>
     </div>
 
     <!-- JavaScript Libraries -->
