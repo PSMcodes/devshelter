@@ -1437,7 +1437,7 @@
   font-size: 33px;
   color: #ffffff;
   text-align: center;
-  padding-top:6% ;
+  padding-top: 6%;
 }
 
 .caption {
@@ -1452,7 +1452,7 @@
   margin-left: 20%;
   border-radius: 4px;
 }
-.caption:hover{
+.caption:hover {
   background: white;
   border: 2px solid cyan;
   cursor: pointer;
@@ -1597,7 +1597,7 @@
   display: block;
   flex: 0 0 20%;
 }
-.btn-2{
+.btn-2 {
   border: 2px solid rgb(0, 0, 255);
   background: white !important;
   color: rgb(0, 38, 255);
@@ -1694,8 +1694,13 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
+<<<<<<< HEAD
   max-width: 500px; /* Adjust as needed */
   min-height:300px;
+=======
+  width: 700px; /* Adjust as needed */
+  min-height: 300px;
+>>>>>>> daae877c0ce3b6865c0983b6ee8f8892f21752af
   margin-left: 20px; /* Space between inputs and descriptions */
 }
 
@@ -1708,7 +1713,8 @@
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   max-width: 90%;
   max-height: 80%;
-  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53); /* Added cubic-bezier for smooth animation */
+  transition: opacity 0.3s ease,
+    transform 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53); /* Added cubic-bezier for smooth animation */
   opacity: 0;
    transition: transform 0.3s ease;
 }
@@ -1721,6 +1727,46 @@
   transform: translateX(0px);
   animation: fade-in 1.3s ease;
 }
+
+.roomCard {
+  position: relative;
+}
+.card-overlay {
+  position: absolute;
+  background: #eeeb;
+  backdrop-filter: blur(2px);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.roomCard:hover .card-overlay {
+  opacity: 1;
+}
+
+.card-overlay .card-overlay-item {
+  height: 150px;
+  width: 250px;
+  margin: 10px auto;
+  border-radius: 40px;
+  background: #0f172b;
+  box-shadow: 21px 21px 42px #0c1221;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: var(--light);
+  text-align: center;
+  border-radius: 20px;
+}
+
 @keyframes fade-in {
   0%{
     opacity: 0;
@@ -1729,12 +1775,29 @@
     opacity: 1;
   }
 }
+<<<<<<< HEAD
 .room-div2{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
   gap: 10%;
   place-items: center;
   width: 100%;
+=======
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:2%;
+	left:20px;
+	background-color:#24d4fd;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+>>>>>>> daae877c0ce3b6865c0983b6ee8f8892f21752af
 }
 .service-main{
   display: flex;
@@ -1750,8 +1813,18 @@
 *{
   outline: 2px solid red;
 }
+<<<<<<< HEAD
 @media (max-width:700px) {
   .para{
   margin: 0;
   }
 }
+=======
+.float:hover{
+  color: #000000;
+}
+.my-float{
+	margin-top:16px;
+}
+
+>>>>>>> daae877c0ce3b6865c0983b6ee8f8892f21752af
