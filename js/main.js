@@ -176,38 +176,79 @@ function toggleForms() {
 }
 
     
+// document.addEventListener('DOMContentLoaded', function() {
+//     const radioInputs = document.querySelectorAll('.radio-input');
+//     const descriptionBoxes = document.querySelectorAll('.description-box');
+
+//     radioInputs.forEach((input, index) => {
+//         input.addEventListener('change', () => {
+//             // Hide all description boxes
+//             descriptionBoxes.forEach(box => {
+//                 box.classList.remove('active');
+//             });
+
+//             // Show selected description box
+//             descriptionBoxes[index].classList.add('active');
+//         });
+//     });
+// });
+
 document.addEventListener('DOMContentLoaded', function() {
     const radioInputs = document.querySelectorAll('.radio-input');
     const descriptionBoxes = document.querySelectorAll('.description-box');
-
-    radioInputs.forEach((input, index) => {
-        input.addEventListener('change', () => {
-            // Hide all description boxes
-            descriptionBoxes.forEach(box => {
-                box.classList.remove('active');
-            });
-
-            // Show selected description box
-            descriptionBoxes[index].classList.add('active');
-        });
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const descriptionBoxes = document.querySelectorAll('.description-box');
     let currentIndex = 0;
+    let intervalId;
 
-    function showNextDescription() {
-        descriptionBoxes.forEach((box, index) => {
-            if (index === currentIndex) {
+    function showDescription(index) {
+        descriptionBoxes.forEach((box, idx) => {
+            if (idx === index) {
                 box.classList.add('active');
             } else {
                 box.classList.remove('active');
             }
         });
 
-        currentIndex = (currentIndex + 1) % descriptionBoxes.length;
+        radioInputs.forEach((input, idx) => {
+            input.checked = (idx === index);
+        });
     }
 
-    setInterval(showNextDescription, 2000); // Change description every 3 seconds
+    function startAutoCycle() {
+        intervalId = setInterval(() => {
+            showDescription(currentIndex);
+            currentIndex = (currentIndex + 1) % descriptionBoxes.length;
+        }, 3000);
+    }
+
+    function stopAutoCycle() {
+        clearInterval(intervalId);
+    }
+
+    radioInputs.forEach((input, index) => {
+        input.addEventListener('change', () => {
+            stopAutoCycle();
+            currentIndex = index;
+            showDescription(currentIndex);
+            setTimeout(startAutoCycle, 3000); 
+        });
+    });
+
+    startAutoCycle();
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const loadMoreBtn = document.getElementById('load-more-btn');
+    const additionalText = document.getElementById('additional-text');
+
+    if (loadMoreBtn && additionalText) {
+        loadMoreBtn.addEventListener('click', function() {
+            additionalText.classList.toggle('hidden-on-small');
+            if (additionalText.classList.contains('hidden-on-small')) {
+                loadMoreBtn.innerText = 'Load More';
+            } else {
+                loadMoreBtn.innerText = 'Show Less';
+            }
+        });
+    }
+});
+
