@@ -66,7 +66,6 @@
     <!-- Spinner End -->
 
     <!-- Header Start -->
-    <link rel="import" href="header.html">
     <div class="container-fluid bg-dark px-0">
       <div class="row gx-0">
         <div class="col-lg-3 bg-dark d-none d-lg-block">
@@ -231,7 +230,7 @@
     </div>
 
     <div class="container mt-5">
-      <h2 class="room-title my-5">Deluxe Room</h2>
+      <h2 class="room-title my-5" id="roomTitle">*</h2>
       <!-- Slideshow Gallery -->
       <div class="col-lg-12">
         <!-- Main Carousel -->
@@ -564,15 +563,18 @@
     <!-- Footer End -->
 
     <!-- Back to Top -->
-    <a href="https://wa.me/7709705558" class="float "  target="_blank" alt="contact directly">
+    <a
+      href="https://wa.me/7709705558"
+      class="float"
+      target="_blank"
+      alt="contact directly"
+    >
       <i class="fab fa-whatsapp my-float"></i>
-      </a>
-      
-  
-      
-      <a href="tel:+91 8451880595" class="float-2" target="_blank">
-        <i class="fa fa-headset my-float"></i>
-        </a>
+    </a>
+
+    <a href="tel:+91 8451880595" class="float-2" target="_blank">
+      <i class="fa fa-headset my-float"></i>
+    </a>
   </body>
 </html>
 
@@ -607,13 +609,14 @@
   const checkOut = new URLSearchParams(params).get("checkOut");
   const guest = new URLSearchParams(params).get("guest");
   const rooms = new URLSearchParams(params).get("rooms");
+  const subtype = new URLSearchParams(params).get("subtype");
 
   function getData() {
     fetch("server.json")
       .then((data) => data.json())
       .then((data) => {
         roomData = data;
-        if (roomLocation && roomType) {
+        if (roomLocation || roomType) {
           showData();
         } else {
           console.log("No room selected");
@@ -636,24 +639,65 @@
     document.getElementById("bathCount").innerHTML =
       currentRoom["maxOccupancy"];
     document.getElementById("aboutDetails").innerHTML = currentRoom["info"];
-    for (i = 0; i < currentRoom["images"].length; i++) {
-      let card = document.createElement("div");
-      card.className = "carousel-item";
-      if (i == 0) {
-        card.classList.add("active");
-      }
-      card.innerHTML = `
+    document.getElementById("roomTitle").innerHTML = currentRoom.title;
+    if (subtype) {
+      currentRoom.subtype.forEach((element) => {
+        if (element.id == subtype) {
+          document.getElementById("aboutDetails").innerHTML = element["info"];
+          document.getElementById("roomTitle").innerHTML = element.title;
+          // carousel for subtype images
+          for (i = 0; i < element["images"].length; i++) {
+            let card = document.createElement("div");
+            card.className = "carousel-item";
+            if (i == 0) {
+              card.classList.add("active");
+            }
+            card.innerHTML = `
+              <img
+                src="${element["images"][i]}"
+                class="d-block w-100"
+                alt="Deluxe Room"
+              />
+      `;
+            document.getElementById("carouselContainer").appendChild(card);
+
+            let card2 = document.createElement("div");
+            card2.className = "col-2";
+            card2.innerHTML = `<a
+                href="#"
+                data-target="#roomCarousel"
+                data-slide-to="${i}"
+                class="d-block mb-4"
+              >
+                <img
+                  src="${element["images"][i]}"
+                  class="img-thumbnail img-fluid"
+                  alt="Room 1"
+                />
+              </a>`;
+            document.getElementById("roomGalleryContainer").appendChild(card2);
+          }
+        }
+      });
+    } else {
+      for (i = 0; i < currentRoom["images"].length; i++) {
+        let card = document.createElement("div");
+        card.className = "carousel-item";
+        if (i == 0) {
+          card.classList.add("active");
+        }
+        card.innerHTML = `
               <img
                 src="${currentRoom["images"][i]}"
                 class="d-block w-100"
                 alt="Deluxe Room"
               />
       `;
-      document.getElementById("carouselContainer").appendChild(card);
+        document.getElementById("carouselContainer").appendChild(card);
 
-      let card2 = document.createElement("div");
-      card2.className = "col-2";
-      card2.innerHTML = `<a
+        let card2 = document.createElement("div");
+        card2.className = "col-2";
+        card2.innerHTML = `<a
                 href="#"
                 data-target="#roomCarousel"
                 data-slide-to="${i}"
@@ -665,7 +709,8 @@
                   alt="Room 1"
                 />
               </a>`;
-      document.getElementById("roomGalleryContainer").appendChild(card2);
+        document.getElementById("roomGalleryContainer").appendChild(card2);
+      }
     }
 
     //  inquiry form

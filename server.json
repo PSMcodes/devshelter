@@ -1,39 +1,89 @@
 {
   "malad": {
     "3bhk": {
-      "map": "map",
-      "images": [
-        "./img/malad/3bhk/IMG_2075.JPG",
-        "./img/malad/3bhk/IMG_2080.JPG",
-        "./img/malad/3bhk/IMG_2081.JPG",
-        "./img/malad/3bhk/IMG_2082.JPG",
-        "./img/malad/3bhk/IMG_2077.JPG"
+      "subtype": [
+        {
+          "id": "semi",
+          "title": "Semi Deluxe Room",
+          "map": "map",
+          "images": [
+            "./img/malad/3bhk/IMG_2075.JPG",
+            "./img/malad/3bhk/IMG_2080.JPG",
+            "./img/malad/3bhk/IMG_2081.JPG",
+            "./img/malad/3bhk/IMG_2083.JPG",
+            "./img/malad/3bhk/IMG_2084.JPG"
+          ],
+          "info": "These 3BHK Service Apartments are ideal for travelers seeking a home away from home with all the modern amenities of a hotel.<br><br>Each apartment features a fully-equipped kitchen, allowing guests to prepare their own meals and snacks. Alternatively, we offer a common kitchen where you can order meals prepared by our chef, who provides hygienic and home-style dishes at a reasonable price. This saves you both the trouble and the cost of dining out.<br><br>Our 3BHK service apartments are perfect for families, business travelers, or anyone looking for a comfortable place to stay. Conveniently located in the Malad area of Mumbai Suburban, the apartments offer easy access to all Malad stations. Nearby shopping joints and restaurants provide top-quality services, ensuring you have a delightful stay. Whether you're in town for business or leisure, these apartments are an excellent choice."
+        },
+        {
+          "id": "deluxe",
+          "title": "Deluxe Room",
+          "map": "map",
+          "images": [
+            "./img/malad/3bhk/IMG_2077.JPG",
+            "./img/malad/3bhk/IMG_2080.JPG",
+            "./img/malad/3bhk/IMG_2081.JPG",
+            "./img/malad/3bhk/IMG_2082.JPG",
+            "./img/malad/3bhk/IMG_2077.JPG"
+          ],
+          "info": "These 3BHK Service Apartments are ideal for travelers seeking a home away from home with all the modern amenities of a hotel.<br><br>Each apartment features a fully-equipped kitchen, allowing guests to prepare their own meals and snacks. Alternatively, we offer a common kitchen where you can order meals prepared by our chef, who provides hygienic and home-style dishes at a reasonable price. This saves you both the trouble and the cost of dining out.<br><br>Our 3BHK service apartments are perfect for families, business travelers, or anyone looking for a comfortable place to stay. Conveniently located in the Malad area of Mumbai Suburban, the apartments offer easy access to all Malad stations. Nearby shopping joints and restaurants provide top-quality services, ensuring you have a delightful stay. Whether you're in town for business or leisure, these apartments are an excellent choice."
+        }
       ],
-      "info": "These 3BHK Service Apartments are ideal for travelers seeking a home away from home with all the modern amenities of a hotel.<br><br>Each apartment features a fully-equipped kitchen, allowing guests to prepare their own meals and snacks. Alternatively, we offer a common kitchen where you can order meals prepared by our chef, who provides hygienic and home-style dishes at a reasonable price. This saves you both the trouble and the cost of dining out.<br><br>Our 3BHK service apartments are perfect for families, business travelers, or anyone looking for a comfortable place to stay. Conveniently located in the Malad area of Mumbai Suburban, the apartments offer easy access to all Malad stations. Nearby shopping joints and restaurants provide top-quality services, ensuring you have a delightful stay. Whether you're in town for business or leisure, these apartments are an excellent choice.",
       "maxOccupancy": 3
     },
     "4bhk": {
-      "map": "map",
-      "info": "These 4BHK Service Apartments are perfect for larger families or groups seeking a luxurious home away from home with all the modern amenities of a hotel.<br><br>Each apartment comes with a fully-equipped kitchen, giving guests the freedom to prepare their own meals and snacks. Additionally, we offer a common kitchen where you can order meals from our chef, who provides hygienic and home-style dishes at a reasonable price. This helps you save both time and money on dining out.<br><br>Our 4BHK service apartments are ideal for families, business groups, or anyone needing a spacious and comfortable place to stay. Conveniently located in the Malad area of Mumbai Suburban, the apartments are easily accessible to all Malad stations. Nearby shopping centers and restaurants offer top-notch services, ensuring a pleasant and enjoyable stay. Whether you're in town for business or leisure, these apartments are the perfect choice.",
+      "subtype": [
+        {
+          "id": "semi",
+          "title": "Semi Deluxe Room",
+          "map": "map",
+          "images": [
+            "./img/malad/3bhk/IMG_2075.JPG",
+            "./img/malad/3bhk/IMG_2080.JPG",
+            "./img/malad/3bhk/IMG_2081.JPG",
+            "./img/malad/3bhk/IMG_2083.JPG",
+            "./img/malad/3bhk/IMG_2084.JPG"
+          ],
+          "info": "These 3BHK Service Apartments are ideal for travelers seeking a home away from home with all the modern amenities of a hotel.<br><br>Each apartment features a fully-equipped kitchen, allowing guests to prepare their own meals and snacks. Alternatively, we offer a common kitchen where you can order meals prepared by our chef, who provides hygienic and home-style dishes at a reasonable price. This saves you both the trouble and the cost of dining out.<br><br>Our 3BHK service apartments are perfect for families, business travelers, or anyone looking for a comfortable place to stay. Conveniently located in the Malad area of Mumbai Suburban, the apartments offer easy access to all Malad stations. Nearby shopping joints and restaurants provide top-quality services, ensuring you have a delightful stay. Whether you're in town for business or leisure, these apartments are an excellent choice."
+        },
+        {
+          "id": "deluxe",
+          "title": "Deluxe Room",
+          "map": "map",
+          "images": [
+            "./img/malad/3bhk/IMG_2077.JPG",
+            "./img/malad/3bhk/IMG_2080.JPG",
+            "./img/malad/3bhk/IMG_2081.JPG",
+            "./img/malad/3bhk/IMG_2082.JPG",
+            "./img/malad/3bhk/IMG_2077.JPG"
+          ],
+          "info": "These 3BHK Service Apartments are ideal for travelers seeking a home away from home with all the modern amenities of a hotel.<br><br>Each apartment features a fully-equipped kitchen, allowing guests to prepare their own meals and snacks. Alternatively, we offer a common kitchen where you can order meals prepared by our chef, who provides hygienic and home-style dishes at a reasonable price. This saves you both the trouble and the cost of dining out.<br><br>Our 3BHK service apartments are perfect for families, business travelers, or anyone looking for a comfortable place to stay. Conveniently located in the Malad area of Mumbai Suburban, the apartments offer easy access to all Malad stations. Nearby shopping joints and restaurants provide top-quality services, ensuring you have a delightful stay. Whether you're in town for business or leisure, these apartments are an excellent choice."
+        }
+      ],
       "maxOccupancy": 4
     },
     "apart": {
+      "title":"Kalpaturu Hometel",
+      "images":[
+        "img/malad-aparthotel/IMG_5278.JPG",
+        "img/malad-aparthotel/IMG_E5279.JPG",
+        "img/malad-aparthotel/IMG_E5408.JPG",
+        "img/malad-aparthotel/IMG_E6114.JPG",
+        "img/malad-aparthotel/IMG_E6094.JPG"
+      ],
       "map": "map",
-      "info": "Welcome to our Hometel, the perfect blend of home comfort and hotel luxury for travelers seeking a warm and inviting place to stay.<br>Our hometel offers a cozy and fully-equipped kitchen where guests can prepare their own meals and snacks. If you prefer, you can also enjoy meals from our common kitchen, where our chef prepares hygienic and home-style dishes at a reasonable price. This option helps you save money and enjoy healthy, delicious food without the expense of dining out.<br>Located conveniently in the Malad area of Mumbai Suburban, our hometel provides easy access to all Malad stations. Nearby shopping centers and restaurants offer top-notch services, ensuring a pleasant and enjoyable stay. Our hometel is perfect for business travelers, families, or anyone seeking a comfortable and welcoming place to stay."
-    },
-    "apart2": {
-      "map": "map",
-      "info": "Welcome to our Hometel, the perfect blend of home comfort and hotel luxury for travelers seeking a warm and inviting place to stay.<br>Our hometel offers a cozy and fully-equipped kitchen where guests can prepare their own meals and snacks. If you prefer, you can also enjoy meals from our common kitchen, where our chef prepares hygienic and home-style dishes at a reasonable price. This option helps you save money and enjoy healthy, delicious food without the expense of dining out.<br>Located conveniently in the Malad area of Mumbai Suburban, our hometel provides easy access to all Malad stations. Nearby shopping centers and restaurants offer top-notch services, ensuring a pleasant and enjoyable stay. Our hometel is perfect for business travelers, families, or anyone seeking a comfortable and welcoming place to stay."
+      "info": "Welcome to our Hometel, the perfect blend of home comfort and hotel luxury for travelers seeking a warm and inviting place to stay.<br>Our hometel offers a cozy and fully-equipped kitchen where guests can prepare their own meals and snacks. If you prefer, you can also enjoy meals from our common kitchen, where our chef prepares hygienic and home-style dishes at a reasonable price. This option helps you save money and enjoy healthy, delicious food without the expense of dining out.<br>Located conveniently in the Malad area of Mumbai Suburban, our hometel provides easy access to all Malad stations. Nearby shopping centers and restaurants offer top-notch services, ensuring a pleasant and enjoyable stay. Our hometel is perfect for business travelers, families, or anyone seeking a comfortable and welcoming place to stay.",
+      "maxOccupancy":3
     }
   },
   "goregoan": {
-    "aparthotel": {
+    "apart": {
       "map": "map",
       "info": "info here"
     }
   },
   "jogeshwari": {
-    "aparthotel": {
+    "apart": {
       "map": "map",
       "info": "info here"
     }

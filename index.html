@@ -233,7 +233,7 @@
         >
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="w-100 h-100" src="img/malad-3bhk/IMG_2073.JPG" alt="Image" />
+              <img class="w-100 h-100" src="img/malad/3bhk/IMG_2073.JPG" alt="Image" />
               <div
                 class="carousel-caption d-flex flex-column align-items-center justify-content-center"
               >
@@ -376,9 +376,9 @@
                   <div class="col-md-3">
                     <select class="form-select" name="location">
                       <option selected>Location</option>
-                      <option value="Jogeshwari">Jogeshwari</option>
-                      <option value="Malad">Malad</option>
-                      <option value="Goregaon">Goregaon</option>
+                      <option value="jogeshwari">Jogeshwari</option>
+                      <option value="malad">Malad</option>
+                      <option value="goregaon">Goregaon</option>
                     </select>
                   </div>
                   <div class="col-md-3">
@@ -606,7 +606,7 @@
                 <img
                   class="img-fluid rounded w-50 wow zoomIn"
                   data-wow-delay="0.5s"
-                  src="img/malad-3bhk/IMG_2081.JPG"
+                  src="img/malad/3bhk/IMG_2081.JPG"
                   style="filter: drop-shadow(4px 3px 1px #46464688)"
                 />
               </div>
@@ -1530,7 +1530,7 @@
           "guestCounterDisplay"
         ).innerHTML;
         let noOfRooms = document.getElementById("roomCounterDisplay").innerHTML;
-        window.location.href = `/booking.html?location=${stayLocation}&checkIn=${checkInDate}&checkOut=${checkOutDate}&guest=${noOfGuest}&rooms=${noOfRooms}`;
+        window.location.href = `/room.html?location=${stayLocation}&checkIn=${checkInDate}&checkOut=${checkOutDate}&guest=${noOfGuest}&rooms=${noOfRooms}`;
       });
 
       var images = document.getElementsByClassName("icons");

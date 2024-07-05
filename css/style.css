@@ -1608,9 +1608,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
-.radio-input{
+.radio-input {
   display: none;
 }
 .radio-tile {
@@ -1706,9 +1705,9 @@
     transform 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53); /* Added cubic-bezier for smooth animation */
   opacity: 0;
   transform: translateX(-20px); /* Initial position off-screen */
-   transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
 }
-.description-box p{
+.description-box p {
   color: #000000;
 }
 .description-box.active {
@@ -1758,49 +1757,48 @@
 }
 
 @keyframes fade-in {
-  0%{
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }
 
-.float{
-	position:fixed;
-	width:60px;
-	height:60px;
-	bottom:2%;
-	left:20px;
-	background-color:#24d4fd;
-	color:#FFF;
-	border-radius:50px;
-	text-align:center;
-  font-size:30px;
-	box-shadow: 2px 2px 3px #999;
-  z-index:100;
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 15%;
+  right: 20px;
+  background-color: #24d4fd;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
 }
-.float-2{
-	position:fixed;
-	width:60px;
-	height:60px;
-	bottom:2%;
-	right:20px;
-	background-color:#24d4fd;
-	color:#FFF;
-	border-radius:50px;
-	text-align:center;
-  font-size:30px;
-	box-shadow: 2px 2px 3px #999;
-  z-index:100;
+.float-2 {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 2%;
+  right: 20px;
+  background-color: #24d4fd;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
 }
-.float-2:hover{
+.float-2:hover {
   color: #000000;
 }
-.float:hover{
+.float:hover {
   color: #000000;
 }
-.my-float{
-	margin-top:16px;
+.my-float {
+  margin-top: 16px;
 }
-
