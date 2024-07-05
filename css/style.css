@@ -1371,7 +1371,13 @@
 .text-justify {
   text-align: justify;
 }
-
+.room-div{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10%;
+  place-items: center;
+  width: 100%;
+}
 .card {
   overflow: visible;
   position: relative;
@@ -1669,9 +1675,9 @@
 }
 
 .radio-icon i {
-  width: 1rem;
-  height: 1rem;
+
   fill: #000000;
+  font-size: 20px;
 }
 
 .radio-label {
@@ -1687,8 +1693,8 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
-  width: 700px; /* Adjust as needed */
-  min-height: 300px;
+  max-width: 500px; /* Adjust as needed */
+  min-height:400px;
   margin-left: 20px; /* Space between inputs and descriptions */
 }
 
@@ -1696,16 +1702,15 @@
   overflow: hidden;
   display: none; /* Initially hide all description boxes */
   background-color: #f0f0f0;
-  padding: 10px;
+  padding: 4%;
   border-radius: 8px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
+  max-width: 90%;
   max-height: 80%;
   transition: opacity 0.3s ease,
     transform 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53); /* Added cubic-bezier for smooth animation */
   opacity: 0;
-  transform: translateX(-20px); /* Initial position off-screen */
-  transition: transform 0.3s ease;
+   transition: transform 0.3s ease;
 }
 .description-box p {
   color: #000000;
@@ -1713,7 +1718,7 @@
 .description-box.active {
   display: block; /* Show the active description box */
   opacity: 1;
-  transform: translateX(60px);
+  transform: translateX(0px);
   animation: fade-in 1.3s ease;
 }
 
@@ -1764,41 +1769,56 @@
     opacity: 1;
   }
 }
-
-.float {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 15%;
-  right: 20px;
-  background-color: #24d4fd;
-  color: #fff;
-  border-radius: 50px;
-  text-align: center;
-  font-size: 30px;
-  box-shadow: 2px 2px 3px #999;
-  z-index: 100;
+.room-div2{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+  gap: 10%;
+  place-items: center;
+  width: 100%;
 }
-.float-2 {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 2%;
-  right: 20px;
-  background-color: #24d4fd;
-  color: #fff;
-  border-radius: 50px;
-  text-align: center;
-  font-size: 30px;
-  box-shadow: 2px 2px 3px #999;
-  z-index: 100;
+.service-main{
+  display: flex;
+} 
+@media (max-width:996px) {
+  .service-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }  
 }
-.float-2:hover {
+@media (max-width:700px) {
+  .para{
+  margin: 0;
+  }
+}
+.paid-tag {
+  position: absolute;
+  top: 16px;
+  right: -25px;
+  background-color: #ffb700;
   color: #000000;
+  transform: rotate(30deg);
+  padding: 5px 50px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-.float:hover {
-  color: #000000;
+.hidden-on-small {
+  display: none;
+  animation: reveal 2s ease-in-out;
 }
-.my-float {
-  margin-top: 16px;
+@keyframes reveal {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+#load-more-btn {
+  display: block;
+  margin: 0 auto;
 }
