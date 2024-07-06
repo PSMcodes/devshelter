@@ -1,16 +1,22 @@
-  =>  Template Name    : Hotelier - Hotel HTML Template
+  =>  Website Name    : DevShelter | Rooms and Hotel
 
-  =>  Template Link    : https://htmlcodex.com/hotel-html-template
+  =>  webiste Link    : 
 
-  =>  Template License : https://htmlcodex.com/license (or read the LICENSE.txt file)
+  =>  Website License : https://htmlcodex.com/license (or read the LICENSE.txt file)
 
-  =>  Template Author  : HTML Codex
+  =>  Website Design by  : PSMcodes
 
-  =>  Author Website   : https://htmlcodex.com
+  =>  Design by Website   : 
 
-  =>  About HTML Codex : HTML Codex is one of the top creators and publishers of Free HTML templates, HTML landing pages, HTML email templates and HTML snippets in the world. Read more at ( https://htmlcodex.com/about-us )
+  =>  About DevShelter :  We provide comfortable and peaceful stay for corporate executives,
+              business travelers, tourists and vacation rentals. Serviced
+              Apartments are best alternate option to expensive hotel stays.Our
+              Service Apartments are ideal for organizations to meet all their
+              employee’s travel requirements. If you wish to travel especially
+              for longer duration, then DEV SHELTERS is an ideal choice. Our
+              Service Apartments are located in premium areas of Mumbai such as
+              Malad, Goregaon and Jogeshwari which are surrounded with business
+              hubs, shopping malls, restaurants and also convenient commute to
+              major spots.
 
 
-  remining task
-  -- the maximum capicity of guest 
-  -- the maximum capicity of rooms 
