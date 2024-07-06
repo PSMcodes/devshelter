@@ -252,3 +252,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+
+
+
+$(document).ready(function(){
+    var marquee_width = $(".marquee-content-primary").width();
+    document.documentElement.style.setProperty('--marquee-padding', marquee_width + 'px');
+  });
+  
+  
