@@ -76,7 +76,7 @@
             class="navbar-brand d-flex flex-column align-items-center justify-content-center"
           >
             <img
-              src="img/logo.png"
+              src="img/main/logo.png"
               class="navbar-brand w-25"
               alt="Dev Shelters Logo"
               id="logo"
@@ -89,16 +89,22 @@
             <div class="col-lg-7 px-5 text-start">
               <div class="h-100 d-inline-flex align-items-center me-4">
                 <i class="fa fa-envelope text-primary me-2"></i>
-                <p class="mb-0">devshelters63@gmail.com</p>
+                <a
+                  href="mailto:devshelters63@gmail.com"
+                  class="mb-0 text-dark"
+                  >devshelters63@gmail.com</a
+                >
               </div>
               <!-- <div class="h-100 d-inline-flex align-items-center me-4">
-            <i class="fa fa-headset text-primary me-2"></i>
-            <p class="mb-0">+91 8451880595</p>
-          </div> -->
+                <i class="fa fa-headset text-primary me-2"></i>
+                <p class="mb-0">+91 8451880595</p>
+              </div> -->
 
               <div class="h-100 d-inline-flex align-items-center">
                 <i class="fa fa-phone-alt text-primary me-2"></i>
-                <p class="mb-0">+91 7039433505</p>
+                <a href="tel:+91 8451880595 " class="mb-0 text-dark"
+                  >+91 8451880595</a
+                >
               </div>
             </div>
             <div
@@ -129,91 +135,79 @@
               id="navbarCollapse"
             >
               <div class="navbar-nav">
-                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="index.html" class="nav-item nav-link ">Home</a>
                 <a href="service.html" class="nav-item nav-link">Services</a>
-                <a href="about.html" class="nav-item nav-link w-100"
+                <a href="about.html" class="nav-item nav-link "
                   >About Us</a
                 >
                 <ul class="navbar-nav">
                   <!-- Dropdown -->
                   <li class="nav-item dropdown p-0 m-0">
                     <a
-                      class="nav-link dropdown-toggle"
+                      class="nav-link dropdown-toggle active"
                       id="navbarDropdownMenuLink"
                     >
-                      Our Rooms
+                      Our Listings
                     </a>
                     <ul class="dropdown-menu">
                       <li>
                         <a class="dropdown-item border-bottom" href="#">
-                          Malad &raquo;
+                          Service Apartment &raquo;
                         </a>
                         <ul class="dropdown-menu dropdown-submenu l">
                           <li>
-                            <a class="dropdown-item border-bottom" href="#"
+                            <a
+                              class="dropdown-item border-bottom"
+                              href="roomdetails.html?location=malad&type=3bhk"
                               ><i
                                 class="fa-solid fa-hotel"
                                 style="color: #24d4fd"
                               ></i>
-                              3Bhk Service Apartment
+                              3Bhk Malad
                             </a>
                           </li>
                           <li>
-                            <a class="dropdown-item border-bottom" href="#"
+                            <a class="dropdown-item " href="roomdetails.html?location=malad&type=4bhk"
                               ><i
                                 class="fa-solid fa-hotel"
                                 style="color: #24d4fd"
                               ></i>
-                              4Bhk Service Apartment
-                            </a>
-                          </li>
-                          <li>
-                            <a class="dropdown-item border-bottom" href="#"
-                              ><i
-                                class="fa-solid fa-hotel"
-                                style="color: #24d4fd"
-                              ></i>
-                              Kalpataru Hometel Rooms
+                              4Bhk Malad
                             </a>
                           </li>
                         </ul>
                       </li>
 
                       <li>
-                        <a class="dropdown-item border-bottom" href="#">
-                          Goregaon &raquo;
+                        <a class="dropdown-item " href="#">
+                          Apart Hotel &raquo;
                         </a>
                         <ul class="dropdown-menu dropdown-submenu">
-                          <!-- <li>
-                              <a class="dropdown-item" href="#">Submenu item 1</a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item" href="#">Submenu item 2</a>
-                            </li> -->
                           <li>
-                            <a class="dropdown-item border-bottom" href="#"
+                            <a class="dropdown-item border-bottom" href="roomdetails.html?location=malad&type=apart"
                               ><i
                                 class="fa-solid fa-hotel"
                                 style="color: #24d4fd"
                               ></i>
-                              Aparthotels
+                              Kalpataru Hometel Malad
                             </a>
                           </li>
-                        </ul>
-                      </li>
-
-                      <li>
-                        <a class="dropdown-item" href="#">
-                          Jogeshwari &raquo;
-                        </a>
-                        <ul class="dropdown-menu dropdown-submenu">
                           <li>
-                            <a class="dropdown-item border-bottom" href="#">
-                              <i
+                            <a class="dropdown-item border-bottom" href="roomdetails.html?location=malad&type=apart2"
+                              ><i
                                 class="fa-solid fa-hotel"
                                 style="color: #24d4fd"
                               ></i>
-                              Aparthotels
+                              Devshelters Malad
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item " href="roomdetails.html?location=goregon&type=apart"
+                              ><i
+                                class="fa-solid fa-hotel"
+                                style="color: #24d4fd"
+                              ></i>
+                              Devshelters Goregaon
                             </a>
                           </li>
                         </ul>
@@ -225,11 +219,13 @@
                 <a href="booking.html" class="nav-item nav-link">Booking</a>
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
               </div>
+              <!-- <a href="https://htmlcodex.com/hotel-html-template-pro" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Premium Version<i class="fa fa-arrow-right ms-3"></i></a> -->
             </div>
           </nav>
         </div>
       </div>
     </div>
+    
 
     <div class="container mt-5">
       <h2 class="room-title my-5" id="roomTitle">*</h2>
@@ -379,25 +375,25 @@
                 <div class="section">
                     <h2>Features</h2>
                     <ul>
-                        <li data-tooltip="Room service available 24/7">
+                        <li data-tooltip="Room service available 24/7" class="mb-2">
                             <i class="fas fa-concierge-bell"></i> 24-hr Room Service
                         </li>
-                        <li data-tooltip="Temperature control in all rooms">
+                        <li data-tooltip="Temperature control in all rooms" class="mb-2">
                             <i class="fas fa-snowflake"></i> Air Conditioning
                         </li>
-                        <li data-tooltip="Shuttle service to and from the airport">
+                        <li data-tooltip="Shuttle service to and from the airport" class="mb-2">
                             <i class="fas fa-shuttle-van"></i> Airport Shuttle
                         </li>
-                        <li data-tooltip="Private bathroom in each room">
+                        <li data-tooltip="Private bathroom in each room"class="mb-2">
                             <i class="fas fa-bath"></i> Bathroom
                         </li>
-                        <li data-tooltip="Chef and caretaker available">
+                        <li data-tooltip="Chef and caretaker available"class="mb-2">
                             <i class="fas fa-utensils"></i> Chef & Care Taker
                         </li>
-                        <li data-tooltip="Free laundry service">
+                        <li data-tooltip="Free laundry service"class="mb-2">
                             <i class="fas fa-tshirt"></i> Comp Laundry
                         </li>
-                        <li data-tooltip="Complimentary breakfast provided">
+                        <li data-tooltip="Complimentary breakfast provided"class="mb-2">
                             <i class="fas fa-coffee"></i> Comp Breakfast
                         </li>
                         <li data-tooltip="Free newspaper daily">
@@ -408,25 +404,25 @@
                 <div class="section">
                     <h2>Amenities</h2>
                     <ul>
-                        <li data-tooltip="Entertainment options available">
+                        <li data-tooltip="Entertainment options available"class="mb-2">
                             <i class="fas fa-tv"></i> Entertainment Facilities
                         </li>
-                        <li data-tooltip="Kitchenette in rooms">
+                        <li data-tooltip="Kitchenette in rooms"class="mb-2">
                             <i class="fas fa-blender"></i> Equipped Kitchenette
                         </li>
-                        <li data-tooltip="Free wireless internet">
+                        <li data-tooltip="Free wireless internet"class="mb-2">
                             <i class="fas fa-wifi"></i> Free Wifi
                         </li>
-                        <li data-tooltip="Hair dryer in rooms">
+                        <li data-tooltip="Hair dryer in rooms"class="mb-2">
                             <i class="fas fa-wind"></i> Hair Dryer
                         </li>
-                        <li data-tooltip="Tablet check-in service">
+                        <li data-tooltip="Tablet check-in service"class="mb-2">
                             <i class="fas fa-tablet-alt"></i> Tablet Check In
                         </li>
-                        <li data-tooltip="Television in rooms">
+                        <li data-tooltip="Television in rooms"class="mb-2">
                             <i class="fas fa-tv"></i> TV
                         </li>
-                        <li data-tooltip="Warm and welcoming hospitality">
+                        <li data-tooltip="Warm and welcoming hospitality"class="mb-2">
                             <i class="fas fa-heart"></i> Warm Hospitality
                         </li>
                     </ul>
@@ -450,76 +446,61 @@
           </div>
         </div>
         <div class="col-lg-4">
-          <div class="position-sticky top-0">
+          <div class="position-sticky top-0 ">
             <h2>Booking</h2>
-            <form>
-              <div class="d-flex">
-                <div class="form-group w-50">
-                  <label for="checkIn">Check-in Date</label>
-                  <input
-                    type="date"
-                    class="form-control"
-                    id="checkIn"
-                    required
-                  />
-                </div>
-                <div class="form-group w-50">
-                  <label for="checkOut">Check-out Date</label>
-                  <input
-                    type="date"
-                    class="form-control"
-                    id="checkOut"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="checkOut">Your name</label>
-                <input
-                  type="text"
-                  class="form-control w-100"
-                  id="checkOut"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="checkOut">Email</label>
-                <input
-                  type="Email"
-                  class="form-control w-100"
-                  id="EmailId"
-                  required
-                />
-              </div>
-              <div class="d-flex">
-                <div class="form-group w-50">
-                  <label for="guests">Guests</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="guests"
-                    min="1"
-                    max="6"
-                    required
-                  />
-                </div>
-                <div class="form-group w-50">
-                  <label for="rooms">Rooms</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="rooms"
-                    min="1"
-                    max="6"
-                    required
-                  />
-                </div>
-              </div>
-              <span id="hints" class="text-danger"></span>
-              <button type="submit" class="btn btn-primary w-100 mt-2">
-                Book Now
-              </button>
-            </form>
+                  <form id="inquiryForm2">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control " id="name" placeholder="Your Name" required /> 
+                                            <label for="name">Your Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="contact" placeholder="Your Contact" required/>
+                                            <label for="contact">Your Contact</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-floating date" id="date3" data-target-input="nearest">
+                                            <input type="date" class="form-control" id="checkin" placeholder="Check In" required/>
+                                            <label for="checkin">Check In</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating date" id="date4" data-target-input="nearest">
+                                            <input type="date" class="form-control" id="checkout" placeholder="Check Out" required/>
+                                            <label for="checkout">Check Out</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="number" class="form-control" id="guest" placeholder="Guests" required> 
+                                            <label for="guest">Guests</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="number" class="form-control" id="rooms" placeholder="Rooms" required> 
+                                            <label for="rooms">Rooms</label>
+                                        </div>
+                                    </div>
+                            
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" placeholder="Special Request" id="message"
+                                                style="height: 100px"></textarea>
+                                            <label for="message">Special Request</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-primary w-100 py-3" type="submit">Book Now</button>
+                                    </div>
+                                </div>
+                            </form>
           </div>
         </div>
       </div>
