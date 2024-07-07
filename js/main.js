@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', function() {
         loadMoreBtn.addEventListener('click', function() {
             additionalText.classList.toggle('hidden-on-small');
             if (additionalText.classList.contains('hidden-on-small')) {
-                loadMoreBtn.innerText = 'Load More';
+                loadMoreBtn.innerText = 'Show More';
             } else {
                 loadMoreBtn.innerText = 'Show Less';
             }

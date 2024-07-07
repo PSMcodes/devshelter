@@ -94,7 +94,7 @@
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
   color: var(--primary);
-  
+  background-color: none;
 
 }
 .nav-item:after {
@@ -1222,7 +1222,11 @@
     transform: translateX(-100%) !important;
   }
 }
-
+.dropdown-menu{
+  position: absolute;
+  top: 30px;
+  left: 100px;
+}
 .dropdown-menu li {
   position: relative;
 }
@@ -1231,7 +1235,7 @@
   display: none;
   position: absolute;
   left: 100%;
-  top: -15px;
+  top: 5px;
 }
 
 .btn-about:hover {
@@ -1468,7 +1472,7 @@
   padding: 2%;
   font-weight: 500;
   font-size: 16px;
-  color: #000000;
+  color: white;
   display: block;
   margin-top: 5px;
   margin-left: 20%;
@@ -1478,6 +1482,7 @@
   background: white;
   border: 2px solid cyan;
   cursor: pointer;
+  color: cyan;
 }
 
 /*Hover*/
@@ -1757,10 +1762,14 @@
 }
 .card-overlay {
   position: absolute;
-  background: #eeeb;
-  backdrop-filter: blur(2px);
-  top: 0;
-  bottom: 0;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.11);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.8px);
+  -webkit-backdrop-filter: blur(6.8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  top: 0%;
+  bottom: 50%;
   left: 0;
   right: 0;
   opacity: 0;
@@ -1768,24 +1777,30 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+
+  height: 50%;
 }
 
 .roomCard:hover .card-overlay {
   opacity: 1;
+
 }
 
 .card-overlay .card-overlay-item {
-  height: 150px;
-  width: 250px;
-  margin: 10px auto;
+  height: 50px;
+  width: 150px;
+  margin: auto 15px;
   border-radius: 40px;
-  background: #0f172b;
+  background: rgba(255, 255, 255, 0.11);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.8px);
+  -webkit-backdrop-filter: blur(6.8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 21px 21px 42px #0c1221;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
+  font-size: 1rem;
   color: var(--light);
   text-align: center;
   border-radius: 20px;
