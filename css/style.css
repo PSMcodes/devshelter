@@ -957,6 +957,12 @@
   padding-right: 65px;
 }
 
+@media (max-width:500) {
+  .testimonial-carousel{
+    padding: 0;
+  }
+}
+
 .testimonial-carousel .testimonial-item {
   padding: 30px;
 }
@@ -1377,11 +1383,22 @@
   text-align: justify;
 }
 .room-div{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10%;
-  place-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   width: 100%;
+}
+
+@media (max-width:810px) {
+  .room-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:center;
+  }
+  .card{
+    margin-bottom: 8%;
+  }
 }
 .card {
   overflow: visible;
@@ -1782,12 +1799,7 @@
     opacity: 1;
   }
 }
-.room-div{
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  place-items: center;
 
-}
 .room-div2{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
@@ -1855,7 +1867,7 @@
 }
 
 h2 {
-  text-align: center;
+  text-align: left  ;
   margin-bottom: 20px;
 }
 
