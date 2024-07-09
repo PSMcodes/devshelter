@@ -505,7 +505,9 @@
         </div>
       </div>
     </div>
-
+    <div class="container-fluid py-5">
+      
+    </div>
     <!-- Footer Start -->
     <div
       class="container-fluid bg-dark text-light wow fadeIn footer"
@@ -674,7 +676,7 @@
     document.getElementById("roomTitle").innerHTML = currentRoom.title;
     if (subtype) {
       currentRoom.subtype.forEach((element) => {
-        if (element.id == subtype) {
+        if (subtype.includes(element.id)) {
           document.getElementById("aboutDetails").innerHTML = element["info"];
           document.getElementById("roomTitle").innerHTML = element.title;
           // carousel for subtype images
@@ -747,20 +749,20 @@
 
     //  inquiry form
     if (checkIn) {
-      document.getElementById("checkIn").value = checkIn;
-      document.getElementById("checkIn").setAttribute("readonly", true);
+      document.getElementById("checkin").value = checkIn;
+      document.getElementById("checkin").setAttribute("disabled", true);
     }
     if (checkOut) {
-      document.getElementById("checkOut").value = checkOut;
-      document.getElementById("checkOut").setAttribute("readonly", true);
+      document.getElementById("checkout").value = checkOut;
+      document.getElementById("checkout").setAttribute("disabled", true);
     }
     if (guest) {
-      document.getElementById("guests").value = guest;
-      document.getElementById("guests").setAttribute("readonly", true);
+      document.getElementById("guest").value = guest;
+      document.getElementById("guest").setAttribute("disabled", true);
     }
     if (rooms) {
       document.getElementById("rooms").value = rooms;
-      document.getElementById("rooms").setAttribute("readonly", true);
+      document.getElementById("rooms").setAttribute("disabled", true);
     }
     if (guest > currentRoom["maxOccupancy"]) {
       console.log("yes");
