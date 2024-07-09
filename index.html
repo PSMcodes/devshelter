@@ -45,14 +45,17 @@
     <link href="css/style.css" rel="stylesheet" />
     <!-- <script src="js/main.js"></script> -->
 
-    <meta property="og:title" content="DevShelter | Rooms and Hotels">
-    <meta name="description" content="DevShelter -   We provide comfortable and peaceful stay for corporate executives,
-    business travelers, tourists and vacation rentals. ">
-<meta property="og:image" content="">
-<meta property="og:url" content="">
-<meta property="og:type" content="Rooms and hotels at mumbai">
-<meta name="twitter:image" content="">
-<meta name="twitter:image:width" content="100">
+    <meta property="og:title" content="DevShelter | Rooms and Hotels" />
+    <meta
+      name="description"
+      content="DevShelter -   We provide comfortable and peaceful stay for corporate executives,
+    business travelers, tourists and vacation rentals. "
+    />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="Rooms and hotels at mumbai" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:image:width" content="100" />
   </head>
 
   <body>
@@ -142,9 +145,7 @@
                 <div class="navbar-nav">
                   <a href="index.html" class="nav-item nav-link active">Home</a>
                   <a href="service.html" class="nav-item nav-link">Services</a>
-                  <a href="about.html" class="nav-item nav-link "
-                    >About Us</a
-                  >
+                  <a href="about.html" class="nav-item nav-link">About Us</a>
                   <ul class="navbar-nav">
                     <!-- Dropdown -->
                     <li class="nav-item dropdown p-0 m-0">
@@ -172,7 +173,9 @@
                               </a>
                             </li>
                             <li>
-                              <a class="dropdown-item " href="roomdetails.html?location=malad&type=4bhk"
+                              <a
+                                class="dropdown-item"
+                                href="roomdetails.html?location=malad&type=4bhk"
                                 ><i
                                   class="fa-solid fa-hotel"
                                   style="color: #24d4fd"
@@ -184,12 +187,14 @@
                         </li>
 
                         <li>
-                          <a class="dropdown-item " href="#">
+                          <a class="dropdown-item" href="#">
                             Apart Hotel &raquo;
                           </a>
                           <ul class="dropdown-menu dropdown-submenu">
                             <li>
-                              <a class="dropdown-item border-bottom" href="roomdetails.html?location=malad&type=apart"
+                              <a
+                                class="dropdown-item border-bottom"
+                                href="roomdetails.html?location=malad&type=apart"
                                 ><i
                                   class="fa-solid fa-hotel"
                                   style="color: #24d4fd"
@@ -198,7 +203,9 @@
                               </a>
                             </li>
                             <li>
-                              <a class="dropdown-item border-bottom" href="roomdetails.html?location=malad&type=apart2"
+                              <a
+                                class="dropdown-item border-bottom"
+                                href="roomdetails.html?location=malad&type=apart2"
                                 ><i
                                   class="fa-solid fa-hotel"
                                   style="color: #24d4fd"
@@ -207,7 +214,9 @@
                               </a>
                             </li>
                             <li>
-                              <a class="dropdown-item " href="roomdetails.html?location=goregon&type=apart"
+                              <a
+                                class="dropdown-item"
+                                href="roomdetails.html?location=goregon&type=apart"
                                 ><i
                                   class="fa-solid fa-hotel"
                                   style="color: #24d4fd"
@@ -230,40 +239,23 @@
           </div>
         </div>
       </div>
-      <div class="marquee-footer">
-        <div class="marquee">
-        <div class="marquee_text">
-        <ul class="marquee-content-primary">
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
+      <?php 
+        include 'offers.php';
+        if(has_offer()){
+          echo '<div class="marquee-footer">
+            <div class="marquee">
+              <div class="marquee_text">
+                <ul class="marquee-content-primary">';
+                 display_latest_offer(); 
+          echo '  
         </ul>
-          <ul class="marquee-content-secondary">
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        </ul>
-        </div>
-        </div>
-        </div>
+      </div>
+    </div>
+    </div>
+          ';
+        }
+      ?>
+              
 
       <!-- Carousel Start -->
       <div class="container-fluid p-0 mb-5">
@@ -272,12 +264,13 @@
           class="carousel slide"
           data-bs-ride="carousel"
         >
-        
           <div class="carousel-inner">
-            
             <div class="carousel-item active">
-              
-              <img class="w-100 h-100" src="img/malad/3bhk/IMG_2073.JPG" alt="Image" />
+              <img
+                class="w-100 h-100"
+                src="img/malad/3bhk/IMG_2073.JPG"
+                alt="Image"
+              />
               <div
                 class="carousel-caption d-flex flex-column align-items-center justify-content-center"
               >
@@ -291,12 +284,12 @@
                     Devshelter A Brand Luxurious Hotel
                   </h1>
                   <a
-                    href=""
+                    href="room.html"
                     class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
                     >Our Rooms</a
                   >
                   <a
-                    href=""
+                    href="booking.html"
                     class="btn btn-light py-md-3 px-md-5 animated slideInRight"
                     >Book A Room</a
                   >
@@ -304,7 +297,11 @@
               </div>
             </div>
             <div class="carousel-item">
-              <img class="w-100 h-100" src="img/goregaon-aparthotel/IMG_3286.JPG" alt="Image" />
+              <img
+                class="w-100 h-100"
+                src="img/goregaon-aparthotel/IMG_3286.JPG"
+                alt="Image"
+              />
               <div
                 class="carousel-caption d-flex flex-column align-items-center justify-content-center"
               >
@@ -318,12 +315,12 @@
                     Your Home in Every Destination
                   </h2>
                   <a
-                    href=""
+                    href="room.html"
                     class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
                     >Our Rooms</a
                   >
                   <a
-                    href=""
+                    href="booking.html"
                     class="btn btn-light py-md-3 px-md-5 animated slideInRight"
                     >Book A Room</a
                   >
@@ -331,7 +328,11 @@
               </div>
             </div>
             <div class="carousel-item">
-              <img class="w-100 h-100" src="img/malad-aparthotel/IMG_E6114.JPG" alt="Image" />
+              <img
+                class="w-100 h-100"
+                src="img/malad-aparthotel/IMG_E6114.JPG"
+                alt="Image"
+              />
               <div
                 class="carousel-caption d-flex flex-column align-items-center justify-content-center"
               >
@@ -345,12 +346,12 @@
                     Comfort Like Never Before
                   </h1>
                   <a
-                    href=""
+                    href="room.html"
                     class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
                     >Our Rooms</a
                   >
                   <a
-                    href=""
+                    href="booking.html"
                     class="btn btn-light py-md-3 px-md-5 animated slideInRight"
                     >Book A Room</a
                   >
@@ -358,7 +359,11 @@
               </div>
             </div>
             <div class="carousel-item">
-              <img class="w-100 h-100" src="img/goregaon-aparthotel/IMG_3302.JPG" alt="Image" />
+              <img
+                class="w-100 h-100"
+                src="img/goregaon-aparthotel/IMG_3302.JPG"
+                alt="Image"
+              />
               <div
                 class="carousel-caption d-flex flex-column align-items-center justify-content-center"
               >
@@ -372,12 +377,12 @@
                     Stays for Business and Beyond
                   </h2>
                   <a
-                    href=""
+                    href="room.html"
                     class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
                     >Our Rooms</a
                   >
                   <a
-                    href=""
+                    href="booking.html"
                     class="btn btn-light py-md-3 px-md-5 animated slideInRight"
                     >Book A Room</a
                   >
@@ -419,7 +424,7 @@
                 <div class="row g-2">
                   <div class="col-md-3">
                     <select class="form-select" name="location">
-                      <option selected>Location</option>
+                      <option hidden>Location</option>
                       <option value="jogeshwari">Jogeshwari</option>
                       <option value="malad">Malad</option>
                       <option value="goregaon">Goregaon</option>
@@ -576,7 +581,7 @@
             <h2 class="mb-4">
               Welcome to
               <span class="text-primary">DevShelter</span>
-            </h2 >
+            </h2>
             <p class="mb-4">
               We provide comfortable and peaceful stay for corporate executives,
               business travelers, tourists and vacation rentals. Serviced
@@ -621,7 +626,9 @@
                 </div>
               </div>
             </div>
-            <a class="btn btn-about btn-primary py-3 px-5 mt-2" href="about.html"
+            <a
+              class="btn btn-about btn-primary py-3 px-5 mt-2"
+              href="about.html"
               >Explore More</a
             >
           </div>
@@ -683,7 +690,7 @@
         <h6 class="section-title text-center text-primary text-uppercase">
           Our Location
         </h6>
-        <p class="para style="margin-left: 5rem; margin-right: 5rem">
+        <p class="para" style="margin-left: 5rem; margin-right: 5rem">
           DevShelter offers conveniently located hotels in vibrant Mumbai
           neighborhoods such as Malad, Goregaon, and Jogeshwari, providing
           guests with easy access to local attractions, business centers, and
@@ -695,7 +702,10 @@
           <div class="imgbox">
             <div
               class="img"
-              style="background: url(img/main/malad.jpg); background-size: cover"
+              style="
+                background: url(img/main/malad.jpg);
+                background-size: cover;
+              "
             >
               <h2 class="title">Malad</h2>
             </div>
@@ -709,7 +719,10 @@
           <div class="imgbox">
             <div
               class="img"
-              style="background: url(img/main/goregaon.jpg); background-size: cover"
+              style="
+                background: url(img/main/goregaon.jpg);
+                background-size: cover;
+              "
             >
               <h2 class="title">Goregaon</h2>
             </div>
@@ -1233,137 +1246,137 @@
 
     <!-- Testimonial Start -->
     <div
-    class="container-fluid testimonial my-5 py-5 bg-dark wow zoomIn"
-    data-wow-delay="0.1s"
-  >
-    <div class="container-fluid">
-      <div class="owl-carousel testimonial-carousel py-5">
-        <div
-          class="testimonial-item position-relative bg-white rounded overflow-hidden"
-        >
-          <a
-            href="https://www.google.com/travel/search?q=Dev%20shelter&g2lb=2504374%2C4814050%2C4874190%2C4893075%2C4965990%2C72277293%2C72302247%2C72317059%2C72406588%2C72414906%2C72421566%2C72462234%2C72470899%2C72471280%2C72472051%2C72473841%2C72481459%2C72485658%2C72486593%2C72494250%2C72513513%2C72536387%2C72538597%2C72549171%2C72570850%2C72586335%2C72597757%2C72597926%2C72602734%2C72606236%2C72616110%2C72618896%2C72619172%2C72619927%2C72620306%2C72629582&hl=en-IN&gl=in&cs=1&ssta=1&ts=CAEaHhIcEhQKBwjoDxAGGA8SBwjoDxAGGBAYATIECAAQACoHCgU6A0lOUg&qs=CAEyFENnc0kwSmJkOXAzUWhlX1RBUkFCOAhCCREKx7NY-G_nj0IJEatrXTwSsitZQgkRaMv8PQDWrFpaODI2qgEzEAEyHhABIhpFppq6QvAZouUrN5eveHdnfFoOfzH50PmY9TIPEAIiC2RldiBzaGVsdGVyahwKGg0AcBZFEhMIiuCCzJzbhgMVVf5MAh1ekQVr&ap=MABoAboBB3Jldmlld3M&ictx=111&ved=0CAAQ5JsGahcKEwjY8ezQnNuGAxUAAAAAHQAAAAAQPA"
-            class="text-dark"
+      class="container-fluid testimonial my-5 py-5 bg-dark wow zoomIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container-fluid">
+        <div class="owl-carousel testimonial-carousel py-5">
+          <div
+            class="testimonial-item position-relative bg-white rounded overflow-hidden"
           >
-            <p>
-              Well managed set of properties. The manager, Shivajeet, is a
-              very kind and helpful guy. They have a caretaker and a cook at
-              each property. The caretakers are very cooperative people as
-              well.
-            </p>
-            <div class="d-flex align-items-center">
-              <img
-                class="img-fluid flex-shrink-0 rounded"
-                src="https://lh3.googleusercontent.com/a/ACg8ocI62o557erbgRx7ujT8D91pPhNaUW8Qz5l8K-V8-V1IbxfHbw=s40-c-rp-mo-ba3-br100"
-                style="width: 45px; height: 45px"
-              />
-              <div class="ps-3">
-                <h6 class="fw-bold mb-1">Siddharth Mathapati</h6>
-                <!-- <small>Profession</small> -->
+            <a
+              href="https://www.google.com/travel/search?q=Dev%20shelter&g2lb=2504374%2C4814050%2C4874190%2C4893075%2C4965990%2C72277293%2C72302247%2C72317059%2C72406588%2C72414906%2C72421566%2C72462234%2C72470899%2C72471280%2C72472051%2C72473841%2C72481459%2C72485658%2C72486593%2C72494250%2C72513513%2C72536387%2C72538597%2C72549171%2C72570850%2C72586335%2C72597757%2C72597926%2C72602734%2C72606236%2C72616110%2C72618896%2C72619172%2C72619927%2C72620306%2C72629582&hl=en-IN&gl=in&cs=1&ssta=1&ts=CAEaHhIcEhQKBwjoDxAGGA8SBwjoDxAGGBAYATIECAAQACoHCgU6A0lOUg&qs=CAEyFENnc0kwSmJkOXAzUWhlX1RBUkFCOAhCCREKx7NY-G_nj0IJEatrXTwSsitZQgkRaMv8PQDWrFpaODI2qgEzEAEyHhABIhpFppq6QvAZouUrN5eveHdnfFoOfzH50PmY9TIPEAIiC2RldiBzaGVsdGVyahwKGg0AcBZFEhMIiuCCzJzbhgMVVf5MAh1ekQVr&ap=MABoAboBB3Jldmlld3M&ictx=111&ved=0CAAQ5JsGahcKEwjY8ezQnNuGAxUAAAAAHQAAAAAQPA"
+              class="text-dark"
+            >
+              <p>
+                Well managed set of properties. The manager, Shivajeet, is a
+                very kind and helpful guy. They have a caretaker and a cook at
+                each property. The caretakers are very cooperative people as
+                well.
+              </p>
+              <div class="d-flex align-items-center">
+                <img
+                  class="img-fluid flex-shrink-0 rounded"
+                  src="https://lh3.googleusercontent.com/a/ACg8ocI62o557erbgRx7ujT8D91pPhNaUW8Qz5l8K-V8-V1IbxfHbw=s40-c-rp-mo-ba3-br100"
+                  style="width: 45px; height: 45px"
+                />
+                <div class="ps-3">
+                  <h6 class="fw-bold mb-1">Siddharth Mathapati</h6>
+                  <!-- <small>Profession</small> -->
+                </div>
               </div>
-            </div>
-            <i
-              class="fa-brands fa-google fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"
-              style="color: #ffd43b"
-            ></i>
-            <!-- <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i> -->
-          </a>
-        </div>
-        <div
-          class="testimonial-item position-relative bg-white rounded overflow-hidden"
-        >
-          <a
-            href="https://www.google.com/travel/search?q=Dev%20shelter&g2lb=2504374%2C4814050%2C4874190%2C4893075%2C4965990%2C72277293%2C72302247%2C72317059%2C72406588%2C72414906%2C72421566%2C72462234%2C72470899%2C72471280%2C72472051%2C72473841%2C72481459%2C72485658%2C72486593%2C72494250%2C72513513%2C72536387%2C72538597%2C72549171%2C72570850%2C72586335%2C72597757%2C72597926%2C72602734%2C72606236%2C72616110%2C72618896%2C72619172%2C72619927%2C72620306%2C72629582&hl=en-IN&gl=in&cs=1&ssta=1&ts=CAEaHhIcEhQKBwjoDxAGGA8SBwjoDxAGGBAYATIECAAQACoHCgU6A0lOUg&qs=CAEyFENnc0kwSmJkOXAzUWhlX1RBUkFCOAhCCREKx7NY-G_nj0IJEatrXTwSsitZQgkRaMv8PQDWrFpaODI2qgEzEAEyHhABIhpFppq6QvAZouUrN5eveHdnfFoOfzH50PmY9TIPEAIiC2RldiBzaGVsdGVyahwKGg0AcBZFEhMIiuCCzJzbhgMVVf5MAh1ekQVr&ap=MABoAboBB3Jldmlld3M&ictx=111&ved=0CAAQ5JsGahcKEwjY8ezQnNuGAxUAAAAAHQAAAAAQPA"
-            class="text-dark"
+              <i
+                class="fa-brands fa-google fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"
+                style="color: #ffd43b"
+              ></i>
+              <!-- <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i> -->
+            </a>
+          </div>
+          <div
+            class="testimonial-item position-relative bg-white rounded overflow-hidden"
           >
-            <p>
-              What a homestay!!! This is the best room stay hotel ever
-              seen...superb room super service everything is so good .. The
-              only thing I felt sad is bed because it's small for family
-              members..if king size means this is ...
-            </p>
-            <div class="d-flex align-items-center">
-              <img
-                class="img-fluid flex-shrink-0 rounded"
-                src="https://lh3.googleusercontent.com/a/ACg8ocLy-WJtCSBzP1SYemgxQ68JELFiY5XWCF_J579jBFGpMIZcvA=s40-c-rp-mo-br100 "
-                style="width: 45px; height: 45px"
-              />
-              <div class="ps-3">
-                <h6 class="fw-bold mb-1">Hamee Safee</h6>
-                <!-- <small>Profession</small> -->
+            <a
+              href="https://www.google.com/travel/search?q=Dev%20shelter&g2lb=2504374%2C4814050%2C4874190%2C4893075%2C4965990%2C72277293%2C72302247%2C72317059%2C72406588%2C72414906%2C72421566%2C72462234%2C72470899%2C72471280%2C72472051%2C72473841%2C72481459%2C72485658%2C72486593%2C72494250%2C72513513%2C72536387%2C72538597%2C72549171%2C72570850%2C72586335%2C72597757%2C72597926%2C72602734%2C72606236%2C72616110%2C72618896%2C72619172%2C72619927%2C72620306%2C72629582&hl=en-IN&gl=in&cs=1&ssta=1&ts=CAEaHhIcEhQKBwjoDxAGGA8SBwjoDxAGGBAYATIECAAQACoHCgU6A0lOUg&qs=CAEyFENnc0kwSmJkOXAzUWhlX1RBUkFCOAhCCREKx7NY-G_nj0IJEatrXTwSsitZQgkRaMv8PQDWrFpaODI2qgEzEAEyHhABIhpFppq6QvAZouUrN5eveHdnfFoOfzH50PmY9TIPEAIiC2RldiBzaGVsdGVyahwKGg0AcBZFEhMIiuCCzJzbhgMVVf5MAh1ekQVr&ap=MABoAboBB3Jldmlld3M&ictx=111&ved=0CAAQ5JsGahcKEwjY8ezQnNuGAxUAAAAAHQAAAAAQPA"
+              class="text-dark"
+            >
+              <p>
+                What a homestay!!! This is the best room stay hotel ever
+                seen...superb room super service everything is so good .. The
+                only thing I felt sad is bed because it's small for family
+                members..if king size means this is ...
+              </p>
+              <div class="d-flex align-items-center">
+                <img
+                  class="img-fluid flex-shrink-0 rounded"
+                  src="https://lh3.googleusercontent.com/a/ACg8ocLy-WJtCSBzP1SYemgxQ68JELFiY5XWCF_J579jBFGpMIZcvA=s40-c-rp-mo-br100 "
+                  style="width: 45px; height: 45px"
+                />
+                <div class="ps-3">
+                  <h6 class="fw-bold mb-1">Hamee Safee</h6>
+                  <!-- <small>Profession</small> -->
+                </div>
               </div>
-            </div>
-            <i
-              class="fa-brands fa-google fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"
-              style="color: #ffd43b"
-            ></i>
-            <!-- <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i> -->
-          </a>
-        </div>
-        <div
-          class="testimonial-item position-relative bg-white rounded overflow-hidden"
-        >
-          <a
-            href="https://www.google.com/travel/search?q=Dev%20shelter&g2lb=2504374%2C4814050%2C4874190%2C4893075%2C4965990%2C72277293%2C72302247%2C72317059%2C72406588%2C72414906%2C72421566%2C72462234%2C72470899%2C72471280%2C72472051%2C72473841%2C72481459%2C72485658%2C72486593%2C72494250%2C72513513%2C72536387%2C72538597%2C72549171%2C72570850%2C72586335%2C72597757%2C72597926%2C72602734%2C72606236%2C72616110%2C72618896%2C72619172%2C72619927%2C72620306%2C72629582&hl=en-IN&gl=in&cs=1&ssta=1&ts=CAEaHhIcEhQKBwjoDxAGGA8SBwjoDxAGGBAYATIECAAQACoHCgU6A0lOUg&qs=CAEyFENnc0kwSmJkOXAzUWhlX1RBUkFCOAhCCREKx7NY-G_nj0IJEatrXTwSsitZQgkRaMv8PQDWrFpaODI2qgEzEAEyHhABIhpFppq6QvAZouUrN5eveHdnfFoOfzH50PmY9TIPEAIiC2RldiBzaGVsdGVyahwKGg0AcBZFEhMIiuCCzJzbhgMVVf5MAh1ekQVr&ap=MABoAboBB3Jldmlld3M&ictx=111&ved=0CAAQ5JsGahcKEwjY8ezQnNuGAxUAAAAAHQAAAAAQPA"
-            class="text-dark"
+              <i
+                class="fa-brands fa-google fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"
+                style="color: #ffd43b"
+              ></i>
+              <!-- <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i> -->
+            </a>
+          </div>
+          <div
+            class="testimonial-item position-relative bg-white rounded overflow-hidden"
           >
-            <p>
-              Thank you so much for the hospitality and also the
-              arrangements. We really liked your service. Amar bhaiyaa is an
-              amazing cook. They have laundary facility and also outside
-              food is allowed. We enjoyed our 17 days stay.
-            </p>
-            <div class="d-flex align-items-center">
-              <img
-                class="img-fluid flex-shrink-0 rounded"
-                src="https://lh3.googleusercontent.com/a-/ALV-UjWlJxKP9QO1aIGAT2ZYFVlFAtiriSJBPTzUQLRpgby4A0pHhX4T=s40-c-rp-mo-ba3-br100"
-                style="width: 45px; height: 45px"
-              />
-              <div class="ps-3">
-                <h6 class="fw-bold mb-1">Skinasics by Rhea</h6>
-                <!-- <small>Profession</small> -->
+            <a
+              href="https://www.google.com/travel/search?q=Dev%20shelter&g2lb=2504374%2C4814050%2C4874190%2C4893075%2C4965990%2C72277293%2C72302247%2C72317059%2C72406588%2C72414906%2C72421566%2C72462234%2C72470899%2C72471280%2C72472051%2C72473841%2C72481459%2C72485658%2C72486593%2C72494250%2C72513513%2C72536387%2C72538597%2C72549171%2C72570850%2C72586335%2C72597757%2C72597926%2C72602734%2C72606236%2C72616110%2C72618896%2C72619172%2C72619927%2C72620306%2C72629582&hl=en-IN&gl=in&cs=1&ssta=1&ts=CAEaHhIcEhQKBwjoDxAGGA8SBwjoDxAGGBAYATIECAAQACoHCgU6A0lOUg&qs=CAEyFENnc0kwSmJkOXAzUWhlX1RBUkFCOAhCCREKx7NY-G_nj0IJEatrXTwSsitZQgkRaMv8PQDWrFpaODI2qgEzEAEyHhABIhpFppq6QvAZouUrN5eveHdnfFoOfzH50PmY9TIPEAIiC2RldiBzaGVsdGVyahwKGg0AcBZFEhMIiuCCzJzbhgMVVf5MAh1ekQVr&ap=MABoAboBB3Jldmlld3M&ictx=111&ved=0CAAQ5JsGahcKEwjY8ezQnNuGAxUAAAAAHQAAAAAQPA"
+              class="text-dark"
+            >
+              <p>
+                Thank you so much for the hospitality and also the arrangements.
+                We really liked your service. Amar bhaiyaa is an amazing cook.
+                They have laundary facility and also outside food is allowed. We
+                enjoyed our 17 days stay.
+              </p>
+              <div class="d-flex align-items-center">
+                <img
+                  class="img-fluid flex-shrink-0 rounded"
+                  src="https://lh3.googleusercontent.com/a-/ALV-UjWlJxKP9QO1aIGAT2ZYFVlFAtiriSJBPTzUQLRpgby4A0pHhX4T=s40-c-rp-mo-ba3-br100"
+                  style="width: 45px; height: 45px"
+                />
+                <div class="ps-3">
+                  <h6 class="fw-bold mb-1">Skinasics by Rhea</h6>
+                  <!-- <small>Profession</small> -->
+                </div>
               </div>
-            </div>
-            <i
-              class="fa-brands fa-google fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"
-              style="color: #ffd43b"
-            ></i>
-            <!-- <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i> -->
-          </a>
-        </div>
-        <div
-          class="testimonial-item position-relative bg-white rounded overflow-hidden"
-        >
-          <a
-            href="https://www.google.com/travel/search?q=Dev%20shelter&g2lb=2504374%2C4814050%2C4874190%2C4893075%2C4965990%2C72277293%2C72302247%2C72317059%2C72406588%2C72414906%2C72421566%2C72462234%2C72470899%2C72471280%2C72472051%2C72473841%2C72481459%2C72485658%2C72486593%2C72494250%2C72513513%2C72536387%2C72538597%2C72549171%2C72570850%2C72586335%2C72597757%2C72597926%2C72602734%2C72606236%2C72616110%2C72618896%2C72619172%2C72619927%2C72620306%2C72629582&hl=en-IN&gl=in&cs=1&ssta=1&ts=CAEaHhIcEhQKBwjoDxAGGA8SBwjoDxAGGBAYATIECAAQACoHCgU6A0lOUg&qs=CAEyFENnc0kwSmJkOXAzUWhlX1RBUkFCOAhCCREKx7NY-G_nj0IJEatrXTwSsitZQgkRaMv8PQDWrFpaODI2qgEzEAEyHhABIhpFppq6QvAZouUrN5eveHdnfFoOfzH50PmY9TIPEAIiC2RldiBzaGVsdGVyahwKGg0AcBZFEhMIiuCCzJzbhgMVVf5MAh1ekQVr&ap=MABoAboBB3Jldmlld3M&ictx=111&ved=0CAAQ5JsGahcKEwjY8ezQnNuGAxUAAAAAHQAAAAAQPA"
-            class="text-dark"
+              <i
+                class="fa-brands fa-google fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"
+                style="color: #ffd43b"
+              ></i>
+              <!-- <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i> -->
+            </a>
+          </div>
+          <div
+            class="testimonial-item position-relative bg-white rounded overflow-hidden"
           >
-            <p>
-              Great experience in this hotel manager and staff is ver good
-              behaviour And rooms , clining, breakfast is very good great
-              experience I request to all please 👍visit
-            </p>
-            <div class="d-flex align-items-center">
-              <img
-                class="img-fluid flex-shrink-0 rounded"
-                src="https://lh3.googleusercontent.com/a-/ALV-UjXmCIc5zMNotppB-VcxZI3HS6sjHiUPvHMLIqi4m6OenUVgiINs=s40-c-rp-mo-br100"
-                style="width: 45px; height: 45px"
-              />
-              <div class="ps-3">
-                <h6 class="fw-bold mb-1">Indrajeet Pandey</h6>
-                <!-- <small>Profession</small> -->
+            <a
+              href="https://www.google.com/travel/search?q=Dev%20shelter&g2lb=2504374%2C4814050%2C4874190%2C4893075%2C4965990%2C72277293%2C72302247%2C72317059%2C72406588%2C72414906%2C72421566%2C72462234%2C72470899%2C72471280%2C72472051%2C72473841%2C72481459%2C72485658%2C72486593%2C72494250%2C72513513%2C72536387%2C72538597%2C72549171%2C72570850%2C72586335%2C72597757%2C72597926%2C72602734%2C72606236%2C72616110%2C72618896%2C72619172%2C72619927%2C72620306%2C72629582&hl=en-IN&gl=in&cs=1&ssta=1&ts=CAEaHhIcEhQKBwjoDxAGGA8SBwjoDxAGGBAYATIECAAQACoHCgU6A0lOUg&qs=CAEyFENnc0kwSmJkOXAzUWhlX1RBUkFCOAhCCREKx7NY-G_nj0IJEatrXTwSsitZQgkRaMv8PQDWrFpaODI2qgEzEAEyHhABIhpFppq6QvAZouUrN5eveHdnfFoOfzH50PmY9TIPEAIiC2RldiBzaGVsdGVyahwKGg0AcBZFEhMIiuCCzJzbhgMVVf5MAh1ekQVr&ap=MABoAboBB3Jldmlld3M&ictx=111&ved=0CAAQ5JsGahcKEwjY8ezQnNuGAxUAAAAAHQAAAAAQPA"
+              class="text-dark"
+            >
+              <p>
+                Great experience in this hotel manager and staff is ver good
+                behaviour And rooms , clining, breakfast is very good great
+                experience I request to all please 👍visit
+              </p>
+              <div class="d-flex align-items-center">
+                <img
+                  class="img-fluid flex-shrink-0 rounded"
+                  src="https://lh3.googleusercontent.com/a-/ALV-UjXmCIc5zMNotppB-VcxZI3HS6sjHiUPvHMLIqi4m6OenUVgiINs=s40-c-rp-mo-br100"
+                  style="width: 45px; height: 45px"
+                />
+                <div class="ps-3">
+                  <h6 class="fw-bold mb-1">Indrajeet Pandey</h6>
+                  <!-- <small>Profession</small> -->
+                </div>
               </div>
-            </div>
-            <i
-              class="fa-brands fa-google fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"
-              style="color: #ffd43b"
-            ></i>
-            <!-- <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i> -->
-          </a>
+              <i
+                class="fa-brands fa-google fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"
+                style="color: #ffd43b"
+              ></i>
+              <!-- <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i> -->
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
     <!-- Testimonial End -->
 
     <!-- Footer Start -->
@@ -1483,14 +1496,15 @@
       ><i class="bi bi-arrow-up"></i
     ></a> -->
 
-
-   
-    <a href="https://wa.me/7039433505" class="float "  target="_blank" alt="contact directly">
-    <i class="fab fa-whatsapp my-float"></i>
+    <a
+      href="https://wa.me/7039433505"
+      class="float"
+      target="_blank"
+      alt="contact directly"
+    >
+      <i class="fab fa-whatsapp my-float"></i>
     </a>
-    
 
-    
     <a href="tel:+91 8451880595" class="float-2" target="_blank">
       <i class="fa fa-headset my-float"></i>
     </a>
