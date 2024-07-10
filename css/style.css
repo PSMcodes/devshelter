@@ -1387,11 +1387,25 @@
   text-align: justify;
 }
 .room-div{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10%;
-  place-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items:center ;
   width: 100%;
+}@media (max-width:888px){
+  .room-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .card{
+    margin-bottom: 10%;
+  }
+  .para{
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+  }
 }
 .card {
   overflow: visible;
@@ -1879,7 +1893,7 @@
 }
 
 h2 {
-  text-align: center;
+  text-align: left;
   margin-bottom: 20px;
 }
 
