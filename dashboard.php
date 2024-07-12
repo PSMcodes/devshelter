@@ -1,6 +1,15 @@
 <?php
 session_start();
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+<<<<<<< HEAD
+    header('Location: index.html');
+    exit;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+=======
     header('Location: admin.html');
     exit;
 }
@@ -8,10 +17,36 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 <!DOCTYPE html>
 <html lang="en">
 
+>>>>>>> 17887e6e66d477bc331561e4160d578310122a6a
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
+<<<<<<< HEAD
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h2>Admin Dashboard</h2>
+        <button onclick="showAddOfferForm()">Add Offer</button>
+        <button onclick="blockInventory()">Block Inventory</button>
+
+        <div id="add-offer-form" style="display:none;">
+            <h3>Add Offer</h3>
+            <form action="add_offer.php" method="post">
+                <label for="offer">Offer Details:</label>
+                <input type="text" id="offer" name="offer" required>
+                <button type="submit">Add Offer</button>
+            </form>
+        </div>
+
+        <div id="block-inventory" style="display:none;">
+            <h3>All rooms are booked</h3>
+            <p>All inventory has been blocked.</p>
+        </div>
+    </div>
+
+=======
     <!-- Include Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -107,11 +142,20 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+>>>>>>> 17887e6e66d477bc331561e4160d578310122a6a
     <script>
         function showAddOfferForm() {
             document.getElementById('add-offer-form').style.display = 'block';
         }
 
+<<<<<<< HEAD
+        function blockInventory() {
+            document.getElementById('block-inventory').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+=======
         function toggleInventoryStatus() {
             var form = document.getElementById('block-inventory-form');
             var propertySelect = document.getElementById('property-select');
@@ -130,3 +174,4 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 </body>
 
 </html>
+>>>>>>> 17887e6e66d477bc331561e4160d578310122a6a
