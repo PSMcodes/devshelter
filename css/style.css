@@ -950,12 +950,13 @@
 }
 
 /*** Testimonial ***/
+/*** Testimonial ***/
 .testimonial {
-  background: linear-gradient(rgba(15, 23, 43, 0.7), rgba(15, 23, 43, 0.7)),
-    url(../img/carousel-2.jpg);
+  background: linear-gradient(rgba(15, 23, 43, 0.7), rgba(15, 23, 43, 0.7)), url(../img/testimonial.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 20px; /* Ensure some padding around the testimonial section */
 }
 
 .testimonial-carousel {
@@ -964,7 +965,7 @@
 }
 
 .testimonial-carousel .testimonial-item {
-  padding: 30px;
+  padding: 5%;
 }
 
 .testimonial-carousel .owl-nav {
@@ -987,7 +988,7 @@
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  background: var(--primary);
+  /* background: var(--primary); */
   border-radius: 2px;
   font-size: 18px;
   transition: 0.5s;
@@ -996,8 +997,51 @@
 .testimonial-carousel .owl-nav .owl-prev:hover,
 .testimonial-carousel .owl-nav .owl-next:hover {
   color: var(--primary);
-  background: #ffffff;
+  /* background: #ffffff; */
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .testimonial-carousel {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .testimonial-carousel .testimonial-item {
+    padding: 10%;
+  }
+
+  .testimonial-carousel .owl-nav .owl-prev,
+  .testimonial-carousel .owl-nav .owl-next {
+    max-width: 50px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-carousel {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .testimonial-carousel .testimonial-item {
+    padding: 15%;
+  }
+
+  .testimonial-carousel .owl-nav .owl-prev,
+  .testimonial-carousel .owl-nav .owl-next {
+    max-width: 40px;
+    font-size: 14px;
+    background: var(--primary);
+    color: white;
+  }
+  .testimonial-carousel .owl-nav .owl-prev:hover,
+.testimonial-carousel .owl-nav .owl-next:hover {
+  color: white;
+  /* background: #ffffff; */
+}
+}
+
 
 /*** Team ***/
 .team-item,
@@ -1392,6 +1436,22 @@
   align-items:center ;
   width: 100%;
 }@media (max-width:888px){
+  .room-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .card{
+    margin-bottom: 10%;
+  }
+  .para{
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+  }
+}
+@media (max-width:888px){
   .room-div{
     display: flex;
     flex-direction: column;
@@ -1957,63 +2017,77 @@ i {
 }
 
 
-.float{
-	position:fixed;
-	width:80px;
-	height:60px;
-	bottom:5%;
-	right:0px;
-	background-color:#24d4fd;
-	color:#FFF;
-  -webkit-border-top-left-radius: 50px;
-  -webkit-border-bottom-left-radius: 50px;
-  -moz-border-radius-topleft: 50px;
-  -moz-border-radius-bottomleft: 50px;
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;  
-	text-align:center;
-  font-size:30px;
-	box-shadow: 2px 2px 3px #999;
-  z-index:100;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.float-2{
-	position:fixed;
-	width:80px;
-	height:60px;
-	bottom:15%;
-	right:0px;
-	background-color:#24d4fd;
-	color:#FFF;
+/* Floating Button Styles */
+.float, .float-2 {
+  position: fixed;
+  width: 80px;
+  height: 60px;
+  bottom: 5%;
+  right: 0px;
+  background-color: #24d4fd;
+  color: #FFF;
   -webkit-border-top-left-radius: 50px;
   -webkit-border-bottom-left-radius: 50px;
   -moz-border-radius-topleft: 50px;
   -moz-border-radius-bottomleft: 50px;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
-	text-align:center;
-  font-size:30px;
-	box-shadow: 2px 2px 3px #999;
-  z-index:100;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.3s ease-in-out;
 }
-.float-2:hover{
-  color:white ;
+
+.float {
+  bottom: 5%;
 }
-.float:hover{
+
+.float-2 {
+  bottom: 15%;
+}
+
+.float:hover, .float-2:hover {
   color: white;
 }
-.my-float{
-	margin-left: 10px;
+
+.my-float {
+  margin-left: 10px;
 }
+
 .my-float:hover {
   transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   transition: 1s ease-out;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .float, .float-2 {
+    width: 60px;
+    height: 50px;
+    font-size: 24px;
+  }
+  
+  .my-float {
+    margin-left: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .float, .float-2 {
+    width: 50px;
+    height: 40px;
+    font-size: 20px;
+  }
+  
+  .my-float {
+    margin-left: 5px;
+  }
+}
+
 
 
 
