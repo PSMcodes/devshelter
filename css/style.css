@@ -1610,6 +1610,19 @@
   .carousel-item2 img {
     max-width: 80%;
     max-height: 80px;
+    padding: 0;
+  }
+  .carousel2{
+    padding-top:-2% !important;
+    margin-bottom: 10% !important;
+    margin-top: -19% !important; 
+  }
+  .brand-bottom{
+    padding-bottom: -13% !important;
+    margin-bottom: 0 !important;
+  }
+  .brand-title{
+    height: 100px !important;
   }
 }
 

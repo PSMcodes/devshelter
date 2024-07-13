@@ -237,6 +237,49 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+    const radioInputs = document.querySelectorAll('.radio-fight');
+    const descriptionBoxes = document.querySelectorAll('.description-box2');
+    let currentIndex = 0;
+    let intervalId;
+
+    function showDescription(index) {
+        descriptionBoxes.forEach((box, idx) => {
+            if (idx === index) {
+                box.classList.add('active');
+            } else {
+                box.classList.remove('active');
+            }
+        });
+
+        radioInputs.forEach((input, idx) => {
+            input.checked = (idx === index);
+        });
+    }
+
+    function startAutoCycle() {
+        intervalId = setInterval(() => {
+            showDescription(currentIndex);
+            currentIndex = (currentIndex + 1) % descriptionBoxes.length;
+        }, 3000);
+    }
+
+    function stopAutoCycle() {
+        clearInterval(intervalId);
+    }
+
+    radioInputs.forEach((input, index) => {
+        input.addEventListener('change', () => {
+            stopAutoCycle();
+            currentIndex = index;
+            showDescription(currentIndex);
+            setTimeout(startAutoCycle, 3000); 
+        });
+    });
+
+    startAutoCycle();
+});
+
+document.addEventListener('DOMContentLoaded', function() {
     const loadMoreBtn = document.getElementById('load-more-btn');
     const additionalText = document.getElementById('additional-text');
 

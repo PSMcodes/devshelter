@@ -342,8 +342,8 @@
       <!-- about service end  -->
 
       <!-- Service Start -->
-      <div class="container-fluid py-5 main-services" style="background: url(img/main/time-background.png); background-size: cover; background-position:center center ; backdrop-filter: opacity(23%) ;">
-        <div class="container">
+      <div class="container-fluid py-5 main-services services-container" style="background: url(img/main/time-background.png); background-size: cover; background-position:center center ; backdrop-filter: opacity(23%) ; ">
+        <div class="container services-container">
           <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
             <h6 class="section-title text-center text-primary text-uppercase">
               Our Services
@@ -354,10 +354,15 @@
             </h1>
           </div>
           <div class="row m-2 d-flex justify-content-between">
+            <h3 class="text-start text-primary text-uppercase" style="margin-left: 6%; max-width: 20%;">
+              complimentary Services
+            </h3>
             <div class="radio-container service-main">
-              <div class="container  d-flex flex-column align-items-center">
+
+              <div class="Services-main2 d-flex flex-column align-items-center w-100">
               <div class="radio-inputs room-div2">
                   <!-- Radio Buttons -->
+                
                   <label>
                       <input class="radio-input" type="radio" name="vehicle" value="Room">
                       <span class="radio-tile">
@@ -445,50 +450,6 @@
                 <!-- Add more labels for additional options -->
             </div>
 
-            <div class="radio-inputs room-div2">
-              <!-- Radio Buttons -->
-              <label>
-                  <input class="radio-input" type="radio" name="vehicle" value="butler">
-                  <span class="radio-tile">
-                      <span class="radio-icon">
-                          <!-- SVG for Room -->
-                         <i class="fa-solid fa-user"></i>
-                      </span>
-                  </span>
-              </label>
-              
-              <label>
-                  <input class="radio-input" type="radio" name="vehicle" value="airplane">
-                  <span class="radio-tile">
-                      <span class="radio-icon">
-                          <!-- SVG for Motorbike -->
-                          <i class="fa-solid fa-plane"></i>
-                      </span>
-                  </span>
-              </label>
-              
-              <label>
-                  <input class="radio-input" type="radio" name="vehicle" value="food">
-                  <span class="radio-tile">
-                      <span class="radio-icon">
-                          <!-- SVG for Car -->
-                          <i class="fa-solid fa-cutlery"></i>
-                      </span>
-                  </span>
-              </label>
-              
-              <label>
-                  <input class="radio-input" type="radio" name="vehicle" value="cab">
-                  <span class="radio-tile">
-                      <span class="radio-icon">
-                          <!-- SVG for Plane -->
-                          <i class="fa-solid fa-taxi"></i>
-                      </span>
-                  </span>
-              </label>
-              
-              <!-- Add more labels for additional options -->
-          </div>
             </div>
 
               
@@ -550,31 +511,103 @@
                       <p>Enjoy laundry and dry cleaning services for a fresh wardrobe throughout your stay. Our efficient and reliable service ensures your clothes are clean, pressed, and ready to wear. Relax and focus on your activities while we take care of your laundry needs.</p>
                       <a class="btn btn-primary py-3 px-5 mt-2" href="">Explore More</a>
                   </div>
-                  <div id="butler-description" class="description-box">
-                    <span class="paid-tag">Paid</span>
-                    <h6 class="section-title text-center text-primary text-uppercase">         
-                      butler Services
-                    </h6> 
-                      <p>Experience the epitome of luxury with our personalized butler services, tailored to meet your every need. From unpacking your luggage to arranging special requests, our dedicated butlers are here to ensure a seamless and unforgettable stay.</p>
-                      <a class="btn btn-primary py-3 px-5 mt-2" href="">Explore More</a>
-                  </div>
-                  <div id="airplane-services-description" class="description-box">
-                    <span class="paid-tag">Paid</span>
-                    <h6 class="section-title text-center text-primary text-uppercase">
-                      Airport Transfers
-                    </h6> 
-                      <p>Enjoy seamless airport transfers with our reliable and comfortable transportation service. Our professional drivers ensure timely pickups and drop-offs, allowing you to relax from the moment you arrive until your departure.</p>
-                      <a class="btn btn-primary py-3 px-5 mt-2" href="">Explore More</a>
-                  </div>
-                  <div id="food-description" class="description-box">
-                    <span class="paid-tag">Paid</span>
-                    <h6 class="section-title text-center text-primary text-uppercase">
-                      Food & Beverages
-                    </h6> 
-                      <p>Savor a diverse selection of exquisite food and beverages, crafted to satisfy every palate. Our menu features a range of gourmet dishes, refreshing drinks, and delectable snacks available around the clock.</p>
-                      <a class="btn btn-primary py-3 px-5 mt-2" href="">Explore More</a>
-                  </div>
-                  <div id="cab-description" class="description-box">
+                  <!-- Add more description boxes for other options -->
+              </div>
+          </div>
+          </div>
+
+          <div class="row m-2 d-flex justify-content-between paid-services">
+            <h3 class="text-start text-primary text-uppercase" style="margin-left: 6%;">
+              Paid Services
+            </h3>
+            <div class="radio-container service-main">
+
+              <div class="container  d-flex flex-column align-items-center">
+
+
+
+            <div class="radio-inputs room-div2">
+              <!-- Radio Buttons -->
+              <label>
+                  <input class="radio-input radio-fight" type="radio" name="paid" value="butler">
+                  <span class="radio-tile">
+                      <span class="radio-icon">
+                          <!-- SVG for Room -->
+                         <i class="fa-solid fa-user"></i>
+                      </span>
+                  </span>
+              </label>
+              
+              <label>
+                  <input class="radio-input radio-fight" type="radio" name="paid" value="airplane">
+                  <span class="radio-tile">
+                      <span class="radio-icon">
+                          <!-- SVG for Motorbike -->
+                          <i class="fa-solid fa-plane"></i>
+                      </span>
+                  </span>
+              </label>
+              
+              <label>
+                  <input class="radio-input radio-fight" type="radio" name="paid" value="food">
+                  <span class="radio-tile">
+                      <span class="radio-icon">
+                          <!-- SVG for Car -->
+                          <i class="fa-solid fa-cutlery"></i>
+                      </span>
+                  </span>
+              </label>
+              
+              <label>
+                  <input class="radio-input radio-fight" type="radio" name="paid" value="cab">
+                  <span class="radio-tile">
+                      <span class="radio-icon">
+                          <!-- SVG for Plane -->
+                          <i class="fa-solid fa-taxi"></i>
+                      </span>
+                  </span>
+              </label>
+              
+              <!-- Add more labels for additional options -->
+          </div>
+            </div>
+
+              <!-- Description Boxes -->
+              <div class="description-boxes">
+                <div id="butler-description" class="description-box  description-box2 active">
+                  <span class="paid-tag">Paid</span>
+                  <h6 class="section-title text-center text-primary text-uppercase">         
+                    butler Services
+                  </h6> 
+                    <p>Experience the epitome of luxury with our personalized butler services, tailored to meet your every need. From unpacking your luggage to arranging special requests, our dedicated butlers are here to ensure a seamless and unforgettable stay.</p>
+                    <a class="btn btn-primary py-3 px-5 mt-2" href="">Explore More</a>
+                </div>
+                <div id="airplane-services-description" class="description-box description-box2">
+                  <span class="paid-tag">Paid</span>
+                  <h6 class="section-title text-center text-primary text-uppercase">
+                    Airport Transfers
+                  </h6> 
+                    <p>Enjoy seamless airport transfers with our reliable and comfortable transportation service. Our professional drivers ensure timely pickups and drop-offs, allowing you to relax from the moment you arrive until your departure.</p>
+                    <a class="btn btn-primary py-3 px-5 mt-2" href="">Explore More</a>
+                </div>
+                <div id="food-description" class="description-box description-box2">
+                  <span class="paid-tag">Paid</span>
+                  <h6 class="section-title text-center text-primary text-uppercase">
+                    Food & Beverages
+                  </h6> 
+                    <p>Savor a diverse selection of exquisite food and beverages, crafted to satisfy every palate. Our menu features a range of gourmet dishes, refreshing drinks, and delectable snacks available around the clock.</p>
+                    <a class="btn btn-primary py-3 px-5 mt-2" href="">Explore More</a>
+                </div>
+                <div id="cab-description" class="description-box">
+                  <span class="paid-tag">Paid</span>
+                  <h6 class="section-title text-center text-primary text-uppercase">
+                    Charges Cab Hire
+                  </h6> 
+                    <p>Enjoy hassle-free transportation with our transparent cab hire charges, ensuring you know exactly what you're paying for. Our competitive rates and detailed billing provide clarity and peace of mind, whether you're heading to a meeting, exploring the city, or running errands.</p>
+                    <a class="btn btn-primary py-3 px-5 mt-2" href="">Explore More</a>
+                </div>
+
+                  <div id="cab-description" class="description-box description-box2">
                     <span class="paid-tag">Paid</span>
                     <h6 class="section-title text-center text-primary text-uppercase">
                       Charges Cab Hire
@@ -587,7 +620,10 @@
           </div>
           </div>
         </div>
+        
       </div>
+
+      
 
       <!-- Service End -->
 
