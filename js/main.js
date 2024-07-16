@@ -200,6 +200,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let intervalId;
 
     function showDescription(index) {
+        console.log("box1",index);
         descriptionBoxes.forEach((box, idx) => {
             if (idx === index) {
                 box.classList.add('active');
@@ -243,6 +244,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let intervalId;
 
     function showDescription(index) {
+        // console.log(index);
         descriptionBoxes.forEach((box, idx) => {
             if (idx === index) {
                 box.classList.add('active');

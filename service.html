@@ -223,40 +223,31 @@
         </div>
       </div>
       <!-- Header End -->
-      <div class="marquee-footer">
-        <div class="marquee">
+      <?php 
+        include 'offers.php';
+        if(has_offer()){
+          echo '<div class="marquee-footer">
+      <div class="marquee">
         <div class="marquee_text">
-        <ul class="marquee-content-primary">
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
+          <ul class="marquee-content-primary">
+            '; display_latest_offer(); echo '
+          </ul>
+        </div>
+      </div>
+    </div>
+    '; } ?>
+    <?php 
+    
+    if(any_property_blocked()){
+      echo '<div class="marquee-footer">
+    <div class="marquee bg-danger">
+      <div class="marquee_text">
+        <ul class="marquee-content-danger">
+          '; display_any_blocked_property(); echo '
         </ul>
-          <ul class="marquee-content-secondary">
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        <li>◉ offer</li>
-        </ul>
-        </div>
-        </div>
-        </div>
+      </div>
+    </div>
+    '; } ?>
       <!-- Page Header Start -->
       <div
         class="container-fluid page-header p-0"
@@ -357,7 +348,7 @@
             <h3 class="text-start text-primary text-uppercase" style="margin-left: 6%; max-width: 20%;">
               complimentary Services
             </h3>
-            <div class="radio-container service-main">
+            <div class="container service-main">
 
               <div class="Services-main2 d-flex flex-column align-items-center w-100">
               <div class="radio-inputs room-div2">
@@ -529,7 +520,7 @@
             <div class="radio-inputs room-div2">
               <!-- Radio Buttons -->
               <label>
-                  <input class="radio-input radio-fight" type="radio" name="paid" value="butler">
+                  <input class="radio-fight" type="radio" name="paid" value="butler">
                   <span class="radio-tile">
                       <span class="radio-icon">
                           <!-- SVG for Room -->
@@ -539,7 +530,7 @@
               </label>
               
               <label>
-                  <input class="radio-input radio-fight" type="radio" name="paid" value="airplane">
+                  <input class="radio-fight" type="radio" name="paid" value="airplane">
                   <span class="radio-tile">
                       <span class="radio-icon">
                           <!-- SVG for Motorbike -->
@@ -549,7 +540,7 @@
               </label>
               
               <label>
-                  <input class="radio-input radio-fight" type="radio" name="paid" value="food">
+                  <input class="radio-fight" type="radio" name="paid" value="food">
                   <span class="radio-tile">
                       <span class="radio-icon">
                           <!-- SVG for Car -->
@@ -559,7 +550,7 @@
               </label>
               
               <label>
-                  <input class="radio-input radio-fight" type="radio" name="paid" value="cab">
+                  <input class="radio-fight" type="radio" name="paid" value="cab">
                   <span class="radio-tile">
                       <span class="radio-icon">
                           <!-- SVG for Plane -->
@@ -574,7 +565,7 @@
 
               <!-- Description Boxes -->
               <div class="description-boxes">
-                <div id="butler-description" class="description-box  description-box2 active">
+                <div id="butler-description" class=" description-box2 active">
                   <span class="paid-tag">Paid</span>
                   <h6 class="section-title text-center text-primary text-uppercase">         
                     butler Services
@@ -582,7 +573,7 @@
                     <p>Experience the epitome of luxury with our personalized butler services, tailored to meet your every need. From unpacking your luggage to arranging special requests, our dedicated butlers are here to ensure a seamless and unforgettable stay.</p>
                     <a class="btn btn-primary py-3 px-5 mt-2" href="">Explore More</a>
                 </div>
-                <div id="airplane-services-description" class="description-box description-box2">
+                <div id="airplane-services-description" class="description-box2">
                   <span class="paid-tag">Paid</span>
                   <h6 class="section-title text-center text-primary text-uppercase">
                     Airport Transfers
@@ -590,7 +581,7 @@
                     <p>Enjoy seamless airport transfers with our reliable and comfortable transportation service. Our professional drivers ensure timely pickups and drop-offs, allowing you to relax from the moment you arrive until your departure.</p>
                     <a class="btn btn-primary py-3 px-5 mt-2" href="">Explore More</a>
                 </div>
-                <div id="food-description" class="description-box description-box2">
+                <div id="food-description" class="description-box2">
                   <span class="paid-tag">Paid</span>
                   <h6 class="section-title text-center text-primary text-uppercase">
                     Food & Beverages
@@ -598,16 +589,7 @@
                     <p>Savor a diverse selection of exquisite food and beverages, crafted to satisfy every palate. Our menu features a range of gourmet dishes, refreshing drinks, and delectable snacks available around the clock.</p>
                     <a class="btn btn-primary py-3 px-5 mt-2" href="">Explore More</a>
                 </div>
-                <div id="cab-description" class="description-box">
-                  <span class="paid-tag">Paid</span>
-                  <h6 class="section-title text-center text-primary text-uppercase">
-                    Charges Cab Hire
-                  </h6> 
-                    <p>Enjoy hassle-free transportation with our transparent cab hire charges, ensuring you know exactly what you're paying for. Our competitive rates and detailed billing provide clarity and peace of mind, whether you're heading to a meeting, exploring the city, or running errands.</p>
-                    <a class="btn btn-primary py-3 px-5 mt-2" href="">Explore More</a>
-                </div>
-
-                  <div id="cab-description" class="description-box description-box2">
+                  <div id="cab-description" class="description-box2">
                     <span class="paid-tag">Paid</span>
                     <h6 class="section-title text-center text-primary text-uppercase">
                       Charges Cab Hire
