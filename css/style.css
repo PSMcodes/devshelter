@@ -988,7 +988,7 @@
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  /* background: var(--primary); */
+  background: var(--primary);
   border-radius: 2px;
   font-size: 18px;
   transition: 0.5s;
@@ -2138,3 +2138,15 @@ i {
     }
 }
 
+
+.videoDes{
+  padding: 3rem !important;
+}
+@media screen and (max-width:480px){
+  .section-title::before,.section-title::after{
+    display: none;
+  }
+  .videoDes{
+    padding: 1.5rem !important;
+  }
+}
