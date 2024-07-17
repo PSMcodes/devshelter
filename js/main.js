@@ -171,7 +171,7 @@ function toggleForms() {
     } else {
         regularForm.classList.add('active');
         corporateForm.classList.remove('active');
-        toggleButton.textContent = 'Switch to Corporate Inquiry Form';
+        toggleButton.textContent = 'Switch to Normal Inquiry Form';
     }
 }
 
