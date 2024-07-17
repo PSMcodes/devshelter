@@ -1986,10 +1986,6 @@ li {
   transition: background-color 0.3s;
 }
 
-li:hover {
-  background-color: #f0f0f0;
-}
-
 i {
   margin-right: 10px;
   font-size: 1.2em;
