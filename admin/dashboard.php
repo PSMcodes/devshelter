@@ -20,38 +20,48 @@ if (!isset($_SESSION['user_id'])) {
 
 <body>
     <div class="container-fluid">
-        <div class="row">
+        <div class="row h-100">
             <!-- Vertical Navigation Bar -->
-            <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+            <nav class="col-md-3 col-lg-2 d-md-block bg-dark sidebar py-5">
                 <div class="position-sticky">
                     <ul class="nav flex-column">
+                        <li class="navbar-brand">
+                            <h1 class="h2 text-white text-center">Dashboard</h1>
+                        </li>
+                        <li class="navbar-brand bg-white ">
+                            <img src="../img/main/logo.png" alt="img\main\logo.png"
+                                class="navbar-logo w-100 d-block mx-auto">
+                        </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="dashboard.php?page=manage_locations">
+                            <a class="nav-link text-white text-decoration-none active" aria-current="page"
+                                href="dashboard.php?page=manage_locations">
                                 Manage Locations
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="dashboard.php?page=manage_room_types">
+                            <a class="nav-link text-white text-decoration-none"
+                                href="dashboard.php?page=manage_room_types">
                                 Manage Room Types
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="dashboard.php?page=manage_rooms">
+                            <a class="nav-link text-white text-decoration-none" href="dashboard.php?page=manage_rooms">
                                 Manage Rooms
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="dashboard.php?page=manage_bookings">
+                            <a class="nav-link text-white text-decoration-none"
+                                href="dashboard.php?page=manage_bookings">
                                 Manage Bookings
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="dashboard.php?page=manage_guest">
+                            <a class="nav-link text-white text-decoration-none" href="dashboard.php?page=manage_guest">
                                 Manage Guests
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="logout.php">
+                            <a class="btn btn-danger d-block mx-auto" href="logout.php">
                                 Logout
                             </a>
                         </li>
@@ -63,7 +73,6 @@ if (!isset($_SESSION['user_id'])) {
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Dashboard</h1>
                 </div>
                 <main id="view-panel">
                     <?php $page = isset($_GET['page']) ? $_GET['page'] : 'home'; ?>
