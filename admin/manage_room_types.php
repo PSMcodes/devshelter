@@ -1,10 +1,5 @@
 <?php
 // manage_room_types.php
-if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
-    exit;
-}
-
 require 'config.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -20,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Error: " . $stmt->error;
     }
-
+    header("Location: dashboard.php?page=manage_room_types");
     $stmt->close();
 }
 
@@ -34,7 +29,7 @@ $result = $conn->query("SELECT * FROM room_types");
 </head>
 <body>
     <h1>Manage Room Types</h1>
-    <main class="d-flex">
+    <main class="">
 
         <form method="POST" action="manage_room_types.php" class="my-5 w-50">
             <input type="text" name="type" placeholder="Room Type" class="form-control d-inline w-75 m-2" required>
@@ -43,17 +38,22 @@ $result = $conn->query("SELECT * FROM room_types");
     </form>
 
     <!-- <h2>Room Type List</h2> -->
-    <table class="table my-4 w-50">
+    <table class="table my-4 ">
         <tr class="table-dark">
             <th>ID</th>
             <th>Type</th>
             <th>Description</th>
+            <th>Functions</th>
         </tr>
         <?php while ($row = $result->fetch_assoc()) { ?>
             <tr>
                 <td><?php echo $row['id']; ?></td>
                 <td><?php echo $row['type']; ?></td>
                 <td><?php echo $row['description']; ?></td>
+                <td>
+                    <a class="btn btn-primary">Edit</a>
+                    <a class="btn btn-danger">Delete</a>
+                </td>
             </tr>
             <?php } ?>
         </table>

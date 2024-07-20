@@ -1,9 +1,5 @@
 <?php
 // manage_locations.php
-if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
-    exit;
-}
 
 require 'config.php';
 
@@ -19,7 +15,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Error: " . $stmt->error;
     }
-
+    
+    header("Location: dashboard.php?page=manage_locations");
     $stmt->close();
 }
 
@@ -28,9 +25,11 @@ $result = $conn->query("SELECT * FROM locations");
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Manage Locations</title>
 </head>
+
 <body>
     <h1>Manage Locations</h1>
     <form method="POST" action="manage_locations.php">
@@ -45,11 +44,12 @@ $result = $conn->query("SELECT * FROM locations");
             <th>Name</th>
         </tr>
         <?php while ($row = $result->fetch_assoc()) { ?>
-        <tr>
-            <td><?php echo $row['id']; ?></td>
-            <td><?php echo $row['name']; ?></td>
-        </tr>
+            <tr>
+                <td><?php echo $row['id']; ?></td>
+                <td><?php echo $row['name']; ?></td>
+            </tr>
         <?php } ?>
     </table>
 </body>
+
 </html>
