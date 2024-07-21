@@ -1,7 +1,7 @@
 /********** Template CSS **********/
 :root {
   --primary: #24d4fd;
-  --light: #f1f8ff;
+  --light: white;
   --dark: #0f172b;
   --marquee-padding :0px;
   --marquee-padding-negative: calc(var(--marquee-padding) * -1);
@@ -1142,7 +1142,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #f1f8ff;
+  background-color: white;
 }
 
 .drp-items {
@@ -1470,8 +1470,8 @@
 .card {
   overflow: visible;
   position: relative;
-  width: 280px;
-  height: 354px;
+  width: 350px;
+  height: 390px;
   background: #fff;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
@@ -1541,12 +1541,13 @@
   margin-left: 20%;
   border-radius: 4px;
   transition: .2s;
+  color: white;
 }
 .caption:hover {
   background: white;
   border: 2px solid cyan;
   cursor: pointer;
-  color: rgb(0, 0, 0);
+  color: cyan !important;
 }
 
 /*Hover*/
@@ -2158,4 +2159,8 @@ i {
   .description-box,.description-box2{
     max-height: 100%;
   }
+}
+
+input{
+  border-radius: 25px;
 }
