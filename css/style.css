@@ -8,6 +8,12 @@
 
   
 }
+.no-select {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* Internet Explorer/Edge */
+  user-select: none;         /* Standard */
+}
 
 html{
   scroll-behavior: smooth;
@@ -98,7 +104,7 @@ html{
   z-index: 99;
 }
 
-/*** Spinner ***/
+/* ** Spinner **
 #spinner {
   opacity: 0;
   visibility: hidden;
@@ -110,7 +116,7 @@ html{
   transition: opacity 0.5s ease-out, visibility 0s linear 0s;
   visibility: visible;
   opacity: 1;
-}
+} */
 
 /*** Button ***/
 .btn {
@@ -306,26 +312,7 @@ html{
   display: none;
 }
 
-.seven h1 {
-  text-align: center;
-      font-size:30px; font-weight:300; color:#222; letter-spacing:1px;
-      text-transform: uppercase;
-  
-      display: grid;
-      grid-template-columns: 1fr max-content 1fr;
-      grid-template-rows: 27px 0;
-      grid-gap: 20px;
-      align-items: center;
-  }
-  
-  .seven h1:after,.seven h1:before {
-      content: " ";
-      display: block;
-      border-bottom: 1px solid #c50000;
-      border-top: 1px solid #c50000;
-      height: 5px;
-    background-color:#f8f8f8;
-  }
+
 
 /*** Service ***/
 .service-item {
@@ -1381,6 +1368,8 @@ html{
     transform: translateX(-100%) !important;
   }
 }
+
+
 .dropdown-menu{
   position: absolute;
   top: 30px;
@@ -1762,18 +1751,14 @@ html{
 .carousel-track {
   display: flex;
   width: 100%;
-  animation: scroll 10s alternate infinite linear;
+  animation: scroll 15s alternate infinite linear;
 }
 .carousel-track-2 {
   display: flex;
   width: 100%;
-  animation: scroll-2 10s alternate infinite linear;
-}
-.carousel-track-3 {
-  display: flex;
-  width: 100%;
-  animation: scroll 10s alternate infinite linear;
-}
+  animation: scroll-2 5s alternate infinite linear;
+} 
+
 .carousel-item2 {
   min-width: 1%;
   flex: 0 0 auto;
@@ -1818,7 +1803,7 @@ html{
 }
 @keyframes scroll-2 {
   0% {
-    transform: translateX(-30%);
+    transform: translateX(-10%);
   }
   100% {
     transform: translateX(0%);
@@ -2281,7 +2266,16 @@ i {
   }
 }
 
+.show1{
+  display: block;
+  /* background-color: var(--secondary); */
 
+}
 
-
+@media (max-width: 768px) {
+.dropdown-submenu {
+  margin-top: 25px;
+  width: 50%;
+}
+}
 

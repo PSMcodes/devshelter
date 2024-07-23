@@ -34,7 +34,7 @@
     const $dropdown = $(".dropdown");
     const $dropdownToggle = $(".dropdown-toggle");
     const $dropdownMenu = $(".dropdown-menu");
-    const showClass = "show";
+    const showClass = "show1";
 
     $(window).on("load resize", function () {
         if (this.matchMedia("(min-width: 300px)").matches) {
