@@ -1,15 +1,27 @@
 (function ($) {
     "use strict";
 
-    // Spinner
-    let spinner = function () {
-        setTimeout(function () {
-            if ($('#spinner').length > 0) {
-                $('#spinner').removeClass('show');
-            }
-        }, 1);
-    };
-    spinner();
+    document.addEventListener("DOMContentLoaded", function() {
+        var loader = document.getElementById('loader');
+        var content = document.getElementById('content');
+    
+        // Increase opacity to show the loader
+        setTimeout(function() {
+            loader.style.opacity = 1;
+        }, 100); // Start the fade-in effect after a short delay
+    
+        // Simulate loading time
+        window.onload = function() {
+            // Hide the loader and show the content
+            setTimeout(function() {
+                loader.style.opacity = 0;
+                setTimeout(function() {
+                    loader.style.display = 'none';
+                    content.style.display = 'block';
+                }, 1000); // Ensure the loader fades out before hiding
+            }, 3000); // Adjust the delay to match your loading time
+        };
+    });
 
     // var marquee_width = $(".marquee-content-primary").width();
     // document.documentElement.style.setProperty('--marquee-padding', marquee_width + 'px');
