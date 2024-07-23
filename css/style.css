@@ -1822,10 +1822,11 @@ html{
 
 .radio-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  width: 90%;
-  margin: 0 auto;
+  /* margin-left: -50px; */
+  width: 100%;
+  /* margin: 0 auto; */
 }
 .radio-inputs {
   display: flex;
@@ -1877,7 +1878,7 @@ html{
 }
 
 .radio-tile:hover {
-  border-color: #2260ff;
+  border-color: #24d4fd;
 }
 
 .radio-tile:hover:before {
@@ -1886,17 +1887,17 @@ html{
 }
 
 .radio-input:checked + .radio-tile,.radio-fight:checked + .radio-tile {
-  border-color: #2260ff;
+  border-color: lightgray;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  color: #000000;
-  background: cyan;
+  color: white;
+  background: #24d4fd;
 }
 
 .radio-input:checked + .radio-tile:before,.radio-fight:checked + .radio-tile:before {
   transform: scale(1);
   opacity: 1;
-  background-color: #2260ff;
-  border-color: #2260ff;
+  /* background-color: ; */
+  border-color: var(--secondary);
 }
 
 .radio-icon i {
@@ -1906,7 +1907,7 @@ html{
 }
 
 .radio-label {
-  color: #707070;
+  color: #000000;
   transition: 0.375s ease;
   text-align: center;
   font-size: 13px;
@@ -2245,9 +2246,9 @@ i {
   padding: 3rem !important;
 }
 @media screen and (max-width:480px){
-  .section-title::before,.section-title::after{
+  /* .section-title::before,.section-title::after{
     display: none;
-  }
+  } */
   .videoDes{
     padding: 1.5rem !important;
   }
@@ -2256,7 +2257,8 @@ i {
     gap: 0;
   }
   .section-title{
-    width: 50%;
+    /* width: 50%; */
+    height: 50%;
   }
   .description-boxes{
     margin: 25px 0;
@@ -2273,9 +2275,36 @@ i {
 }
 
 @media (max-width: 768px) {
-.dropdown-submenu {
+.navbar-nav .dropdown-submenu {
   margin-top: 25px;
-  width: 50%;
+  /* width: 50%; */
 }
 }
 
+.carousel-image {
+  height: 100vh !important;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 768px) {
+  .carousel-caption {
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .carousel-caption h1 {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+
+  .carousel-caption h6 {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .btn {
+    padding: 0.5rem 1rem; /* Adjust button padding for smaller screens */
+  }
+  .section-title{
+    height: fit-content;
+  }
+}
