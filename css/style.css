@@ -251,10 +251,10 @@ html{
 /*** Section Title ***/
 .section-title {
   position: relative;
-  display: inline-block;
+  display:  inline-block  ;
 }
 
-.section-title::before {
+/* .section-title::before {
   position: absolute;
   content: "";
   width: 45px;
@@ -274,6 +274,31 @@ html{
   right: -55px;
   margin-top: -1px;
   background: var(--primary);
+} */
+
+.section-title:after,.section-title:before {
+  content: " ";
+  display: block;
+  border-bottom: 1px solid #24d4fd;
+  border-top: 1px solid #24d4fd;
+  height: 5px;
+  animation: slide 2s infinite;
+
+}
+.section-title:after {
+  right: 0;
+  left: auto;
+  top: 0;
+  animation-delay: 1s; /* Delay to create a staggered effect */
+}
+
+@keyframes slide {
+  0%, 100% {
+    width: 50%;
+  }
+  50% {
+    width: 100%;
+  }
 }
 
 .section-title.text-start::before,
@@ -1744,6 +1769,11 @@ html{
   width: 100%;
   animation: scroll-2 10s alternate infinite linear;
 }
+.carousel-track-3 {
+  display: flex;
+  width: 100%;
+  animation: scroll 10s alternate infinite linear;
+}
 .carousel-item2 {
   min-width: 1%;
   flex: 0 0 auto;
@@ -1754,8 +1784,8 @@ html{
 }
 
 .carousel-item2 img {
-  max-width: 100%;
-  max-height: 100px;
+  max-width: 80%;
+  max-height: 80px;
 }
 @media (max-width:600px) {
   .carousel-item2 img {
