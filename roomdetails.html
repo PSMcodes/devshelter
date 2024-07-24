@@ -228,36 +228,31 @@
     
 
     <div class="container mt-5">
-      <h2 class="room-title my-5" id="roomTitle">*</h2>
+      <h2 class="room-title my-5" id="roomTitle">Malad</h2>
       <!-- Slideshow Gallery -->
       <div class="col-lg-12">
-        <!-- Main Carousel -->
-        <div id="roomCarousel" class="carousel slide mb-4" data-ride="carousel">
-          <div class="carousel-inner" id="carouselContainer">
-            <!-- here are the room slides -->
+        <div class="row my-2 p-4 bg-white border rounded-3" >
+          <div class="col-md-6 image-Div"  >
+            <span class="img-overlay"></span>
+            <img src="img/main/carousel-1.jpg" alt="" class="w-100 mx-auto d-block ">
           </div>
-          <a
-            class="carousel-control-prev"
-            href="#roomCarousel"
-            role="button"
-            data-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a
-            class="carousel-control-next"
-            href="#roomCarousel"
-            role="button"
-            data-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
+          <div class="col-md-6">
+            <h3>3 BHKS Semi Deluxe Room</h3>
+            <p class="span">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptate reiciendis, tempora maxime asperiores tenetur adipisci at dolores quidem delectus nobis neque eos modi consequuntur deleniti ea quibusdam repellendus! Vitae?
+            Nihil, alias dicta nulla et omnis libero dolore dolor? Aliquid corporis provident consequuntur ab eum quam commodi asperiores enim minima, voluptatem, illum, tempora molestias dolorem deleniti amet officiis praesentium laudantium!</p>
+            <button class="btn btn-primary">Choose This</button>
+          </div>
         </div>
-        <div id="roomGallery" class="slideshow-gallery mb-4">
-          <div class="row" id="roomGalleryContainer">
-            <!-- here are the room photos -->
+        <div class="row my-2 p-4 bg-white border rounded-3">
+          <div class="col-md-6 image-Div" >
+            <span class="img-overlay"></span>
+            <img src="img/main/carousel-1.jpg" alt="" class="w-100 mx-auto d-block ">
+          </div>
+          <div class="col-md-6">
+            <h3>3 BHKS Deluxe Room</h3>
+            <p class="span">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptate reiciendis, tempora maxime asperiores tenetur adipisci at dolores quidem delectus nobis neque eos modi consequuntur deleniti ea quibusdam repellendus! Vitae?
+            Nihil, alias dicta nulla et omnis libero dolore dolor? Aliquid corporis provident consequuntur ab eum quam commodi asperiores enim minima, voluptatem, illum, tempora molestias dolorem deleniti amet officiis praesentium laudantium!</p>
+            <button class="btn btn-primary">Choose This</button>
           </div>
         </div>
       </div>
@@ -645,131 +640,131 @@
   const rooms = new URLSearchParams(params).get("rooms");
   const subtype = new URLSearchParams(params).get("subtype");
 
-  function getData() {
-    fetch("server.json")
-      .then((data) => data.json())
-      .then((data) => {
-        roomData = data;
-        if (roomLocation || roomType) {
-          showData();
-        } else {
-          console.log("No room selected");
-          window.location.pathname = "room.html";
-        }
-      });
-  }
+  // function getData() {
+  //   fetch("server.json")
+  //     .then((data) => data.json())
+  //     .then((data) => {
+  //       roomData = data;
+  //       if (roomLocation || roomType) {
+  //         showData();
+  //       } else {
+  //         console.log("No room selected");
+  //         window.location.pathname = "room.html";
+  //       }
+  //     });
+  // }
 
-  function showData() {
-    // Room details
-    console.log(roomData[roomLocation][roomType]);
-    let currentRoom = roomData[roomLocation][roomType];
-    document.getElementById("guestsCount").innerHTML =
-      currentRoom["maxOccupancy"];
-    document.getElementById("guestCount2").innerHTML =
-      currentRoom["maxOccupancy"];
-    document.getElementById("bedroomCount").innerHTML =
-      currentRoom["maxOccupancy"];
-    document.getElementById("bedCount").innerHTML = currentRoom["maxOccupancy"];
-    document.getElementById("bathCount").innerHTML =
-      currentRoom["maxOccupancy"];
-    document.getElementById("aboutDetails").innerHTML = currentRoom["info"];
-    document.getElementById("roomTitle").innerHTML = currentRoom.title;
-    if (subtype) {
-      currentRoom.subtype.forEach((element) => {
-        if (subtype.includes(element.id)) {
-          document.getElementById("aboutDetails").innerHTML = element["info"];
-          document.getElementById("roomTitle").innerHTML = element.title;
-          // carousel for subtype images
-          for (i = 0; i < element["images"].length; i++) {
-            let card = document.createElement("div");
-            card.className = "carousel-item";
-            if (i == 0) {
-              card.classList.add("active");
-            }
-            card.innerHTML = `
-              <img
-                src="${element["images"][i]}"
-                class="d-block w-100"
-                alt="Deluxe Room"
-              />
-      `;
-            document.getElementById("carouselContainer").appendChild(card);
+  // function showData() {
+  //   // Room details
+  //   console.log(roomData[roomLocation][roomType]);
+  //   let currentRoom = roomData[roomLocation][roomType];
+  //   document.getElementById("guestsCount").innerHTML =
+  //     currentRoom["maxOccupancy"];
+  //   document.getElementById("guestCount2").innerHTML =
+  //     currentRoom["maxOccupancy"];
+  //   document.getElementById("bedroomCount").innerHTML =
+  //     currentRoom["maxOccupancy"];
+  //   document.getElementById("bedCount").innerHTML = currentRoom["maxOccupancy"];
+  //   document.getElementById("bathCount").innerHTML =
+  //     currentRoom["maxOccupancy"];
+  //   document.getElementById("aboutDetails").innerHTML = currentRoom["info"];
+  //   document.getElementById("roomTitle").innerHTML = currentRoom.title;
+  //   if (subtype) {
+  //     currentRoom.subtype.forEach((element) => {
+  //       if (subtype.includes(element.id)) {
+  //         document.getElementById("aboutDetails").innerHTML = element["info"];
+  //         document.getElementById("roomTitle").innerHTML = element.title;
+  //         // carousel for subtype images
+  //         for (i = 0; i < element["images"].length; i++) {
+  //           let card = document.createElement("div");
+  //           card.className = "carousel-item";
+  //           if (i == 0) {
+  //             card.classList.add("active");
+  //           }
+  //           card.innerHTML = `
+  //             <img
+  //               src="${element["images"][i]}"
+  //               class="d-block w-100"
+  //               alt="Deluxe Room"
+  //             />
+  //     `;
+  //           document.getElementById("carouselContainer").appendChild(card);
 
-            let card2 = document.createElement("div");
-            card2.className = "col-2";
-            card2.innerHTML = `<a
-                href="#"
-                data-target="#roomCarousel"
-                data-slide-to="${i}"
-                class="d-block mb-4"
-              >
-                <img
-                  src="${element["images"][i]}"
-                  class="img-thumbnail img-fluid"
-                  alt="Room 1"
-                />
-              </a>`;
-            document.getElementById("roomGalleryContainer").appendChild(card2);
-          }
-        }
-      });
-    } else {
-      for (i = 0; i < currentRoom["images"].length; i++) {
-        let card = document.createElement("div");
-        card.className = "carousel-item";
-        if (i == 0) {
-          card.classList.add("active");
-        }
-        card.innerHTML = `
-              <img
-                src="${currentRoom["images"][i]}"
-                class="d-block w-100"
-                alt="Deluxe Room"
-              />
-      `;
-        document.getElementById("carouselContainer").appendChild(card);
+  //           let card2 = document.createElement("div");
+  //           card2.className = "col-2";
+  //           card2.innerHTML = `<a
+  //               href="#"
+  //               data-target="#roomCarousel"
+  //               data-slide-to="${i}"
+  //               class="d-block mb-4"
+  //             >
+  //               <img
+  //                 src="${element["images"][i]}"
+  //                 class="img-thumbnail img-fluid"
+  //                 alt="Room 1"
+  //               />
+  //             </a>`;
+  //           document.getElementById("roomGalleryContainer").appendChild(card2);
+  //         }
+  //       }
+  //     });
+  //   } else {
+  //     for (i = 0; i < currentRoom["images"].length; i++) {
+  //       let card = document.createElement("div");
+  //       card.className = "carousel-item";
+  //       if (i == 0) {
+  //         card.classList.add("active");
+  //       }
+  //       card.innerHTML = `
+  //             <img
+  //               src="${currentRoom["images"][i]}"
+  //               class="d-block w-100"
+  //               alt="Deluxe Room"
+  //             />
+  //     `;
+  //       document.getElementById("carouselContainer").appendChild(card);
 
-        let card2 = document.createElement("div");
-        card2.className = "col-2";
-        card2.innerHTML = `<a
-                href="#"
-                data-target="#roomCarousel"
-                data-slide-to="${i}"
-                class="d-block mb-4"
-              >
-                <img
-                  src="${currentRoom["images"][i]}"
-                  class="img-thumbnail img-fluid"
-                  alt="Room 1"
-                />
-              </a>`;
-        document.getElementById("roomGalleryContainer").appendChild(card2);
-      }
-    }
+  //       let card2 = document.createElement("div");
+  //       card2.className = "col-2";
+  //       card2.innerHTML = `<a
+  //               href="#"
+  //               data-target="#roomCarousel"
+  //               data-slide-to="${i}"
+  //               class="d-block mb-4"
+  //             >
+  //               <img
+  //                 src="${currentRoom["images"][i]}"
+  //                 class="img-thumbnail img-fluid"
+  //                 alt="Room 1"
+  //               />
+  //             </a>`;
+  //       document.getElementById("roomGalleryContainer").appendChild(card2);
+  //     }
+  //   }
 
-    //  inquiry form
-    if (checkIn) {
-      document.getElementById("checkin").value = checkIn;
-      document.getElementById("checkin").setAttribute("disabled", true);
-    }
-    if (checkOut) {
-      document.getElementById("checkout").value = checkOut;
-      document.getElementById("checkout").setAttribute("disabled", true);
-    }
-    if (guest) {
-      document.getElementById("guest").value = guest;
-      document.getElementById("guest").setAttribute("disabled", true);
-    }
-    if (rooms) {
-      document.getElementById("rooms").value = rooms;
-      document.getElementById("rooms").setAttribute("disabled", true);
-    }
-    if (guest > currentRoom["maxOccupancy"]) {
-      console.log("yes");
-      document.querySelector("#hints").innerHTML =
-        "* One more room will be required as your Guests are more than room max capicity";
-    }
-  }
+  //   //  inquiry form
+  //   if (checkIn) {
+  //     document.getElementById("checkin").value = checkIn;
+  //     document.getElementById("checkin").setAttribute("disabled", true);
+  //   }
+  //   if (checkOut) {
+  //     document.getElementById("checkout").value = checkOut;
+  //     document.getElementById("checkout").setAttribute("disabled", true);
+  //   }
+  //   if (guest) {
+  //     document.getElementById("guest").value = guest;
+  //     document.getElementById("guest").setAttribute("disabled", true);
+  //   }
+  //   if (rooms) {
+  //     document.getElementById("rooms").value = rooms;
+  //     document.getElementById("rooms").setAttribute("disabled", true);
+  //   }
+  //   if (guest > currentRoom["maxOccupancy"]) {
+  //     console.log("yes");
+  //     document.querySelector("#hints").innerHTML =
+  //       "* One more room will be required as your Guests are more than room max capicity";
+  //   }
+  // }
 
   getData();
 </script>

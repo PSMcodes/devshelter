@@ -20,3 +20,12 @@
               major spots.
 
 
+<div class="marquee-footer">
+      <div class="marquee">
+        <div class="marquee_text">
+          <ul class="marquee-content-primary">
+            '; display_latest_offer(); echo '
+          </ul>
+        </div>
+      </div>
+    </div>

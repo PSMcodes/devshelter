@@ -78,7 +78,7 @@ while ($type = $room_types_result->fetch_assoc()) {
             <th>Actions</th>
         </tr>
         <?php
-        $rooms = $conn->query("SELECT rooms.*, locations.name as location_name, room_types.type as room_type FROM rooms JOIN locations ON rooms.location_id = locations.id JOIN room_types ON rooms.type_id = room_types.id");
+        $rooms = $conn->query("SELECT rooms.*, locations.name as location_name, room_types.type as room_type FROM rooms JOIN locations ON rooms.location_id = locations.id JOIN room_types ON rooms.type_id = room_types.id order by type_id ,room_number; ");
         while ($row = $rooms->fetch_assoc()) { ?>
         <tr>
             <td>
