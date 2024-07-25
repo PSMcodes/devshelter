@@ -758,6 +758,25 @@
     } else {
       let currentRoom = roomData[roomLocation][roomType];
       console.log(currentRoom);
+      $("#guestsCount").html(currentRoom["maxOccupancy"]);
+      $("#guestCount2").html(currentRoom["maxOccupancy"]);
+      $("#bedroomCount").html(currentRoom["maxOccupancy"]);
+      $("#bedCount").html(currentRoom["maxOccupancy"]);
+      // heading here
+      $("#roomTitle").html(currentRoom.title);
+      // info here
+      $(".infoDiv").html(`
+       <div class="row py-2 my-2 bg-white2 rounded-4">
+          <div class="col-md-12 d-flex justify-content-around align-items-center">
+            <img src="${currentRoom.images[0]}" alt="" class="w-40 col-md-6 d-block mx-auto" />
+            <div class="Roomdetails col-md-6">
+              <h3>${currentRoom.title}</h3>
+              <span>${currentRoom.info}</span>
+              <button class="btn-primary btn d-block">Choose This</button>
+            </div>
+          </div>
+        </div>
+      `);
     }
   }
 

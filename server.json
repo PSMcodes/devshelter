@@ -2,7 +2,7 @@
   "malad": {
     "service": {
       "3bhk": {
-        "title":"3 Bhk service Apartment",
+        "title": "3 Bhk service Apartment",
         "roomType": [
           {
             "id": "semi",
@@ -33,7 +33,7 @@
         ]
       },
       "4bhk": {
-        "title":"4 Bhk service Apartment",
+        "title": "4 Bhk service Apartment",
         "roomType": [
           {
             "id": "semi",
@@ -77,9 +77,22 @@
       "map": "map",
       "info": "Welcome to our Hometel, the perfect blend of home comfort and hotel luxury for travelers seeking a warm and inviting place to stay.<br>Our hometel offers a cozy and fully-equipped kitchen where guests can prepare their own meals and snacks. If you prefer, you can also enjoy meals from our common kitchen, where our chef prepares hygienic and home-style dishes at a reasonable price. This option helps you save money and enjoy healthy, delicious food without the expense of dining out.<br>Located conveniently in the Malad area of Mumbai Suburban, our hometel provides easy access to all Malad stations. Nearby shopping centers and restaurants offer top-notch services, ensuring a pleasant and enjoyable stay. Our hometel is perfect for business travelers, families, or anyone seeking a comfortable and welcoming place to stay.",
       "maxOccupancy": 3
+    },
+    "apart2": {
+      "title": "Devshelter Malad",
+      "images": [
+        "img/malad-aparthotel/IMG_5278.JPG",
+        "img/malad-aparthotel/IMG_E5279.JPG",
+        "img/malad-aparthotel/IMG_E5408.JPG",
+        "img/malad-aparthotel/IMG_E6114.JPG",
+        "img/malad-aparthotel/IMG_E6094.JPG"
+      ],
+      "map": "map",
+      "info": "Welcome to our Hometel, the perfect blend of home comfort and hotel luxury for travelers seeking a warm and inviting place to stay.<br>Our hometel offers a cozy and fully-equipped kitchen where guests can prepare their own meals and snacks. If you prefer, you can also enjoy meals from our common kitchen, where our chef prepares hygienic and home-style dishes at a reasonable price. This option helps you save money and enjoy healthy, delicious food without the expense of dining out.<br>Located conveniently in the Malad area of Mumbai Suburban, our hometel provides easy access to all Malad stations. Nearby shopping centers and restaurants offer top-notch services, ensuring a pleasant and enjoyable stay. Our hometel is perfect for business travelers, families, or anyone seeking a comfortable and welcoming place to stay.",
+      "maxOccupancy": 3
     }
   },
-  "goregaon": {
+  "goregoan": {
     "apart": {
       "id": "aprat1",
       "title": "Apart Hotel",
