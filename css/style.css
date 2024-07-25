@@ -2313,3 +2313,12 @@ i {
     height: fit-content;
   }
 }
+.bg-white2{
+  background: #f9f8f6 !important;
+}
+
+.w-40{
+  /* width: 40% !important; */
+  object-fit: contain !important;
+  aspect-ratio: 16 / 9 !important;
+}
