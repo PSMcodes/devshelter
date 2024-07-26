@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon" />
+    <link href="img/main/logo.png" rel="icon" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -48,15 +48,16 @@
     <meta property="og:title" content="DevShelter | Rooms and Hotels" />
     <meta
       name="description"
-      content="DevShelter -   We provide comfortable and peaceful stay for corporate executives,
+      content="DevShelter - We provide comfortable and peaceful stay for corporate executives,
     business travelers, tourists and vacation rentals. "
     />
-    <meta property="og:image" content="" />
-    <meta property="og:url" content="" />
+    <meta property="og:image" content="https://devshelter.in/img/main/logo.png" />
+    <meta property="og:url" content="https://devshelter.in" />
     <meta property="og:type" content="Rooms and hotels at mumbai" />
-    <meta name="twitter:image" content="" />
+    <meta name="twitter:image" content="https://devshelter.in/img/main/logo.png" />
     <meta name="twitter:image:width" content="100" />
   </head>
+
   <body>
     <style>
       .sticky-top {
@@ -92,7 +93,9 @@
             <div class="col-lg-7 px-5 text-start">
               <div class="h-100 d-inline-flex align-items-center me-4">
                 <i class="fa fa-envelope text-primary me-2"></i>
-                <a href="mailto:devshelters63@gmail.com" class="mb-0 text-dark"
+                <a
+                  href="mailto:devshelters63@gmail.com"
+                  class="mb-0 text-dark"
                   >devshelters63@gmail.com</a
                 >
               </div>
@@ -112,30 +115,10 @@
               class="col-lg-5 px-5 text-end d-inline-flex align-items-center justify-content-center"
             >
               <div>
-                <a
-                  class="me-3"
-                  href="https://www.facebook.com/share/dyovuE3GajghUz1m/?mibextid=LQQJ4d"
-                  target="_blank"
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
-                <a
-                  class="me-3"
-                  href="https://www.instagram.com/dev.shelters?igsh=MTVzNWlxbWZrNnRmNg%3D%3D&utm_source=qr"
-                  target="_blank"
-                  ><i class="fab fa-instagram"></i
-                ></a>
-                <a
-                  class="me-3"
-                  href="https://www.youtube.com/@devshelters9739"
-                  target="_blank"
-                  ><i class="fab fa-youtube"></i
-                ></a>
-                <a
-                  class=""
-                  href="https://www.linkedin.com/in/shubham-sharma-34ba10133?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-                  target="_blank"
-                  ><i class="fab fa-linkedin-in"></i
-                ></a>
+                <a class="me-3" href="https://www.facebook.com/share/dyovuE3GajghUz1m/?mibextid=LQQJ4d" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a class="me-3" href="https://www.instagram.com/dev.shelters/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a class="me-3" href="https://www.youtube.com/@devshelters9739" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a class="" href="https://www.linkedin.com/in/shubham-sharma-34ba10133?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank"><i class="fab fa-linkedin-in"></i></a>
               </div>
             </div>
           </div>
@@ -156,14 +139,14 @@
               id="navbarCollapse"
             >
               <div class="navbar-nav">
-                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="index.html" class="nav-item nav-link active">Home</a>
                 <a href="service.html" class="nav-item nav-link">Services</a>
                 <a href="about.html" class="nav-item nav-link">About Us</a>
                 <ul class="navbar-nav">
                   <!-- Dropdown -->
-                  <li class="nav-item dropdown p-0 m-0">
+                  <li class=" dropdown p-0 m-0 bg-dark">
                     <a
-                      class="nav-link dropdown-toggle active"
+                      class="nav-link dropdown-toggle"
                       id="navbarDropdownMenuLink"
                     >
                       Our Listings
@@ -173,11 +156,11 @@
                         <a class="dropdown-item border-bottom" href="#">
                           Service Apartment &raquo;
                         </a>
-                        <ul class="dropdown-menu dropdown-submenu l">
+                        <ul class="dropdown-menu dropdown-submenu">
                           <li>
                             <a
                               class="dropdown-item border-bottom"
-                              href="roomdetails.html?location=malad&type=3bhk"
+                              href="roomdetails.html?location=malad&type=service&subtype=3bhk"
                               ><i
                                 class="fa-solid fa-hotel"
                                 style="color: #24d4fd"
@@ -188,7 +171,7 @@
                           <li>
                             <a
                               class="dropdown-item"
-                              href="roomdetails.html?location=malad&type=4bhk"
+                              href="roomdetails.html?location=malad&type=service&subtype=4bhk"
                               ><i
                                 class="fa-solid fa-hotel"
                                 style="color: #24d4fd"
@@ -229,7 +212,7 @@
                           <li>
                             <a
                               class="dropdown-item"
-                              href="roomdetails.html?location=goregon&type=apart"
+                              href="roomdetails.html?location=goregoan&type=apart"
                               ><i
                                 class="fa-solid fa-hotel"
                                 style="color: #24d4fd"
@@ -241,6 +224,8 @@
                       </li>
                     </ul>
                   </li>
+
+
                 </ul>
 
                 <a href="booking.html" class="nav-item nav-link">Booking</a>
@@ -491,6 +476,18 @@
                     <label for="contact">Your Contact</label>
                   </div>
                 </div>
+                <div class="col-md-12">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="emailId"
+                      placeholder="Your Email"
+                      required
+                    />
+                    <label for="contact">Your Email</label>
+                  </div>
+                </div>
 
                 <div class="col-md-6">
                   <div
@@ -561,6 +558,7 @@
                     <label for="message">Special Request</label>
                   </div>
                 </div>
+                <div class="col-md-12 text-danger" id="alert"></div>
                 <div class="col-12">
                   <button class="btn btn-primary w-100 py-3" type="submit">
                     Book Now
@@ -690,6 +688,19 @@
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/bootstrap-extended.min.css">  -->
+    <!-- <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css"> -->
+
+    <!-- Template Javascript -->
 <script>
   function changeSlide(index) {
     $("#imageGalleryCarousel").carousel(index);
@@ -755,7 +766,8 @@
             <img src="${currentRoom[subtype].roomType[1].images[0]}" alt="" class="w-40 col-md-6" />
           </div>
         </div>`);
-    } else {
+    } 
+    else {
       let currentRoom = roomData[roomLocation][roomType];
       console.log(currentRoom);
       $("#guestsCount").html(currentRoom["maxOccupancy"]);
@@ -779,6 +791,11 @@
       `);
     }
   }
-
+  if(checkIn){$('#checkin').val(checkIn)}
+  if(checkOut){$('#checkout').val(checkOut)}
+  if(guest){$('#guest').val(guest)}
+  if(rooms){$('#rooms').val(rooms)}
+  if(guest>3){$('#alert').html('Two rooms will be booked as the guests are exceeding room limit ')}
   getData();
 </script>
+<script defer src="js/main.js"></script>
