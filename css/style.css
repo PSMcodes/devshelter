@@ -1769,8 +1769,10 @@ html{
 }
 
 .carousel-item2 img {
-  max-width: 80%;
-  max-height: 80px;
+  width: 150px; /* Set the desired width */
+  height: 100px; /* Set the desired height */
+  object-fit: contain; /* Adjust to 'cover' if you want to cover the entire area */
+  display: block;
 }
 @media (max-width: 600px) {
   .carousel-item2 img {
@@ -2322,3 +2324,32 @@ i {
   object-fit: contain !important;
   aspect-ratio: 16 / 9 !important;
 }
+
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: currentColor; }
+}
+
+@keyframes hide-caret {
+  from { border-right: .15em solid; }
+  to { border-right: none; }
+}
+
+.typewriter {
+  overflow: hidden; /* Ensures the text stays within the container */
+  border-right: .15em solid; /* The caret */
+  white-space: nowrap; /* Keeps the text on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the text is typed */
+  animation: 
+      typewriter 4s steps(40, end) 1s 1 normal both,
+      blink-caret .75s step-end infinite,
+      hide-caret 0s 5s forwards;
+}
+
+
