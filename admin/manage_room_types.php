@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $description = $_POST['description'];
 
     if ($room_id) {
-        $sql = "UPDATE room_types SET type=?,description=? where id = ?";
+        $sql = "UPDATE room_types SET type=?,primarytype=? where id = ?";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("ssi", $type, $description, $room_id);
     } else {
@@ -68,7 +68,7 @@ $result = $conn->query("SELECT * FROM room_types");
             <tr class="table-dark">
                 <th>ID</th>
                 <th>Type</th>
-                <th>Description</th>
+                <th>Primary Type</th>
                 <th>Functions</th>
             </tr>
             <?php while ($row = $result->fetch_assoc()) { ?>
@@ -80,12 +80,12 @@ $result = $conn->query("SELECT * FROM room_types");
                     <?php echo $row['type']; ?>
                 </td>
                 <td>
-                    <?php echo $row['description']; ?>
+                    <?php echo $row['primarytype']; ?>
                 </td>
                 <td>
                     <a class="btn btn-primary edit-room_type" data-bs-toggle="modal" data-bs-target="#myModal2"
                         data-room-type="<?php echo $row['type']; ?>" data-bs-id="<?php echo $row['id']; ?>"
-                        data-room-description="<?php echo $row['description']; ?>">Edit
+                        data-room-description="<?php echo $row['primarytype']; ?>">Edit
                     </a>
                     <a class="btn btn-danger" href="delete.php?delete=room_type&id=<?php echo $row['id']; ?>">Delete</a>
                 </td>
@@ -107,8 +107,8 @@ $result = $conn->query("SELECT * FROM room_types");
                             <input type="text" name="room_id" id="" hidden>
                             <input type="text" name="type" placeholder="Room Type"
                                 class="form-control d-inline w-75 m-2" required>
-                            <textarea name="description" placeholder="Description" class="form-control w-75 m-2"
-                                rows="5" required></textarea>
+                            <input name="description" placeholder="Description" class="form-control w-75 m-2"
+                                rows="5" required>
                             <button type="submit" class="btn btn-primary">Save</button>
                         </form>
                     </div>
@@ -130,7 +130,7 @@ $result = $conn->query("SELECT * FROM room_types");
                     room_type;
                 document.querySelector('#editRoomTypeModal input[name="room_id"]').value = this
                     .getAttribute('data-bs-id')
-                document.querySelector('#editRoomTypeModal textarea[name="description"]')
+                document.querySelector('#editRoomTypeModal input[name="description"]')
                     .value = room_description;
             });
         });
