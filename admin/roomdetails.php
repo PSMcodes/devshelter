@@ -140,7 +140,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="col-lg-3 bg-dark d-none d-lg-block">
                 <a href="index.html" class="navbar-brand d-flex flex-column align-items-center justify-content-center">
                     <img src="img/main/logo.png" class="navbar-brand w-25" alt="Dev Shelters Logo" id="logo" />
-                    <h3 class="text-primary">Dev Shelter</h3>
+                    <h3 class="text-primary">DevShelter</h3>
                 </a>
             </div>
             <div class="col-lg-9 d-flex flex-column justify-content-center">
@@ -151,9 +151,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <a href="mailto:devshelters63@gmail.com" class="mb-0 text-dark">devshelters63@gmail.com</a>
                         </div>
                         <!-- <div class="h-100 d-inline-flex align-items-center me-4">
-                    <i class="fa fa-headset text-primary me-2"></i>
-                    <p class="mb-0">+91 8451880595</p>
-                  </div> -->
+                <i class="fa fa-headset text-primary me-2"></i>
+                <p class="mb-0">+91 8451880595</p>
+              </div> -->
 
                         <div class="h-100 d-inline-flex align-items-center">
                             <i class="fa fa-phone-alt text-primary me-2"></i>
@@ -176,7 +176,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
                 <nav class="navbar navbar-expand-md bg-dark navbar-dark p-3 p-lg-0">
                     <a href="index.html" class="navbar-brand d-block d-lg-none">
-                        <h1 class="m-0 text-primary">Dev Shelter</h1>
+                        <h1 class="m-0 text-primary">DevShelter</h1>
                     </a>
                     <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
                         data-bs-target="#navbarCollapse">
@@ -189,7 +189,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <a href="about.html" class="nav-item nav-link">About Us</a>
                             <ul class="navbar-nav">
                                 <!-- Dropdown -->
-                                <li class=" dropdown p-0 m-0 bg-dark">
+                                <li class="dropdown p-0 m-0 bg-dark">
                                     <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink">
                                         Our Listings
                                     </a>
@@ -201,14 +201,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                             <ul class="dropdown-menu dropdown-submenu">
                                                 <li>
                                                     <a class="dropdown-item border-bottom"
-                                                        href="roomdetails.php?location=malad&type=service&subtype=3bhk"><i
+                                                        href="roomdetails.html?location=malad&type=service&subtype=3bhk"><i
                                                             class="fa-solid fa-hotel" style="color: #24d4fd"></i>
                                                         3Bhk Malad
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a class="dropdown-item"
-                                                        href="roomdetails.php?location=malad&type=service&subtype=4bhk"><i
+                                                        href="roomdetails.html?location=malad&type=service&subtype=4bhk"><i
                                                             class="fa-solid fa-hotel" style="color: #24d4fd"></i>
                                                         4Bhk Malad
                                                     </a>
@@ -223,23 +223,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                             <ul class="dropdown-menu dropdown-submenu">
                                                 <li>
                                                     <a class="dropdown-item border-bottom"
-                                                        href="roomdetails.php?location=malad&type=apart"><i
+                                                        href="roomdetails.html?location=malad&type=apart"><i
                                                             class="fa-solid fa-hotel" style="color: #24d4fd"></i>
                                                         Kalpataru Hometel Malad
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a class="dropdown-item border-bottom"
-                                                        href="roomdetails.php?location=malad&type=apart2"><i
+                                                        href="roomdetails.html?location=malad&type=apart2"><i
                                                             class="fa-solid fa-hotel" style="color: #24d4fd"></i>
-                                                        Dev Shelters Malad
+                                                        Devshelters Malad
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a class="dropdown-item"
-                                                        href="roomdetails.php?location=goregaon&type=apart"><i
+                                                        href="roomdetails.html?location=goregoan&type=apart"><i
                                                             class="fa-solid fa-hotel" style="color: #24d4fd"></i>
-                                                        Dev Shelters Goregaon
+                                                        Devshelters Goregaon
                                                     </a>
                                                 </li>
                                             </ul>
@@ -247,6 +247,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     </ul>
                                 </li>
                             </ul>
+
+                            <a href="booking.html" class="nav-item nav-link">Booking</a>
                             <a href="contact.html" class="nav-item nav-link">Contact</a>
                         </div>
                         <!-- <a href="https://htmlcodex.com/hotel-html-template-pro" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Premium Version<i class="fa fa-arrow-right ms-3"></i></a> -->
@@ -255,6 +257,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </div>
     </div>
+
     <div class="container mt-5">
         <h2 class="room-title my-5" id="roomTitle">*</h2>
         <div class="infoDiv my-2">
@@ -580,6 +583,44 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <a href="tel:+91 8451880595" class="float-2" target="_blank">
         <i class="fa fa-headset my-float"></i>
     </a>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
 </body>
 
 </html>
@@ -645,7 +686,7 @@ function showData() {
         // spliting the sub type
         $(".infoDiv").html(`
       <div class="row py-2 my-2 bg-white2 rounded-4">
-          <div class="col-md-12 d-flex justify-content-around align-items-center rooomimg">
+          <div class="col-md-12 d-flex justify-content-around align-items-center">
             <img src="${currentRoom[subtype].roomType[0].images[0]}" alt="" class="w-40 col-md-6 d-block mx-auto" />
             <div class="Roomdetails col-md-6">
               <h3>${currentRoom[subtype].roomType[0].title}</h3>
@@ -654,8 +695,8 @@ function showData() {
             </div>
           </div>
         </div>
-        <div class="row py-2 my-2 bg-white2 rounded-4 ">
-          <div class="col-md-12 d-flex justify-content-around rooomimg2">
+        <div class="row py-2 my-2 bg-white2 rounded-4">
+          <div class="col-md-12 d-flex justify-content-around">
             <div class="Roomdetails col-md-6">
               <h3>${currentRoom[subtype].roomType[1].title}</h3>
              <span>${currentRoom[subtype].roomType[1].info}</span>
@@ -676,7 +717,7 @@ function showData() {
         // info here
         $(".infoDiv").html(`
        <div class="row py-2 my-2 bg-white2 rounded-4">
-          <div class="col-md-12 d-flex justify-content-around align-items-center rooomimg">
+          <div class="col-md-12 d-flex justify-content-around align-items-center">
             <img src="${currentRoom.images[0]}" alt="" class="w-40 col-md-6 d-block mx-auto" />
             <div class="Roomdetails col-md-6">
               <h3>${currentRoom.title}</h3>

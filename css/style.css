@@ -2295,36 +2295,28 @@ i {
   object-position: center;
 }
 
-@media (max-width: 768px) {
-  .carousel-caption {
-    padding: 1rem; /* Adjust padding for smaller screens */
-  }
 
-  .carousel-caption h1 {
-    font-size: 2rem; /* Adjust font size for smaller screens */
-  }
-
-  .carousel-caption h6 {
-    font-size: 1rem; /* Adjust font size for smaller screens */
-  }
-
-  .btn {
-    padding: 0.5rem 1rem; /* Adjust button padding for smaller screens */
-  }
-  .section-title{
-    height: fit-content;
-  }
-}
 .bg-white2{
   background: #f9f8f6 !important;
 }
 
 .w-40{
-  /* width: 40% !important; */
-  object-fit: contain !important;
-  aspect-ratio: 16 / 9 !important;
+  max-width: 40% !important;
 }
-
+@media (max-width:800px) {
+  .rooomimg{
+    display: flex;
+    flex-direction: column;
+  }
+  .rooomimg2{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .w-40{
+    min-width: 90%;
+    margin-bottom: 9%;
+  }
+}
 
 @keyframes typewriter {
   from { width: 0; }
