@@ -231,7 +231,7 @@
                               <li>
                                 <a
                                   class="dropdown-item"
-                                  href="roomdetails.php?location=goregon&type=apart"
+                                  href="roomdetails.php?location=goregoan&type=apart"
                                   ><i
                                     class="fa-solid fa-hotel"
                                     style="color: #24d4fd"
@@ -255,40 +255,8 @@
           </div>
         </div>
         <!-- Header End -->
-        <div class="marquee-footer">
-          <div class="marquee">
-            <div class="marquee_text">
-              <ul class="marquee-content-primary">
-                <li>◉ offer</li>
-                <li>◉ offer</li>
-                <li>◉ offer</li>
-                <li>◉ offer</li>
-                <li>◉ offer</li>
-                <li>◉ offer</li>
-                <li>◉ offer</li>
-                <li>◉ offer</li>
-                <li>◉ offer</li>
-                <li>◉ offer</li>
-                <li>◉ offer</li>
-                <li>◉ offer</li>
-              </ul>
-              <ul class="marquee-content-secondary">
-                <li>◉ offer</li>
-                <li>◉ offer</li>
-                <li>◉ offer</li>
-                <li>◉ offer</li>
-                <li>◉ offer</li>
-                <li>◉ offer</li>
-                <li>◉ offer</li>
-                <li>◉ offer</li>
-                <li>◉ offer</li>
-                <li>◉ offer</li>
-                <li>◉ offer</li>
-                <li>◉ offer</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+
+
         <!-- Page Header Start -->
         <div
           class="container-fluid page-header mb-5 p-0"
@@ -300,14 +268,18 @@
                 Rooms
               </h1>
               <nav aria-label="breadcrumb">
-                <ol class="breadcrumb justify-content-center text-uppercase" style="font-size: 20px;">
+                <ol
+                  class="breadcrumb justify-content-center text-uppercase"
+                  style="font-size: 20px"
+                >
                   <li class="breadcrumb-item">
                     <a href="index.html">Dev Shelter</a>
                   </li>
                   <!-- <li class="breadcrumb-item"><a href="#">Pages</a></li> -->
                   <li
                     class="breadcrumb-item text-white active"
-                    aria-current="page" style="font-size: 20px;"
+                    aria-current="page"
+                    style="font-size: 20px"
                   >
                     Rooms
                   </li>
@@ -566,8 +538,9 @@
                   Building,Evershine Nagar, Malad West Mumbai -400064, India.
                 </p>
                 <p class="mb-2">
-                  <i class="fa fa-phone-alt me-3"></i>+91 7039433505 (for booking)
-                  <i class="fa fa-headset me-3"></i>+91 8451880595 (for business enquiry)
+                  <i class="fa fa-phone-alt me-3"></i>+91 7039433505 (for
+                  booking) <i class="fa fa-headset me-3"></i>+91 8451880595 (for
+                  business enquiry)
                   <br />
                 </p>
                 <p class="mb-2">
@@ -669,17 +642,18 @@
 <script>
   let params = new URLSearchParams(window.location.search);
   let roomLocation = params.get("location");
-  if (roomLocation) {
+  if (roomLocation=="malad"&&roomLocation=="goregaon") {
     document.getElementById(`${roomLocation}Div`).classList.remove("d-none");
-  } else {
+  }
+  else {
     document.getElementById("maladDiv").classList.remove("d-none");
     document.getElementById("goregaonDiv").classList.remove("d-none");
-    document.getElementById("jogeshwariDiv").classList.remove("d-none");
+    // document.getElementById("jogeshwariDiv").classList.remove("d-none");
   }
   // $('.nextlinks').attr('href',$('.nextlinks').attr('href')+params.toString())
   $('.nextlinks').each(function() {
             let existingHref = $(this).attr('href');
-            
+
             // Construct the URL relative to the current location
             let currentPath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
             let fullUrl = window.location.origin + currentPath + existingHref;

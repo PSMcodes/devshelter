@@ -650,7 +650,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <img src="${currentRoom[subtype].roomType[1].images[0]}" alt="" class="w-40 col-md-6" />
           </div>
         </div>`);
-    } else {
+    } 
+    else {
       let currentRoom = roomData[roomLocation][roomType];
       console.log(currentRoom);
       $("#guestsCount").html(currentRoom["maxOccupancy"]);

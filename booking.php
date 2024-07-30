@@ -1,24 +1,57 @@
 <?php
 require ('./admin/config.php');
+require ('utilities.php');
 
-if (!isset($_GET['roomNumber'])) {
-  header('Location:room.html');
+// confirmbooking
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // Perform necessary actions for POST request
+  echo sendMail('prasadkalvikatti@gmail.com', "sample", "hello");
 }
 
-$sql = 'SELECT * FROM rooms where id = ?';
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("i", $_GET['roomNumber']);
-$stmt->execute();
-$result = $stmt->get_result();
-if ($result->num_rows > 0) {
-  $row = $result->fetch_assoc();
+
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+  if (isset($_GET['roomNumber'], $_GET['checkIn'], $_GET['checkOut'], $_GET['guest'], $_GET['rooms'])) {
+    $roomNumber = intval($_GET['roomNumber']);
+    $checkIn = new DateTime($_GET['checkIn']);
+    $checkOut = new DateTime($_GET['checkOut']);
+    $guest = intval($_GET['guest']);
+    $rooms = intval($_GET['rooms']);
+
+    $sql = 'SELECT * FROM rooms WHERE id = ?';
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $roomNumber);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+      $row = $result->fetch_assoc();
+
+      // Calculate number of days
+      $difference = $checkIn->diff($checkOut);
+      $days = $difference->days;
+
+      // Calculate additional guests
+      $baseCapacity = $rooms * 2;
+      $additionalGuests = max(0, $guest - $baseCapacity);
+
+      // Calculate pricing
+      $price1 = ($row['price'] * $days * $rooms);
+      $price2 = $additionalGuests * 500;
+      $total = $price1 + $price2;
+      $serviceCharge = $total * (2.25 / 100);
+      $gst = $total * (12 / 100);
+      $netTotal = $total + $serviceCharge + $gst;
+    } else {
+      // Handle case where room number is not found
+      echo "Room not found.";
+      exit;
+    }
+  } else {
+    // Handle missing parameters
+    echo "Missing required parameters.";
+    exit;
+  }
 }
-
-// calculate number of days
-$startDate = new DateTime($_GET['checkIn']);
-$endDate = new DateTime($_GET['checkOut']);
-$difference = $startDate->diff($endDate);
-
 ?>
 
 <!DOCTYPE html>
@@ -197,40 +230,7 @@ $difference = $startDate->diff($endDate);
         </div>
       </div>
       <!-- Header End -->
-      <div class="marquee-footer">
-        <div class="marquee">
-          <div class="marquee_text">
-            <ul class="marquee-content-primary">
-              <li>◉ offer</li>
-              <li>◉ offer</li>
-              <li>◉ offer</li>
-              <li>◉ offer</li>
-              <li>◉ offer</li>
-              <li>◉ offer</li>
-              <li>◉ offer</li>
-              <li>◉ offer</li>
-              <li>◉ offer</li>
-              <li>◉ offer</li>
-              <li>◉ offer</li>
-              <li>◉ offer</li>
-            </ul>
-            <ul class="marquee-content-secondary">
-              <li>◉ offer</li>
-              <li>◉ offer</li>
-              <li>◉ offer</li>
-              <li>◉ offer</li>
-              <li>◉ offer</li>
-              <li>◉ offer</li>
-              <li>◉ offer</li>
-              <li>◉ offer</li>
-              <li>◉ offer</li>
-              <li>◉ offer</li>
-              <li>◉ offer</li>
-              <li>◉ offer</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+     
 
       <!-- Page Header Start -->
       <div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/main/carousel-1.jpg);">
@@ -261,18 +261,21 @@ $difference = $startDate->diff($endDate);
             <div class="col-lg-6">
               <h3 class="section-title">Pricing Details</h3>
               <div class="container-fluid my-2 p-2 ">
-                <p class="text-dark">₹ <?php echo $row['price'] ?> x <span id="noOfDays"><?php echo $difference->days; ?> Days </span> x <span
-                    id="noOfRooms"> <?php echo $_GET['rooms'].' rooms';?></span> = ₹ <?php echo ($row['price']*$difference->days*$_GET['rooms']) ?></p>
-                <p class="text-dark">Additional Guest = ₹ Total </p>
-                <p class="text-primary h4">Sub total = ₹ Total </p>
-                <p class="text-dark">Service Tax = ₹ Total </p>
-                <p class="text-dark">GST = ₹ Total </p>
-                <p class="text-primary h4">Payment Due = ₹ Total </p>
+                <p class="text-dark">₹ <?php echo $row['price'] ?> x <span
+                    id="noOfDays"><?php echo $difference->days; ?> Days </span> x <span id="noOfRooms">
+                    <?php echo $_GET['rooms'] . ' rooms'; ?></span> = ₹
+                  <?php echo $price1 ?>
+                </p>
+                <p class="text-dark"><?php echo $additionalGuests; ?> * ₹ 500 = ₹ <?php echo $price2; ?> </p>
+                <p class="text-primary h4">Sub total = ₹ <?php echo $total; ?> </p>
+                <p class="text-dark">Service Tax = ₹ <?php echo $serviceCharge; ?> </p>
+                <p class="text-dark">GST 12% = ₹ <?php echo $gst; ?> </p>
+                <p class="text-primary h4">Payment Due = ₹ <?php echo $netTotal; ?> </p>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="wow fadeInUp" data-wow-delay="0.2s">
-                <form id="inquiryForm2">
+                <form id="inquiryForm3" method="post">
                   <div class="row g-3">
                     <div class="col-md-6">
                       <div class="form-floating">
