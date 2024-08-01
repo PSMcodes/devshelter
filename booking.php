@@ -5,16 +5,35 @@ require ('utilities.php');
 // confirmbooking
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Perform necessary actions for POST request
-  // echo sendMail('prasadkalvikatti@gmail.com', "sample", "hello");
-  $sql = "SELECT 1 FROM guests WHERE phone = ? OR email = ? LIMIT 1";
-  $stmt = $conn->prepare($sql);
-  $stmt->bind_param("is", $_POST['contactNumber'],$_POST['emailId']);
-  $stmt->execute();
-  $result = $stmt->get_result();
-  echo $result->num_rows;
-  $s = "INSERT INTO `bookings`(`id`, `room_id`, `guest_id`, `check_in`, `check_out`, `status`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]','[value-6]')";
-  $s1 = "INSERT INTO `guests`(`id`, `name`, `email`, `phone`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]')";
+  $guest_name = $_POST['contactName'];
+  $guest_email = $_POST['emailId'];
+  $guest_phone = $_POST['contactNumber'];
+  echo implode(',', $_POST);
+  $room_id = $_GET['roomNumber'];
+  $check_in = $_GET['checkIn'];
+  $check_out = $_GET['checkOut'];
 
+  $guest_query = "SELECT * FROM guests WHERE phone = '$guest_phone' OR email = '$guest_email'";
+  $guest_result = $conn->query($guest_query);
+
+  if ($guest_result->num_rows > 0) {
+    // Guest already exists, get their ID
+    $guest_row = $guest_result->fetch_assoc();
+    $guest_id = $guest_row['id'];
+  } else {
+    // Guest does not exist, add them to the guests table
+    $guest_query = "INSERT INTO guests (name, email, phone) VALUES ('$guest_name', '$guest_email', '$guest_phone')";
+    $conn->query($guest_query);
+    $guest_id = $conn->insert_id;
+  }
+
+  // Add new booking to the bookings table
+  $booking_query = "INSERT INTO bookings (room_id, guest_id, check_in, check_out, status) VALUES ('$room_id', '$guest_id', '$check_in', '$check_out', 'pending')";
+  $conn->query($booking_query);
+
+  $conn->close();
+
+  // echo sendMail('prasadkalvikatti@gmail.com', "sample", "hello");
 }
 
 
