@@ -1,18 +1,33 @@
 <?php
+
+?>
+<?php
 require ('./admin/config.php');
 require ('utilities.php');
 
+$netTotal;
 // confirmbooking
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  global $netTotal;
   // Perform necessary actions for POST request
   $guest_name = $_POST['contactName'];
   $guest_email = $_POST['emailId'];
   $guest_phone = $_POST['contactNumber'];
-  echo implode(',', $_POST);
+  // echo implode(',', $_POST);
   $room_id = $_GET['roomNumber'];
   $check_in = $_GET['checkIn'];
   $check_out = $_GET['checkOut'];
-
+  $rooms = $_GET['rooms'];
+  // get Room number
+  $roomNumber = intval($_GET['roomNumber']);
+  $room_query = "SELECT room_number FROM rooms WHERE id = ?";
+  $stmt = $conn->prepare($room_query);
+  $stmt->bind_param("i", $roomNumber);
+  $stmt->execute();
+  $room_result = $stmt->get_result();
+  $room_row = $room_result->fetch_assoc();
+  $room_name = $room_row['room_number'];
+  // check if guest is present
   $guest_query = "SELECT * FROM guests WHERE phone = '$guest_phone' OR email = '$guest_email'";
   $guest_result = $conn->query($guest_query);
 
@@ -32,18 +47,50 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $conn->query($booking_query);
 
   $conn->close();
+  $subject = "Booking Confirmation - DevShelter";
+  $message = "
+      <html>
+      <head>
+          <title>Booking Confirmation</title>
+      </head>
+      <body>
+          <h2>Dear $guest_name,</h2>
+          <p>Thank you for your booking at DevShelter. Here are your booking details:</p>
+          <table>
+              <tr>
+                  <th>Room No</th><td>$room_name</td>
+              </tr>
+              <tr>
+                  <th>Check-in Date</th><td>$check_in</td>
+              </tr>
+              <tr>
+                  <th>Check-out Date</th><td>$check_out</td>
+              </tr>
+              <tr>
+                  <th>Number of Rooms</th><td>$rooms</td>
+              </tr>
+              <tr>
+                  <th>Total Amount</th><td>₹ $netTotal</td>
+              </tr>
+          </table>
+          <p>We look forward to welcoming you!</p>
+          <p>Best regards,<br>DevShelter Team</p>
+      </body>
+      </html>
+  ";
 
-  // echo sendMail('prasadkalvikatti@gmail.com', "sample", "hello");
+  echo sendMail('prasadkalvikatti@gmail.com', $subject, $message);
 }
 
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
   if (isset($_GET['roomNumber'], $_GET['checkIn'], $_GET['checkOut'], $_GET['guest'], $_GET['rooms'])) {
+    global $netTotal;
     $roomNumber = intval($_GET['roomNumber']);
     $checkIn = new DateTime($_GET['checkIn']);
     $checkOut = new DateTime($_GET['checkOut']);
-    $guest = intval($_GET['guest']);
-    $rooms = intval($_GET['rooms']);
+    $guest = $_GET['guest'];
+    $rooms = $_GET['rooms'];
 
     $sql = 'SELECT * FROM rooms WHERE id = ?';
     $stmt = $conn->prepare($sql);
