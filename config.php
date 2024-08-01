@@ -5,7 +5,7 @@
 
     define('USERNAME', 'prasadkalvikatti@gmail.com');
     
-    define('PASSWORD','');
+    define('PASSWORD','abfr xbuk nnrp idad');
 
     define('SENT_FROM','prasadkalvikatti@gmail.com');
 

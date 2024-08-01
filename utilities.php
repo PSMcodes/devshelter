@@ -1,30 +1,15 @@
 
 <?php
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+require 'PHPMailer/src/Exception.php';
 
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 
 require 'config.php';
-$msg = '<!DOCTYPE html>
-<html>
-<head>
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            padding: 8px;
-            text-align: left;
-            border: 1px solid #ddd;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
-</head>
-<body>
+$msg = '
     <h2>Reservation Details</h2>
     <table>
         <tr>
@@ -100,11 +85,7 @@ $msg = '<!DOCTYPE html>
     <p>Booking ID: 1543300-2942-1483282518</p>
     <p>Booking ID: 1543300-2942-1483283645</p>
     <br>
-    <p>Created By: Shubham Sharma</p>
-    <p>Created On: Jan. 2, 2017, 12:57 p.m.</p>
-    <p>Type of Voucher: Direct Phone</p>
-</body>
-</html>
+    <p>Created On: '.'
 ';
 function sendMail($email, $subject, $message)
 {
@@ -133,7 +114,10 @@ function sendMail($email, $subject, $message)
 
     $mail->isHTML(true);
 
+    
     $mail->Subject = $subject;
+    
+    $mail->Body = !empty($bodyContent) ? $bodyContent : 'Default body content';
 
     $mail->AltBody = $message;
 
