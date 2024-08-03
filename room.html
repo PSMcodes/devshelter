@@ -98,7 +98,7 @@
                     <i class="fa fa-headset text-primary me-2"></i>
                     <p class="mb-0">+91 8451880595</p>
                   </div> -->
-  
+
                   <div class="h-100 d-inline-flex align-items-center">
                     <i class="fa fa-phone-alt text-primary me-2"></i>
                     <a href="tel:+91 8451880595 " class="mb-0 text-dark"
@@ -110,14 +110,36 @@
                   class="col-lg-5 px-5 text-end d-inline-flex align-items-center justify-content-center"
                 >
                   <div>
-                    <a class="me-3" href="https://www.facebook.com/share/dyovuE3GajghUz1m/?mibextid=LQQJ4d" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a class="me-3" href="https://www.instagram.com/dev.shelters/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a class="me-3" href="https://www.youtube.com/@devshelters9739" target="_blank"><i class="fab fa-youtube"></i></a>
-                    <a class="" href="https://www.linkedin.com/in/shubham-sharma-34ba10133?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a
+                      class="me-3"
+                      href="https://www.facebook.com/share/dyovuE3GajghUz1m/?mibextid=LQQJ4d"
+                      target="_blank"
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                    <a
+                      class="me-3"
+                      href="https://www.instagram.com/dev.shelters/"
+                      target="_blank"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                    <a
+                      class="me-3"
+                      href="https://www.youtube.com/@devshelters9739"
+                      target="_blank"
+                      ><i class="fab fa-youtube"></i
+                    ></a>
+                    <a
+                      class=""
+                      href="https://www.linkedin.com/in/shubham-sharma-34ba10133?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                      target="_blank"
+                      ><i class="fab fa-linkedin-in"></i
+                    ></a>
                   </div>
                 </div>
               </div>
-              <nav class="navbar navbar-expand-md bg-dark navbar-dark p-3 p-lg-0">
+              <nav
+                class="navbar navbar-expand-md bg-dark navbar-dark p-3 p-lg-0"
+              >
                 <a href="index.html" class="navbar-brand d-block d-lg-none">
                   <h1 class="m-0 text-primary">Dev Shelter</h1>
                 </a>
@@ -134,12 +156,16 @@
                   id="navbarCollapse"
                 >
                   <div class="navbar-nav">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="service.html" class="nav-item nav-link">Services</a>
+                    <a href="index.html" class="nav-item nav-link active"
+                      >Home</a
+                    >
+                    <a href="service.html" class="nav-item nav-link"
+                      >Services</a
+                    >
                     <a href="about.html" class="nav-item nav-link">About Us</a>
                     <ul class="navbar-nav">
                       <!-- Dropdown -->
-                      <li class=" dropdown p-0 m-0 bg-dark">
+                      <li class="dropdown p-0 m-0 bg-dark">
                         <a
                           class="nav-link dropdown-toggle"
                           id="navbarDropdownMenuLink"
@@ -176,7 +202,7 @@
                               </li>
                             </ul>
                           </li>
-  
+
                           <li>
                             <a class="dropdown-item" href="#">
                               Apart Hotel &raquo;
@@ -229,7 +255,6 @@
           </div>
         </div>
         <!-- Header End -->
-
 
         <!-- Page Header Start -->
         <div
@@ -616,30 +641,32 @@
 <script>
   let params = new URLSearchParams(window.location.search);
   let roomLocation = params.get("location");
-  if (roomLocation=="malad"&&roomLocation=="goregaon") {
+  if (roomLocation == "malad" || roomLocation == "goregaon") {
     document.getElementById(`${roomLocation}Div`).classList.remove("d-none");
-  }
-  else {
+  } else {
     document.getElementById("maladDiv").classList.remove("d-none");
     document.getElementById("goregaonDiv").classList.remove("d-none");
     // document.getElementById("jogeshwariDiv").classList.remove("d-none");
   }
   // $('.nextlinks').attr('href',$('.nextlinks').attr('href')+params.toString())
-  $('.nextlinks').each(function() {
-            let existingHref = $(this).attr('href');
+  $(".nextlinks").each(function () {
+    let existingHref = $(this).attr("href");
 
-            // Construct the URL relative to the current location
-            let currentPath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
-            let fullUrl = window.location.origin + currentPath + existingHref;
+    // Construct the URL relative to the current location
+    let currentPath = window.location.pathname.substring(
+      0,
+      window.location.pathname.lastIndexOf("/") + 1
+    );
+    let fullUrl = window.location.origin + currentPath + existingHref;
 
-            let existingUrl = new URL(fullUrl);
+    let existingUrl = new URL(fullUrl);
 
-            // Append each current URL parameter to the existing link
-            params  .forEach((value, key) => {
-                existingUrl.searchParams.set(key, value);
-            });
+    // Append each current URL parameter to the existing link
+    params.forEach((value, key) => {
+      existingUrl.searchParams.set(key, value);
+    });
 
-            // Update the href attribute with the new URL
-            $(this).attr('href', existingUrl.toString());
-        });
+    // Update the href attribute with the new URL
+    $(this).attr("href", existingUrl.toString());
+  });
 </script>

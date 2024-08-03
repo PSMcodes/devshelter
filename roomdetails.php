@@ -2,23 +2,23 @@
 require ('utilities.php');
 require ('./admin/config.php');
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $location = isset($_GET['location']) ? $_GET['location'] : null;
-  $type = isset($_GET['type']) ? $_GET['type'] : null;
-  $checkIn = isset($_GET['checkIn']) ? $_GET['checkIn'] : null;
-  $checkOut = isset($_GET['checkOut']) ? $_GET['checkOut'] : null;
-  $guest = isset($_GET['guest']) ? $_GET['guest'] : null;
-  $rooms = isset($_GET['rooms']) ? $_GET['rooms'] : null;
-  $contactName = $_POST['contactName'];
-  $contactNumber = $_POST['contactNumber'];
-  $emailId = $_POST['emailId'];
-  $message = $_POST['message'];
+    $location = isset($_GET['location']) ? $_GET['location'] : null;
+    $type = isset($_GET['type']) ? $_GET['type'] : null;
+    $checkIn = isset($_GET['checkIn']) ? $_GET['checkIn'] : null;
+    $checkOut = isset($_GET['checkOut']) ? $_GET['checkOut'] : null;
+    $guest = isset($_GET['guest']) ? $_GET['guest'] : null;
+    $rooms = isset($_GET['rooms']) ? $_GET['rooms'] : null;
+    $contactName = $_POST['contactName'];
+    $contactNumber = $_POST['contactNumber'];
+    $emailId = $_POST['emailId'];
+    $message = $_POST['message'];
 
 
-  // echo $location . " __ " . $type . " __ " . $checkIn . " __ " . $checkOut;
-  echo $location, $type, $checkIn, $checkOut, $checkIn, $checkOut, $checkIn, $checkOut, $rooms;
-  if ($location && $type && $checkIn && $checkOut) {
-    // Query to check room availability
-    $sql = "SELECT 
+    // echo $location . " __ " . $type . " __ " . $checkIn . " __ " . $checkOut;
+    echo $location, $type, $checkIn, $checkOut, $checkIn, $checkOut, $checkIn, $checkOut, $rooms;
+    if ($location && $type && $checkIn && $checkOut) {
+        // Query to check room availability
+        $sql = "SELECT 
     r.id, 
     r.room_number, 
     r.price, 
@@ -45,28 +45,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 )
         ) LIMIT ?";
 
-    $stmt = $conn->prepare($sql);
-    // location name,type(apart),checkin,checkout,checkin,checkout,checkin,checkout
-    $stmt->bind_param("sssssssss", $location, $type, $checkIn, $checkOut, $checkIn, $checkOut, $checkIn, $checkOut, $rooms);
-    $stmt->execute();
-    $result = $stmt->get_result();
+        $stmt = $conn->prepare($sql);
+        // location name,type(apart),checkin,checkout,checkin,checkout,checkin,checkout
+        $stmt->bind_param("sssssssss", $location, $type, $checkIn, $checkOut, $checkIn, $checkOut, $checkIn, $checkOut, $rooms);
+        $stmt->execute();
+        $result = $stmt->get_result();
 
-    if ($result->num_rows > 0) {
-      // Display available rooms
-      $row = $result->fetch_assoc();
-      echo $row;
-      $gibberish = generateRandomGibberish(100);
-      header("Location:booking.php?$gibberish&roomNumber=$row[id]&location=$location&type=$type&subtype=$subtype&checkIn=$checkIn&checkOut=$checkOut&guest={$guest}&rooms=2&contactName=$contactName&contactNumber=$contactNumber&emailId=$emailId&message=$message");
-    } else {
-      echo "<script>  
+        if ($result->num_rows > 0) {
+            // Display available rooms
+            $row = $result->fetch_assoc();
+            echo $row;
+            $gibberish = generateRandomGibberish(100);
+            header("Location:booking.php?$gibberish&roomNumber=$row[id]&location=$location&type=$type&subtype=$subtype&checkIn=$checkIn&checkOut=$checkOut&guest={$guest}&rooms=$rooms&contactName=$contactName&contactNumber=$contactNumber&emailId=$emailId&message=$message");
+        } else {
+            echo "<script>  
             alert('Room not available at the selected dates');
           // $('#alert').html($('#alert').html() + '<br><br> <span class='h3 text-bg-danger p-2 rounded-4'> Room not available at the selected dates </span>');
       </script>";
+        }
+        $stmt->close();
+    } else {
+        echo "<p>Please provide valid location, type, and date range.</p>";
     }
-    $stmt->close();
-  } else {
-    echo "<p>Please provide valid location, type, and date range.</p>";
-  }
 
 }
 
@@ -123,13 +123,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
     <style>
-    .sticky-top {
-        position: sticky;
-        top: 0;
-        z-index: 1020;
-        padding: 20px;
-        border-radius: 5px;
-    }
+        .sticky-top {
+            position: sticky;
+            top: 0;
+            z-index: 1020;
+            padding: 20px;
+            border-radius: 5px;
+        }
     </style>
 
     <!-- Spinner End -->
@@ -600,50 +600,50 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!-- Template Javascript -->
 <script>
-function changeSlide(index) {
-    $("#imageGalleryCarousel").carousel(index);
-}
+    function changeSlide(index) {
+        $("#imageGalleryCarousel").carousel(index);
+    }
 
-// updates Details
+    // updates Details
 
-let roomData;
+    let roomData;
 
-let params = window.location.search;
-let roomLocation = new URLSearchParams(params).get("location");
-let roomType = new URLSearchParams(params).get("type");
-const loct = new URLSearchParams(params).get("location");
-const checkIn = new URLSearchParams(params).get("checkIn");
-const checkOut = new URLSearchParams(params).get("checkOut");
-const guest = new URLSearchParams(params).get("guest");
-const rooms = new URLSearchParams(params).get("rooms");
-const subtype = new URLSearchParams(params).get("subtype");
+    let params = window.location.search;
+    let roomLocation = new URLSearchParams(params).get("location");
+    let roomType = new URLSearchParams(params).get("type");
+    const loct = new URLSearchParams(params).get("location");
+    const checkIn = new URLSearchParams(params).get("checkIn");
+    const checkOut = new URLSearchParams(params).get("checkOut");
+    const guest = new URLSearchParams(params).get("guest");
+    const rooms = new URLSearchParams(params).get("rooms");
+    const subtype = new URLSearchParams(params).get("subtype");
 
-function getData() {
-    fetch("server.json")
-        .then((data) => data.json())
-        .then((data) => {
-            roomData = data;
-            if (roomLocation || roomType) {
-                showData(roomData);
-            } else {
-                console.log("No room selected");
-                window.location.pathname = "room.html";
-            }
-        });
-}
+    function getData() {
+        fetch("server.json")
+            .then((data) => data.json())
+            .then((data) => {
+                roomData = data;
+                if (roomLocation || roomType) {
+                    showData(roomData);
+                } else {
+                    console.log("No room selected");
+                    window.location.pathname = "room.html";
+                }
+            });
+    }
 
-function showData() {
-    if (roomType == "service") {
-        let currentRoom = roomData[roomLocation][roomType];
-        console.log(currentRoom);
-        $("#guestsCount").html(currentRoom["maxOccupancy"]);
-        $("#guestCount2").html(currentRoom["maxOccupancy"]);
-        $("#bedroomCount").html(currentRoom["maxOccupancy"]);
-        $("#bedCount").html(currentRoom["maxOccupancy"]);
-        // heading here
-        $("#roomTitle").html(currentRoom[subtype].title);
-        // spliting the sub type
-        $(".infoDiv").html(`
+    function showData() {
+        if (roomType == "service") {
+            let currentRoom = roomData[roomLocation][roomType];
+            console.log(currentRoom);
+            $("#guestsCount").html(currentRoom["maxOccupancy"]);
+            $("#guestCount2").html(currentRoom["maxOccupancy"]);
+            $("#bedroomCount").html(currentRoom["maxOccupancy"]);
+            $("#bedCount").html(currentRoom["maxOccupancy"]);
+            // heading here
+            $("#roomTitle").html(currentRoom[subtype].title);
+            // spliting the sub type
+            $(".infoDiv").html(`
       <div class="row py-2 my-2 bg-white2 rounded-4">
           <div class="col-md-12 d-flex justify-content-around align-items-center rooomimg">
             <img src="${currentRoom[subtype].roomType[0].images[0]}" alt="" class="w-40 col-md-6 d-block mx-auto" />
@@ -664,17 +664,17 @@ function showData() {
             <img src="${currentRoom[subtype].roomType[1].images[0]}" alt="" class="w-40 col-md-6" />
           </div>
         </div>`);
-    } else {
-        let currentRoom = roomData[roomLocation][roomType];
-        console.log(currentRoom);
-        $("#guestsCount").html(currentRoom["maxOccupancy"]);
-        $("#guestCount2").html(currentRoom["maxOccupancy"]);
-        $("#bedroomCount").html(currentRoom["maxOccupancy"]);
-        $("#bedCount").html(currentRoom["maxOccupancy"]);
-        // heading here
-        $("#roomTitle").html(currentRoom.title);
-        // info here
-        $(".infoDiv").html(`
+        } else {
+            let currentRoom = roomData[roomLocation][roomType];
+            console.log(currentRoom);
+            $("#guestsCount").html(currentRoom["maxOccupancy"]);
+            $("#guestCount2").html(currentRoom["maxOccupancy"]);
+            $("#bedroomCount").html(currentRoom["maxOccupancy"]);
+            $("#bedCount").html(currentRoom["maxOccupancy"]);
+            // heading here
+            $("#roomTitle").html(currentRoom.title);
+            // info here
+            $(".infoDiv").html(`
        <div class="row py-2 my-2 bg-white2 rounded-4">
           <div class="col-md-12 d-flex justify-content-around align-items-center rooomimg">
             <img src="${currentRoom.images[0]}" alt="" class="w-40 col-md-6 d-block mx-auto" />
@@ -686,58 +686,58 @@ function showData() {
           </div>
         </div>
       `);
-    }
-}
-
-if (checkIn) {
-    $("#checkin").val(checkIn);
-}
-if (checkOut) {
-    $("#checkout").val(checkOut);
-}
-if (guest) {
-    $("#guest").val(guest);
-}
-if (rooms) {
-    $("#rooms").val(rooms);
-}
-
-let inquiryForm = document.querySelector("#inquiryForm2");
-inquiryForm.addEventListener("submit", (e) => {
-    if (guest > 3) {
-        $("#alert").html(
-            "Two rooms will be booked as the guests are exceeding room limit "
-        );
-    }
-    // e.preventDefault()
-    const name = document.getElementById("name").value;
-    if (!/^[a-zA-Z\s]+$/.test(name)) {
-        alert("Please enter a valid name (only letters and spaces are allowed).");
-        event.preventDefault();
-        return;
+        }
     }
 
-    // Validate email (HTML5 email validation is usually sufficient)
-    const email = document.getElementById("emailId").value;
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        alert("Please enter a valid email address.");
-        event.preventDefault();
-        return;
+    if (checkIn) {
+        $("#checkin").val(checkIn);
+    }
+    if (checkOut) {
+        $("#checkout").val(checkOut);
+    }
+    if (guest) {
+        $("#guest").val(guest);
+    }
+    if (rooms) {
+        $("#rooms").val(rooms);
     }
 
-    // Validate Indian contact number
-    const contact = document.getElementById("contact").value;
-    if (!/^[6-9]\d{9}$/.test(contact)) {
-        alert(
-            "Please enter a valid Indian contact number (10 digits, starting with 6-9)."
-        );
-        event.preventDefault();
-        return;
-    }
-    $('#alert').html($('#alert').html() +
-        '<br><br> <span class="h6 text-bg-success p-2 rounded-3">Processing </span>')
-});
+    let inquiryForm = document.querySelector("#inquiryForm2");
+    inquiryForm.addEventListener("submit", (e) => {
+        if (guest > 3) {
+            $("#alert").html(
+                "Two rooms will be booked as the guests are exceeding room limit "
+            );
+        }
+        // e.preventDefault()
+        const name = document.getElementById("name").value;
+        if (!/^[a-zA-Z\s]+$/.test(name)) {
+            alert("Please enter a valid name (only letters and spaces are allowed).");
+            event.preventDefault();
+            return;
+        }
 
-getData();
+        // Validate email (HTML5 email validation is usually sufficient)
+        const email = document.getElementById("emailId").value;
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            alert("Please enter a valid email address.");
+            event.preventDefault();
+            return;
+        }
+
+        // Validate Indian contact number
+        const contact = document.getElementById("contact").value;
+        if (!/^[6-9]\d{9}$/.test(contact)) {
+            alert(
+                "Please enter a valid Indian contact number (10 digits, starting with 6-9)."
+            );
+            event.preventDefault();
+            return;
+        }
+        $('#alert').html($('#alert').html() +
+            '<br><br> <span class="h6 text-bg-success p-2 rounded-3">Processing </span>')
+    });
+
+    getData();
 </script>
 <script defer src="js/main.js"></script>
