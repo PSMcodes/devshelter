@@ -278,6 +278,9 @@ ALTER TABLE `bookings`
   ADD CONSTRAINT `bookings_ibfk_1` FOREIGN KEY (`room_id`) REFERENCES `rooms` (`id`),
   ADD CONSTRAINT `bookings_ibfk_2` FOREIGN KEY (`guest_id`) REFERENCES `guests` (`id`);
 
+
+ALTER TABLE `bookings` ADD COLUMN totalRooms int(11),ADD COLUMN totalGuest int(11), ADD COLUMN timestamp varchar(100),ADD COLUMN Price DOUBLE;
+
 --
 -- Constraints for table `rooms`
 --

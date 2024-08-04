@@ -3,77 +3,84 @@
 require 'admin/config.php';
 require 'utilities.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  global $netTotal;
-  // Perform necessary actions for POST request
-  $guest_name = $_POST['contactName'];
-  $guest_email = $_POST['emailId'];
-  $guest_phone = $_POST['contactNumber'];
-  // echo implode(',', $_POST);
-  $room_id = $_POST['roomNumber'];
-  $check_in = $_POST['checkIn'];
-  $check_out = $_POST['checkOut'];
-  $rooms = $_POST['rooms'];
-  $guests = $_POST['guests'];
-  // get Room number
-  $roomNumber = intval($_POST['roomNumber']);
-  $room_query = "SELECT room_number FROM rooms WHERE id = ?";
-  $stmt = $conn->prepare($room_query);
-  $stmt->bind_param("i", $roomNumber);
-  $stmt->execute();
-  $room_result = $stmt->get_result();
-  $room_row = $room_result->fetch_assoc();
-  $room_name = $room_row['room_number'];
-  // check if guest is present
-  $guest_query = "SELECT * FROM guests WHERE phone = '$guest_phone' OR email = '$guest_email'";
-  $guest_result = $conn->query($guest_query);
+    global $netTotal;
+    // Perform necessary actions for POST request
+    $guest_name = $_POST['contactName'];
+    $guest_email = $_POST['emailId'];
+    $guest_phone = $_POST['contactNumber'];
+    // echo implode(',', $_POST);
+    $room_id = $_POST['roomNumber'];
+    $check_in = $_POST['checkIn'];
+    $check_out = $_POST['checkOut'];
+    $rooms = $_POST['rooms'];
+    $guests = $_POST['guests'];
+    $netTotal = $_POST['totalprice'];
+    // get Room number
+    $roomNumber = intval($_POST['roomNumber']);
+    $room_query = "SELECT room_number FROM rooms WHERE id = ?";
+    $stmt = $conn->prepare($room_query);
+    $stmt->bind_param("i", $roomNumber);
+    $stmt->execute();
+    $room_result = $stmt->get_result();
+    $room_row = $room_result->fetch_assoc();
+    $room_name = $room_row['room_number'];
+    // check if guest is present
+    $guest_query = "SELECT * FROM guests WHERE phone = '$guest_phone' OR email = '$guest_email'";
+    $guest_result = $conn->query($guest_query);
 
-  if ($guest_result->num_rows > 0) {
-    // Guest already exists, get their ID
-    $guest_row = $guest_result->fetch_assoc();
-    $guest_id = $guest_row['id'];
-  } else {
-    // Guest does not exist, add them to the guests table
-    $guest_query = "INSERT INTO guests (name, email, phone) VALUES ('$guest_name', '$guest_email', '$guest_phone')";
-    $conn->query($guest_query);
-    $guest_id = $conn->insert_id;
-  }
+    if ($guest_result->num_rows > 0) {
+        // Guest already exists, get their ID
+        $guest_row = $guest_result->fetch_assoc();
+        $guest_id = $guest_row['id'];
+    } else {
+        // Guest does not exist, add them to the guests table
+        $guest_query = "INSERT INTO guests (name, email, phone) VALUES ('$guest_name', '$guest_email', '$guest_phone')";
+        $conn->query($guest_query);
+        $guest_id = $conn->insert_id;
+    }
 
-  $timestamp = date('Y-m-d H:i:s');
-  // Add new booking to the bookings table
-  $booking_query = "INSERT INTO bookings (room_id, guest_id, check_in, check_out, status , totalRooms,totalGuest,timestamp) VALUES ('$room_id', '$guest_id', '$check_in', '$check_out', 'pending',$rooms,$guests,'$timestamp')";
-  $conn->query($booking_query);
+    $timestamp = date('Y-m-d H:i:s');
+    // Add new booking to the bookings table
+    $booking_query = "INSERT INTO bookings (room_id, guest_id, check_in, check_out, status , totalRooms,totalGuest,timestamp,Price) VALUES ('$room_id', '$guest_id', '$check_in', '$check_out', 'pending',$rooms,$guests,'$timestamp',$netTotal)";
+    $conn->query($booking_query);
 
-  // get current room details
-  $res = $conn->query("SELECT * FROM bookings ORDER BY timestamp DESC LIMIT 1;");
-  $row = $res->fetch_assoc();
+    // get current room details
+    $res = $conn->query("SELECT * FROM bookings ORDER BY timestamp DESC LIMIT 1;");
+    $row = $res->fetch_assoc();
 
-  // get guest details
-  $res = $conn->query("SELECT * FROM guests where id = " . $row['guest_id']);
-  $guestDetails = $res->fetch_assoc();
+    // get guest details
+    $res = $conn->query("SELECT * FROM guests where id = " . $row['guest_id']);
+    $guestDetails = $res->fetch_assoc();
 
-  $conn->close();
-  $subject = "Booking Confirmation - DevShelter";
-  $message = '<td style="padding:10px;box-sizing:border-box">
+    // get room type 
+    $res = $conn->query("SELECT * from `room_types` where id = (SELECT type_id from `rooms` where id = (SELECT room_id from `bookings` where id = " . $row['id'] . "))");
+    $roomtype = $res->fetch_assoc();
+
+    // differencce in day (total days)
+    $date1 = new DateTime($row['check_in']);
+    $date2 = new DateTime($row['check_out']);
+    $interval = $date1->diff($date2);
+
+    $conn->close();
+    $subject = "Booking Confirmation - DevShelter";
+    $message = '<td style="padding:10px;box-sizing:border-box">
             <table style="width:100%;height:auto;margin:0;border-collapse:collapse;padding:0" cellpadding="0" cellspacing="0">
                 <tbody><tr>
                     <td style="padding:5px;text-align:center;box-sizing:border-box;border:1px solid #999">
-                        <img src="https://ci3.googleusercontent.com/meips/ADKq_NZ4syO4NE2Kg0B1VWLHRRcXtRHmMjdhyiySV8q4Evd_8pGYPbOHm4tKukk2Njezw0agpmtYVkQrmjMM3WucDJjbhnt37CEtvTRu7wLT9ZawK1mfD9STaNXxAN1Ra5pvA5IWxCIM3Bp23xd2U3fQW2LtNMZnTw=s0-d-e1-ft#https://djubo-static.s3.amazonaws.com/media/logo/dev_cefaeacd-347a-49ec-9c70-6f1f8b5b2209_l.jpg" style="max-height:70px;max-width:100%" class="CToWUd" data-bit="iit" jslog="138226; u014N:xr6bB; 53:WzAsMl0.">
+                        <img src="https://devshelter.in/img/main/logo.png" alt="Logo" width="100px">
                     </td>
                     <td style="padding:5px;line-height:1;box-sizing:border-box;border:1px solid #999;white-space:nowrap"> Reservation ID<br>
 
-                        <h2 style="margin:5px 0 0 0">DEV.' . $row['id'] . '</h2>
+                        <h2 style="margin:5px 0 0 0">DEV' . $row['id'] . '</h2>
                         
                         
                     </td>
                     <td style="padding:5px;box-sizing:border-box;border:1px solid #999;font-size:12px;line-height:16px;white-space:nowrap">
                         <img src="https://ci3.googleusercontent.com/meips/ADKq_NZ1j2qwQtvg7KUPPhHb7BDiBvMm5fOQzyIs0zzJYmIXgMSmga0VJfmgKP30jRLyzG6KmFuprXZWa-84Ap1VvqDOvW9wUPgl7U5SYW791JAwPkBa98XtsNKP=s0-d-e1-ft#https://djubo-static.s3.amazonaws.com/static/v4/images/calendar.png" style="max-width:25%" class="CToWUd" data-bit="iit"><br>
                         <strong>Check in</strong>
-                        <br>
-                         Jan. 2, 2017 <br>
+                        <br>' . $row['check_in'] . '<br>
                         <strong>Check out</strong>
-                        <br>
-                         Jan. 4, 2017 
-                    </td>
+                        <br>' . $row['check_out'] . '</td>
                     
                         <td style="padding:5px;box-sizing:border-box;border:1px solid #999">
                             <img src="https://ci3.googleusercontent.com/meips/ADKq_NZuznA0ahTfPgip_VE78-uDATqtySsQbpT8ZbOk8RH_D-qdAk64OI16-HP3ZzJd4cBOscyi31BK9QJkd741EmaddrOBt6j0RY1gJpyGk9un2LKGTQ=s0-d-e1-ft#https://djubo-static.s3.amazonaws.com/static/v4/images/cfm.png" style="max-height:65px;min-width:50px;min-height:50px;max-width:100%" class="CToWUd" data-bit="iit">
@@ -100,15 +107,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <table style="border-collapse:collapse">
                                     <tbody><tr>
                                         <td valign="top" style="padding:0 10px 0 0px;white-space:nowrap">Guest Name</td>
-                                        <td valign="top" style="padding:0;white-space:nowrap"> : Stayzilla </td>
+                                        <td valign="top" style="padding:0;white-space:nowrap"> : ' . $guestDetails['name'] . ' </td>
                                     </tr>
                                     <tr>
                                         <td valign="top" style="padding:0 10px 0 0px;white-space:nowrap">Guest Email</td>
-                                        <td valign="top" style="padding:0"> : </td>
+                                        <td valign="top" style="padding:0"> : ' . $guestDetails['email'] . ' </td>
                                     </tr>
                                     <tr>
                                         <td valign="top" style="padding:0 10px 0 0px;white-space:nowrap">Guest Contact No.</td>
-                                        <td valign="top" style="padding:0"> : 00000000000</td>
+                                        <td valign="top" style="padding:0"> : ' . $guestDetails['phone'] . '</td>
                                     </tr>
                                 </tbody></table>
                             </td>
@@ -131,105 +138,42 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <th style="border-color:#ddd;padding:5px;box-sizing:border-box">S.No.</th>
                 <th style="border-color:#ddd;padding:5px;box-sizing:border-box">Room</th>
                 <th style="border-color:#ddd;padding:5px;box-sizing:border-box">Nights</th>
-                <th style="border-color:#ddd;padding:5px;box-sizing:border-box">Adults</th>
-                <th style="border-color:#ddd;padding:5px;box-sizing:border-box">Children</th>
-                <th style="border-color:#ddd;padding:5px;box-sizing:border-box">Infants</th>
+                <th style="border-color:#ddd;padding:5px;box-sizing:border-box">Guests</th>
                 <th style="border-color:#ddd;padding:5px;box-sizing:border-box">Meal Plan</th>
                 <th style="border-color:#ddd;padding:5px;box-sizing:border-box">Room No.</th>
                 <th style="border-color:#ddd;padding:5px;box-sizing:border-box">Currency</th>
-                <th style="border-color:#ddd;padding:5px;box-sizing:border-box">
-                    
-                        Average Price Per Night
-                    
-                </th>
             </tr>
             
                 <tr>
                     <td style="font-weight:bold;text-align:center;border-color:#ddd;padding:5px;box-sizing:border-box">1</td>
-                    <td style="font-weight:bold;text-align:center;border-color:#ddd;padding:5px;box-sizing:border-box">Deluxe Room</td>
-                    <td style="font-weight:bold;text-align:center;border-color:#ddd;padding:5px;box-sizing:border-box">2</td>
-                    <td style="font-weight:bold;text-align:center;border-color:#ddd;padding:5px;box-sizing:border-box">
-                        
-                            2
-                        
-                    </td>
-                    <td style="font-weight:bold;text-align:center;border-color:#ddd;padding:5px;box-sizing:border-box">
-                        
-                            N.A.
-                        
-                    </td>
-                    <td style="font-weight:bold;text-align:center;border-color:#ddd;padding:5px;box-sizing:border-box">
-                        
-                            N.A.
-                        
-                    </td>
-                    <td style="font-weight:bold;text-align:center;border-color:#ddd;padding:5px;box-sizing:border-box">
-                        
-                            CP
-                        
-                    </td>
-                    <td style="font-weight:bold;text-align:center;border-color:#ddd;padding:5px;box-sizing:border-box">
-                        005
-                    </td>
-                    <td style="border-color:#ddd;padding:5px;box-sizing:border-box">
-                        
-                            INR
-                        
-                    </td>
-                    <td style="font-weight:bold;text-align:right;padding:5px;box-sizing:border-box;border-color:#ddd">
-                        
-                            4,512.50
-                        
-                    </td>
+                    <td style="font-weight:bold;text-align:center;border-color:#ddd;padding:5px;box-sizing:border-box">' . $roomtype['type'] . '</td>
+                    <td style="font-weight:bold;text-align:center;border-color:#ddd;padding:5px;box-sizing:border-box">'. $interval->days.'</td>
+                    <td style="font-weight:bold;text-align:center;border-color:#ddd;padding:5px;box-sizing:border-box">'.$row['totalGuest'].'</td>
+                    <td style="font-weight:bold;text-align:center;border-color:#ddd;padding:5px;box-sizing:border-box">CP</td>
+                    <td style="font-weight:bold;text-align:center;border-color:#ddd;padding:5px;box-sizing:border-box">'.$row['room_id'].'</td>
+                    <td style="border-color:#ddd;padding:5px;box-sizing:border-box">INR</td>
                 </tr>
-            
+              
             <tr>
-                <td colspan="8" style="text-align:right;padding:5px;box-sizing:border-box;border-color:#ddd">
-                    Room Rent
-                </td>
-                <td style="border-color:#ddd;padding:5px;box-sizing:border-box">INR</td>
-                <td style="font-weight:bold;text-align:right;padding:5px;box-sizing:border-box;border-color:#ddd">
-                    9,025.00
-                </td>
-            </tr>
-            
-            
-            <tr>
-                <td colspan="8" style="text-align:right;padding:5px;box-sizing:border-box;border-color:#ddd">
+                <td colspan="5" style="text-align:right;padding:5px;box-sizing:border-box;border-color:#ddd">
                     Total
                 </td>
                 <td style="border-color:#ddd;padding:5px;box-sizing:border-box">INR</td>
-                <td style="font-weight:bold;text-align:right;padding:5px;box-sizing:border-box;border-color:#ddd">
-                    9,025.00
-                </td>
+                <td style="font-weight:bold;text-align:right;padding:5px;box-sizing:border-box;border-color:#ddd">'.$row['Price'].'</td>
             </tr>
             <tr>
-                <td colspan="8" style="text-align:right;padding:5px;box-sizing:border-box;border-color:#ddd">
-                    Total Taxes
-                </td>
-                <td style="border-color:#ddd;padding:5px;box-sizing:border-box">INR</td>
-                <td style="font-weight:bold;text-align:right;padding:5px;box-sizing:border-box;border-color:#ddd">0.00</td>
-            </tr>
-            <tr>
-                <td colspan="8" style="text-align:right;padding:5px;box-sizing:border-box;border-color:#ddd">
+                <td colspan="5" style="text-align:right;padding:5px;box-sizing:border-box;border-color:#ddd">
                     Advance Amount
                 </td>
                 <td style="border-color:#ddd;padding:5px;box-sizing:border-box">INR</td>
                 <td style="font-weight:bold;text-align:right;padding:5px;box-sizing:border-box;border-color:#ddd">0.00</td>
             </tr>
             <tr>
-                <td colspan="8" style="text-align:right;padding:5px;box-sizing:border-box;border-color:#ddd">
-                    Discount Amount
-                </td>
-                <td style="border-color:#ddd;padding:5px;box-sizing:border-box">INR</td>
-                <td style="font-weight:bold;text-align:right;padding:5px;box-sizing:border-box;border-color:#ddd">4,025.00</td>
-            </tr>
-            <tr>
-                <td colspan="8" style="text-align:right;padding:5px;box-sizing:border-box;border-color:#ddd">
+                <td colspan="5" style="text-align:right;padding:5px;box-sizing:border-box;border-color:#ddd">
                     Net Payable at Hotel
                 </td>
                 <td style="border-color:#ddd;padding:5px;box-sizing:border-box">INR</td>
-                <td style="font-weight:bold;text-align:right;padding:5px;box-sizing:border-box;border-color:#ddd">5,000.00</td>
+                <td style="font-weight:bold;text-align:right;padding:5px;box-sizing:border-box;border-color:#ddd">'.$row['Price'].'</td>
             </tr>
         </tbody></table>
     </td>
@@ -261,7 +205,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </td>
   ';
 
-  echo sendMail($guest_email, $subject, $message);
+    echo sendMail($guest_email, $subject, $message);
+    // echo sendMail("devshelters63@gmail.com", "New Booking", $message);
 }
 ?>
 <!DOCTYPE html>

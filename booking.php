@@ -1,7 +1,4 @@
 <?php
-
-?>
-<?php
 require ('./admin/config.php');
 require ('utilities.php');
 
@@ -350,131 +347,128 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                                                 <label for="rooms">Rooms</label>
                                             </div>
                                         </div>
-                                        <div class="col-md-12">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control" id="roomNumber"
-                                                    name="roomNumber" placeholder="Your Room" required hidden>
-                                                <label for="Room" hidden>Room Number</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="form-floating">
-                                                <textarea class="form-control" placeholder="Special Request"
-                                                    id="message" style="height: 100px"></textarea>
-                                                <label for="message">Special Request</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <button class="btn btn-primary w-100 py-3" type="submit">Confirm
-                                                Booking</button>
-                                        </div>
+                                        <input type="text" class="form-control" id="roomNumber" name="roomNumber" placeholder="Your Room" required hidden>
+                                        <input type="text" class="form-control" id="totalprice" name="totalprice" placeholder="Your Room" required hidden value="<?php echo $netTotal;   ?>">
                                     </div>
-                                </form>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Special Request" id="message"
+                                        style="height: 100px"></textarea>
+                                    <label for="message">Special Request</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Confirm
+                                    Booking</button>
                             </div>
                         </div>
+                        </form>
                     </div>
                 </div>
             </div>
-            <!-- Booking End -->
+        </div>
+    </div>
+    <!-- Booking End -->
 
-            <div class="container-fluid py-5">
+    <div class="container-fluid py-5">
 
-            </div>
+    </div>
 
 
-            <!-- Footer Start -->
-            <div class="container-fluid bg-dark text-light wow fadeIn footer" data-wow-delay="0.1s">
-                <div class="container pb-5">
-                    <div class="row g-5">
-                        <div class="col-md-6 col-lg-4">
-                            <div class="bg-primary rounded p-4">
-                                <a href="index.html">
-                                    <h1 class="text-white text-uppercase mb-3">DevShelter</h1>
-                                </a>
-                                <h5 class="text-white mb-0">
-                                    <a class="text-dark fw-medium ">Beyond </a> your dreams
-                                    within your reach.
-                                </h5>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3">
-                            <h6 class="section-title text-start text-primary text-uppercase mb-4">
-                                Contact
-                            </h6>
-                            <p class="mb-2">
-                                <i class="fa fa-map-marker-alt me-3"></i>2nd Floor, Kalpataru
-                                Building,Evershine Nagar, Malad West Mumbai -400064, India.
-                            </p>
-                            <p class="mb-2">
-                                <i class="fa fa-headset me-3"></i>+91 8451880595 (for inquiry) <br>
-                                <i class="fa fa-phone-alt me-3"></i>+91 7039433505 (for booking)
-                            </p>
-                            <p class="mb-2">
-                                <i class="fa fa-envelope me-3"></i>devshelters63@gmail.com
-                            </p>
-                            <!-- <div class="d-flex pt-2">
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light wow fadeIn footer" data-wow-delay="0.1s">
+        <div class="container pb-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-4">
+                    <div class="bg-primary rounded p-4">
+                        <a href="index.html">
+                            <h1 class="text-white text-uppercase mb-3">DevShelter</h1>
+                        </a>
+                        <h5 class="text-white mb-0">
+                            <a class="text-dark fw-medium ">Beyond </a> your dreams
+                            within your reach.
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h6 class="section-title text-start text-primary text-uppercase mb-4">
+                        Contact
+                    </h6>
+                    <p class="mb-2">
+                        <i class="fa fa-map-marker-alt me-3"></i>2nd Floor, Kalpataru
+                        Building,Evershine Nagar, Malad West Mumbai -400064, India.
+                    </p>
+                    <p class="mb-2">
+                        <i class="fa fa-headset me-3"></i>+91 8451880595 (for inquiry) <br>
+                        <i class="fa fa-phone-alt me-3"></i>+91 7039433505 (for booking)
+                    </p>
+                    <p class="mb-2">
+                        <i class="fa fa-envelope me-3"></i>devshelters63@gmail.com
+                    </p>
+                    <!-- <div class="d-flex pt-2">
                           <a class=" btn-outline-light btn-social m-2" href=""><i class="fab fa-twitter"></i></a>
                           <a class=" btn-outline-light btn-social m-2" href=""><i class="fab fa-facebook-f"></i></a>
                           <a class=" btn-outline-light btn-social m-2" href=""><i class="fab fa-youtube"></i></a>
                           <a class=" btn-outline-light btn-social m-2 " href=""><i class="fab fa-linkedin-in"></i></a>
                       </div> -->
-                        </div>
-                        <div class="col-lg-5 col-md-12">
-                            <div class="row gy-5 g-4">
-                                <div class="col-md-6">
-                                    <h6 class="section-title text-start text-primary text-uppercase mb-4">
-                                        Company
-                                    </h6>
-                                    <a class="btn btn-link" href="about.html">About Us</a>
-                                    <a class="btn btn-link" href="contact.html">Contact Us</a>
-                                </div>
-                                <div class="col-md-6 d-flex flex-column">
-                                    <h6 class="text-start text-primary text-uppercase mb-4">
-                                        Social media
-                                    </h6>
-                                    <a class="btn btn-link m-1"
-                                        href="https://www.linkedin.com/in/shubham-sharma-34ba10133?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-                                        target="_blank"><i class="fab fa-linkedin-in me-2"></i>Linkedin</a>
-                                    <a class="btn btn-link m-1"
-                                        href="https://www.facebook.com/share/dyovuE3GajghUz1m/?mibextid=LQQJ4d"
-                                        target="_blank"><i class="fab fa-facebook-f me-2"></i>Facebook</a>
-                                    <a class="btn btn-link m-1" href="https://www.youtube.com/@devshelters9739"
-                                        target="_blank"><i class="fab fa-youtube me-2"></i>Youtube</a>
-                                    <a class="btn btn-link m-1"
-                                        href="https://www.instagram.com/dev.shelters?igsh=MTVzNWlxbWZrNnRmNg%3D%3D&utm_source=qr"
-                                        target="_blank"><i class="fab fa-instagram me-2"></i>Instagram</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                <div class="container">
-                    <div class="copyright">
-                        <div class="row">
-                            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                                &copy; <a class="border-bottom" href="#">DevShelter</a> , All
-                                Right Reserved. Designed by
-                                <a class="border-bottom" href="https://psmcodes.com" target="_blank">
-                                    psmcodes.co</a>
-                            </div>
-
+                <div class="col-lg-5 col-md-12">
+                    <div class="row gy-5 g-4">
+                        <div class="col-md-6">
+                            <h6 class="section-title text-start text-primary text-uppercase mb-4">
+                                Company
+                            </h6>
+                            <a class="btn btn-link" href="about.html">About Us</a>
+                            <a class="btn btn-link" href="contact.html">Contact Us</a>
+                        </div>
+                        <div class="col-md-6 d-flex flex-column">
+                            <h6 class="text-start text-primary text-uppercase mb-4">
+                                Social media
+                            </h6>
+                            <a class="btn btn-link m-1"
+                                href="https://www.linkedin.com/in/shubham-sharma-34ba10133?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                                target="_blank"><i class="fab fa-linkedin-in me-2"></i>Linkedin</a>
+                            <a class="btn btn-link m-1"
+                                href="https://www.facebook.com/share/dyovuE3GajghUz1m/?mibextid=LQQJ4d"
+                                target="_blank"><i class="fab fa-facebook-f me-2"></i>Facebook</a>
+                            <a class="btn btn-link m-1" href="https://www.youtube.com/@devshelters9739"
+                                target="_blank"><i class="fab fa-youtube me-2"></i>Youtube</a>
+                            <a class="btn btn-link m-1"
+                                href="https://www.instagram.com/dev.shelters?igsh=MTVzNWlxbWZrNnRmNg%3D%3D&utm_source=qr"
+                                target="_blank"><i class="fab fa-instagram me-2"></i>Instagram</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Footer End -->
-
-
-            <a href="https://wa.me/7039433505" class="float " target="_blank" alt="contact directly">
-                <i class="fab fa-whatsapp my-float"></i>
-            </a>
-
-
-
-            <a href="tel:+91 8451880595" class="float-2" target="_blank">
-                <i class="fa fa-headset my-float"></i>
-            </a>
         </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">DevShelter</a> , All
+                        Right Reserved. Designed by
+                        <a class="border-bottom" href="https://psmcodes.com" target="_blank">
+                            psmcodes.co</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <a href="https://wa.me/7039433505" class="float " target="_blank" alt="contact directly">
+        <i class="fab fa-whatsapp my-float"></i>
+    </a>
+
+
+
+    <a href="tel:+91 8451880595" class="float-2" target="_blank">
+        <i class="fa fa-headset my-float"></i>
+    </a>
+    </div>
     </div>
 
 
@@ -494,29 +488,29 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script>
-    const params = new URLSearchParams(window.location.search);
-    const roomNum = params.get('roomNumber')
-    const loct = params.get('location');
-    const checkIn = params.get('checkIn');
-    const checkOut = params.get('checkOut');
-    const guest = params.get('guest');
-    const rooms = params.get('rooms');
-    const contactName = params.get('contactName');
-    const contactNumber = params.get('contactNumber');
-    const contactEmail = params.get('emailId')
-    const message = params.get('message')
+        const params = new URLSearchParams(window.location.search);
+        const roomNum = params.get('roomNumber')
+        const loct = params.get('location');
+        const checkIn = params.get('checkIn');
+        const checkOut = params.get('checkOut');
+        const guest = params.get('guest');
+        const rooms = params.get('rooms');
+        const contactName = params.get('contactName');
+        const contactNumber = params.get('contactNumber');
+        const contactEmail = params.get('emailId')
+        const message = params.get('message')
 
-    if (roomNum && checkIn && checkOut && guest && rooms && contactName && contactNumber && contactEmail) {
-        document.querySelector(`#roomNumber`).value = roomNum;
-        document.getElementById('checkin').value = checkIn;
-        document.getElementById('checkout').value = checkOut;
-        document.getElementById('guest').value = guest;
-        document.getElementById('rooms').value = rooms
-        document.getElementById('name').value = contactName
-        document.getElementById('contact').value = contactNumber
-        document.getElementById('emailId').value = contactEmail
-        document.getElementById('message').value = message
-    }
+        if (roomNum && checkIn && checkOut && guest && rooms && contactName && contactNumber && contactEmail) {
+            document.querySelector(`#roomNumber`).value = roomNum;
+            document.getElementById('checkin').value = checkIn;
+            document.getElementById('checkout').value = checkOut;
+            document.getElementById('guest').value = guest;
+            document.getElementById('rooms').value = rooms
+            document.getElementById('name').value = contactName
+            document.getElementById('contact').value = contactNumber
+            document.getElementById('emailId').value = contactEmail
+            document.getElementById('message').value = message
+        }
     </script>
 </body>
 
