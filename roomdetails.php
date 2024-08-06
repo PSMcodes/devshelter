@@ -415,11 +415,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <!-- Map Section -->
                 <div class="room-details">
                     <h3>Map</h3>
-
-                    <iframe class="rounded w-100  mb-5"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
-                        frameborder="0" style="min-height: 350px; border: 0" allowfullscreen="" aria-hidden="false"
-                        tabindex="0"></iframe>
+                    <div id="map"></div>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -640,6 +636,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $("#guestCount2").html(currentRoom["maxOccupancy"]);
             $("#bedroomCount").html(currentRoom["maxOccupancy"]);
             $("#bedCount").html(currentRoom["maxOccupancy"]);
+            // map 
+            $('#map').html(currentRoom[subtype].map)
             // heading here
             $("#roomTitle").html(currentRoom[subtype].title);
             // spliting the sub type
@@ -650,7 +648,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="Roomdetails col-md-6">
               <h3>${currentRoom[subtype].roomType[0].title}</h3>
               <span>${currentRoom[subtype].roomType[0].info}</span>
-              <button class="btn-primary btn d-block">Choose This</button>
             </div>
           </div>
         </div>
@@ -659,7 +656,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="Roomdetails col-md-6">
               <h3>${currentRoom[subtype].roomType[1].title}</h3>
              <span>${currentRoom[subtype].roomType[1].info}</span>
-              <button class="btn-primary btn d-block">Choose This</button>
             </div>
             <img src="${currentRoom[subtype].roomType[1].images[0]}" alt="" class="w-40 col-md-6" />
           </div>
@@ -671,6 +667,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $("#guestCount2").html(currentRoom["maxOccupancy"]);
             $("#bedroomCount").html(currentRoom["maxOccupancy"]);
             $("#bedCount").html(currentRoom["maxOccupancy"]);
+            // map
+            $('#map').html(currentRoom.map)
             // heading here
             $("#roomTitle").html(currentRoom.title);
             // info here
@@ -681,7 +679,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="Roomdetails col-md-6">
               <h3>${currentRoom.title}</h3>
               <span>${currentRoom.info}</span>
-              <button class="btn-primary btn d-block">Choose This</button>
             </div>
           </div>
         </div>

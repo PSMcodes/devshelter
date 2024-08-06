@@ -191,7 +191,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <p style="margin:5px 0px">Created By: Shubham Sharma</p>
                 
                 
-                    <p style="margin:5px 0px">Created On: Jan. 2, 2017, 12:57 p.m.</p>
+                    <p style="margin:5px 0px">Created On: '.date("Y-m-d H:i:s").'</p>
                 
             </td>
         </tr>
