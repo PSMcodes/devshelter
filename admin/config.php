@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost"; // Change this to your server name if different
-$username = "root";        // Change this to your database username
-$password = "";            // Change this to your database password
+$username = "u912243786_devshelter";        // Change this to your database username
+$password = "5*?hu>lQ@zVg";            // Change this to your database password
 $dbname = "u912243786_devshelter"; // Change this to your database name
 
 // Create connection
@@ -12,3 +12,6 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 ?>
+<!-- db = u912243786_devshelter
+username = u912243786_devshelter
+password = 5*?hu>lQ@zVg -->

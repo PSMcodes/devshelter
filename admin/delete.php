@@ -10,12 +10,16 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             case 'room':
                 deleteRoom($_GET['id']);
                 break;
+            case 'booking':
+                deleteBooking($_GET['id']);
+                break;
             default:
                 echo "Invalid operation.";
                 break;
         }
     }
 }
+
 
 function deleteRoomType($room_id)
 {
@@ -59,6 +63,25 @@ function deleteRoom($room_id)
     $stmt->close();
     $conn->close();
     header('Location: dashboard.php?page=manage_rooms');
+    exit(); // Ensure the script stops execution after the redirect
+}
+
+function deleteBooking($bookingId)
+{
+    global $conn;
+    $sql = "DELETE FROM bookings WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $bookingId);
+
+    if ($stmt->execute()) {
+        echo "Room deleted successfully!";
+    } else {
+        echo "Error: " . $stmt->error;
+    }
+
+    $stmt->close();
+    $conn->close();
+    header('Location: dashboard.php?page=manage_bookings');
     exit(); // Ensure the script stops execution after the redirect
 }
 ?>

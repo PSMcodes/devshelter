@@ -6,7 +6,6 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 require 'config.php';
-require 'delete.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $room_id = $_POST['room_id'];
@@ -19,7 +18,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Add booking
     $sql_booking = "INSERT INTO `bookings` (`timestamp`, `room_id`, `guest_id`, `check_in`, `check_out`, `status`, `totalRooms`, `totalGuest`) VALUES (CURRENT_TIMESTAMP, ?, ?, ?, ?, ?, ?, ?)";
+
     $stmt_booking = $conn->prepare($sql_booking);
+    $stmt_booking1 = $conn->prepare("UPDATE room SET status = 'booked' ");
 
 
     $stmt_booking->bind_param("iisssii", $room_id, $guest_id, $check_in, $check_out, $status, $totalRooms, $totalGuest);
@@ -159,7 +160,7 @@ $guests = $conn->query("SELECT * FROM guests");
             </td>
             <td>
                 <a href='edit_booking.php?id=<?php echo $row['id']; ?>'>Edit</a> |
-                <a href='delete_booking.php?id=<?php echo $row['id']; ?>'>Delete</a>
+                <a href='delete.php?delete=booking&id=<?php echo $row['id']; ?>'>Delete</a>
             </td>
         </tr>
         <?php } ?>

@@ -8,36 +8,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $type_id = $_POST['type_id'];
     $price = $_POST['price'];
     $status = $_POST['status'];
-    $google_map_link = $_POST['google_map_link'];
-    $max_capacity = $_POST['max_capacity'];
-
-    // Handle file upload
-    $image = $_FILES['image']['name'];
-    $target_dir = "uploads/";
-    $target_file = $target_dir . basename($image);
-    move_uploaded_file($_FILES['image']['tmp_name'], $target_file);
 
     if ($room_id) {
         // Update existing room
-        $sql = "UPDATE rooms SET room_number=?, location_id=?, type_id=?, price=?, status=?, image=?, google_map_link=?, max_capacity=? WHERE id=?";
+        $sql = "UPDATE rooms SET room_number=?, location_id=?, type_id=?, price=?, status=? WHERE id=?";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("siidsssii", $room_number, $location_id, $type_id, $price, $status, $target_file, $google_map_link, $max_capacity, $room_id);
+        $stmt->bind_param("iiidsi", $room_number, $location_id, $type_id, $price, $status, $room_id);
     } else {
         // Insert new room
-        $sql = "INSERT INTO rooms (room_number, location_id, type_id, price, status, image, google_map_link, max_capacity) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO rooms (room_number, location_id, type_id, price, status) VALUES (?, ?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("siidsssi", $room_number, $location_id, $type_id, $price, $status, $target_file, $google_map_link, $max_capacity);
+        $stmt->bind_param("iiids", $room_number, $location_id, $type_id, $price, $status);
     }
 
 
 
 
     if ($stmt->execute()) {
-        echo "<br>Room saved successfully!";
+        echo "<script> alert('Room saved successfully!') </script>";
     } else {
-        echo "Error: " . $stmt->error;
+        echo "<script> alert('Error: " . $stmt->error . ') </script>';
     }
-    header('Location:dashboard.php?page=manage_rooms');
+    // header('Location:dashboard.php?page=manage_rooms');
     $stmt->close();
 }
 
@@ -107,9 +99,7 @@ while ($type = $room_types_result->fetch_assoc()) {
                     data-room-number='<?php echo $row['room_number']; ?>'
                     data-location-id='<?php echo $row['location_id']; ?>' data-type-id='<?php echo $row['type_id']; ?>'
                     data-price='<?php echo $row['price']; ?>' data-status='<?php echo $row['status']; ?>'
-                    data-google-map-link='<?php echo $row['google_map_link']; ?>'
-                    data-max-capacity='<?php echo $row['max_capacity']; ?>' data-bs-toggle="modal"
-                    data-bs-target="#myModal1">Edit</a> |
+                    data-bs-toggle="modal" data-bs-target="#myModal1">Edit</a> |
                 <a href='delete.php?delete=room&id=<?php echo $row['id']; ?>'>Delete</a>
             </td>
         </tr>
@@ -204,11 +194,6 @@ while ($type = $room_types_result->fetch_assoc()) {
                             <option value="booked">Booked</option>
                             <option value="maintenance">Maintenance</option>
                         </select>
-                        <input class="form-control my-2 d-inline" type="url" name="google_map_link"
-                            placeholder="Google Map Link" required>
-                        <input class="form-control my-2 d-inline" type="number" name="max_capacity"
-                            placeholder="Max Capacity" required>
-                        <input class="form-control my-2 d-inline" type="file" name="image">
                         <button type="submit" class="btn btn-primary">Save</button>
                     </form>
                 </div>
@@ -241,10 +226,6 @@ while ($type = $room_types_result->fetch_assoc()) {
                 document.querySelector('#editRoomModal select[name="type_id"]').value = typeId;
                 document.querySelector('#editRoomModal input[name="price"]').value = price;
                 document.querySelector('#editRoomModal select[name="status"]').value = status;
-                document.querySelector('#editRoomModal input[name="google_map_link"]').value =
-                    googleMapLink;
-                document.querySelector('#editRoomModal input[name="max_capacity"]').value =
-                    maxCapacity;
                 document.querySelector('#editRoomModal input[name="room_id"]').value = roomId;
             });
         });
