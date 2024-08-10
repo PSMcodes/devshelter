@@ -32,8 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Error: " . $stmt_booking->error;
     }
 
-
-
+    header("Location: dashboard.php?page=manage_bookings");
 
 }
 
@@ -95,6 +94,7 @@ $guests = $conn->query("SELECT * FROM guests");
                 data-status = "<?php echo $row['status']; ?>"
                 data-totalRooms = "<?php echo $row['totalRooms']; ?>"
                 data-totalGuests = "<?php echo $row['totalGuest']; ?>"
+                class="edit-booking"
                 >Edit</a> |
                 <a href='delete.php?delete=booking&id=<?php echo $row['id']; ?>'>Delete</a>
             </td>
@@ -255,7 +255,7 @@ $guests = $conn->query("SELECT * FROM guests");
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        var editLinks = document.querySelectorAll('.edit-room');
+        var editLinks = document.querySelectorAll('.edit-booking');
         editLinks.forEach(function(link) {
             link.addEventListener('click', function() {
                 var roomId = this.getAttribute('data-roomId');
@@ -266,14 +266,15 @@ $guests = $conn->query("SELECT * FROM guests");
                 var totalRooms= this.getAttribute('data-totalRooms');
                 var totalGuest = this.getAttribute('data-totalGuests');
                 
-                document.querySelector('#bookingModal1 input[name="room_number"]').value =
-                    roomNumber;
-                document.querySelector('#bookingModal1 select[name="location_id"]').value =
-                    locationId;
-                document.querySelector('#bookingModal1 select[name="type_id"]').value = typeId;
-                document.querySelector('#bookingModal1 input[name="price"]').value = price;
+                document.querySelector('#bookingModal1 input[name="room_id"]').value =
+                    roomId;
+                document.querySelector('#bookingModal1 input[name="guest_id"]').value =
+                    GuestId;
+                document.querySelector('#bookingModal1 input[name="check_in"]').value = check_in;
+                document.querySelector('#bookingModal1 input[name="check_out"]').value = check_out;
                 document.querySelector('#bookingModal1 select[name="status"]').value = status;
-                document.querySelector('#bookingModal1 input[name="room_id"]').value = roomId;
+                document.querySelector('#bookingModal1 input[name="totalRooms"]').value = totalRooms;
+                document.querySelector('#bookingModal1 input[name="totalGuest"]').value = totalGuest;
             });
         });
     });

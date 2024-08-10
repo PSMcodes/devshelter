@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "<script> alert('Error: " . $stmt->error . ') </script>';
     }
-    // header('Location:dashboard.php?page=manage_rooms');
+    header('Location:dashboard.php?page=manage_rooms');
     $stmt->close();
 }
 
