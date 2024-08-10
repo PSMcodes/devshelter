@@ -92,7 +92,11 @@ while ($type = $room_types_result->fetch_assoc()) {
                         echo '<span class="badge bg-info">' . $row['status'] . '</span>';
                     } else if ($row['status'] == 'maintenance') {
                         echo '<span class="badge bg-warning">' . $row['status'] . '</span>';
-                    } ?>
+                    } 
+                    else if ($row['status'] == 'pending') {
+                        echo '<span class="badge bg-warning">' . $row['status'] . '</span>';
+                    } 
+                    ?>
             </td>
             <td>
                 <a href='#' class='edit-room' data-id='<?php echo $row['id']; ?>'

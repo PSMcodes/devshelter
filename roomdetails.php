@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     // echo $location . " __ " . $type . " __ " . $checkIn . " __ " . $checkOut;
-    echo $location, $type, $checkIn, $checkOut, $checkIn, $checkOut, $checkIn, $checkOut, $rooms;
+    // echo $location, $type, $checkIn, $checkOut, $checkIn, $checkOut, $checkIn, $checkOut, $rooms;
     if ($location && $type && $checkIn && $checkOut) {
         // Query to check room availability
         $sql = "SELECT 
@@ -53,10 +53,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($result->num_rows > 0) {
             // Display available rooms
-            $row = $result->fetch_assoc();
-            echo $row;
+            $room_ids = [];
+            // getting multiple room ids
+            while ($row = $result->fetch_assoc()) {
+                $room_ids[] = $row['id'];
+            }
+            $room_ids_string = implode(',', $room_ids);
+
             $gibberish = generateRandomGibberish(100);
-            header("Location:booking.php?$gibberish&roomNumber=$row[id]&location=$location&type=$type&subtype=$subtype&checkIn=$checkIn&checkOut=$checkOut&guest={$guest}&rooms=$rooms&contactName=$contactName&contactNumber=$contactNumber&emailId=$emailId&message=$message");
+            header("Location:booking.php?$gibberish&roomNumber=$room_ids_string&location=$location&type=$type&subtype=$subtype&checkIn=$checkIn&checkOut=$checkOut&guest={$guest}&rooms=$rooms&contactName=$contactName&contactNumber=$contactNumber&emailId=$emailId&message=$message");
         } else {
             echo "<script>  
             alert('Room not available at the selected dates');

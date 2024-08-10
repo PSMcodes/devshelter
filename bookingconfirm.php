@@ -24,6 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $room_result = $stmt->get_result();
     $room_row = $room_result->fetch_assoc();
     $room_name = $room_row['room_number'];
+    $guest_id;
     // check if guest is present
     $guest_query = "SELECT * FROM guests WHERE phone = '$guest_phone' OR email = '$guest_email'";
     $guest_result = $conn->query($guest_query);
@@ -41,20 +42,46 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $timestamp = date('Y-m-d H:i:s');
     // Add new booking to the bookings table
-    $booking_query = "INSERT INTO bookings (room_id, guest_id, check_in, check_out, status , totalRooms,totalGuest,timestamp,Price) VALUES ('$room_id', '$guest_id', '$check_in', '$check_out', 'pending',$rooms,$guests,'$timestamp',$netTotal)";
-    $conn->query($booking_query);
+    $allRooms = explode(',', $room_id);
+    for ($i = 0; $i < $rooms; $i++) {
+        $roomId = $allRooms[$i]; // Correctly extract the room ID from the array
+        $booking_query = "INSERT INTO bookings (room_id, guest_id, check_in, check_out, status, totalRooms, totalGuest, timestamp, Price) VALUES ('$roomId', '$guest_id', '$check_in', '$check_out', 'pending', $rooms, $guests, '$timestamp', $netTotal)";
+
+        if (!$conn->query($booking_query)) {
+            die("Error in booking query: " . $conn->error); // Stop execution and show the error
+        }
+
+        $update_room_query = "UPDATE rooms SET status = 'pending' WHERE id = '$roomId'";
+
+        if (!$conn->query($update_room_query)) {
+            die("Error in update room query: " . $conn->error); // Stop execution and show the error
+        }
+    }
 
     // get current room details
-    $res = $conn->query("SELECT * FROM bookings ORDER BY timestamp DESC LIMIT 1;");
+    $res = $conn->query("SELECT * FROM bookings ORDER BY timestamp DESC LIMIT $rooms");
+    if ($res === false) {
+        die("Error in selecting bookings: " . $conn->error); // Stop execution and show the error
+    }
+
     $row = $res->fetch_assoc();
-
-    // get guest details
-    $res = $conn->query("SELECT * FROM guests where id = " . $row['guest_id']);
-    $guestDetails = $res->fetch_assoc();
-
-    // get room type 
-    $res = $conn->query("SELECT * from `room_types` where id = (SELECT type_id from `rooms` where id = (SELECT room_id from `bookings` where id = " . $row['id'] . "))");
-    $roomtype = $res->fetch_assoc();
+    if ($row) {
+        // Get guest details
+        $res = $conn->query("SELECT * FROM guests WHERE id = " . $row['guest_id']);
+        if ($res === false) {
+            die("Error in selecting guest: " . $conn->error); // Stop execution and show the error
+        }
+        $guestDetails = $res->fetch_assoc();
+    
+        // Get room type
+        $res = $conn->query("SELECT * FROM room_types WHERE id = (SELECT type_id FROM rooms WHERE id = (SELECT room_id FROM bookings WHERE id = " . $row['id'] . "))");
+        if ($res === false) {
+            die("Error in selecting room type: " . $conn->error); // Stop execution and show the error
+        }
+        $roomtype = $res->fetch_assoc();
+    } else {
+        die("No bookings found.");
+    }
 
     // differencce in day (total days)
     $date1 = new DateTime($row['check_in']);
@@ -147,10 +174,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <tr>
                     <td style="font-weight:bold;text-align:center;border-color:#ddd;padding:5px;box-sizing:border-box">1</td>
                     <td style="font-weight:bold;text-align:center;border-color:#ddd;padding:5px;box-sizing:border-box">' . $roomtype['type'] . '</td>
-                    <td style="font-weight:bold;text-align:center;border-color:#ddd;padding:5px;box-sizing:border-box">'. $interval->days.'</td>
-                    <td style="font-weight:bold;text-align:center;border-color:#ddd;padding:5px;box-sizing:border-box">'.$row['totalGuest'].'</td>
+                    <td style="font-weight:bold;text-align:center;border-color:#ddd;padding:5px;box-sizing:border-box">' . $interval->days . '</td>
+                    <td style="font-weight:bold;text-align:center;border-color:#ddd;padding:5px;box-sizing:border-box">' . $row['totalGuest'] . '</td>
                     <td style="font-weight:bold;text-align:center;border-color:#ddd;padding:5px;box-sizing:border-box">CP</td>
-                    <td style="font-weight:bold;text-align:center;border-color:#ddd;padding:5px;box-sizing:border-box">'.$row['room_id'].'</td>
+                    <td style="font-weight:bold;text-align:center;border-color:#ddd;padding:5px;box-sizing:border-box">' . $row['room_id'] . '</td>
                     <td style="border-color:#ddd;padding:5px;box-sizing:border-box">INR</td>
                 </tr>
               
@@ -159,7 +186,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     Total
                 </td>
                 <td style="border-color:#ddd;padding:5px;box-sizing:border-box">INR</td>
-                <td style="font-weight:bold;text-align:right;padding:5px;box-sizing:border-box;border-color:#ddd">'.$row['Price'].'</td>
+                <td style="font-weight:bold;text-align:right;padding:5px;box-sizing:border-box;border-color:#ddd">' . $row['Price'] . '</td>
             </tr>
             <tr>
                 <td colspan="5" style="text-align:right;padding:5px;box-sizing:border-box;border-color:#ddd">
@@ -173,7 +200,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     Net Payable at Hotel
                 </td>
                 <td style="border-color:#ddd;padding:5px;box-sizing:border-box">INR</td>
-                <td style="font-weight:bold;text-align:right;padding:5px;box-sizing:border-box;border-color:#ddd">'.$row['Price'].'</td>
+                <td style="font-weight:bold;text-align:right;padding:5px;box-sizing:border-box;border-color:#ddd">' . $row['Price'] . '</td>
             </tr>
         </tbody></table>
     </td>
@@ -191,7 +218,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <p style="margin:5px 0px">Created By: Shubham Sharma</p>
                 
                 
-                    <p style="margin:5px 0px">Created On: '.date("Y-m-d H:i:s").'</p>
+                    <p style="margin:5px 0px">Created On: ' . date("Y-m-d H:i:s") . '</p>
                 
             </td>
         </tr>
@@ -206,7 +233,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   ';
 
     echo sendMail($guest_email, $subject, $message);
-    // echo sendMail("devshelters63@gmail.com", "New Booking", $message);
+    echo sendMail("devshelters63@gmail.com", "New Booking", $message);
 }
 ?>
 <!DOCTYPE html>
@@ -256,7 +283,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="twitter:image:width" content="100" />
 </head>
 
-<body class="overflow-hidden">
+<body class="overflow">
     <!-- Header Start -->
     <div class="container-fluid bg-dark px-0">
         <div class="row gx-0">
