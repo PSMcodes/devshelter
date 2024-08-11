@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 03, 2024 at 05:37 PM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.1.6
+-- Generation Time: Aug 10, 2024 at 05:10 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,15 +29,24 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `bookings` (
   `id` int(11) NOT NULL,
-  `timestamp` varchar(100) DEFAULT NULL,
   `room_id` int(11) NOT NULL,
   `guest_id` int(11) NOT NULL,
   `check_in` date NOT NULL,
   `check_out` date NOT NULL,
   `status` enum('pending','confirmed','cancelled') NOT NULL,
-  `totalRooms` int(11) NOT NULL,
-  `totalGuest` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `totalRooms` int(11) DEFAULT NULL,
+  `totalGuest` int(11) DEFAULT NULL,
+  `timestamp` varchar(100) DEFAULT NULL,
+  `Price` double DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `bookings`
+--
+
+INSERT INTO `bookings` (`id`, `room_id`, `guest_id`, `check_in`, `check_out`, `status`, `totalRooms`, `totalGuest`, `timestamp`, `Price`) VALUES
+(2632, 13, 2, '2024-08-10', '2024-08-11', 'pending', 2, 4, '2024-08-10 17:07:11', 5712.5),
+(2633, 14, 2, '2024-08-10', '2024-08-11', 'pending', 2, 4, '2024-08-10 17:07:11', 5712.5);
 
 -- --------------------------------------------------------
 
@@ -50,14 +59,15 @@ CREATE TABLE `guests` (
   `name` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `phone` varchar(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `guests`
 --
 
 INSERT INTO `guests` (`id`, `name`, `email`, `phone`) VALUES
-(1, 'prasad', 'prasadkalvikatti@gmail.com', '9022428111');
+(1, 'prasad', 'prasadkalvikatti@gmial.com', '9022428111'),
+(2, 'prasad', 'prasadkalviaktti@gmail.com', '9022428112');
 
 -- --------------------------------------------------------
 
@@ -68,7 +78,7 @@ INSERT INTO `guests` (`id`, `name`, `email`, `phone`) VALUES
 CREATE TABLE `locations` (
   `id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `locations`
@@ -90,58 +100,55 @@ CREATE TABLE `rooms` (
   `location_id` int(11) NOT NULL,
   `type_id` int(11) NOT NULL,
   `price` decimal(10,2) NOT NULL,
-  `status` enum('available','booked','maintenance') NOT NULL,
-  `image` varchar(255) DEFAULT NULL,
-  `google_map_link` varchar(255) DEFAULT NULL,
-  `max_capacity` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `status` enum('available','booked','maintenance','pending') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `rooms`
 --
 
-INSERT INTO `rooms` (`id`, `room_number`, `location_id`, `type_id`, `price`, `status`, `image`, `google_map_link`, `max_capacity`) VALUES
-(13, '101', 4, 7, '2500.00', 'available', 'uploads/', 'https://www.google.com', 2),
-(14, '102', 4, 8, '2500.00', 'available', 'uploads/', 'https://www.google.com', 2),
-(15, '103-A', 4, 9, '3000.00', 'available', 'uploads/', 'https://www.google.com', 2),
-(16, '103-B', 4, 9, '3000.00', 'available', 'uploads/', 'https://www.google.com', 2),
-(17, '104-A', 4, 10, '3000.00', 'available', 'uploads/', 'https://www.google.com', 2),
-(18, '104-B', 4, 10, '3000.00', 'available', 'uploads/', 'https://www.google.com', 2),
-(19, '104-C', 4, 10, '3000.00', 'available', 'uploads/', 'https://www.google.com', 2),
-(56, 'Kalpataru 01', 4, 12, '3000.00', 'available', 'uploads/', 'https://www.google.com', 2),
-(57, 'Kalpataru 02', 4, 12, '3000.00', 'available', 'uploads/', 'https://www.google.com', 2),
-(58, 'Kalpataru 03', 4, 12, '3000.00', 'available', 'uploads/', 'https://www.google.com', 2),
-(59, 'Kalpataru 04', 4, 12, '3000.00', 'available', 'uploads/', 'https://www.google.com', 2),
-(60, 'Kalpataru 05', 4, 12, '3000.00', 'available', 'uploads/', 'https://www.google.com', 2),
-(61, 'Kalpataru 06', 4, 12, '3000.00', 'available', 'uploads/', 'https://www.google.com', 2),
-(62, 'Kalpataru 07', 4, 12, '3000.00', 'available', 'uploads/', 'https://www.google.com', 2),
-(63, 'Kalpataru 08', 4, 12, '3000.00', 'available', 'uploads/', 'https://www.google.com', 2),
-(64, 'Kalpataru 09', 4, 12, '3000.00', 'available', 'uploads/', 'https://www.google.com', 2),
-(75, 'devShelter Malad 01', 4, 12, '3000.00', 'available', 'uploads/', 'https://www.google.com', 2),
-(76, 'devShelter Malad 02', 4, 12, '3000.00', 'available', 'uploads/IMG_2078.JPG', 'https://www.google.com', 2),
-(77, 'devShelter Malad 03', 4, 12, '3000.00', 'available', 'uploads/IMG_2078.JPG', 'https://www.google.com', 2),
-(78, 'devShelter Malad 04', 4, 12, '3000.00', 'available', 'uploads/IMG_2078.JPG', 'https://www.google.com', 2),
-(79, 'devShelter Malad 05', 4, 12, '3000.00', 'available', 'uploads/IMG_2078.JPG', 'https://www.google.com', 2),
-(80, 'devShelter Malad 06', 4, 12, '3000.00', 'available', 'uploads/IMG_2078.JPG', 'https://www.google.com', 2),
-(81, 'devShelter Malad 07', 4, 12, '3000.00', 'available', 'uploads/IMG_2078.JPG', 'https://www.google.com', 2),
-(82, 'devShelter Malad 08', 4, 12, '3000.00', 'available', 'uploads/IMG_2078.JPG', 'https://www.google.com', 2),
-(83, 'devShelter Malad 09', 4, 12, '3000.00', 'available', 'uploads/IMG_2078.JPG', 'https://www.google.com', 2),
-(84, 'devShelter Malad 10', 4, 12, '3000.00', 'available', 'uploads/IMG_2078.JPG', 'https://www.google.com', 2),
-(95, 'devShelter Goregoan 01', 5, 11, '3500.00', 'available', 'uploads/IMG_2078.JPG', 'https://www.google.com', 2),
-(96, 'devShelter Goregoan 02', 5, 11, '3500.00', 'available', 'uploads/IMG_2078.JPG', 'https://www.google.com', 2),
-(97, 'devShelter Goregoan 03', 5, 11, '3500.00', 'available', 'uploads/IMG_2078.JPG', 'https://www.google.com', 2),
-(98, 'devShelter Goregoan 04', 5, 11, '3500.00', 'available', 'uploads/IMG_2078.JPG', 'https://www.google.com', 2),
-(99, 'devShelter Goregoan 05', 5, 11, '3500.00', 'available', 'uploads/IMG_2078.JPG', 'https://www.google.com', 2),
-(100, 'devShelter Goregoan 06', 5, 11, '3500.00', 'available', 'uploads/IMG_2078.JPG', 'https://www.google.com', 2),
-(101, 'devShelter Goregoan 07', 5, 11, '3500.00', 'available', 'uploads/IMG_2078.JPG', 'https://www.google.com', 2),
-(102, 'devShelter Goregoan 08', 5, 11, '3500.00', 'available', 'uploads/IMG_2078.JPG', 'https://www.google.com', 2),
-(103, 'devShelter Goregoan 09', 5, 11, '3500.00', 'available', 'uploads/IMG_2078.JPG', 'https://www.google.com', 2),
-(104, 'devShelter Goregoan 10', 5, 11, '3500.00', 'available', 'uploads/IMG_2078.JPG', 'https://www.google.com', 2),
-(110, 'DevShelter Goregoan 01 B', 5, 12, '3000.00', 'available', 'uploads/IMG_2078.JPG', 'https://www.google.com', 2),
-(111, 'DevShelter Goregoan 02 B', 5, 12, '3000.00', 'available', 'uploads/IMG_2078.JPG', 'https://www.google.com', 2),
-(112, 'DevShelter Goregoan 03 B', 5, 12, '3000.00', 'available', 'uploads/IMG_2078.JPG', 'https://www.google.com', 2),
-(113, 'DevShelter Goregoan 04 B', 5, 12, '3000.00', 'available', 'uploads/IMG_2078.JPG', 'https://www.google.com', 2),
-(114, 'DevShelter Goregoan 05 B', 5, 12, '3000.00', 'available', 'uploads/IMG_2078.JPG', 'https://www.google.com', 2);
+INSERT INTO `rooms` (`id`, `room_number`, `location_id`, `type_id`, `price`, `status`) VALUES
+(13, '101', 4, 7, 2500.00, 'pending'),
+(14, '102', 4, 8, 2500.00, 'pending'),
+(15, '103', 4, 9, 3000.00, 'available'),
+(16, '103-B', 4, 9, 3000.00, 'available'),
+(17, '104', 4, 10, 3000.00, 'available'),
+(18, '104-B', 4, 10, 3000.00, 'available'),
+(19, '104-C', 4, 10, 3000.00, 'available'),
+(56, 'Kalpataru 01', 4, 12, 3000.00, 'available'),
+(57, 'Kalpataru 02', 4, 12, 3000.00, 'available'),
+(58, 'Kalpataru 03', 4, 12, 3000.00, 'available'),
+(59, 'Kalpataru 04', 4, 12, 3000.00, 'available'),
+(60, 'Kalpataru 05', 4, 12, 3000.00, 'available'),
+(61, 'Kalpataru 06', 4, 12, 3000.00, 'available'),
+(62, 'Kalpataru 07', 4, 12, 3000.00, 'available'),
+(63, 'Kalpataru 08', 4, 12, 3000.00, 'available'),
+(64, 'Kalpataru 09', 4, 12, 3000.00, 'available'),
+(75, '0', 4, 12, 3000.00, 'available'),
+(76, 'devShelter Malad 02', 4, 12, 3000.00, 'available'),
+(77, 'devShelter Malad 03', 4, 12, 3000.00, 'available'),
+(78, 'devShelter Malad 04', 4, 12, 3000.00, 'available'),
+(79, 'devShelter Malad 05', 4, 12, 3000.00, 'available'),
+(80, 'devShelter Malad 06', 4, 12, 3000.00, 'available'),
+(81, 'devShelter Malad 07', 4, 12, 3000.00, 'available'),
+(82, 'devShelter Malad 08', 4, 12, 3000.00, 'available'),
+(83, 'devShelter Malad 09', 4, 12, 3000.00, 'available'),
+(84, 'devShelter Malad 10', 4, 12, 3000.00, 'available'),
+(95, 'devShelter Goregoan 01', 5, 11, 3500.00, 'available'),
+(96, 'devShelter Goregoan 02', 5, 11, 3500.00, 'available'),
+(97, 'devShelter Goregoan 03', 5, 11, 3500.00, 'available'),
+(98, 'devShelter Goregoan 04', 5, 11, 3500.00, 'available'),
+(99, 'devShelter Goregoan 05', 5, 11, 3500.00, 'available'),
+(100, 'devShelter Goregoan 06', 5, 11, 3500.00, 'available'),
+(101, 'devShelter Goregoan 07', 5, 11, 3500.00, 'available'),
+(102, 'devShelter Goregoan 08', 5, 11, 3500.00, 'available'),
+(103, 'devShelter Goregoan 09', 5, 11, 3500.00, 'available'),
+(104, 'devShelter Goregoan 10', 5, 11, 3500.00, 'available'),
+(110, 'DevShelter Goregoan 01 B', 5, 12, 3000.00, 'available'),
+(111, 'DevShelter Goregoan 02 B', 5, 12, 3000.00, 'available'),
+(112, 'DevShelter Goregoan 03 B', 5, 12, 3000.00, 'available'),
+(113, 'DevShelter Goregoan 04 B', 5, 12, 3000.00, 'available'),
+(114, 'DevShelter Goregoan 05 B', 5, 12, 3000.00, 'available');
 
 -- --------------------------------------------------------
 
@@ -153,7 +160,7 @@ CREATE TABLE `room_types` (
   `id` int(11) NOT NULL,
   `type` varchar(50) NOT NULL,
   `primarytype` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `room_types`
@@ -178,7 +185,7 @@ CREATE TABLE `users` (
   `username` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
   `role` enum('admin','staff') NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
@@ -241,13 +248,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `bookings`
 --
 ALTER TABLE `bookings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2601;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2634;
 
 --
 -- AUTO_INCREMENT for table `guests`
 --
 ALTER TABLE `guests`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `locations`
@@ -259,7 +266,7 @@ ALTER TABLE `locations`
 -- AUTO_INCREMENT for table `rooms`
 --
 ALTER TABLE `rooms`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2453;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2457;
 
 --
 -- AUTO_INCREMENT for table `room_types`
@@ -277,9 +284,6 @@ ALTER TABLE `room_types`
 ALTER TABLE `bookings`
   ADD CONSTRAINT `bookings_ibfk_1` FOREIGN KEY (`room_id`) REFERENCES `rooms` (`id`),
   ADD CONSTRAINT `bookings_ibfk_2` FOREIGN KEY (`guest_id`) REFERENCES `guests` (`id`);
-
-
-ALTER TABLE `bookings` ADD COLUMN totalRooms int(11),ADD COLUMN totalGuest int(11), ADD COLUMN timestamp varchar(100),ADD COLUMN Price DOUBLE;
 
 --
 -- Constraints for table `rooms`
