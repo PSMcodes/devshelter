@@ -141,163 +141,124 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <!-- Header Start -->
     <div class="container-fluid bg-dark px-0">
-          <div class="row gx-0">
+        <div class="row gx-0">
             <div class="col-lg-3 bg-dark d-none d-lg-block">
-              <a
-                href="index.html"
-                class="navbar-brand d-flex flex-column align-items-center justify-content-center"
-              >
-                <img
-                  src="img/main/logo.png"
-                  class="navbar-brand w-25"
-                  alt="Dev Shelters Logo"
-                  id="logo"
-                />
-                <h3 class="text-primary">Dev Shelter</h3>
-              </a>
+                <a href="index.html" class="navbar-brand d-flex flex-column align-items-center justify-content-center">
+                    <img src="img/main/logo.png" class="navbar-brand w-25" alt="Dev Shelters Logo" id="logo" />
+                    <h3 class="text-primary">Dev Shelter</h3>
+                </a>
             </div>
             <div class="col-lg-9 d-flex flex-column justify-content-center">
-              <div class="row gx-0 bg-white d-none d-lg-flex h-100">
-                <div class="col-lg-7 px-5 text-start d-flex">
-                  <div class="h-100 d-inline-flex align-items-center me-4">
-                    <i class="fa fa-envelope text-primary me-2"></i>
-                    <a
-                      href="mailto:devshelters63@gmail.com"
-                      class="mb-0 text-dark"
-                      >devshelters63@gmail.com</a
-                    >
-                  </div>
-                  <div class="h-100 d-inline-flex align-items-center d-flex mx-2">
-                    <i class="fa fa-phone-alt text-primary me-2"></i>
-                    <a href="tel:+91 8451880595 " class="mb-0 text-dark">+918451880595</a>
+                <div class="row gx-0 bg-white d-none d-lg-flex h-100">
+                    <div class="col-lg-7 px-5 text-start d-flex">
+                        <div class="h-100 d-inline-flex align-items-center me-4">
+                            <i class="fa fa-envelope text-primary me-2"></i>
+                            <a href="mailto:devshelters63@gmail.com" class="mb-0 text-dark">devshelters63@gmail.com</a>
+                        </div>
+                        <div class="h-100 d-inline-flex align-items-center d-flex mx-2">
+                            <i class="fa fa-phone-alt text-primary me-2"></i>
+                            <a href="tel:+91 8451880595 " class="mb-0 text-dark">+918451880595</a>
+                        </div>
+                        <div class="h-100 d-inline-flex align-items-center d-flex mx-2">
+                            <i class="fa fa-phone-alt text-primary me-2"></i>
+                            <a href="tel:+91 7039433505 " class="mb-0 text-dark">+917039433505</a>
+                        </div>
                     </div>
-                  <div class="h-100 d-inline-flex align-items-center d-flex mx-2">
-                    <i class="fa fa-phone-alt text-primary me-2"></i>
-                    <a href="tel:+91 7039433505 " class="mb-0 text-dark">+917039433505</a>
-                  </div>
+                    <div class="col-lg-5 px-5 text-end d-inline-flex align-items-center justify-content-center">
+                        <div>
+                            <a class="me-3" href="https://www.facebook.com/share/dyovuE3GajghUz1m/?mibextid=LQQJ4d"
+                                target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a class="me-3" href="https://www.instagram.com/dev.shelters/" target="_blank"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a class="me-3" href="https://www.youtube.com/@devshelters9739" target="_blank"><i
+                                    class="fab fa-youtube"></i></a>
+                            <a class=""
+                                href="https://www.linkedin.com/in/shubham-sharma-34ba10133?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                                target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
                 </div>
-                <div
-                  class="col-lg-5 px-5 text-end d-inline-flex align-items-center justify-content-center"
-                >
-                  <div>
-                    <a class="me-3" href="https://www.facebook.com/share/dyovuE3GajghUz1m/?mibextid=LQQJ4d" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a class="me-3" href="https://www.instagram.com/dev.shelters/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a class="me-3" href="https://www.youtube.com/@devshelters9739" target="_blank"><i class="fab fa-youtube"></i></a>
-                    <a class="" href="https://www.linkedin.com/in/shubham-sharma-34ba10133?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                  </div>
-                </div>
-              </div>
-              <nav class="navbar navbar-expand-md bg-dark navbar-dark p-3 p-lg-0">
-                <a href="index.html" class="navbar-brand d-block d-lg-none">
-                  <h1 class="m-0 text-primary">Dev Shelter</h1>
-                </a>
-                <button
-                  type="button"
-                  class="navbar-toggler"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#navbarCollapse"
-                >
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div
-                  class="collapse navbar-collapse justify-content-between"
-                  id="navbarCollapse"
-                >
-                  <div class="navbar-nav">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="service.html" class="nav-item nav-link">Services</a>
-                    <a href="about.html" class="nav-item nav-link">About Us</a>
-                    <ul class="navbar-nav">
-                      <!-- Dropdown -->
-                      <li class=" dropdown p-0 m-0 bg-dark">
-                        <a
-                          class="nav-link dropdown-toggle"
-                          id="navbarDropdownMenuLink"
-                        >
-                          Our Listings
-                        </a>
-                        <ul class="dropdown-menu">
-                          <li>
-                            <a class="dropdown-item border-bottom" href="#">
-                              Service Apartment &raquo;
-                            </a>
-                            <ul class="dropdown-menu dropdown-submenu">
-                              <li>
-                                <a
-                                  class="dropdown-item border-bottom"
-                                  href="roomdetails.php?location=malad&type=service&subtype=3bhk"
-                                  ><i
-                                    class="fa-solid fa-hotel"
-                                    style="color: #24d4fd"
-                                  ></i>
-                                  3Bhk Malad
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item"
-                                  href="roomdetails.php?location=malad&type=service&subtype=4bhk"
-                                  ><i
-                                    class="fa-solid fa-hotel"
-                                    style="color: #24d4fd"
-                                  ></i>
-                                  4Bhk Malad
-                                </a>
-                              </li>
+                <nav class="navbar navbar-expand-md bg-dark navbar-dark p-3 p-lg-0">
+                    <a href="index.html" class="navbar-brand d-block d-lg-none">
+                        <h1 class="m-0 text-primary">Dev Shelter</h1>
+                    </a>
+                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav">
+                            <a href="index.html" class="nav-item nav-link active">Home</a>
+                            <a href="service.html" class="nav-item nav-link">Services</a>
+                            <a href="about.html" class="nav-item nav-link">About Us</a>
+                            <ul class="navbar-nav">
+                                <!-- Dropdown -->
+                                <li class=" dropdown p-0 m-0 bg-dark">
+                                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink">
+                                        Our Listings
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item border-bottom" href="#">
+                                                Service Apartment &raquo;
+                                            </a>
+                                            <ul class="dropdown-menu dropdown-submenu">
+                                                <li>
+                                                    <a class="dropdown-item border-bottom"
+                                                        href="roomdetails.php?location=malad&type=service&subtype=3bhk"><i
+                                                            class="fa-solid fa-hotel" style="color: #24d4fd"></i>
+                                                        3Bhk Malad
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item"
+                                                        href="roomdetails.php?location=malad&type=service&subtype=4bhk"><i
+                                                            class="fa-solid fa-hotel" style="color: #24d4fd"></i>
+                                                        4Bhk Malad
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                Apart Hotel &raquo;
+                                            </a>
+                                            <ul class="dropdown-menu dropdown-submenu">
+                                                <li>
+                                                    <a class="dropdown-item border-bottom"
+                                                        href="roomdetails.php?location=malad&type=apart"><i
+                                                            class="fa-solid fa-hotel" style="color: #24d4fd"></i>
+                                                        Kalpataru Hometel Malad
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item border-bottom"
+                                                        href="roomdetails.php?location=malad&type=apart2"><i
+                                                            class="fa-solid fa-hotel" style="color: #24d4fd"></i>
+                                                        Dev Shelters Malad
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item"
+                                                        href="roomdetails.php?location=goregaon&type=apart"><i
+                                                            class="fa-solid fa-hotel" style="color: #24d4fd"></i>
+                                                        Dev Shelters Goregaon
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
                             </ul>
-                          </li>
-  
-                          <li>
-                            <a class="dropdown-item" href="#">
-                              Apart Hotel &raquo;
-                            </a>
-                            <ul class="dropdown-menu dropdown-submenu">
-                              <li>
-                                <a
-                                  class="dropdown-item border-bottom"
-                                  href="roomdetails.php?location=malad&type=apart"
-                                  ><i
-                                    class="fa-solid fa-hotel"
-                                    style="color: #24d4fd"
-                                  ></i>
-                                  Kalpataru Hometel Malad
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item border-bottom"
-                                  href="roomdetails.php?location=malad&type=apart2"
-                                  ><i
-                                    class="fa-solid fa-hotel"
-                                    style="color: #24d4fd"
-                                  ></i>
-                                  Dev Shelters Malad
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item"
-                                  href="roomdetails.php?location=goregaon&type=apart"
-                                  ><i
-                                    class="fa-solid fa-hotel"
-                                    style="color: #24d4fd"
-                                  ></i>
-                                  Dev Shelters Goregaon
-                                </a>
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
-                  </div>
-                  <!-- <a href="https://htmlcodex.com/hotel-html-template-pro" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Premium Version<i class="fa fa-arrow-right ms-3"></i></a> -->
-                </div>
-              </nav>
+                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        </div>
+                        <!-- <a href="https://htmlcodex.com/hotel-html-template-pro" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Premium Version<i class="fa fa-arrow-right ms-3"></i></a> -->
+                    </div>
+                </nav>
             </div>
-          </div>
         </div>
+    </div>
     <div class="container mt-5">
         <h2 class="room-title my-5" id="roomTitle">*</h2>
         <div class="infoDiv my-2">
@@ -672,63 +633,76 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     function showData() {
-        if (roomType == "service") {
-            let currentRoom = roomData[roomLocation][roomType];
-            console.log(currentRoom);
-            $("#guestsCount").html(currentRoom["maxOccupancy"]);
-            $("#guestCount2").html(currentRoom["maxOccupancy"]);
-            $("#bedroomCount").html(currentRoom["maxOccupancy"]);
-            $("#bedCount").html(currentRoom["maxOccupancy"]);
-            // map 
-            $('#map').html(currentRoom[subtype].map)
-            // heading here
-            $("#roomTitle").html(currentRoom[subtype].title);
-            // spliting the sub type
-            $(".infoDiv").html(`
-      <div class="row py-2 my-2 bg-white2 rounded-4">
-          <div class="col-md-12 d-flex justify-content-around align-items-center rooomimg">
-            <img src="${currentRoom[subtype].roomType[0].images[0]}" alt="" class="w-40 col-md-6 d-block mx-auto" />
-            <div class="Roomdetails col-md-6">
-              <h3>${currentRoom[subtype].roomType[0].title}</h3>
-              <span>${currentRoom[subtype].roomType[0].info}</span>
-            </div>
-          </div>
-        </div>
-        <div class="row py-2 my-2 bg-white2 rounded-4 ">
-          <div class="col-md-12 d-flex justify-content-around rooomimg2">
-            <div class="Roomdetails col-md-6">
-              <h3>${currentRoom[subtype].roomType[1].title}</h3>
-             <span>${currentRoom[subtype].roomType[1].info}</span>
-            </div>
-            <img src="${currentRoom[subtype].roomType[1].images[0]}" alt="" class="w-40 col-md-6" />
-          </div>
-        </div>`);
-        } else {
-            let currentRoom = roomData[roomLocation][roomType];
-            console.log(currentRoom);
-            $("#guestsCount").html(currentRoom["maxOccupancy"]);
-            $("#guestCount2").html(currentRoom["maxOccupancy"]);
-            $("#bedroomCount").html(currentRoom["maxOccupancy"]);
-            $("#bedCount").html(currentRoom["maxOccupancy"]);
-            // map
-            $('#map').html(currentRoom.map)
-            // heading here
-            $("#roomTitle").html(currentRoom.title);
-            // info here
-            $(".infoDiv").html(`
-       <div class="row py-2 my-2 bg-white2 rounded-4">
-          <div class="col-md-12 d-flex justify-content-around align-items-center rooomimg">
-            <img src="${currentRoom.images[0]}" alt="" class="w-40 col-md-6 d-block mx-auto" />
-            <div class="Roomdetails col-md-6">
-              <h3>${currentRoom.title}</h3>
-              <span>${currentRoom.info}</span>
-            </div>
-          </div>
-        </div>
-      `);
-        }
+        let currentRoom = roomData[roomLocation][roomType];
+        let maxOccupancy = currentRoom["maxOccupancy"];
+
+        $("#guestsCount").html(maxOccupancy);
+        $("#guestCount2").html(maxOccupancy);
+        $("#bedroomCount").html(maxOccupancy);
+        $("#bedCount").html(maxOccupancy);
+        $('#map').html(currentRoom[subtype]?.map || currentRoom.map);
+        $("#roomTitle").html(currentRoom[subtype]?.title || currentRoom.title);
+
+        let roomDetailsHtml = generateRoomDetailsHTML(currentRoom);
+        $(".infoDiv").html(roomDetailsHtml);
     }
 
+    function generateRoomDetailsHTML(room) {
+        let html = "";
+
+        if (room[subtype]) {
+            // If there's a subtype (e.g., "3bhk", "4bhk")
+            html += "<div class='row py-2 my-2 bg-white2 rounded-4 d-flex'>"
+                html += generateCarouselHTML(room[subtype].roomType[0].images, "div1");
+                html += generateRoomInfoHTML(room[subtype].roomType[0]);
+            html += "</div>"
+            html += "<div class='row py-2 my-2 bg-white2 rounded-4 d-flex'>"
+                html += generateRoomInfoHTML(room[subtype].roomType[1]);
+                html += generateCarouselHTML(room[subtype].roomType[1].images, "div2");
+            html += "</div>"
+        } else {
+            // If no subtype, show default room details
+             html += "<div class='row py-2 my-2 bg-white2 rounded-4 d-flex'>"
+            html += generateCarouselHTML(room.images, "div1");
+            html += generateRoomInfoHTML(room);
+            html += "</div>"
+        }
+
+        return html;
+    }
+
+    function generateCarouselHTML(images, carouselId) {
+        let html = `<div id="carouselExampleFade${carouselId}" class="carousel slide carousel-fade col-md-5">`;
+        html += `<div class="carousel-inner" id="${carouselId}">`;
+
+        images.forEach((image, index) => {
+            html += `<div class="carousel-item ${index === 0 ? 'active' : ''}">`;
+            html += `<img src="${image}" class="d-block w-100" alt="...">`;
+            html += `</div>`;
+        });
+
+        html += `</div>`;
+        html += `<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade${carouselId}" data-bs-slide="prev">`;
+        html += `<span class="carousel-control-prev-icon" aria-hidden="true"></span>`;
+        html += `<span class="visually-hidden">Previous</span>`;
+        html += `</button>`;
+        html += `<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade${carouselId}" data-bs-slide="next">`;
+        html += `<span class="carousel-control-next-icon" aria-hidden="true"></span>`;
+        html += `<span class="visually-hidden">Next</span>`;
+        html += `</button>`;
+        html += `</div>`;
+
+        return html;
+    }
+
+    function generateRoomInfoHTML(roomInfo) {
+        return `
+                <div class="Roomdetails col-md-6">
+                    <h3>${roomInfo.title}</h3>
+                    <span>${roomInfo.info}</span>
+        </div>`;
+    }
+    
     if (checkIn) {
         $("#checkin").val(checkIn);
     }
