@@ -648,7 +648,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $("#bedroomCount").html("8");
         }else if(currentRoom.title =="Devshelter Malad"){
         $("#bedroomCount").html("10");
-        }else if("currentRoom.title =="Dev Shelter Goregaon"){
+        }else if(currentRoom.title =="Dev Shelter Goregaon"){
         $("#bedroomCount").html("10");
     }
 
