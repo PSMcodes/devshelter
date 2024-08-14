@@ -279,7 +279,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             class="col-3 d-flex flex-column justify-content-center align-items-center border text-secondary p-3">
                             <i class="fa fa-user fa-solid f-20 my-2"></i>
                             <span class="text-secondary">Max Occupancy</span>
-                            <b id="guestsCount">*</b>
+                            <b id="guestsCount">3</b>
                         </div>
                         <div
                             class="col-3 d-flex flex-column justify-content-center align-items-center border text-secondary p-3">
@@ -643,6 +643,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $('#map').html(currentRoom[subtype]?.map || currentRoom.map);
         $("#roomTitle").html(currentRoom[subtype]?.title || currentRoom.title);
 
+        if(currentRoom.title=="Kalpaturu Hometel")
+        {
+        $("#bedroomCount").html("8");
+        }else if(currentRoom.title =="Devshelter Malad"){
+        $("#bedroomCount").html("10");
+        }else if()
+
         let roomDetailsHtml = generateRoomDetailsHTML(currentRoom);
         $(".infoDiv").html(roomDetailsHtml);
     }
@@ -652,17 +659,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if (room[subtype]) {
             // If there's a subtype (e.g., "3bhk", "4bhk")
-            html += "<div class='row py-2 my-2 bg-white2 rounded-4 d-flex'>"
+            html += "<div class='row py-2 my-2 bg-white2 rounded-4 d-flex align-items-center'>"
                 html += generateCarouselHTML(room[subtype].roomType[0].images, "div1");
                 html += generateRoomInfoHTML(room[subtype].roomType[0]);
             html += "</div>"
-            html += "<div class='row py-2 my-2 bg-white2 rounded-4 d-flex'>"
+            html += "<div class='row py-2 my-2 bg-white2 rounded-4 d-flex align-items-center'>"
                 html += generateRoomInfoHTML(room[subtype].roomType[1]);
                 html += generateCarouselHTML(room[subtype].roomType[1].images, "div2");
             html += "</div>"
         } else {
             // If no subtype, show default room details
-             html += "<div class='row py-2 my-2 bg-white2 rounded-4 d-flex'>"
+             html += "<div class='row py-2 my-2 bg-white2 rounded-4 d-flex align-items-center'>"
             html += generateCarouselHTML(room.images, "div1");
             html += generateRoomInfoHTML(room);
             html += "</div>"
