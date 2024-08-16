@@ -1,6 +1,6 @@
 <?php
-require ('utilities.php');
-require ('./admin/config.php');
+require('utilities.php');
+require('./admin/config.php');
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $location = isset($_GET['location']) ? $_GET['location'] : null;
     $type = isset($_GET['type']) ? $_GET['type'] : null;
@@ -314,7 +314,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     <div class="icon">
                                         <i class="fa-solid fa-people-group"></i>
                                     </div>
-                                    <span class="text-secondary">Guests : <span id="guestCount2"></span> ( guest per Room )</span>
+                                    <span class="text-secondary">Guests : <span id="guestCount2"></span> ( guest per
+                                        Room )</span>
                                 </div>
                                 <div class="amenities">
                                     <div class="icon"><i class="fa-solid fa-bed"></i></div>
@@ -643,14 +644,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $('#map').html(currentRoom[subtype]?.map || currentRoom.map);
         $("#roomTitle").html(currentRoom[subtype]?.title || currentRoom.title);
 
-        if(currentRoom.title=="Kalpaturu Hometel")
-        {
-        $("#bedroomCount").html("8");
-        }else if(currentRoom.title =="Dev shelter Malad"){
-        $("#bedroomCount").html("10");
-        }else if(currentRoom.title =="Dev Shelter Goregaon"){
-        $("#bedroomCount").html("10");
-    }
+        if (currentRoom.title == "Kalpaturu Hometel") {
+            $("#bedroomCount").html("8");
+        } else if (currentRoom.title == "Dev shelter Malad") {
+            $("#bedroomCount").html("10");
+        } else if (currentRoom.title == "Dev Shelter Goregaon") {
+            $("#bedroomCount").html("10");
+        }else if (currentRoom[subtype].title == "4 Bhk service Apartment") {
+            console.log("yes");
+            $("#bedroomCount").html("4");
+        }
 
         let roomDetailsHtml = generateRoomDetailsHTML(currentRoom);
         $(".infoDiv").html(roomDetailsHtml);
@@ -662,16 +665,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (room[subtype]) {
             // If there's a subtype (e.g., "3bhk", "4bhk")
             html += "<div class='row py-2 my-2 bg-white2 rounded-4 d-flex align-items-center'>"
-                html += generateRoomInfoHTML(room[subtype].roomType[1]);
-                html += generateCarouselHTML(room[subtype].roomType[1].images, "div2");
+            html += generateRoomInfoHTML(room[subtype].roomType[1]);
+            html += generateCarouselHTML(room[subtype].roomType[1].images, "div2");
             html += "</div>"
             html += "<div class='row py-2 my-2 bg-white2 rounded-4 d-flex align-items-center'>"
-                html += generateCarouselHTML(room[subtype].roomType[0].images, "div1");
-                html += generateRoomInfoHTML(room[subtype].roomType[0]);
+            html += generateCarouselHTML(room[subtype].roomType[0].images, "div1");
+            html += generateRoomInfoHTML(room[subtype].roomType[0]);
             html += "</div>"
         } else {
             // If no subtype, show default room details
-             html += "<div class='row py-2 my-2 bg-white2 rounded-4 d-flex align-items-center'>"
+            html += "<div class='row py-2 my-2 bg-white2 rounded-4 d-flex align-items-center'>"
             html += generateCarouselHTML(room.images, "div1");
             html += generateRoomInfoHTML(room);
             html += "</div>"
@@ -711,7 +714,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <span>${roomInfo.info}</span>
         </div>`;
     }
-    
+
     if (checkIn) {
         $("#checkin").val(checkIn);
     }

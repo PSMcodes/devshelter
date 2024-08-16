@@ -39,11 +39,11 @@
             "id": "semi",
             "title": "Semi Deluxe Room",
             "images": [
-              "./img/malad/4bhk/image00003.jpeg",
-              "./img/malad/4bhk/image00005.jpeg",
-              "./img/malad/4bhk/image00035.jpeg",
-              "./img/malad/4bhk/image00031.jpeg",
-              "./img/malad/4bhk/image00033.jpeg"
+              "./img/malad/4bhk/image00008.jpeg",
+              "./img/malad/4bhk/image00011.jpeg",
+              "./img/malad/4bhk/image00015.jpeg",
+              "./img/malad/4bhk/image00010.jpeg",
+              "./img/malad/4bhk/image00007.jpeg"
             ],
             "info": "These 4BHK Service Apartments are ideal for travelers seeking a home away from home with all the modern amenities of a hotel.<br>Each apartment features a fully-equipped kitchen, allowing guests to prepare their own meals and snacks. Alternatively, we offer a common kitchen where you can order meals prepared by our chef, who provides hygienic and home-style dishes at a reasonable price. This saves you both the trouble and the cost of dining out.<br>Our 4BHK service apartments are perfect for families, business travelers, or anyone looking for a comfortable place to stay. Conveniently located in the Malad area of Mumbai Suburban, the apartments offer easy access to all Malad stations. Nearby shopping joints and restaurants provide top-quality services, ensuring you have a delightful stay. Whether you're in town for business or leisure, these apartments are an excellent choice."
           },
@@ -82,12 +82,12 @@
     "apart2": {
       "title": "Dev shelter Malad",
       "images": [
-        "img/malad-aparthotel/IMG_5278.JPG",
         "img/malad-aparthotel/IMG_E6027.JPG",
         "img/malad-aparthotel/IMG_e6032.JPG",
         "img/malad-aparthotel/IMG_E6053.JPG",
         "img/malad-aparthotel/IMG_E6062.JPG",
         "img/malad-aparthotel/IMG_E6083.JPG",
+        "img/malad-aparthotel/IMG_5278.JPG",
         "img/malad-aparthotel/IMG_E6058.JPG"
       ],
       "map": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.4387269788217!2d72.8422935!3d19.1760308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7c555afd28d%3A0x3fea643b08c687bc!2sSharda%20Bhavan!5e0!3m2!1sen!2sin!4v1722884068859!5m2!1sen!2sin' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>",
