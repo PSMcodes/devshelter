@@ -322,7 +322,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 </div>
                                 <div class="amenities">
                                     <div class="icon"><i class="fa-solid fa-bed"></i></div>
-                                    <span class="text-secondary">Beds: Single / Twin Beds</span>
+                                    <span class="text-secondary">Beds: Double / Twin Beds</span>
                                 </div>
                                 <div class="amenities">
                                     <div class="icon">
