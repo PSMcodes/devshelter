@@ -21,11 +21,11 @@
             "id": "deluxe",
             "title": "Deluxe Room",
             "images": [
-              "./img/malad/3bhk/IMG_2077.jpg",
-              "./img/malad/3bhk/IMG_2080.jpg",
-              "./img/malad/3bhk/IMG_2081.jpg",
-              "./img/malad/3bhk/IMG_2082.jpg",
-              "./img/malad/3bhk/IMG_2077.jpg"
+              "./img/malad/3bhk/IMG_2077.JPG",
+              "./img/malad/3bhk/IMG_2080.JPG",
+              "./img/malad/3bhk/IMG_2081.JPG",
+              "./img/malad/3bhk/IMG_2082.JPG",
+              "./img/malad/3bhk/IMG_2077.JPG"
             ],
             "info": "These 3BHK Service Apartments are ideal for travelers seeking a home away from home with all the modern amenities of a hotel.<br>Each apartment features a fully-equipped kitchen, allowing guests to prepare their own meals and snacks. Alternatively, we offer a common kitchen where you can order meals prepared by our chef, who provides hygienic and home-style dishes at a reasonable price. This saves you both the trouble and the cost of dining out.<br>Our 3BHK service apartments are perfect for families, business travelers, or anyone looking for a comfortable place to stay.Whether you're in town for business or leisure, these apartments are an excellent choice."
           }
@@ -68,12 +68,12 @@
       "images": [
         "./img/kalpataru/IMG_5487.jpg",
         "./img/kalpataru/IMG_5492.jpg",
-        "./img/kalpataru/IMG_e9843.jpg",
-        "./img/kalpataru/IMG_e1229.jpg",
-        "./img/kalpataru/IMG_e9749.jpg",
-        "./img/kalpataru/IMG_e9772.jpg",
-        "./img/kalpataru/IMG_e9785.jpg",
-        "./img/kalpataru/IMG_e1235.jpg"
+        "./img/kalpataru/IMG_E9843.jpg",
+        "./img/kalpataru/IMG_E1229.jpg",
+        "./img/kalpataru/IMG_E9749.jpg",
+        "./img/kalpataru/IMG_E9772.jpg",
+        "./img/kalpataru/IMG_E9785.jpg",
+        "./img/kalpataru/IMG_E1235.jpg"
       ],
       "map": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.086994906075!2d72.83398500000001!3d19.191402300000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b6e95e4c9725%3A0x359828cfda2306bc!2sKalpataru%20Building%2C%20Malad%2C%20Padma%20Nagar%2C%20Evershine%20Nagar%2C%20Malad%20West%2C%20Mumbai%2C%20Maharashtra%20400064!5e0!3m2!1sen!2sin!4v1722883610912!5m2!1sen!2sin' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>",
       "info": "Welcome to our Hometel, the perfect blend of home comfort and hotel luxury for travelers seeking a warm and inviting place to stay.<br>Our hometel offers a cozy and fully-equipped kitchen where guests can prepare their own meals and snacks. If you prefer, you can also enjoy meals from our common kitchen, where our chef prepares hygienic and home-style dishes at a reasonable price. This option helps you save money and enjoy healthy, delicious food without the expense of dining out.<br>Located conveniently in the Malad area of Mumbai Suburban, our hometel provides easy access to all Malad stations. Nearby shopping centers and restaurants offer top-notch services, ensuring a pleasant and enjoyable stay. Our hometel is perfect for business travelers, families, or anyone seeking a comfortable and welcoming place to stay.",
@@ -82,8 +82,8 @@
     "apart2": {
       "title": "Dev shelter Malad",
       "images": [
-        "img/malad-aparthotel/IMG_5278.jpg",
-        "img/malad-aparthotel/IMG_e6027.jpg",
+        "img/malad-aparthotel/IMG_5278.JPG",
+        "img/malad-aparthotel/IMG_E6027.JPG",
         "img/malad-aparthotel/IMG_e6032.jpg",
         "img/malad-aparthotel/IMG_E6053.jpg",
         "img/malad-aparthotel/IMG_E6062.jpg",
