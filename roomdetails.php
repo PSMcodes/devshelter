@@ -314,15 +314,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     <div class="icon">
                                         <i class="fa-solid fa-people-group"></i>
                                     </div>
-                                    <span class="text-secondary">Guests : <span id="guestCount2"></span></span>
+                                    <span class="text-secondary">Guests : <span id="guestCount2"></span> ( guest per Room )</span>
                                 </div>
                                 <div class="amenities">
                                     <div class="icon"><i class="fa-solid fa-bed"></i></div>
-                                    <span class="text-secondary">Bedrooms: <span id="bedroomCount">3</span></span>
+                                    <span class="text-secondary">Total Bedrooms: <span id="bedroomCount">3</span></span>
                                 </div>
                                 <div class="amenities">
                                     <div class="icon"><i class="fa-solid fa-bed"></i></div>
-                                    <span class="text-secondary">Beds: <span id="bedCount">3</span></span>
+                                    <span class="text-secondary">Beds: Single / Twin Beds</span>
                                 </div>
                                 <div class="amenities">
                                     <div class="icon">
@@ -334,7 +334,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <div class="col-6">
                                 <div class="amenities">
                                     <div class="icon"><i class="fa-solid fa-shower"></i></div>
-                                    <span class="text-secondary">Bathrooms: <span id="bathCount">1</span></span>
+                                    <span class="text-secondary">Bathrooms: 1 per room</span>
                                 </div>
                                 <div class="amenities">
                                     <div class="icon">
@@ -347,7 +347,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     <div class="icon">
                                         <i class="fa-regular fa-calendar"></i>
                                     </div>
-                                    <span class="text-secondary">Check-Out Before : <b>10:00 AM</b>
+                                    <span class="text-secondary">Check-Out Before : <b>11:00 AM</b>
                                     </span>
                                 </div>
                             </div>
@@ -646,7 +646,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if(currentRoom.title=="Kalpaturu Hometel")
         {
         $("#bedroomCount").html("8");
-        }else if(currentRoom.title =="Devshelter Malad"){
+        }else if(currentRoom.title =="Dev shelter Malad"){
         $("#bedroomCount").html("10");
         }else if(currentRoom.title =="Dev Shelter Goregaon"){
         $("#bedroomCount").html("10");
@@ -662,12 +662,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (room[subtype]) {
             // If there's a subtype (e.g., "3bhk", "4bhk")
             html += "<div class='row py-2 my-2 bg-white2 rounded-4 d-flex align-items-center'>"
-                html += generateCarouselHTML(room[subtype].roomType[0].images, "div1");
-                html += generateRoomInfoHTML(room[subtype].roomType[0]);
-            html += "</div>"
-            html += "<div class='row py-2 my-2 bg-white2 rounded-4 d-flex align-items-center'>"
                 html += generateRoomInfoHTML(room[subtype].roomType[1]);
                 html += generateCarouselHTML(room[subtype].roomType[1].images, "div2");
+            html += "</div>"
+            html += "<div class='row py-2 my-2 bg-white2 rounded-4 d-flex align-items-center'>"
+                html += generateCarouselHTML(room[subtype].roomType[0].images, "div1");
+                html += generateRoomInfoHTML(room[subtype].roomType[0]);
             html += "</div>"
         } else {
             // If no subtype, show default room details
