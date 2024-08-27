@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         }
     } else {
         // Handle missing parameters
-        echo "Missing required parameters.";
+        Header("Location:bookingRoom.php");
         exit;
     }
 }
