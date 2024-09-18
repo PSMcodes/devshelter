@@ -13,6 +13,9 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             case 'booking':
                 deleteBooking($_GET['id']);
                 break;
+                case 'offer':
+                    deleteOffer($_GET['id']);
+                    break;
             default:
                 echo "Invalid operation.";
                 break;
@@ -82,6 +85,24 @@ function deleteBooking($bookingId)
     $stmt->close();
     $conn->close();
     header('Location: dashboard.php?page=manage_bookings');
+    exit(); // Ensure the script stops execution after the redirect
+}
+
+function deleteOffer($offerId){
+    global $conn;
+    $sql = "DELETE FROM offers WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $offerId);
+
+    if ($stmt->execute()) {
+        echo "Offer deleted successfully!";
+    } else {
+        echo "Error: " . $stmt->error;
+    }
+
+    $stmt->close();
+    $conn->close();
+    header('Location: dashboard.php?page=manage_offers');
     exit(); // Ensure the script stops execution after the redirect
 }
 ?>

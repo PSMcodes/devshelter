@@ -61,6 +61,11 @@ if (!isset($_SESSION['user_id'])) {
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link text-white text-decoration-none" href="dashboard.php?page=manage_offers">
+                                Manage Offers
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a class="btn btn-danger d-block mx-auto" href="logout.php">
                                 Logout
                             </a>
