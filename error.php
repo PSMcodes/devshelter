@@ -204,7 +204,7 @@ h1{
         <div class="row gx-0">
           <div class="col-lg-3 bg-dark d-none d-lg-block">
             <a
-              href="index.html"
+              href="index.php"
               class="navbar-brand d-flex flex-column align-items-center justify-content-center"
             >
               <img
@@ -251,7 +251,7 @@ h1{
               </div>
             </div>
             <nav class="navbar navbar-expand-md bg-dark navbar-dark p-3 p-lg-0">
-              <a href="index.html" class="navbar-brand d-block d-lg-none">
+              <a href="index.php" class="navbar-brand d-block d-lg-none">
                 <h1 class="m-0 text-primary">DevShelter</h1>
               </a>
               <button
@@ -267,9 +267,9 @@ h1{
                 id="navbarCollapse"
               >
                 <div class="navbar-nav">
-                  <a href="index.html" class="nav-item nav-link ">Home</a>
-                  <a href="service.html" class="nav-item nav-link">Services</a>
-                  <a href="about.html" class="nav-item nav-link">About Us</a>
+                  <a href="index.php" class="nav-item nav-link ">Home</a>
+                  <a href="service.php" class="nav-item nav-link">Services</a>
+                  <a href="about.php" class="nav-item nav-link">About Us</a>
                   <ul class="navbar-nav">
                     <!-- Dropdown -->
                     <li class="nav-item dropdown p-0 m-0 bg-dark">
@@ -288,7 +288,7 @@ h1{
                             <li>
                               <a
                                 class="dropdown-item border-bottom"
-                                href="roomdetails.html?location=malad&type=3bhk"
+                                href="roomdetails.php?location=malad&type=3bhk"
                                 ><i
                                   class="fa-solid fa-hotel"
                                   style="color: #24d4fd"
@@ -299,7 +299,7 @@ h1{
                             <li>
                               <a
                                 class="dropdown-item"
-                                href="roomdetails.html?location=malad&type=4bhk"
+                                href="roomdetails.php?location=malad&type=4bhk"
                                 ><i
                                   class="fa-solid fa-hotel"
                                   style="color: #24d4fd"
@@ -318,7 +318,7 @@ h1{
                             <li>
                               <a
                                 class="dropdown-item border-bottom"
-                                href="roomdetails.html?location=malad&type=apart"
+                                href="roomdetails.php?location=malad&type=apart"
                                 ><i
                                   class="fa-solid fa-hotel"
                                   style="color: #24d4fd"
@@ -329,7 +329,7 @@ h1{
                             <li>
                               <a
                                 class="dropdown-item border-bottom"
-                                href="roomdetails.html?location=malad&type=apart2"
+                                href="roomdetails.php?location=malad&type=apart2"
                                 ><i
                                   class="fa-solid fa-hotel"
                                   style="color: #24d4fd"
@@ -340,7 +340,7 @@ h1{
                             <li>
                               <a
                                 class="dropdown-item"
-                                href="roomdetails.html?location=goregon&type=apart"
+                                href="roomdetails.php?location=goregon&type=apart"
                                 ><i
                                   class="fa-solid fa-hotel"
                                   style="color: #24d4fd"
@@ -354,8 +354,8 @@ h1{
                     </li>
                   </ul>
 
-                  <a href="booking.html" class="nav-item nav-link">Booking</a>
-                  <a href="contact.html" class="nav-item nav-link">Contact</a>
+                  <a href="booking.php" class="nav-item nav-link">Booking</a>
+                  <a href="contact.php" class="nav-item nav-link">Contact</a>
                 </div>
                 <!-- <a href="https://htmlcodex.com/hotel-html-template-pro" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Premium Version<i class="fa fa-arrow-right ms-3"></i></a> -->
               </div>
@@ -413,7 +413,7 @@ h1{
       <div class="row g-5">
         <div class="col-md-6 col-lg-4">
           <div class="bg-primary rounded p-4">
-            <a href="index.html">
+            <a href="index.php">
               <h1 class="text-white text-uppercase mb-3">DevShelter</h1>
             </a>
             <h5 class="text-white mb-0" >
@@ -454,8 +454,8 @@ h1{
               >
                 Company
               </h6>
-              <a class="btn btn-link" href="about.html">About Us</a>
-              <a class="btn btn-link" href="contact.html">Contact Us</a>
+              <a class="btn btn-link" href="about.php">About Us</a>
+              <a class="btn btn-link" href="contact.php">Contact Us</a>
             </div>
             <div class="col-md-6 d-flex flex-column">
               <h6 class="text-start text-primary text-uppercase mb-4">

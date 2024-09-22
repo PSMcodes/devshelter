@@ -110,7 +110,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
           <div class="row gx-0">
             <div class="col-lg-3 bg-dark d-none d-lg-block">
               <a
-                href="index.html"
+                href="index.php"
                 class="navbar-brand d-flex flex-column align-items-center justify-content-center"
               >
                 <img
@@ -154,7 +154,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                 </div>
               </div>
               <nav class="navbar navbar-expand-md bg-dark navbar-dark p-3 p-lg-0">
-                <a href="index.html" class="navbar-brand d-block d-lg-none">
+                <a href="index.php" class="navbar-brand d-block d-lg-none">
                   <h1 class="m-0 text-primary">Dev Shelter</h1>
                 </a>
                 <button
@@ -170,9 +170,9 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                   id="navbarCollapse"
                 >
                   <div class="navbar-nav">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="service.html" class="nav-item nav-link">Services</a>
-                    <a href="about.html" class="nav-item nav-link">About Us</a>
+                    <a href="index.php" class="nav-item nav-link active">Home</a>
+                    <a href="service.php" class="nav-item nav-link">Services</a>
+                    <a href="about.php" class="nav-item nav-link">About Us</a>
                     <ul class="navbar-nav">
                       <!-- Dropdown -->
                       <li class=" dropdown p-0 m-0 bg-dark">
@@ -256,7 +256,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                         </ul>
                       </li>
                     </ul>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="contact.php" class="nav-item nav-link">Contact</a>
                   </div>
                   <!-- <a href="https://htmlcodex.com/hotel-html-template-pro" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Premium Version<i class="fa fa-arrow-right ms-3"></i></a> -->
                 </div>
@@ -274,7 +274,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                         <h1 class="display-3 text-white mb-3 animated slideInDown">Booking</h1>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb justify-content-center text-uppercase">
-                                <li class="breadcrumb-item"><a href="index.html">DevShelter</a></li>
+                                <li class="breadcrumb-item"><a href="index.php">DevShelter</a></li>
                                 <!-- <li class="breadcrumb-item"><a href="#">Pages</a></li> -->
                                 <li class="breadcrumb-item text-white active" aria-current="page">Booking</li>
                             </ol>
@@ -410,7 +410,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                 <div class="row g-5">
                     <div class="col-md-6 col-lg-4">
                         <div class="bg-primary rounded p-4">
-                            <a href="index.html">
+                            <a href="index.php">
                                 <h1 class="text-white text-uppercase mb-3">DevShelter</h1>
                             </a>
                             <h5 class="text-white mb-0">
@@ -447,8 +447,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                                 <h6 class="section-title text-start text-primary text-uppercase mb-4">
                                     Company
                                 </h6>
-                                <a class="btn btn-link" href="about.html">About Us</a>
-                                <a class="btn btn-link" href="contact.html">Contact Us</a>
+                                <a class="btn btn-link" href="about.php">About Us</a>
+                                <a class="btn btn-link" href="contact.php">Contact Us</a>
                             </div>
                             <div class="col-md-6 d-flex flex-column">
                                 <h6 class="text-start text-primary text-uppercase mb-4">

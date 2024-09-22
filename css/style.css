@@ -1249,64 +1249,7 @@ html {
   grid-template-columns: repeat(2, 1fr);
 }
 
-/* offer */
 
-:root {
-  --marquee-padding: 0px;
-  --marquee-padding-negative: calc(var(--marquee-padding) * -1);
-}
-
-.marquee {
-  white-space: nowrap;
-  overflow: hidden;
-  margin: 0 auto;
-  padding: 5px 0;
-  background-color: #fea116;
-  align-items: center;
-  text-align: center;
-}
-
-.marquee .marquee_text {
-  display: inline-block;
-  /* padding-left: 100%; */
-  animation: marquee 30s linear infinite;
-  /* animation: marquee_flip 26s linear infinite;  For left to right */
-  margin-top: 1%;
-}
-
-.marquee .marquee_text ul {
-  display: inline-flex;
-  font-size: 20px;
-  text-transform: uppercase;
-  list-style-position: inside;
-}
-
-.marquee .marquee_text ul.marquee-content-primary {
-  padding-left: 0px;
-}
-
-.marquee .marquee_text ul > li {
-  padding-inline: 7px;
-}
-
-.marquee-content-secondary {
-  position: absolute;
-  left: 0;
-  top: 0;
-  padding-left: var(--marquee-padding);
-}
-
-@keyframes marquee {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translateZ(0);
-  }
-
-  to {
-    -webkit-transform: translate3d(var(--marquee-padding-negative), 0, 0);
-    transform: translate3d(var(--marquee-padding-negative), 0, 0);
-  }
-}
 
 .dropright {
   position: relative;
@@ -2197,7 +2140,7 @@ i {
     margin-left: 5px;
   }
 }
-
+/*-------------*/
 .marquee {
   white-space: nowrap;
   overflow: hidden;
@@ -2208,9 +2151,10 @@ i {
 
 .marquee .marquee_text {
   display: inline-block;
+  position: relative;
   /* padding-left: 100%; */
   animation: marquee 30s linear infinite;
-  /* animation: marquee_flip 26s linear infinite;  For left to right */
+  /* animation: marquee_flip 26s linear infinite;   */
 }
 .marquee .marquee_text ul {
   display: inline-flex;
@@ -2235,13 +2179,12 @@ i {
 
 @keyframes marquee {
   0% {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translateZ(0);
+    /* -webkit-transform: translate3d(0, 0, 0); */
+    left: 100%;
   }
 
-  to {
-    -webkit-transform: translate3d(var(--marquee-padding-negative), 0, 0);
-    transform: translate3d(var(--marquee-padding-negative), 0, 0);
+  100% {
+    left: -1000px;
   }
 }
 

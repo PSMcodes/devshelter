@@ -289,7 +289,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <div class="row gx-0">
             <div class="col-lg-3 bg-dark d-none d-lg-block">
               <a
-                href="index.html"
+                href="index.php"
                 class="navbar-brand d-flex flex-column align-items-center justify-content-center"
               >
                 <img
@@ -333,7 +333,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
               </div>
               <nav class="navbar navbar-expand-md bg-dark navbar-dark p-3 p-lg-0">
-                <a href="index.html" class="navbar-brand d-block d-lg-none">
+                <a href="index.php" class="navbar-brand d-block d-lg-none">
                   <h1 class="m-0 text-primary">Dev Shelter</h1>
                 </a>
                 <button
@@ -349,9 +349,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                   id="navbarCollapse"
                 >
                   <div class="navbar-nav">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="service.html" class="nav-item nav-link">Services</a>
-                    <a href="about.html" class="nav-item nav-link">About Us</a>
+                    <a href="index.php" class="nav-item nav-link active">Home</a>
+                    <a href="service.php" class="nav-item nav-link">Services</a>
+                    <a href="about.php" class="nav-item nav-link">About Us</a>
                     <ul class="navbar-nav">
                       <!-- Dropdown -->
                       <li class=" dropdown p-0 m-0 bg-dark">
@@ -435,7 +435,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </ul>
                       </li>
                     </ul>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="contact.php" class="nav-item nav-link">Contact</a>
                   </div>
                   <!-- <a href="https://htmlcodex.com/hotel-html-template-pro" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Premium Version<i class="fa fa-arrow-right ms-3"></i></a> -->
                 </div>
@@ -480,7 +480,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <div class="details-button">
             <a class=" btn btn-secondary m-3" href="https://mail.google.com" target="_blank">Check Mail</a>
-            <button href="index.html" class="btn btn-primary m-3">Home Page</button>
+            <button href="index.php" class="btn btn-primary m-3">Home Page</button>
         </div>
     </div>
     </div>

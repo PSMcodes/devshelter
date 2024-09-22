@@ -71,7 +71,7 @@
           <div class="row gx-0">
             <div class="col-lg-3 bg-dark d-none d-lg-block">
               <a
-                href="index.html"
+                href="index.php"
                 class="navbar-brand d-flex flex-column align-items-center justify-content-center"
               >
                 <img
@@ -115,7 +115,7 @@
                 </div>
               </div>
               <nav class="navbar navbar-expand-md bg-dark navbar-dark p-3 p-lg-0">
-                <a href="index.html" class="navbar-brand d-block d-lg-none">
+                <a href="index.php" class="navbar-brand d-block d-lg-none">
                   <h1 class="m-0 text-primary">Dev Shelter</h1>
                 </a>
                 <button
@@ -131,9 +131,9 @@
                   id="navbarCollapse"
                 >
                   <div class="navbar-nav">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="service.html" class="nav-item nav-link">Services</a>
-                    <a href="about.html" class="nav-item nav-link">About Us</a>
+                    <a href="index.php" class="nav-item nav-link">Home</a>
+                    <a href="service.php" class="nav-item nav-link">Services</a>
+                    <a href="about.php" class="nav-item nav-link">About Us</a>
                     <ul class="navbar-nav">
                       <!-- Dropdown -->
                       <li class=" dropdown p-0 m-0 bg-dark">
@@ -217,7 +217,7 @@
                         </ul>
                       </li>
                     </ul>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="contact.php" class="nav-item nav-link">Contact</a>
                   </div>
                   <!-- <a href="https://htmlcodex.com/hotel-html-template-pro" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Premium Version<i class="fa fa-arrow-right ms-3"></i></a> -->
                 </div>
@@ -226,7 +226,21 @@
           </div>
         </div>
         <!-- Header End -->
-
+        <?php 
+        include 'admin/offers.php';
+        if(has_offer()){
+          echo '<div class="marquee-footer">
+      <div class="marquee">
+        <div class="marquee_text">
+          <ul class="marquee-content-primary">
+            ⚪ '.display_latest_offer().' ⚪
+            ⚪ '.display_latest_offer().' ⚪
+            ⚪ '.display_latest_offer().' ⚪ 
+          </ul>
+        </div>
+      </div>
+    </div>
+    '; } ?>
         <!-- Page Header Start -->
         <div
           class="container-fluid page-header mb-5 p-0"
@@ -243,7 +257,7 @@
                   style="font-size: 20px"
                 >
                   <li class="breadcrumb-item">
-                    <a href="index.html">Dev Shelter</a>
+                    <a href="index.php">Dev Shelter</a>
                   </li>
                   <!-- <li class="breadcrumb-item"><a href="#">Pages</a></li> -->
                   <li
@@ -468,7 +482,7 @@
             <div class="row g-5">
               <div class="col-md-6 col-lg-4">
                 <div class="bg-primary rounded p-4">
-                  <a href="index.html">
+                  <a href="index.php">
                     <h1 class="text-white text-uppercase mb-3">Dev Shelter</h1>
                   </a>
                   <h5 class="text-white mb-0">
@@ -511,8 +525,8 @@
                     >
                       Company
                     </h6>
-                    <a class="btn btn-link" href="about.html">About Us</a>
-                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="about.php">About Us</a>
+                    <a class="btn btn-link" href="contact.php">Contact Us</a>
                   </div>
                   <div class="col-md-6 d-flex flex-column">
                     <h6 class="text-start text-primary text-uppercase mb-4">

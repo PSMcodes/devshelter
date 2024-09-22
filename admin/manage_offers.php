@@ -7,23 +7,6 @@ if (!isset($_SESSION['user_id'])) {
 
 require 'config.php';
 
-// Handle offer deletion
-if (isset($_GET['delete_id'])) {
-    $delete_id = $_GET['delete_id'];
-    $sql = "DELETE FROM offers WHERE id = ?";
-    $stmt = $conn->prepare($sql);
-    
-    if ($stmt) {
-        $stmt->bind_param("i", $delete_id);
-        $stmt->execute();
-        echo "Offer deleted successfully!";
-    } else {
-        echo "Error deleting offer: " . $conn->error;
-    }
-    header('Location:dashboard.php?page=manage_offers');
-    $stmt.close();
-}
-
 // Handle form submission for adding new offers
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $coupon_code = $_POST['coupon_code'];

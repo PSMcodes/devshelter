@@ -65,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             echo "<script>  
             alert('Room not available at the selected dates');
-          // $('#alert').html($('#alert').html() + '<br><br> <span class='h3 text-bg-danger p-2 rounded-4'> Room not available at the selected dates </span>');
+          // $('#alert').php($('#alert').php() + '<br><br> <span class='h3 text-bg-danger p-2 rounded-4'> Room not available at the selected dates </span>');
       </script>";
         }
         $stmt->close();
@@ -143,7 +143,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="container-fluid bg-dark px-0">
         <div class="row gx-0">
             <div class="col-lg-3 bg-dark d-none d-lg-block">
-                <a href="index.html" class="navbar-brand d-flex flex-column align-items-center justify-content-center">
+                <a href="index.php" class="navbar-brand d-flex flex-column align-items-center justify-content-center">
                     <img src="img/main/logo.png" class="navbar-brand w-25" alt="Dev Shelters Logo" id="logo" />
                     <h3 class="text-primary">Dev Shelter</h3>
                 </a>
@@ -179,7 +179,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
                 </div>
                 <nav class="navbar navbar-expand-md bg-dark navbar-dark p-3 p-lg-0">
-                    <a href="index.html" class="navbar-brand d-block d-lg-none">
+                    <a href="index.php" class="navbar-brand d-block d-lg-none">
                         <h1 class="m-0 text-primary">Dev Shelter</h1>
                     </a>
                     <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
@@ -188,9 +188,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav">
-                            <a href="index.html" class="nav-item nav-link active">Home</a>
-                            <a href="service.html" class="nav-item nav-link">Services</a>
-                            <a href="about.html" class="nav-item nav-link">About Us</a>
+                            <a href="index.php" class="nav-item nav-link active">Home</a>
+                            <a href="service.php" class="nav-item nav-link">Services</a>
+                            <a href="about.php" class="nav-item nav-link">About Us</a>
                             <ul class="navbar-nav">
                                 <!-- Dropdown -->
                                 <li class=" dropdown p-0 m-0 bg-dark">
@@ -251,7 +251,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     </ul>
                                 </li>
                             </ul>
-                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                            <a href="contact.php" class="nav-item nav-link">Contact</a>
                         </div>
                         <!-- <a href="https://htmlcodex.com/hotel-html-template-pro" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Premium Version<i class="fa fa-arrow-right ms-3"></i></a> -->
                     </div>
@@ -259,6 +259,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </div>
     </div>
+    <?php 
+          include 'admin/offers.php';
+          if(has_offer()){
+            echo '<div class="marquee-footer">
+        <div class="marquee">
+          <div class="marquee_text">
+            <ul class="marquee-content-primary">
+              ⚪ '.display_latest_offer().' ⚪
+              ⚪ '.display_latest_offer().' ⚪
+              ⚪ '.display_latest_offer().' ⚪ 
+            </ul>
+          </div>
+        </div>
+      </div>
+      '; } ?>
+
     <div class="container mt-5">
         <h2 class="room-title my-5" id="roomTitle">*</h2>
         <div class="infoDiv my-2">
@@ -505,7 +521,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="row g-5">
                 <div class="col-md-6 col-lg-4">
                     <div class="bg-primary rounded p-4">
-                        <a href="index.html">
+                        <a href="index.php">
                             <h1 class="text-white text-uppercase mb-3">DevShelter</h1>
                         </a>
                         <p class="text-white mb-0">
@@ -535,8 +551,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <h6 class="section-title text-start text-primary text-uppercase mb-4">
                                 Company
                             </h6>
-                            <a class="btn btn-link" href="about.html">About Us</a>
-                            <a class="btn btn-link" href="contact.html">Contact Us</a>
+                            <a class="btn btn-link" href="about.php">About Us</a>
+                            <a class="btn btn-link" href="contact.php">Contact Us</a>
                         </div>
                         <div class="col-md-6 d-flex flex-column">
                             <h6 class="text-start text-primary text-uppercase mb-4">
@@ -628,7 +644,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     showData(roomData);
                 } else {
                     console.log("No room selected");
-                    window.location.pathname = "room.html";
+                    window.location.pathname = "room.php";
                 }
             });
     }
@@ -637,26 +653,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         let currentRoom = roomData[roomLocation][roomType];
         let maxOccupancy = currentRoom["maxOccupancy"];
 
-        $("#guestsCount").html(maxOccupancy);
-        $("#guestCount2").html(maxOccupancy);
-        $("#bedroomCount").html(maxOccupancy);
-        $("#bedCount").html(maxOccupancy);
-        $('#map').html(currentRoom[subtype]?.map || currentRoom.map);
-        $("#roomTitle").html(currentRoom[subtype]?.title || currentRoom.title);
+        $("#guestsCount").php(maxOccupancy);
+        $("#guestCount2").php(maxOccupancy);
+        $("#bedroomCount").php(maxOccupancy);
+        $("#bedCount").php(maxOccupancy);
+        $('#map').php(currentRoom[subtype]?.map || currentRoom.map);
+        $("#roomTitle").php(currentRoom[subtype]?.title || currentRoom.title);
 
         if (currentRoom.title == "Kalpaturu Hometel") {
-            $("#bedroomCount").html("8");
+            $("#bedroomCount").php("8");
         } else if (currentRoom.title == "Dev shelter Malad") {
-            $("#bedroomCount").html("10");
+            $("#bedroomCount").php("10");
         } else if (currentRoom.title == "Dev Shelter Goregaon") {
-            $("#bedroomCount").html("10");
+            $("#bedroomCount").php("10");
         }else if (currentRoom[subtype].title == "4 Bhk service Apartment") {
             console.log("yes");
-            $("#bedroomCount").html("4");
+            $("#bedroomCount").php("4");
         }
 
         let roomDetailsHtml = generateRoomDetailsHTML(currentRoom);
-        $(".infoDiv").html(roomDetailsHtml);
+        $(".infoDiv").php(roomDetailsHtml);
     }
 
     function generateRoomDetailsHTML(room) {
@@ -731,7 +747,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     let inquiryForm = document.querySelector("#inquiryForm2");
     inquiryForm.addEventListener("submit", (e) => {
         if (guest > 3) {
-            $("#alert").html(
+            $("#alert").php(
                 "Two rooms will be booked as the guests are exceeding room limit "
             );
         }
@@ -760,7 +776,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             event.preventDefault();
             return;
         }
-        $('#alert').html($('#alert').html() +
+        $('#alert').php($('#alert').php() +
             '<br><br> <span class="h6 text-bg-success p-2 rounded-3">Processing </span>')
     });
 
