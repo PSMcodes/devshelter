@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Aug 29, 2024 at 07:33 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.0.30
+-- Host: 127.0.0.1:3306
+-- Generation Time: Sep 23, 2024 at 07:39 AM
+-- Server version: 10.11.8-MariaDB-cll-lve
+-- PHP Version: 7.2.34
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -46,7 +46,8 @@ CREATE TABLE `bookings` (
 
 INSERT INTO `bookings` (`id`, `room_id`, `guest_id`, `check_in`, `check_out`, `status`, `totalRooms`, `totalGuest`, `timestamp`, `Price`) VALUES
 (2632, 13, 2, '2024-08-10', '2024-08-11', 'pending', 2, 4, '2024-08-10 17:07:11', 5712.5),
-(2633, 14, 2, '2024-08-10', '2024-08-11', 'pending', 2, 4, '2024-08-10 17:07:11', 5712.5);
+(2633, 14, 2, '2024-08-10', '2024-08-11', 'pending', 2, 4, '2024-08-10 17:07:11', 5712.5),
+(2634, 56, 3, '2024-08-17', '2024-08-18', 'pending', 1, 1, '2024-08-16 13:44:29', 3427.5);
 
 -- --------------------------------------------------------
 
@@ -67,7 +68,8 @@ CREATE TABLE `guests` (
 
 INSERT INTO `guests` (`id`, `name`, `email`, `phone`) VALUES
 (1, 'prasad', 'prasadkalvikatti@gmial.com', '9022428111'),
-(2, 'prasad', 'prasadkalviaktti@gmail.com', '9022428112');
+(2, 'prasad', 'prasadkalviaktti@gmail.com', '9022428112'),
+(3, 'Shivajeet pandey', 'rajpandey5335@gmail.com', '7704995335');
 
 -- --------------------------------------------------------
 
@@ -87,6 +89,21 @@ CREATE TABLE `locations` (
 INSERT INTO `locations` (`id`, `name`) VALUES
 (4, 'Malad'),
 (5, 'Goregoan');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `offers`
+--
+
+CREATE TABLE `offers` (
+  `id` int(11) NOT NULL,
+  `coupon_code` varchar(100) DEFAULT NULL,
+  `discount_percentage` int(11) DEFAULT NULL,
+  `is_always_active` tinyint(1) DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  `expires_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -115,7 +132,7 @@ INSERT INTO `rooms` (`id`, `room_number`, `location_id`, `type_id`, `price`, `st
 (17, '104', 4, 10, 3000.00, 'available'),
 (18, '104-B', 4, 10, 3000.00, 'available'),
 (19, '104-C', 4, 10, 3000.00, 'available'),
-(56, 'Kalpataru 01', 4, 12, 3000.00, 'available'),
+(56, 'Kalpataru 01', 4, 12, 3000.00, 'pending'),
 (57, 'Kalpataru 02', 4, 12, 3000.00, 'available'),
 (58, 'Kalpataru 03', 4, 12, 3000.00, 'available'),
 (59, 'Kalpataru 04', 4, 12, 3000.00, 'available'),
@@ -192,8 +209,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `role`) VALUES
-(1, 'admin', '$2y$10$70Z3T83z8tJ1U1vgowKiUuYMK18RLml9shSFwpnAHpzh451mX762u', 'admin'),
-(2, 'shubam', '$2y$10$7tVG2aSRQZLjBqGkjlzN/eEw9jRrWNGAnfLvuTONU509bOzFbZ24.', 'admin');
+(1, 'admin', '$2y$10$cXdYkPN/DtQUCcY3xCrTOefr2a7GdbOeFtFt0NdsdK52yFYTLHOQW', 'admin'),
+(2, 'shubham', '$2y$10$7tVG2aSRQZLjBqGkjlzN/eEw9jRrWNGAnfLvuTONU509bOzFbZ24.', 'admin');
 
 --
 -- Indexes for dumped tables
@@ -218,6 +235,13 @@ ALTER TABLE `guests`
 --
 ALTER TABLE `locations`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `offers`
+--
+ALTER TABLE `offers`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `coupon_code` (`coupon_code`);
 
 --
 -- Indexes for table `rooms`
@@ -249,19 +273,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `bookings`
 --
 ALTER TABLE `bookings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2634;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2635;
 
 --
 -- AUTO_INCREMENT for table `guests`
 --
 ALTER TABLE `guests`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `locations`
 --
 ALTER TABLE `locations`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `offers`
+--
+ALTER TABLE `offers`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `rooms`

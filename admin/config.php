@@ -12,6 +12,3 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 ?>
-<!-- db = u912243786_devshelter
-username = u912243786_devshelter
-password = 5*?hu>lQ@zVg -->
