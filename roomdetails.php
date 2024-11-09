@@ -6,73 +6,73 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $type = isset($_GET['type']) ? $_GET['type'] : null;
     $checkIn = isset($_GET['checkIn']) ? $_GET['checkIn'] : null;
     $checkOut = isset($_GET['checkOut']) ? $_GET['checkOut'] : null;
-    $guest = isset($_GET['guest']) ? $_GET['guest'] : null;
-    $rooms = isset($_GET['rooms']) ? $_GET['rooms'] : null;
+    $guest = isset($_GET['guest']) ? $_GET['guest'] : $_POST['guests'];
+    $rooms = isset($_GET['rooms']) ? $_GET['rooms'] : $_POST['rooms'];
     $contactName = $_POST['contactName'];
     $contactNumber = $_POST['contactNumber'];
     $emailId = $_POST['emailId'];
     $message = $_POST['message'];
+    $hasCoupon = $_POST['hasCoupon'];
+    $coupon_code = $_POST['couponCode'];
 
 
     // echo $location . " __ " . $type . " __ " . $checkIn . " __ " . $checkOut;
     // echo $location, $type, $checkIn, $checkOut, $checkIn, $checkOut, $checkIn, $checkOut, $rooms;
     if ($location && $type && $checkIn && $checkOut) {
+        echo $guest . "__" . $rooms . "__";
         // Query to check room availability
         $sql = "SELECT 
-    r.id, 
-    r.room_number, 
-    r.price, 
-    rt.primarytype 
-    FROM 
-        rooms r 
-    JOIN 
-        room_types rt ON r.type_id = rt.id 
-    WHERE 
-        r.status = 'available' 
-        AND r.location_id = (SELECT id FROM locations WHERE name = ? )
-        AND rt.primarytype = ? -- Replace 'Deluxe' with the desired primarytype
-        AND r.id NOT IN (
-            SELECT room_id 
-            FROM bookings 
-            WHERE 
-                status = 'available'
-                AND (
-                    (check_in <= ? AND check_out >= ? ) -- overlapping bookings
-                    OR 
-                    (check_in <= ? AND check_in >= ? ) -- starts within the range
-                    OR 
-                    (check_out <= ? AND check_out >= ? ) -- ends within the range
-                )
-        ) LIMIT ?";
+        r.id, 
+        r.room_number, 
+        r.price, 
+        rt.primarytype 
+        FROM 
+            rooms r 
+        JOIN 
+            room_types rt ON r.type_id = rt.id 
+        WHERE 
+            r.status = 'available' 
+            AND r.location_id = (SELECT id FROM locations WHERE name = ?)
+            AND rt.primarytype = ? 
+            AND r.id NOT IN (
+                SELECT room_id 
+                FROM bookings 
+                WHERE 
+                    status = 'available'
+                    AND (
+                        (check_in <= ? AND check_out >= ?)
+                        OR 
+                        (check_in <= ? AND check_in >= ?)
+                        OR 
+                        (check_out <= ? AND check_out >= ?)
+                    )
+            ) LIMIT ?";
 
         $stmt = $conn->prepare($sql);
-        // location name,type(apart),checkin,checkout,checkin,checkout,checkin,checkout
-        $stmt->bind_param("sssssssss", $location, $type, $checkIn, $checkOut, $checkIn, $checkOut, $checkIn, $checkOut, $rooms);
+        $stmt->bind_param("ssssssssi", $location, $type, $checkIn, $checkOut, $checkIn, $checkOut, $checkIn, $checkOut, $rooms);
         $stmt->execute();
         $result = $stmt->get_result();
 
         if ($result->num_rows > 0) {
             // Display available rooms
             $room_ids = [];
-            // getting multiple room ids
             while ($row = $result->fetch_assoc()) {
                 $room_ids[] = $row['id'];
             }
             $room_ids_string = implode(',', $room_ids);
 
             $gibberish = generateRandomGibberish(100);
-            header("Location:booking.php?$gibberish&roomNumber=$room_ids_string&location=$location&type=$type&subtype=$subtype&checkIn=$checkIn&checkOut=$checkOut&guest={$guest}&rooms=$rooms&contactName=$contactName&contactNumber=$contactNumber&emailId=$emailId&message=$message");
+            header("Location:booking.php?$gibberish&roomNumber=$room_ids_string&location=$location&type=$type&subtype=$subtype&checkIn=$checkIn&checkOut=$checkOut&guest={$guest}&rooms=$rooms&contactName=$contactName&contactNumber=$contactNumber&emailId=$emailId&message=$message&hasCoupon=$hasCoupon&CouponCode=$coupon_code");
         } else {
-            echo "<script>  
-            alert('Room not available at the selected dates');
-          // $('#alert').php($('#alert').php() + '<br><br> <span class='h3 text-bg-danger p-2 rounded-4'> Room not available at the selected dates </span>');
-      </script>";
+            echo "<script>
+        alert('Room not available at the selected dates');
+        document.getElementById('alert').innerHTML += '<br><br> <span class=\"h3 text-bg-danger p-2 rounded-4\"> Room not available at the selected dates </span>';
+    </script>";
         }
         $stmt->close();
     } else {
         echo "<p>Please provide valid location, type, and date range.</p>";
     }
-
 }
 
 
@@ -259,21 +259,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </div>
     </div>
-    <?php 
-          include 'admin/offers.php';
-          if(has_offer()){
-            echo '<div class="marquee-footer">
+    <?php
+    include 'admin/offers.php';
+    if (has_offer()) {
+        echo '<div class="marquee-footer">
         <div class="marquee">
           <div class="marquee_text">
             <ul class="marquee-content-primary">
-              ⚪ '.display_latest_offer().' ⚪
-              ⚪ '.display_latest_offer().' ⚪
-              ⚪ '.display_latest_offer().' ⚪ 
+              ⚪ ' . display_latest_offer() . ' ⚪
+              ⚪ ' . display_latest_offer() . ' ⚪
+              ⚪ ' . display_latest_offer() . ' ⚪ 
             </ul>
           </div>
         </div>
       </div>
-      '; } ?>
+      ';
+    } ?>
 
     <div class="container mt-5">
         <h2 class="room-title my-5" id="roomTitle">*</h2>
@@ -484,13 +485,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <input type="number" class="form-control" id="guest" placeholder="Guests"
-                                        required />
+                                        required name="guests" />
                                     <label for="guest">Guests</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="number" class="form-control" id="rooms" placeholder="Rooms" required />
+                                    <input type="number" class="form-control" id="rooms" placeholder="Rooms" required name="rooms" />
                                     <label for="rooms">Rooms</label>
                                 </div>
                             </div>
@@ -498,9 +499,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <div class="col-12">
                                 <div class="form-floating">
                                     <textarea class="form-control" placeholder="Special Request" id="message"
-                                        nmae="message" style="height: 100px"></textarea>
+                                        name="message" style="height: 100px"></textarea>
                                     <label for="message">Special Request</label>
                                 </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="hasCoupon" name="hasCoupon" value="true" >
+                                    <label for="hasCoupon" class="form-check-label">Add Coupon Code ?</label>
+                                </div>
+                                <input type="text" name="couponCode" id="couponInput" class="form-control" placeholder="Coupon Code" >
                             </div>
                             <div class="col-md-12 text-danger" id="alert"></div>
                             <div class="col-12">
@@ -653,26 +661,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         let currentRoom = roomData[roomLocation][roomType];
         let maxOccupancy = currentRoom["maxOccupancy"];
 
-        $("#guestsCount").php(maxOccupancy);
-        $("#guestCount2").php(maxOccupancy);
-        $("#bedroomCount").php(maxOccupancy);
-        $("#bedCount").php(maxOccupancy);
-        $('#map').php(currentRoom[subtype]?.map || currentRoom.map);
-        $("#roomTitle").php(currentRoom[subtype]?.title || currentRoom.title);
+        $("#guestsCount").html(maxOccupancy);
+        $("#guestCount2").html(maxOccupancy);
+        $("#bedroomCount").html(maxOccupancy);
+        $("#bedCount").html(maxOccupancy);
+        $('#map').html(currentRoom[subtype]?.map || currentRoom.map);
+        $("#roomTitle").html(currentRoom[subtype]?.title || currentRoom.title);
 
         if (currentRoom.title == "Kalpaturu Hometel") {
-            $("#bedroomCount").php("8");
+            $("#bedroomCount").html("8");
         } else if (currentRoom.title == "Dev shelter Malad") {
-            $("#bedroomCount").php("10");
+            $("#bedroomCount").html("10");
         } else if (currentRoom.title == "Dev Shelter Goregaon") {
-            $("#bedroomCount").php("10");
-        }else if (currentRoom[subtype].title == "4 Bhk service Apartment") {
+            $("#bedroomCount").html("10");
+        } else if (currentRoom[subtype].title == "4 Bhk service Apartment") {
             console.log("yes");
-            $("#bedroomCount").php("4");
+            $("#bedroomCount").html("4");
         }
 
         let roomDetailsHtml = generateRoomDetailsHTML(currentRoom);
-        $(".infoDiv").php(roomDetailsHtml);
+        $(".infoDiv").html(roomDetailsHtml);
     }
 
     function generateRoomDetailsHTML(room) {
@@ -732,6 +740,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if (checkIn) {
+        console.log(checkIn);
         $("#checkin").val(checkIn);
     }
     if (checkOut) {
@@ -744,10 +753,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $("#rooms").val(rooms);
     }
 
+    $('#couponInput').hide();
+    $('#hasCoupon').change(function() {
+        $('#couponInput').toggle();
+    })
+
     let inquiryForm = document.querySelector("#inquiryForm2");
     inquiryForm.addEventListener("submit", (e) => {
         if (guest > 3) {
-            $("#alert").php(
+            $("#alert").html(
                 "Two rooms will be booked as the guests are exceeding room limit "
             );
         }
@@ -776,8 +790,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             event.preventDefault();
             return;
         }
-        $('#alert').php($('#alert').php() +
+        $('#alert').html($('#alert').html() +
             '<br><br> <span class="h6 text-bg-success p-2 rounded-3">Processing </span>')
+        inquiryForm.submit()
     });
 
     getData();
