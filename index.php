@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5MBQK89P');</script>
+    <!-- End Google Tag Manager -->
+
     <meta charset="utf-8" />
     <title>DevShelter | Room And Hotels</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -44,12 +52,13 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
     <!-- <script src="js/main.js"></script> -->
+     <meta name="google-site-verification" content="0wiDpd6PTXhXZynKP-1Kc9WjbdA_5n5xB0B6dsAxnjg" />
 
-    <meta property="og:title" content="DevShelter | Rooms and Hotels" />
+    <meta property="og:title" content="DevShelter | Rooms and Hotels | Service Apartments" />
     <meta
       name="description"
       content="DevShelter - We provide comfortable and peaceful stay for corporate executives,
-    business travelers, tourists and vacation rentals. "
+    business travelers, tourists , vacation rentals and Service Apartments. "
     />
     <meta
       property="og:image"
@@ -62,20 +71,13 @@
       content="https://devshelter.in/img/main/logo.png"
     />
     <meta name="twitter:image:width" content="100" />
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5MBQK89P');</script>
-<!-- End Google Tag Manager -->
   </head>
 
   <body class="no-select">
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MBQK89P"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MBQK89P"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <div id="loader" class="loader">
       <img src="img/main/logo.png" alt="Company Logo" />
     </div>
