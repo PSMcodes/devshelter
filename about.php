@@ -51,12 +51,12 @@
   <meta property="og:title" content="DevShelter | Rooms and Hotels">
   <meta name="description" content="DevShelter -   We provide comfortable and peaceful stay for corporate executives,
   business travelers, tourists and vacation rentals. ">
-<meta property="og:image" content="">
-<meta property="og:url" content="">
-<meta property="og:type" content="Rooms and hotels at mumbai">
-<meta name="twitter:image" content="">
-<meta name="twitter:image:width" content="100">
-<!-- Meta Pixel Code -->
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:type" content="Rooms and hotels at mumbai">
+  <meta name="twitter:image" content="">
+  <meta name="twitter:image:width" content="100">
+  <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
