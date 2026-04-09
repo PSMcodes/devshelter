@@ -566,7 +566,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                         &copy; <a class="border-bottom" href="#">DevShelter</a> , All
                         Right Reserved. Designed by
-                        <a class="border-bottom" href="https://psmcodes.com" target="_blank">
+                        <a class="border-bottom" href="https://psmcodes.in" target="_blank">
                             psmcodes</a>
                     </div>
                 </div>

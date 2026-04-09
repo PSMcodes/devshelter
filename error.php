@@ -503,10 +503,10 @@ h1{
             Right Reserved. Designed by
             <a
               class="border-bottom"
-              href="https://psmcodes.com"
+              href="https://psmcodes.in"
               target="_blank"
             >
-              psmcodes.co</a
+              psmcodes</a
             >
           </div>
        

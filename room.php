@@ -531,7 +531,7 @@ src="https://www.facebook.com/tr?id=881243914437463&ev=PageView&noscript=1"
                 Right Reserved. Designed by
                 <a
                   class="border-bottom"
-                  href="https://psmcodes.com"
+                  href="https://psmcodes.in"
                   target="_blank">
                   psmcodes</a>
               </div>

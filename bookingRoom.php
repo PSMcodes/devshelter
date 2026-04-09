@@ -395,8 +395,8 @@ src="https://www.facebook.com/tr?id=881243914437463&ev=PageView&noscript=1"
                             <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                                 &copy; <a class="border-bottom" href="#">DevShelter</a> , All
                                 Right Reserved. Designed by
-                                <a class="border-bottom" href="https://psmcodes.com" target="_blank">
-                                    psmcodes.co</a>
+                                <a class="border-bottom" href="https://psmcodes.in" target="_blank">
+                                    psmcodes</a>
                             </div>
 
                         </div>
