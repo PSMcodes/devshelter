@@ -245,7 +245,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
     <!-- Favicon -->
-    <link href="img/main/logo.jpeg" rel="icon" />
+    <link href="https://devshelter.in/img/main/logo.jpeg" rel="icon" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -310,7 +310,7 @@ src="https://www.facebook.com/tr?id=881243914437463&ev=PageView&noscript=1"
                 class="navbar-brand d-flex flex-column align-items-center justify-content-center"
               >
                 <img
-                  src="img/main/logo.jpeg"
+                  src="https://devshelter.in/img/main/logo.jpeg"
                   class="navbar-brand w-25"
                   alt="Dev Shelters Logo"
                   id="logo"
