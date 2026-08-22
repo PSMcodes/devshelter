@@ -18,7 +18,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
   <!-- Favicon -->
-  <link href="https://devshelter.in/img/main/logo.jpeg" rel="icon" />
+  <link href="img/main/logo.jpeg" rel="icon" />
 
   <!-- Google Web Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -82,7 +82,7 @@
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <div id="loader" class="loader">
-    <img src="https://devshelter.in/img/main/logo.jpeg" alt="Company Logo" />
+    <img src="img/main/logo.jpeg" alt="Company Logo" />
   </div>
   <div id="content" class="content">
     <!-- Your main content goes here -->
@@ -92,7 +92,7 @@
         <div class="row gx-0">
           <div class="col-lg-3 bg-dark d-none d-lg-block">
             <a href="index.php" class="navbar-brand d-flex flex-column align-items-center justify-content-center">
-              <img src="https://devshelter.in/img/main/logo.jpeg" class="navbar-brand w-25" alt="Dev Shelters Logo" id="logo" />
+              <img src="img/main/logo.jpeg" class="navbar-brand w-25" alt="Dev Shelters Logo" id="logo" />
               <h3 class="text-primary">Dev Shelter</h3>
             </a>
           </div>

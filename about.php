@@ -78,7 +78,7 @@ src="https://www.facebook.com/tr?id=881243914437463&ev=PageView&noscript=1"
 <body>
 
   <div id="loader" class="loader">
-    <img src="https://devshelter.in/img/main/logo.jpeg" alt="Company Logo">
+    <img src="img/main/logo.jpeg" alt="Company Logo">
 </div>
 
 <div class="content" id="content">
@@ -101,7 +101,7 @@ src="https://www.facebook.com/tr?id=881243914437463&ev=PageView&noscript=1"
             class="navbar-brand d-flex flex-column align-items-center justify-content-center"
           >
             <img
-              src="https://devshelter.in/img/main/logo.jpeg"
+              src="img/main/logo.jpeg"
               class="navbar-brand w-25"
               alt="Dev Shelters Logo"
               id="logo"
