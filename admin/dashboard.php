@@ -29,7 +29,7 @@ if (!isset($_SESSION['user_id'])) {
                             <h1 class="h2 text-white text-center">Dashboard</h1>
                         </li>
                         <li class="navbar-brand bg-white ">
-                            <img src="../img/main/logo.png" alt="img\main\logo.png"
+                            <img src="../img/main/logo.jpeg" alt="img\main\logo.png"
                                 class="navbar-logo w-100 d-block mx-auto">
                         </li>
                         <li class="nav-item">

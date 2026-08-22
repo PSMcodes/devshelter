@@ -94,7 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <table style="width:100%;height:auto;margin:0;border-collapse:collapse;padding:0" cellpadding="0" cellspacing="0">
                 <tbody><tr>
                     <td style="padding:5px;text-align:center;box-sizing:border-box;border:1px solid #999">
-                        <img src="https://devshelter.in/img/main/logo.png" alt="Logo" width="100px">
+                        <img src="https://devshelter.in/img/main/logo.jpeg" alt="Logo" width="100px">
                     </td>
                     <td style="padding:5px;line-height:1;box-sizing:border-box;border:1px solid #999;white-space:nowrap"> Reservation ID<br>
 
@@ -245,7 +245,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
     <!-- Favicon -->
-    <link href="img/main/logo.png" rel="icon" />
+    <link href="img/main/logo.jpeg" rel="icon" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -276,10 +276,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta property="og:title" content="DevShelter | Rooms and Hotels" />
     <meta name="description" content="DevShelter - We provide comfortable and peaceful stay for corporate executives,
     business travelers, tourists and vacation rentals. " />
-    <meta property="og:image" content="https://devshelter.in/img/main/logo.png" />
+    <meta property="og:image" content="https://devshelter.in/img/main/logo.jpeg" />
     <meta property="og:url" content="https://devshelter.in" />
     <meta property="og:type" content="Rooms and hotels at mumbai" />
-    <meta name="twitter:image" content="https://devshelter.in/img/main/logo.png" />
+    <meta name="twitter:image" content="https://devshelter.in/img/main/logo.jpeg" />
     <meta name="twitter:image:width" content="100" />
     <!-- Meta Pixel Code -->
 <script>
@@ -310,7 +310,7 @@ src="https://www.facebook.com/tr?id=881243914437463&ev=PageView&noscript=1"
                 class="navbar-brand d-flex flex-column align-items-center justify-content-center"
               >
                 <img
-                  src="img/main/logo.png"
+                  src="img/main/logo.jpeg"
                   class="navbar-brand w-25"
                   alt="Dev Shelters Logo"
                   id="logo"
